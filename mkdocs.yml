@@ -2,26 +2,49 @@ site_name: jy-hf's learning site
 site_description: An Experimental Package Management Solution for Python
 repo_name: vra/mkdocs-material-example
 repo_url: https://github.com/little612pea/jy-hf
-copyright: Copyright &copy; 2023 jy Feng/Hu
+copyright: Copyright &copy; 2023 jy Hu
 
 
 nav:
   - Home: index.md
-  - Lab 4 - Warm Up:
-    - 实验工具安装: warmup/tools_installation.md
-    - Lab4-实验工具使用: warmup/lab4.md
-  - Lab 5 - Decoder: lab5/decoder.md
-  - Lab 6 - 7-Segment Display Decoder: lab6/seven-segment.md
-  - Lab 7 - Multiplexer: lab7/multiplexer.md
-  - Lab 8 - ALU: lab8/ALU.md
-  - Lab 9 - Latches & Flip-flops: lab9/latches_flip_flops.md
+  - 1 数字逻辑设计:
+    - 实验过程: 1 数字逻辑设计/数逻实验.md
+    - 理论部分: 1 数字逻辑设计/数字逻辑设计 notes.md
+  - 2 数据结构: 
+    - 分课时笔记: 
+      - 第1周: 2 数据结构/webnotes/DS WEEK01.md
+      - 第2周: 2 数据结构/webnotes/DS WEEK02.md
+      - 第3周: 2 数据结构/webnotes/DS WEEK03.md
+      - 第4周: 2 数据结构/webnotes/DS WEEK04.md
+      - 第5周: 2 数据结构/webnotes/DS WEEK05.md
+      - 第6周: 2 数据结构/webnotes/DS WEEK06.md
+      - 第7周: 2 数据结构/webnotes/DS WEEK07.md
+      - 第8周: 2 数据结构/webnotes/DS WEEK08.md
+      - 第9周: 2 数据结构/webnotes/DS WEEK09.md
+      - 第10周: 2 数据结构/webnotes/DS WEEK10.md
+      - 第11周: 2 数据结构/webnotes/DS WEEK11.md
+      - 第12周: 2 数据结构/webnotes/DS WEEK12.md
+      - 第13周: 2 数据结构/webnotes/DS WEEK13.md
+      - 第14周: 2 数据结构/webnotes/DS WEEK14.md
+      - 第15周: 2 数据结构/webnotes/DS WEEK15.md
+      - 总集篇: 2 数据结构/webnotes/Foundation-of-Data-Structure.md
+    - 个人笔记: 2 数据结构/mynotes/FDS-notes.md
+    - Labs & hw: 2 数据结构/labs&hw/FDS Lab&hw review.md
+  - 3 ZJU-AI-ML: 
+    - 课程笔记: 
+      - 反向传播: 3 ZJU-AI-ML/feed forward and backward propagation.md
+      - 赶快补课抄笔记: 3 ZJU-AI-ML/notes for ZJU-AI-ML.md
+      - 一些截图: 3 ZJU-AI-ML/ML-zju.md
+    - 课程Lab&hw: 3 ZJU-AI-ML/labs & hw review.md
+  - 4 图像信息处理 DIP - 默写课~: 4 图像信息处理 DIP/DIP.md
+
   - Other:
-    - Git 基础: Other/about_git.md
-    - 在 Linux/macOS 上仿真: Other/Verilog_Simulation.md
-    - ISE 安装: Other/ISE_installation.md
+    - Linux服务器运维(x)把玩(√): Others/linux 启动.md
+    - CS61A: Others/CS61A-python.md
 
 theme:
   name: material
+  language: zh
   features:
     - header.autohide
     - navigation.instant
