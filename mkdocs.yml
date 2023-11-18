@@ -1,18 +1,24 @@
-site_name: Mkdocs Material Example
+site_name: jy-hf's learning site
 site_description: An Experimental Package Management Solution for Python
 repo_name: vra/mkdocs-material-example
-repo_url: https://github.com/vra/mkdocs-material-example
-copyright: Copyright &copy; 2023 Yunfeng Wang
+repo_url: https://github.com/little612pea/jy-hf
+copyright: Copyright &copy; 2023 jy Feng/Hu
 
 
 nav:
-  - Welcome: index.md
-  - User Guide:
-    - guide/index.md
-    - Installation: guide/installation.md
-    - Basics: guide/basics.md
-    - Configuration: guide/config.md
-  - Changelog: changelog.md
+  - Home: index.md
+  - Lab 4 - Warm Up:
+    - 实验工具安装: warmup/tools_installation.md
+    - Lab4-实验工具使用: warmup/lab4.md
+  - Lab 5 - Decoder: lab5/decoder.md
+  - Lab 6 - 7-Segment Display Decoder: lab6/seven-segment.md
+  - Lab 7 - Multiplexer: lab7/multiplexer.md
+  - Lab 8 - ALU: lab8/ALU.md
+  - Lab 9 - Latches & Flip-flops: lab9/latches_flip_flops.md
+  - Other:
+    - Git 基础: Other/about_git.md
+    - 在 Linux/macOS 上仿真: Other/Verilog_Simulation.md
+    - ISE 安装: Other/ISE_installation.md
 
 theme:
   name: material
