@@ -1,77 +1,62 @@
-site_name: My Docs
-site_dir: public
-site_author: GNG not Gua
-repo_url: https://github.com/little612pea/little612pea.github.io
-repo_name: jy's learning site
-theme:
-  name: material
-   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/weather-night
-        name: 暗色模式
-    - media: "(prefers-color-scheme: dark)"
-      primary: teal
-      scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: 亮色模式
-  language: zh
-  features:
-    - content.code.copy
-    # - navigation.tabs
-    - navigation.expand
-    - navigation.top
-    # - navigation.sections
-  icon:
-    repo: fontawesome/brands/git-alt
-  icon:
-    repo: fontawesome/brands/git-alt
-    
-plugins:
-  - search
-
-markdown_extensions:
-  - admonition
-  - md_in_html
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - tables
-  - attr_list
-  - pymdownx.arithmatex:
-      generic: true
-
-extra_css:
-  - _css/style.css
-
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - javascripts/tex-mml-chtml.js
-  # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+site_name: Mkdocs Material Example
+site_description: An Experimental Package Management Solution for Python
+repo_name: vra/mkdocs-material-example
+repo_url: https://github.com/vra/mkdocs-material-example
+copyright: Copyright &copy; 2023 Yunfeng Wang
 
 
 nav:
-  - Home: index.md
-  - Lab 4 - Warm Up:
-    - 实验工具安装: warmup/tools_installation.md
-    - Lab4-实验工具使用: warmup/lab4.md
-  - Lab 5 - Decoder: lab5/decoder.md
-  - Lab 6 - 7-Segment Display Decoder: lab6/seven-segment.md
-  - Lab 7 - Multiplexer: lab7/multiplexer.md
-  - Lab 8 - ALU: lab8/ALU.md
-  - Lab 9 - Latches & Flip-flops: lab9/latches_flip_flops.md
-  - Other:
-    - Git 基础: Other/about_git.md
-    - 在 Linux/macOS 上仿真: Other/Verilog_Simulation.md
-    - ISE 安装: Other/ISE_installation.md
+  - Welcome: index.md
+  - User Guide:
+    - guide/index.md
+    - Installation: guide/installation.md
+    - Basics: guide/basics.md
+    - Configuration: guide/config.md
+  - Changelog: changelog.md
 
+theme:
+  name: material
+  features:
+    - header.autohide
+    - navigation.instant
+    - navigation.tracking
+    - content.code.annotate
+    - toc.integrate
+    - toc.follow
+    - navigation.path
+    - navigation.top
+    - navigation.tabs
+    - navigation.footer
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+  palette: 
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+      primary: teal #, [red, pink, purple, deep, purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue, grey, black, white]
+      accent: cyan # [red, pink, purple, deep, purple, indigo, blue, light, blue, cyan, teal, green, light, green, lime, yellow, amber, orange, deep orange]
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal #, [red, pink, purple, deep, purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue, grey, black, white]
+      accent: cyan # [red, pink, purple, deep, purple, indigo, blue, light, blue, cyan, teal, green, light, green, lime, yellow, amber, orange, deep orange]
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+
+extra_css:
+  - static/extra.css
