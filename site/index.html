@@ -11,10 +11,8 @@
       
       
       
-        <link rel="prev" href="welcome/">
       
-      
-        <link rel="next" href="1%20%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/%E6%95%B0%E9%80%BB%E5%AE%9E%E9%AA%8C/">
+        <link rel="next" href="mkdocs-guide/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>JY-HF learning site</title>
+        <title>jy-hf的代码空间 - JY-HF learning site</title>
       
     
     
@@ -78,11 +76,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#jy-hf" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -113,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              mkdocs-guide
+              jy-hf的代码空间
             
           </span>
         </div>
@@ -205,6 +198,7 @@
     <div class="md-container" data-md-component="container">
       
       
+  
         
           
             
@@ -215,9 +209,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="welcome/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
         
   
     
@@ -232,16 +228,14 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="mkdocs-guide/" class="md-tabs__link">
         
   
     
   
-  mkdocs-guide
+  about
 
       </a>
     </li>
@@ -361,6 +355,60 @@
           
         
       
+  <style>
+    .md-header {
+      position: initial
+    }
+  
+    .md-main__inner {
+      margin: 0
+    }
+  
+    .md-content {
+      display: none
+    }
+  
+    body {
+        background-color: rgb(31, 48, 85); /* 设置背景颜色为黑色 */
+        color: white; /* 设置文字颜色为白色 */
+    }
+  
+    @media screen and (min-width:60em) {
+      .md-sidebar--secondary {
+        display: none
+      }
+    }
+  
+    @media screen and (min-width:76.25em) {
+      .md-sidebar--primary {
+        display: none
+      }
+    }
+
+  </style>
+  <section class="mdx-container">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
+        <div class="mdx-hero__image">
+          <img
+            src="https://upload-bbs.miyoushe.com/upload/2023/11/05/11316600/63cb78f6e4b55900d5c80a3b5f54de65_8615193900844086.png?x-oss-process=image/auto-orient,0/interlace,1/format,png"
+            alt="" width="1659" height="819.37" draggable="false">
+        </div>
+        <div class="mdx-hero__content">
+          <h1 style="color: antiquewhite;font-family: 'Courier New', Courier, monospace;font-weight: 1000;">Welcome to the coding space of JY-HF!</h1>
+          <p style="color: antiquewhite;font-family: 'Courier New', Courier, monospace;">The learning site you are viewing is created by Jy Hu and Jy Feng when they were sophomores at ZJU. We hope to integrate knowledge we've consumed so far and continue sharing our course notes in the years to come</p>
+          <a href="mkdocs-guide/" title="about"
+            class="md-button md-button--primary">
+            Quick start
+          </a>
+          <a href="insiders/" title="Material for MkDocs Insiders" class="md-button" style="display: inline-block;margin: 10px;">
+            Get Insiders
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
@@ -406,25 +454,6 @@
       
   
   
-  
-    <li class="md-nav__item">
-      <a href="welcome/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -433,67 +462,36 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    mkdocs-guide
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    mkdocs-guide
+    Home
   </span>
   
 
       </a>
       
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
     
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
-    </span>
-  </a>
   
-</li>
-      
-    </ul>
   
-</nav>
-      
+  
+    <li class="md-nav__item">
+      <a href="mkdocs-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    about
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1361,33 +1359,6 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-                  
-
-  
-  
-
-
-<h1 id="jy-hf">欢迎来到jy-hf的代码空间</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
-
-
-
-
-
-                
               </article>
             </div>
           
@@ -1401,68 +1372,6 @@ docs/
 </button>
         
       </main>
-      
-        <footer class="md-footer">
-  
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
-        
-          
-          <a href="welcome/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Home">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                上一页
-              </span>
-              <div class="md-ellipsis">
-                Home
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="1%20%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/%E6%95%B0%E9%80%BB%E5%AE%9E%E9%AA%8C/" class="md-footer__link md-footer__link--next" aria-label="下一页: 实验过程">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                实验过程
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-    <div class="md-copyright__highlight">
-      Copyright &copy; 2023 jy Hu
-    </div>
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
-</div>
-      
-    </div>
-  </div>
-</footer>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">

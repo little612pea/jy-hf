@@ -6,8 +6,8 @@ copyright: Copyright &copy; 2023 jy Hu
 
 
 nav:
-  - Home: welcome.md
-  - mkdocs-guide: index.md
+  - Home: index.md
+  - about: mkdocs-guide.md
   - 1 数字逻辑设计:
     - 实验过程: 1 数字逻辑设计/数逻实验.md
     - 理论部分: 1 数字逻辑设计/数字逻辑设计 notes.md
