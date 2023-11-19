@@ -42,6 +42,7 @@ nav:
   - Other:
     - Linux服务器运维(x)把玩(√): Others/linux 启动.md
     - CS61A: Others/CS61A-python.md
+    - Git 基础: Others/git使用教程.md
 
 theme:
   name: material
