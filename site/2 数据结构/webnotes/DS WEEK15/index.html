@@ -1344,12 +1344,12 @@
 <h1 id="week-15">WEEK 15</h1>
 <h4 id="quadratic-probing">Quadratic Probing</h4>
 <ul>
-<li>$F(i)$ is a quadratic function of $i$, such as $F(i)=i^2$.</li>
+<li><span class="arithmatex">\(F(i)\)</span> is a quadratic function of <span class="arithmatex">\(i\)</span>, such as <span class="arithmatex">\(F(i)=i^2\)</span>.</li>
 </ul>
 <h5 id="theorem-if-quadratic-probing-is-used-and-the-table-size-is-prime-then-a-new-element-can-always-be-inserted-if-the-table-is-at-least-half-empty">[Theorem] If quadratic probing is used, and the table size is <em>prime</em>, then a new element can always be inserted if the table is <em>at least half empty</em>.</h5>
 <p><img src="picture/image-20210104154133711.png" alt="image-20210104154133711" style="zoom:75%;" /></p>
 <blockquote>
-<p>Note : If the table size is a prime of the form $4k + 3$, then the quadratic probing  $f(i) = \pm i^2$ can probe the entire table.</p>
+<p>Note : If the table size is a prime of the form <span class="arithmatex">\(4k + 3\)</span>, then the quadratic probing  <span class="arithmatex">\(f(i) = \pm i^2\)</span> can probe the entire table.</p>
 </blockquote>
 <div class="highlight"><pre><span></span><code><span class="n">HashTable</span><span class="w"> </span><span class="nf">InitializeTable</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">TableSize</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1412,10 +1412,10 @@
 </blockquote>
 <h4 id="double-hashing">Double Hashing</h4>
 <ul>
-<li>$f(i)=i*hash_2(x)$</li>
-<li>$hash_2(x)\not\equiv 0$</li>
+<li><span class="arithmatex">\(f(i)=i*hash_2(x)\)</span></li>
+<li><span class="arithmatex">\(hash_2(x)\not\equiv 0\)</span></li>
 <li>make sure that all cells can be probed</li>
-<li>$hash_2(x)=R-(x\%R)$ with $R$ a prime smaller than TableSize, will work well.</li>
+<li><span class="arithmatex">\(hash_2(x)=R-(x\%R)\)</span> with <span class="arithmatex">\(R\)</span> a prime smaller than TableSize, will work well.</li>
 </ul>
 <blockquote>
 <p>Note :</p>

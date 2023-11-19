@@ -1042,7 +1042,7 @@
           <li class="md-nav__item">
   <a href="#definition-a-topological-order-is-a-linear-ordering-of-the-vertices-of-a-graph-such-that-for-any-two-vertices-i-j-if-i-is-a-predecessor-of-j-in-the-network-then-i-precedes-j-in-the-linear-ordering" class="md-nav__link">
     <span class="md-ellipsis">
-      [Definition] A topological order is a linear ordering  of the vertices of a graph such that, for any two vertices, $i$, $j$, if $i$ is a predecessor of $j$ in the network then $i$ precedes $j$ in the linear ordering.
+      [Definition] A topological order is a linear ordering  of the vertices of a graph such that, for any two vertices, \(i\), \(j\), if \(i\) is a predecessor of \(j\) in the network then \(i\) precedes \(j\) in the linear ordering.
     </span>
   </a>
   
@@ -1579,11 +1579,11 @@
 <h2 id="6-graph-algorithms">6 Graph Algorithms</h2>
 <h3 id="61-definitions">6.1 Definitions</h3>
 <ul>
-<li>$G( V, E )$ where $G$ = graph, $V = V( G )$ = finite nonempty set of vertices, and $E = E( G )$ = finite set of edges.</li>
+<li><span class="arithmatex">\(G( V, E )\)</span> where <span class="arithmatex">\(G\)</span> = graph, <span class="arithmatex">\(V = V( G )\)</span> = finite nonempty set of vertices, and <span class="arithmatex">\(E = E( G )\)</span> = finite set of edges.</li>
 </ul>
 <h4 id="undirected-graph">Undirected graph</h4>
 <ul>
-<li>$( v_i , v_j ) = ( v_j , v_i )$ = the same edge.</li>
+<li><span class="arithmatex">\(( v_i , v_j ) = ( v_j , v_i )\)</span> = the same edge.</li>
 </ul>
 <h4 id="directed-graphdiagraph">Directed graph(diagraph)</h4>
 <p><img src="picture/8-1.png" alt="8-1" style="zoom:120%;" /></p>
@@ -1601,12 +1601,12 @@
 <p><img src="picture/image-20210124163324744.png" alt="image-20210124163324744" style="zoom:120%;" /></p>
 <p><img src="picture/image-20210124163301833.png" alt="image-20210124163301833" style="zoom:120%;" /></p>
 <h4 id="subgraph">Subgraph</h4>
-<p>$$
+<div class="arithmatex">\[
 G'\subset G=V(G')\subseteq V(G) \&amp;\&amp; E(G')\subseteq E(G)
-$$</p>
+\]</div>
 <h4 id="path">Path</h4>
 <ul>
-<li>Path($\subset G$) from $v_p$ to $v_q$ = ${v_p,v_{i1},v_{i2},\cdots,v_{in},v_q}$ such that $(v_p,v_{i1}),(v_{i1},v_{i2}),\cdots,(v_{in},v_q)$ belong to $E(G)$</li>
+<li>Path(<span class="arithmatex">\(\subset G\)</span>) from <span class="arithmatex">\(v_p\)</span> to <span class="arithmatex">\(v_q\)</span> = <span class="arithmatex">\(\{v_p,v_{i1},v_{i2},\cdots,v_{in},v_q\}\)</span> such that <span class="arithmatex">\((v_p,v_{i1}),(v_{i1},v_{i2}),\cdots,(v_{in},v_q)\)</span> belong to <span class="arithmatex">\(E(G)\)</span></li>
 </ul>
 <h4 id="length-of-a-path">Length of a path</h4>
 <ul>
@@ -1614,16 +1614,16 @@ $$</p>
 </ul>
 <h4 id="simple-path">Simple path</h4>
 <ul>
-<li>$v_{i1},v_{i2},\cdots,v_{in}$ are distinct.</li>
+<li><span class="arithmatex">\(v_{i1},v_{i2},\cdots,v_{in}\)</span> are distinct.</li>
 </ul>
 <h4 id="cycle">Cycle</h4>
 <ul>
-<li>simple path with $v_p=v_q$</li>
+<li>simple path with <span class="arithmatex">\(v_p=v_q\)</span></li>
 </ul>
 <h4 id="connected">Connected</h4>
 <ul>
-<li>$v_i$ and $v_j$ in an undirected $G$ are connected if there is a path from $v_i$ to $v_j$ (and hence there is also a path from $v_j$ to $v_i$)</li>
-<li>An undirected graph $G$ is connected if every pair of distinct $v_i$ and $v_j$ are connected</li>
+<li><span class="arithmatex">\(v_i\)</span> and <span class="arithmatex">\(v_j\)</span> in an undirected <span class="arithmatex">\(G\)</span> are connected if there is a path from <span class="arithmatex">\(v_i\)</span> to <span class="arithmatex">\(v_j\)</span> (and hence there is also a path from <span class="arithmatex">\(v_j\)</span> to <span class="arithmatex">\(v_i\)</span>)</li>
+<li>An undirected graph <span class="arithmatex">\(G\)</span> is connected if every pair of distinct <span class="arithmatex">\(v_i\)</span> and <span class="arithmatex">\(v_j\)</span> are connected</li>
 </ul>
 <h4 id="connected-component-of-an-undirected-g">(Connected) Component of an undirected G</h4>
 <ul>
@@ -1639,7 +1639,7 @@ $$</p>
 </ul>
 <h4 id="strongly-connected-directed-graph-g">Strongly connected directed graph G</h4>
 <ul>
-<li>For every pair of $v_i$ and $v_j$ in $V( G )$, there exist directed paths from $v_i$ to $v_j$ and from $v_j$ to $v_i$.  </li>
+<li>For every pair of <span class="arithmatex">\(v_i\)</span> and <span class="arithmatex">\(v_j\)</span> in <span class="arithmatex">\(V( G )\)</span>, there exist directed paths from <span class="arithmatex">\(v_i\)</span> to <span class="arithmatex">\(v_j\)</span> and from <span class="arithmatex">\(v_j\)</span> to <span class="arithmatex">\(v_i\)</span>.  </li>
 <li>If the graph is connected without direction to the edges, then it is said to be weakly connected</li>
 </ul>
 <h4 id="strongly-connected-component">Strongly connected component</h4>
@@ -1655,7 +1655,7 @@ $$</p>
 <p>For a directed G, we have <strong>in-degree</strong> and <strong>out-degree</strong>.</p>
 </li>
 <li>
-<p>Given G with $n$ vertices and $e$ edges, then
+<p>Given G with <span class="arithmatex">\(n\)</span> vertices and <span class="arithmatex">\(e\)</span> edges, then
   $$
   e=(\sum_{i=0}^{n-1}d_i)/2\quad where\quad d_i=degree(v_i)
   $$</p>
@@ -1674,7 +1674,7 @@ $$</p>
 <p>This representation wastes space if the graph has a lot of vertices but very few edges.</p>
 </li>
 <li>
-<p>To find out whether or not $G$ is connected, we’ll have to examine all edges. In this case $T$ and $S$ are both $O( n^2 )$.</p>
+<p>To find out whether or not <span class="arithmatex">\(G\)</span> is connected, we’ll have to examine all edges. In this case <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(S\)</span> are both <span class="arithmatex">\(O( n^2 )\)</span>.</p>
 </li>
 </ul>
 <h4 id="adjacency-lists">Adjacency Lists</h4>
@@ -1686,9 +1686,9 @@ $$</p>
 <p>Note : The order of nodes in each list does not matter.</p>
 </blockquote>
 <ul>
-<li>For undirected $G$, $S$ = $n$ heads + $2e$ nodes  = $(n+2e)$ ptrs + $2e$ ints</li>
-<li>Degree(i) = number of nodes in graph[i](if $G$ is undirected)</li>
-<li>$T$ of examine $E(G)$ = $O(n+e)$</li>
+<li>For undirected <span class="arithmatex">\(G\)</span>, <span class="arithmatex">\(S\)</span> = <span class="arithmatex">\(n\)</span> heads + <span class="arithmatex">\(2e\)</span> nodes  = <span class="arithmatex">\((n+2e)\)</span> ptrs + <span class="arithmatex">\(2e\)</span> ints</li>
+<li>Degree(i) = number of nodes in graph[i](if <span class="arithmatex">\(G\)</span> is undirected)</li>
+<li><span class="arithmatex">\(T\)</span> of examine <span class="arithmatex">\(E(G)\)</span> = <span class="arithmatex">\(O(n+e)\)</span></li>
 </ul>
 <p><img alt="image-20210124165346405" src="../picture/image-20210124165346405.png" /></p>
 <h4 id="adjacency-multilists">Adjacency Multilists</h4>
@@ -1705,19 +1705,19 @@ $$</p>
 <h3 id="63-topological-sort">6.3 Topological Sort 拓扑排序 不是一种严格意义的排序算法</h3>
 <h4 id="aov-activity-on-vertices-network">AOV  activity on vertices  Network 有向无环图</h4>
 <ul>
-<li>digraph $G$ in which $V( G )$ represents activities and $E( G )$ represents precedence relations </li>
+<li>digraph <span class="arithmatex">\(G\)</span> in which <span class="arithmatex">\(V( G )\)</span> represents activities and <span class="arithmatex">\(E( G )\)</span> represents precedence relations </li>
 <li>Feasible AOV network must be a directed acyclic graph（<strong>DAG</strong>）.</li>
-<li>$i$  is a <strong>predecessor</strong> of $j$ = there is a path from $i$  to $j$</li>
-<li>$i$  is an <strong>immediate predecessor</strong> of  $j$ = $&lt; i,  j &gt; \in E( G )$. Then $j$ is called a <strong>successor</strong>(<strong>immediate successor</strong>) of $i$</li>
+<li><span class="arithmatex">\(i\)</span>  is a <strong>predecessor</strong> of <span class="arithmatex">\(j\)</span> = there is a path from <span class="arithmatex">\(i\)</span>  to <span class="arithmatex">\(j\)</span></li>
+<li><span class="arithmatex">\(i\)</span>  is an <strong>immediate predecessor</strong> of  <span class="arithmatex">\(j\)</span> = <span class="arithmatex">\(&lt; i,  j &gt; \in E( G )\)</span>. Then <span class="arithmatex">\(j\)</span> is called a <strong>successor</strong>(<strong>immediate successor</strong>) of <span class="arithmatex">\(i\)</span></li>
 </ul>
 <h4 id="partial-order">Partial order</h4>
 <ul>
 <li>a precedence relation which is both <strong>transitive</strong> and <strong>irreflexive</strong> </li>
 </ul>
 <blockquote>
-<p>Note : If the precedence relation is reflexive, then there must be an $i$ such that $i$ is a predecessor of $i$.  That is, $i$ must be done before $i$ is started. Therefore if a project is <strong>feasible</strong>, it must be <strong>irreflexive</strong>.</p>
+<p>Note : If the precedence relation is reflexive, then there must be an <span class="arithmatex">\(i\)</span> such that <span class="arithmatex">\(i\)</span> is a predecessor of <span class="arithmatex">\(i\)</span>.  That is, <span class="arithmatex">\(i\)</span> must be done before <span class="arithmatex">\(i\)</span> is started. Therefore if a project is <strong>feasible</strong>, it must be <strong>irreflexive</strong>.</p>
 </blockquote>
-<h4 id="definition-a-topological-order-is-a-linear-ordering-of-the-vertices-of-a-graph-such-that-for-any-two-vertices-i-j-if-i-is-a-predecessor-of-j-in-the-network-then-i-precedes-j-in-the-linear-ordering">[Definition] A <em>topological order</em> is a linear ordering  of the vertices of a graph such that, for any two vertices, $i$, $j$, if $i$ is a predecessor of $j$ in the network then $i$ precedes $j$ in the linear ordering.</h4>
+<h4 id="definition-a-topological-order-is-a-linear-ordering-of-the-vertices-of-a-graph-such-that-for-any-two-vertices-i-j-if-i-is-a-predecessor-of-j-in-the-network-then-i-precedes-j-in-the-linear-ordering">[Definition] A <em>topological order</em> is a linear ordering  of the vertices of a graph such that, for any two vertices, <span class="arithmatex">\(i\)</span>, <span class="arithmatex">\(j\)</span>, if <span class="arithmatex">\(i\)</span> is a predecessor of <span class="arithmatex">\(j\)</span> in the network then <span class="arithmatex">\(i\)</span> precedes <span class="arithmatex">\(j\)</span> in the linear ordering.</h4>
 <blockquote>
 <p>Note : The topological orders may <strong>not be unique</strong> for a network.</p>
 </blockquote>
@@ -1740,9 +1740,9 @@ $$</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>$$
+<div class="arithmatex">\[
 T=O(|V|^2+|E|) = O(|V|^2)
-$$</p>
+\]</div>
 <div class="highlight"><pre><span></span><code><span class="cm">/*Improvment:Keep all the unassigned vertices of degree 0 in a special box (queue or stack)*/</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">Topsort</span><span class="p">(</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="p">)</span>
 <span class="p">{</span><span class="w">   </span>
@@ -1765,11 +1765,11 @@ $$</p>
 <span class="w">    </span><span class="n">DisposeQueue</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="cm">/* free memory */</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>$$
+<div class="arithmatex">\[
 T=O(|V|+|E|)
-$$</p>
+\]</div>
 <hr />
-<p>$注意E的范围 最小 V 最大 |V|^2$</p>
+<p><span class="arithmatex">\(注意E的范围 最小 V 最大 |V|^2\)</span></p>
 
 
 

@@ -908,7 +908,7 @@
           <li class="md-nav__item">
   <a href="#45-d-heaps-all-nodes-have-d-children" class="md-nav__link">
     <span class="md-ellipsis">
-      4.5 $d$-Heaps — All nodes have $d$ children
+      4.5 \(d\)-Heaps — All nodes have \(d\) children
     </span>
   </a>
   
@@ -1492,45 +1492,45 @@
 <h4 id="array">Array</h4>
 <ul>
 <li>
-<p>Insertion — add one item at the end ~$\Theta(1)$</p>
+<p>Insertion — add one item at the end ~<span class="arithmatex">\(\Theta(1)\)</span></p>
 </li>
 <li>
-<p>Deletion — find the largest / smallest key ~$\Theta(n)$</p>
+<p>Deletion — find the largest / smallest key ~<span class="arithmatex">\(\Theta(n)\)</span></p>
 </li>
 </ul>
-<p>​                     remove the item and shift array ~$O(n)$</p>
+<p>​                     remove the item and shift array ~<span class="arithmatex">\(O(n)\)</span></p>
 <h4 id="linked-list">Linked List</h4>
 <ul>
 <li>
-<p>Insertion — add to the front of the chain ~$\Theta(1)$</p>
+<p>Insertion — add to the front of the chain ~<span class="arithmatex">\(\Theta(1)\)</span></p>
 </li>
 <li>
-<p>Deletion — find the largest / smallest key ~$\Theta(n)$</p>
+<p>Deletion — find the largest / smallest key ~<span class="arithmatex">\(\Theta(n)\)</span></p>
 </li>
 </ul>
-<p>​                      remove the item ~$\Theta(1)$</p>
+<p>​                      remove the item ~<span class="arithmatex">\(\Theta(1)\)</span></p>
 <ul>
 <li><strong>Never more deletions than insertions</strong></li>
 </ul>
 <h4 id="ordered-array">Ordered Array</h4>
 <ul>
-<li>Insertion — find the proper position ~$O(\log n)$</li>
+<li>Insertion — find the proper position ~<span class="arithmatex">\(O(\log n)\)</span></li>
 </ul>
-<p>​                      shift array and add the item  ~$O(n)$</p>
+<p>​                      shift array and add the item  ~<span class="arithmatex">\(O(n)\)</span></p>
 <ul>
-<li>Deletion — remove the first / last item ~$\Theta(1)$</li>
+<li>Deletion — remove the first / last item ~<span class="arithmatex">\(\Theta(1)\)</span></li>
 </ul>
 <h4 id="ordered-linked-list">Ordered Linked List</h4>
 <ul>
-<li>Insertion — find the proper position ~$O(n)$</li>
+<li>Insertion — find the proper position ~<span class="arithmatex">\(O(n)\)</span></li>
 </ul>
-<p>​                      add the item  ~$\Theta(1)$</p>
+<p>​                      add the item  ~<span class="arithmatex">\(\Theta(1)\)</span></p>
 <ul>
-<li>Deletion — remove the first / last item ~$\Theta(1)$</li>
+<li>Deletion — remove the first / last item ~<span class="arithmatex">\(\Theta(1)\)</span></li>
 </ul>
 <h4 id="binary-search-tree">Binary Search Tree</h4>
 <ul>
-<li>Both insertion and deletion will take $O(\log N)$ only.</li>
+<li>Both insertion and deletion will take <span class="arithmatex">\(O(\log N)\)</span> only.</li>
 <li>Only delete the the minimum element, always delete from the left subtrees.</li>
 <li>Keep a balanced tree </li>
 <li>But there are many operations related to AVL tree that we don't really need for a priority queue.</li>
@@ -1538,13 +1538,13 @@
 <hr />
 <h3 id="43-binary-heap">4.3 Binary Heap</h3>
 <h4 id="structure-property">Structure Property</h4>
-<p><strong>[Definition]</strong> A binary tree with $n$ nodes and height $h$ is <strong>complete</strong>  if  its nodes correspond to the nodes numbered from $1$ to $n$ in the perfect binary tree of height $h$.</p>
+<p><strong>[Definition]</strong> A binary tree with <span class="arithmatex">\(n\)</span> nodes and height <span class="arithmatex">\(h\)</span> is <strong>complete</strong>  if  its nodes correspond to the nodes numbered from <span class="arithmatex">\(1\)</span> to <span class="arithmatex">\(n\)</span> in the perfect binary tree of height <span class="arithmatex">\(h\)</span>.</p>
 <ul>
 <li>
-<p>A complete binary tree of height $h$ has between $2^h$ and $2^{h+1}-1$ nodes.</p>
+<p>A complete binary tree of height <span class="arithmatex">\(h\)</span> has between <span class="arithmatex">\(2^h\)</span> and <span class="arithmatex">\(2^{h+1}-1\)</span> nodes.</p>
 </li>
 <li>
-<p>$h=\lfloor\log N\rfloor$</p>
+<p><span class="arithmatex">\(h=\lfloor\log N\rfloor\)</span></p>
 </li>
 <li>
 <p>Array Representation : BT[n + 1]  ( BT[0] is not used)</p>
@@ -1553,21 +1553,21 @@
 <p><img alt="6-1" src="../picture/6-1.png" /></p>
 <p><strong>[Lemma]</strong> </p>
 <ol>
-<li>$index\,of\,parent(i)=\left{
+<li><span class="arithmatex">\(index\,of\,parent(i)=\left\{
    \begin{array}{rcl}
-   \lfloor i/2\rfloor &amp;&amp; {i\neq1}\
-   None &amp;&amp; {i=1}\
-   \end{array} \right.$</li>
-<li>$index\,of\,left_child(i)=\left{
+   \lfloor i/2\rfloor &amp;&amp; {i\neq1}\\
+   None &amp;&amp; {i=1}\\
+   \end{array} \right.\)</span></li>
+<li><span class="arithmatex">\(index\,of\,left\_child(i)=\left\{
    \begin{array}{rcl}
-   2i &amp;&amp; {2i\leq n}\
-   None &amp;&amp; {2i&gt;n}\
-   \end{array} \right.$</li>
-<li>$index\,of\,right_child(i)=\left{
+   2i &amp;&amp; {2i\leq n}\\
+   None &amp;&amp; {2i&gt;n}\\
+   \end{array} \right.\)</span></li>
+<li><span class="arithmatex">\(index\,of\,right\_child(i)=\left\{
    \begin{array}{rcl}
-   2i+1 &amp;&amp; {2i+1\leq n}\
-   None &amp;&amp; {2i+1&gt;n}\
-   \end{array} \right.$</li>
+   2i+1 &amp;&amp; {2i+1\leq n}\\
+   None &amp;&amp; {2i+1&gt;n}\\
+   \end{array} \right.\)</span></li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="n">PriorityQueue</span><span class="w"> </span><span class="nf">Initialize</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MaxElements</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
 <span class="p">{</span><span class="w"> </span>
@@ -1669,7 +1669,7 @@ $$</p>
 <p>$$
    T(N)=O(N)
    $$</p>
-<p><strong>[Theorem]</strong> For the perfect binary tree of height $h$ containing $2^{h+1}-1$ nodes, the sum of the heights of the nodes is $2^{h+1}-1-(h+1)$.</p>
+<p><strong>[Theorem]</strong> For the perfect binary tree of height <span class="arithmatex">\(h\)</span> containing <span class="arithmatex">\(2^{h+1}-1\)</span> nodes, the sum of the heights of the nodes is <span class="arithmatex">\(2^{h+1}-1-(h+1)\)</span>.</p>
 <p><img alt="image-20210125151728720" src="../picture/image-20210125151728720.png" /></p>
 <hr />
 <h3 id="44-applications-of-priority-queues">4.4 Applications of Priority Queues</h3>
@@ -1702,11 +1702,11 @@ $$</p>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
-<h3 id="45-d-heaps-all-nodes-have-d-children">4.5 $d$-Heaps — All nodes have $d$ children</h3>
+<h3 id="45-d-heaps-all-nodes-have-d-children">4.5 <span class="arithmatex">\(d\)</span>-Heaps — All nodes have <span class="arithmatex">\(d\)</span> children</h3>
 <p><strong>Note</strong> :</p>
 <blockquote>
 <ul>
-<li>DeleteMin will take $d-1$ comparisons to find the smallest child. Hence the total time complexity would be $O(d \log_d N)$.</li>
+<li>DeleteMin will take <span class="arithmatex">\(d-1\)</span> comparisons to find the smallest child. Hence the total time complexity would be <span class="arithmatex">\(O(d \log_d N)\)</span>.</li>
 <li><em>2 or /2 is merely </em><em>a bit shift</em><em>, but </em>d or /d is not.</li>
 <li>When the priority queue is too large to fit entirely in main memory, a d-heap will become interesting.</li>
 </ul>

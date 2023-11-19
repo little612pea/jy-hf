@@ -1411,21 +1411,21 @@
 <h3 id="74-shellsort">7.4 Shellsort</h3>
 <p><img alt="image-20201214133747061" src="../picture/image-20201214133747061.png" /></p>
 <ul>
-<li>Define an <strong>increment sequence</strong> $h_1 &lt; h_2 &lt; \cdots &lt; h_t  ( h_1 = 1 )$</li>
+<li>Define an <strong>increment sequence</strong> <span class="arithmatex">\(h_1 &lt; h_2 &lt; \cdots &lt; h_t  ( h_1 = 1 )\)</span></li>
 <li>
-<p>Define an $h_k$-sort at each phase for $k = t, t - 1,\cdots, 1$</p>
+<p>Define an <span class="arithmatex">\(h_k\)</span>-sort at each phase for <span class="arithmatex">\(k = t, t - 1,\cdots, 1\)</span></p>
 </li>
 <li>
 <p>最后一轮就是Insertion Sort</p>
 </li>
 </ul>
 <blockquote>
-<p>Note : An $h_k$-sorted file that is then $h_{k-1}$-sorted remains $h_k$-sorted.</p>
+<p>Note : An <span class="arithmatex">\(h_k\)</span>-sorted file that is then <span class="arithmatex">\(h_{k-1}\)</span>-sorted remains <span class="arithmatex">\(h_k\)</span>-sorted.</p>
 </blockquote>
 <h4 id="shells-increment-sequence">Shell’s Increment Sequence</h4>
-<p>$$
+<div class="arithmatex">\[
 h_t=\lfloor N/2\rfloor,h_k=\lfloor h_{k+1}/2\rfloor
-$$</p>
+\]</div>
 <div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Shellsort</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
 <span class="p">{</span><span class="w"> </span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">Increment</span><span class="p">;</span><span class="w"> </span>
@@ -1444,20 +1444,20 @@ $$</p>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
-<li>[Theorem] The worst-case running time of Shellsort, using Shell’s increments, is  $\Theta( N^2 )$.</li>
+<li>[Theorem] The worst-case running time of Shellsort, using Shell’s increments, is  <span class="arithmatex">\(\Theta( N^2 )\)</span>.</li>
 </ul>
 <h4 id="hibbards-increment-sequence">Hibbard's Increment Sequence</h4>
-<p>$$
+<div class="arithmatex">\[
 h_k=2^k-1
-$$</p>
+\]</div>
 <ul>
-<li>[Theorem] The worst-case running time of Shellsort, using Hibbard's increments, is  $\Theta( N^{3/2} )$.</li>
+<li>[Theorem] The worst-case running time of Shellsort, using Hibbard's increments, is  <span class="arithmatex">\(\Theta( N^{3/2} )\)</span>.</li>
 </ul>
 <h4 id="conjecture">Conjecture</h4>
 <ul>
-<li>$T_{avg – Hibbard} ( N ) = O ( N^{5/4} )$</li>
-<li>Sedgewick’s best sequence is ${1, 5, 19, 41, 109, \cdots }$ in which the terms are either of the form $9\times4^i – 9\times2^i + 1$ or 
-  $4^i – 3\times2^i + 1$.  $T_{avg} ( N ) = O ( N^{7/6} )$ and $T_{worst}( N ) = O( N^{4/3} )$.</li>
+<li><span class="arithmatex">\(T_{avg – Hibbard} ( N ) = O ( N^{5/4} )\)</span></li>
+<li>Sedgewick’s best sequence is <span class="arithmatex">\(\{1, 5, 19, 41, 109, \cdots \}\)</span> in which the terms are either of the form <span class="arithmatex">\(9\times4^i – 9\times2^i + 1\)</span> or 
+  <span class="arithmatex">\(4^i – 3\times2^i + 1\)</span>.  <span class="arithmatex">\(T_{avg} ( N ) = O ( N^{7/6} )\)</span> and <span class="arithmatex">\(T_{worst}( N ) = O( N^{4/3} )\)</span>.</li>
 </ul>
 <h4 id="conclusion">Conclusion</h4>
 <ul>
@@ -1476,9 +1476,9 @@ $$</p>
 <span class="w">        </span><span class="n">H</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TmpH</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">];</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>$$
+<div class="arithmatex">\[
 T(N)=O(N\log N)
-$$</p>
+\]</div>
 <ul>
 <li>The space requirement is doubled.</li>
 </ul>
@@ -1496,7 +1496,7 @@ $$</p>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
-<li>[Theorem] The average number of comparisons used to heapsort a random permutation of N distinct items is $2N\log N-O(N\log\log N)$.</li>
+<li>[Theorem] The average number of comparisons used to heapsort a random permutation of N distinct items is <span class="arithmatex">\(2N\log N-O(N\log\log N)\)</span>.</li>
 </ul>
 <blockquote>
 <p>Note : Although Heapsort gives <strong>the best average time</strong>, in practice it is slower than a version of Shellsort that uses Sedgewick’s increment sequence.</p>
@@ -1528,7 +1528,7 @@ $$</p>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
-<li>If a TmpArray is declared locally for each call of Merge, then $S(N) = O(N\log N)$.</li>
+<li>If a TmpArray is declared locally for each call of Merge, then <span class="arithmatex">\(S(N) = O(N\log N)\)</span>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="cm">/*Lpos = start of left half, Rpos = start of right half*/</span><span class="w"> </span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">Merge</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">TmpArray</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Lpos</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Rpos</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">RightEnd</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
@@ -1552,14 +1552,14 @@ $$</p>
 <span class="p">}</span>
 </code></pre></div>
 <h4 id="analysis">Analysis</h4>
-<p>$$
-T(1)=O(1)\
-T(N)=2T(\frac{N}{2})+O(N)\
-\frac{T(N)}{N}=\frac{T(\frac{N}{2})}{\frac{N}{2}}+1\
-\cdots\
-\frac{T(\frac{N}{2^{k-1}})}{\frac{N}{2^{k-1}}}=\frac{T(1)}{1}+1\
+<div class="arithmatex">\[
+T(1)=O(1)\\
+T(N)=2T(\frac{N}{2})+O(N)\\
+\frac{T(N)}{N}=\frac{T(\frac{N}{2})}{\frac{N}{2}}+1\\
+\cdots\\
+\frac{T(\frac{N}{2^{k-1}})}{\frac{N}{2^{k-1}}}=\frac{T(1)}{1}+1\\
 T(N)=O(N+N\log N)
-$$</p>
+\]</div>
 <blockquote>
 <p>Note : Mergesort requires linear extra memory, and copying an array is slow. It is hardly ever used for internal sorting, but is quite useful for external sorting.</p>
 </blockquote>

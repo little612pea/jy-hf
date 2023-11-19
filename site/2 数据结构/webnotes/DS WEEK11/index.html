@@ -947,9 +947,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#definition-an-inversion-in-an-array-of-numbers-is-any-ordered-pairij-having-the-property-that-iaj" class="md-nav__link">
+  <a href="#definition-an-inversion-in-an-array-of-numbers-is-any-ordered-pairij-having-the-property-that-ij-but-aiaj" class="md-nav__link">
     <span class="md-ellipsis">
-      [Definition] An inversion in an array of numbers is any ordered pair$(i,j)$ having the property that $iA[j]$
+      [Definition] An inversion in an array of numbers is any ordered pair\((i,j)\) having the property that \(i&lt;j\) but \(A[i]&gt;A[j]\)
     </span>
   </a>
   
@@ -958,7 +958,7 @@
           <li class="md-nav__item">
   <a href="#theorem-the-average-number-of-inversions-in-an-array-of-n-distinct-numbers-is-nn-14" class="md-nav__link">
     <span class="md-ellipsis">
-      [Theorem] The average number of inversions in an array of $N$ distinct numbers is $N(N-1)/4$
+      [Theorem] The average number of inversions in an array of \(N\) distinct numbers is \(N(N-1)/4\)
     </span>
   </a>
   
@@ -967,7 +967,7 @@
           <li class="md-nav__item">
   <a href="#theorem-any-algorithm-that-sorts-by-exchanging-adjacent-elements-requires-omegan2-time-on-average" class="md-nav__link">
     <span class="md-ellipsis">
-      [Theorem] Any algorithm that sorts by exchanging adjacent elements requires $\Omega(N^2)$ time on average
+      [Theorem] Any algorithm that sorts by exchanging adjacent elements requires \(\Omega(N^2)\) time on average
     </span>
   </a>
   
@@ -1463,37 +1463,37 @@
 </code></pre></div>
 <h4 id="biconnectivity">Biconnectivity</h4>
 <ul>
-<li>$v$ is an <strong>articulation point</strong> if $G'=DeleteVertex(G, v)$ has <strong>at least 2</strong> connected components.</li>
-<li>$G$ is a <strong>biconnected graph</strong> if $G$ is connected and has no articulation points.</li>
+<li><span class="arithmatex">\(v\)</span> is an <strong>articulation point</strong> if <span class="arithmatex">\(G'=DeleteVertex(G, v)\)</span> has <strong>at least 2</strong> connected components.</li>
+<li><span class="arithmatex">\(G\)</span> is a <strong>biconnected graph</strong> if <span class="arithmatex">\(G\)</span> is connected and has no articulation points.</li>
 <li>A <strong>biconnected component</strong> is a maximal biconnected subgraph.</li>
 </ul>
 <p><img alt="image-20201207194401819" src="../picture/image-20201207194401819.png" /></p>
 <p><img alt="image-20201207194413257" src="../picture/image-20201207194413257.png" /></p>
 <blockquote>
-<p>Note : No edges can be shared by two or more biconnected components.  Hence $E(G)$ is partitioned by the biconnected components of $G$.</p>
+<p>Note : No edges can be shared by two or more biconnected components.  Hence <span class="arithmatex">\(E(G)\)</span> is partitioned by the biconnected components of <span class="arithmatex">\(G\)</span>.</p>
 </blockquote>
-<p>Finding the <strong>biconnected components</strong> of a connected undirected $G$ :</p>
+<p>Finding the <strong>biconnected components</strong> of a connected undirected <span class="arithmatex">\(G\)</span> :</p>
 <blockquote>
 <ul>
-<li>Use <strong>depth first search</strong> to obtain a spanning tree of $G$</li>
+<li>Use <strong>depth first search</strong> to obtain a spanning tree of <span class="arithmatex">\(G\)</span></li>
 </ul>
 <p><img alt="image-20201208110403641" src="../picture/image-20201208110403641.png" /></p>
 <p><img alt="image-20201208110506092" src="../picture/image-20201208110506092.png" /></p>
 <ul>
-<li>Depth first number($Num$) 先序编号</li>
-<li>Back edges(背向边) = $(u,v)\notin$ tree and $u$ is an ancestor of $v$.</li>
+<li>Depth first number(<span class="arithmatex">\(Num\)</span>) 先序编号</li>
+<li>Back edges(背向边) = <span class="arithmatex">\((u,v)\notin\)</span> tree and <span class="arithmatex">\(u\)</span> is an ancestor of <span class="arithmatex">\(v\)</span>.</li>
 </ul>
 <blockquote>
-<p>Note : If $u$ is an ancestor of $v$, then $Num(u)&lt;Num(v)$.</p>
+<p>Note : If <span class="arithmatex">\(u\)</span> is an ancestor of <span class="arithmatex">\(v\)</span>, then <span class="arithmatex">\(Num(u)&lt;Num(v)\)</span>.</p>
 </blockquote>
 <ul>
-<li>Find the articulation points in $G$</li>
+<li>Find the articulation points in <span class="arithmatex">\(G\)</span></li>
 <li>The root is an articulation point if it has at least 2 children.</li>
-<li>Any other vertex $u$ is an articulation point if $u$ has at least 1 child, and it is impossible to move down at least 1 step and then jump up to $u$‘s ancestor</li>
+<li>Any other vertex <span class="arithmatex">\(u\)</span> is an articulation point if <span class="arithmatex">\(u\)</span> has at least 1 child, and it is impossible to move down at least 1 step and then jump up to <span class="arithmatex">\(u\)</span>‘s ancestor</li>
 </ul>
 </blockquote>
 <ul>
-<li>对于深度优先搜索生成树上的每一个顶点$u$，计算编号最低的顶点，称之为$Low(u)$
+<li>对于深度优先搜索生成树上的每一个顶点<span class="arithmatex">\(u\)</span>，计算编号最低的顶点，称之为<span class="arithmatex">\(Low(u)\)</span>
   $$
   Low(u)=\min{Num(u),\min{Low(w)|w\,is\,a\,child\,of\,u},\min{Num(w)|(u,w)\,is\,a\,back\,edge}}
   $$</li>
@@ -1561,7 +1561,7 @@ void AssignLow(Vertex V)
 <ul>
 <li>The path should be maintained as a linked list.</li>
 <li>For each adjacency list, maintain a pointer to the last edge scanned.</li>
-<li>$T=O(|E|+|V|)$</li>
+<li><span class="arithmatex">\(T=O(|E|+|V|)\)</span></li>
 </ul>
 </blockquote>
 <hr />
@@ -1608,17 +1608,17 @@ void AssignLow(Vertex V)
 </ul>
 <hr />
 <h3 id="73-a-lower-bound-for-simple-sorting-algorithms">7.3 A Lower Bound for Simple Sorting Algorithms</h3>
-<h4 id="definition-an-inversion-in-an-array-of-numbers-is-any-ordered-pairij-having-the-property-that-iaj">[Definition] An <em>inversion</em> in an array of numbers is any ordered pair$(i,j)$ having the property that $i<j$ but $A[i]>A[j]$</h4>
+<h4 id="definition-an-inversion-in-an-array-of-numbers-is-any-ordered-pairij-having-the-property-that-ij-but-aiaj">[Definition] An <em>inversion</em> in an array of numbers is any ordered pair<span class="arithmatex">\((i,j)\)</span> having the property that <span class="arithmatex">\(i&lt;j\)</span> but <span class="arithmatex">\(A[i]&gt;A[j]\)</span></h4>
 <ul>
 <li>
 <p>Swapping two adjacent elements that are out of place removes <strong>exactly one</strong> inversion.</p>
 </li>
 <li>
-<p>$T(N,I)=O(I+N)$ where $I$ is the number of inversions in the original array.</p>
+<p><span class="arithmatex">\(T(N,I)=O(I+N)\)</span> where <span class="arithmatex">\(I\)</span> is the number of inversions in the original array.</p>
 </li>
 </ul>
-<h4 id="theorem-the-average-number-of-inversions-in-an-array-of-n-distinct-numbers-is-nn-14">[Theorem] The average number of inversions in an array of $N$ distinct numbers is $N(N-1)/4$</h4>
-<h4 id="theorem-any-algorithm-that-sorts-by-exchanging-adjacent-elements-requires-omegan2-time-on-average">[Theorem] Any algorithm that sorts by exchanging adjacent elements requires $\Omega(N^2)$ time on average</h4>
+<h4 id="theorem-the-average-number-of-inversions-in-an-array-of-n-distinct-numbers-is-nn-14">[Theorem] The average number of inversions in an array of <span class="arithmatex">\(N\)</span> distinct numbers is <span class="arithmatex">\(N(N-1)/4\)</span></h4>
+<h4 id="theorem-any-algorithm-that-sorts-by-exchanging-adjacent-elements-requires-omegan2-time-on-average">[Theorem] Any algorithm that sorts by exchanging adjacent elements requires <span class="arithmatex">\(\Omega(N^2)\)</span> time on average</h4>
 <hr />
 
 

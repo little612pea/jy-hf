@@ -1429,10 +1429,10 @@
 <li>children : the roots of the subtrees of a parent</li>
 <li>siblings : children of the same parent</li>
 <li>leaf(terminal node) : a node with degree 0(no children)</li>
-<li>path from $n_1$ to $n_k$ : a <strong>unique</strong> sequence of nodes $n_1,n_2,\cdots,n_k$ such that $n_i$ is the parent of $n_{i+1}$ for $1\leq i&lt;k$ </li>
+<li>path from <span class="arithmatex">\(n_1\)</span> to <span class="arithmatex">\(n_k\)</span> : a <strong>unique</strong> sequence of nodes <span class="arithmatex">\(n_1,n_2,\cdots,n_k\)</span> such that <span class="arithmatex">\(n_i\)</span> is the parent of <span class="arithmatex">\(n_{i+1}\)</span> for <span class="arithmatex">\(1\leq i&lt;k\)</span> </li>
 <li>length of path : 路径上边的条数</li>
-<li>depth of $n_i$ : 从根结点到$n_i$结点的路径的长度($Depth(root)=0$)</li>
-<li>height of $n_i$ : 从$n_i$结点到叶结点的最长路径的长度($Height(leaf)=0$)</li>
+<li>depth of <span class="arithmatex">\(n_i\)</span> : 从根结点到<span class="arithmatex">\(n_i\)</span>结点的路径的长度(<span class="arithmatex">\(Depth(root)=0\)</span>)</li>
+<li>height of <span class="arithmatex">\(n_i\)</span> : 从<span class="arithmatex">\(n_i\)</span>结点到叶结点的最长路径的长度(<span class="arithmatex">\(Height(leaf)=0\)</span>)</li>
 <li>height/depth of a tree : 根结点的高度/最深的叶结点的深度</li>
 <li>ancestors of a node : 从此结点到根结点的路径上的所有结点</li>
 <li>descendants of a node : 此结点的子树中的所有结点</li>
@@ -1453,7 +1453,7 @@
 <h3 id="32-binary-trees">3.2 Binary Trees</h3>
 <h4 id="definition-a-binary-tree-is-a-tree-in-which-no-node-can-have-more-than-two-children">[Definition] A binary tree is a tree in which no node can have more than two children.</h4>
 <h4 id="tree-traversals-visit-each-node-exactly-once">Tree Traversals (visit each node exactly once)</h4>
-<p>线性复杂度$O(n)$，因为每个节点只访问一次</p>
+<p>线性复杂度<span class="arithmatex">\(O(n)\)</span>，因为每个节点只访问一次</p>
 <p>遍历不改变操作数的顺序</p>
 <p>visit（可以是print）</p>
 <ol>
@@ -1530,7 +1530,7 @@
 <h4 id="threaded-binary-trees">Threaded Binary Trees</h4>
 <ul>
 <li>
-<p>A full binary tree with $n$ nodes has $2n$ links, and $n+1$ of them are NULL.</p>
+<p>A full binary tree with <span class="arithmatex">\(n\)</span> nodes has <span class="arithmatex">\(2n\)</span> links, and <span class="arithmatex">\(n+1\)</span> of them are NULL.</p>
 </li>
 <li>
 <p>Replace the NULL links by “threads” which will make traversals easier.</p>

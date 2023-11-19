@@ -892,7 +892,7 @@
           <li class="md-nav__item">
   <a href="#definition-a-spanning-tree-of-a-graph-g-is-a-tree-which-consists-of-vg-and-a-subset-of-eg" class="md-nav__link">
     <span class="md-ellipsis">
-      [Definition] A spanning tree of a graph $G$ is a tree which consists of $V(G)$ and a subset of $E(G)$
+      [Definition] A spanning tree of a graph \(G\) is a tree which consists of \(V(G)\) and a subset of \(E(G)\)
     </span>
   </a>
   
@@ -1393,21 +1393,21 @@
 <h3 id="65-network-flow-problems">6.5 Network Flow Problems</h3>
 <p><img alt="image-20201206175230349" src="../picture/image-20201206175230349.png" /></p>
 <ul>
-<li>Determine the maximum amount of flow that can pass from $s$ to $t$.</li>
+<li>Determine the maximum amount of flow that can pass from <span class="arithmatex">\(s\)</span> to <span class="arithmatex">\(t\)</span>.</li>
 </ul>
 <blockquote>
-<p>Note : Total coming in ($v$) = Total going out ($v$) where $v \notin { s, t }$</p>
+<p>Note : Total coming in (<span class="arithmatex">\(v\)</span>) = Total going out (<span class="arithmatex">\(v\)</span>) where <span class="arithmatex">\(v \notin \{ s, t \}\)</span></p>
 </blockquote>
 <h4 id="a-simple-algorithm">A Simple Algorithm</h4>
 <ul>
-<li>流图$G_f$表示算法的任意阶段已经达到的流，开始时$G_f$的所有边都没有流，算法终止时$G_f$包含最大流</li>
-<li>残余图(residual graph)$G_r$表示对于每条边还能添加上多少流，$G_r$的边叫做残余边(residual edge)</li>
+<li>流图<span class="arithmatex">\(G_f\)</span>表示算法的任意阶段已经达到的流，开始时<span class="arithmatex">\(G_f\)</span>的所有边都没有流，算法终止时<span class="arithmatex">\(G_f\)</span>包含最大流</li>
+<li>残余图(residual graph)<span class="arithmatex">\(G_r\)</span>表示对于每条边还能添加上多少流，<span class="arithmatex">\(G_r\)</span>的边叫做残余边(residual edge)</li>
 </ul>
 <blockquote>
-<p><strong>Step 1</strong> : Find any path from $s$ to $t$ in $G_r$ , which is called augmenting path(增长通路).</p>
-<p><strong>Step 2</strong> : Take the minimum edge on this path as the amount of flow and add to $G_f$.</p>
-<p><strong>Step 3</strong> : Update $G_r$ and remove the 0 flow edges.</p>
-<p><strong>Step 4</strong> : If there is a path from $s$ to $t$ in $G_r$ then go to Step 1, or end the algorithm.</p>
+<p><strong>Step 1</strong> : Find any path from <span class="arithmatex">\(s\)</span> to <span class="arithmatex">\(t\)</span> in <span class="arithmatex">\(G_r\)</span> , which is called augmenting path(增长通路).</p>
+<p><strong>Step 2</strong> : Take the minimum edge on this path as the amount of flow and add to <span class="arithmatex">\(G_f\)</span>.</p>
+<p><strong>Step 3</strong> : Update <span class="arithmatex">\(G_r\)</span> and remove the 0 flow edges.</p>
+<p><strong>Step 4</strong> : If there is a path from <span class="arithmatex">\(s\)</span> to <span class="arithmatex">\(t\)</span> in <span class="arithmatex">\(G_r\)</span> then go to Step 1, or end the algorithm.</p>
 </blockquote>
 <ul>
 <li>Step 1中初始选择的路径可能使算法不能找到最优解，贪心算法行不通</li>
@@ -1415,10 +1415,10 @@
 <h4 id="a-solution">A solution</h4>
 <ul>
 <li>allow the algorithm to <strong>undo</strong> its decisions</li>
-<li>For each edge $( v, w )$ with flow $f_{v, w}$ in $G_f$, add an edge $( w, v )$ with flow $f_{v, w}$ in $G_r$ .</li>
+<li>For each edge <span class="arithmatex">\(( v, w )\)</span> with flow <span class="arithmatex">\(f_{v, w}\)</span> in <span class="arithmatex">\(G_f\)</span>, add an edge <span class="arithmatex">\(( w, v )\)</span> with flow <span class="arithmatex">\(f_{v, w}\)</span> in <span class="arithmatex">\(G_r\)</span> .</li>
 </ul>
 <blockquote>
-<p>Note : The algorithm works for $G$ with <strong>cycles</strong> as well.</p>
+<p>Note : The algorithm works for <span class="arithmatex">\(G\)</span> with <strong>cycles</strong> as well.</p>
 </blockquote>
 <h5 id="proposition-if-the-edge-capabilities-are-rational-numbers-this-algorithm-always-terminate-with-a-maximum-flow">[Proposition] If the edge capabilities are <em>rational numbers</em>, this algorithm always terminate with a maximum flow.</h5>
 <h4 id="analysis">Analysis</h4>
@@ -1427,7 +1427,7 @@
 <p>An augmenting path can be found by an unweighted shortest path algorithm.</p>
 </li>
 <li>
-<p>$T=O(f|E|)$ where $f$ is the maximum flow.</p>
+<p><span class="arithmatex">\(T=O(f|E|)\)</span> where <span class="arithmatex">\(f\)</span> is the maximum flow.</p>
 </li>
 <li>
 <p>Always choose the augmenting path that allows the largest increase in flow</p>
@@ -1435,8 +1435,8 @@
 <li>
 <p>对Dijkstra算法进行单线(single-line)修改来寻找增长通路</p>
 </li>
-<li>$cap_{max}$为最大边容量</li>
-<li>$O(|E|\log cap_{max})$条增长通路将足以找到最大流，对于增长通路的每次计算需要$O(|E|\log|V|)$时间</li>
+<li><span class="arithmatex">\(cap_{max}\)</span>为最大边容量</li>
+<li><span class="arithmatex">\(O(|E|\log cap_{max})\)</span>条增长通路将足以找到最大流，对于增长通路的每次计算需要<span class="arithmatex">\(O(|E|\log|V|)\)</span>时间</li>
 </ul>
 <p>$$
   T=T_{augmentation}\times T_{find_a_path}\
@@ -1459,20 +1459,20 @@
 <blockquote>
 <p>Note : </p>
 <ul>
-<li>If every $v \notin { s, t }$ has either a single incoming edge of capacity 1 or a single outgoing edge of capacity 1, then time bound is reduced to $O( |E| |V|^{1/2} )$.</li>
+<li>If every <span class="arithmatex">\(v \notin \{ s, t \}\)</span> has either a single incoming edge of capacity 1 or a single outgoing edge of capacity 1, then time bound is reduced to <span class="arithmatex">\(O( |E| |V|^{1/2} )\)</span>.</li>
 <li>The <strong>min-cost flow</strong> problem is to find, among all maximum flows, the one flow of minimum cost provided that each edge has a cost per unit of flow.</li>
 </ul>
 </blockquote>
 <hr />
 <h3 id="66-minimum-spanning-tree">6.6 Minimum Spanning Tree</h3>
-<h5 id="definition-a-spanning-tree-of-a-graph-g-is-a-tree-which-consists-of-vg-and-a-subset-of-eg">[Definition] A <em>spanning tree</em> of a graph $G$ is a tree which consists of $V(G)$ and a subset of $E(G)$</h5>
+<h5 id="definition-a-spanning-tree-of-a-graph-g-is-a-tree-which-consists-of-vg-and-a-subset-of-eg">[Definition] A <em>spanning tree</em> of a graph <span class="arithmatex">\(G\)</span> is a tree which consists of <span class="arithmatex">\(V(G)\)</span> and a subset of <span class="arithmatex">\(E(G)\)</span></h5>
 <blockquote>
 <p>Note :</p>
 <ul>
-<li>The minimum spanning tree is a tree since it is acyclic, the number of edges is $|V|-1$</li>
+<li>The minimum spanning tree is a tree since it is acyclic, the number of edges is <span class="arithmatex">\(|V|-1\)</span></li>
 <li>It is minimum for the total cost of edges is minimized.</li>
 <li>It is spanning because it covers every vertex.</li>
-<li>A minimum spanning tree exists if $G$ is connected.</li>
+<li>A minimum spanning tree exists if <span class="arithmatex">\(G\)</span> is connected.</li>
 <li>Adding a non-tree edge to a spanning tree, we obtain a cycle.</li>
 </ul>
 </blockquote>
@@ -1481,7 +1481,7 @@
 <blockquote>
 <ul>
 <li>we must use only edges within the graph</li>
-<li>we must use exactly $|V|-1$ edges</li>
+<li>we must use exactly <span class="arithmatex">\(|V|-1\)</span> edges</li>
 <li>we may not use edges that would produce a cycle</li>
 </ul>
 </blockquote>
@@ -1493,7 +1493,7 @@
 <p>在算法的任一时刻，都可以看到一个已经添加到树上的顶点集，而其余顶点尚未加到这棵树中</p>
 </li>
 <li>
-<p>算法在每一阶段都可以通过选择边$(u, v)$，使得$(u,v)$的值是所有$u$ 在树上但$v$不在树上的边的值中的最小者，而找出一个新的顶点并把它添加到这棵树中</p>
+<p>算法在每一阶段都可以通过选择边<span class="arithmatex">\((u, v)\)</span>，使得<span class="arithmatex">\((u,v)\)</span>的值是所有<span class="arithmatex">\(u\)</span> 在树上但<span class="arithmatex">\(v\)</span>不在树上的边的值中的最小者，而找出一个新的顶点并把它添加到这棵树中</p>
 </li>
 <li>
 <p>Kruskal’s Algorithm</p>

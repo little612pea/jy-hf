@@ -1445,8 +1445,8 @@
 <hr />
 <h3 id="82-hash-function">8.2 Hash Function</h3>
 <ul>
-<li>$f(x)$ must be <strong>easy</strong> to compute and <strong>minimize</strong> the number of <strong>collisions</strong>.</li>
-<li>$f(x)$ should be unbiased. For any $x$ and any $i$, we have that $Probability(f(x)=i)=\frac{1}{b}$. Such kind of a hash function is called a <strong>uniform hash function</strong>.</li>
+<li><span class="arithmatex">\(f(x)\)</span> must be <strong>easy</strong> to compute and <strong>minimize</strong> the number of <strong>collisions</strong>.</li>
+<li><span class="arithmatex">\(f(x)\)</span> should be unbiased. For any <span class="arithmatex">\(x\)</span> and any <span class="arithmatex">\(i\)</span>, we have that <span class="arithmatex">\(Probability(f(x)=i)=\frac{1}{b}\)</span>. Such kind of a hash function is called a <strong>uniform hash function</strong>.</li>
 </ul>
 <hr />
 <h3 id="83-separate-chaining">8.3 Separate Chaining</h3>
@@ -1528,7 +1528,7 @@
 <span class="p">}</span><span class="w"> </span>
 </code></pre></div>
 <blockquote>
-<p>Note : Make the TableSize about as large as the number of keys expected (i.e. to make the loading density factor $\lambda\approx$1).</p>
+<p>Note : Make the TableSize about as large as the number of keys expected (i.e. to make the loading density factor <span class="arithmatex">\(\lambda\approx\)</span>1).</p>
 </blockquote>
 <hr />
 <h3 id="84-open-addressing">8.4 Open Addressing</h3>
@@ -1550,13 +1550,13 @@
 }
 </code></pre></div>
 <blockquote>
-<p>Note : Generally $\lambda&lt;0.5$.</p>
+<p>Note : Generally <span class="arithmatex">\(\lambda&lt;0.5\)</span>.</p>
 </blockquote>
 <h4 id="linear-probing">Linear Probing</h4>
 <ul>
-<li>$F(i)$ is a linear function of $i$, such as $F(i)=i$.</li>
+<li><span class="arithmatex">\(F(i)\)</span> is a linear function of <span class="arithmatex">\(i\)</span>, such as <span class="arithmatex">\(F(i)=i\)</span>.</li>
 <li>逐个探测每个单元(必要时可以绕回)以查找出一个空单元</li>
-<li>使用线性探测的预期探测次数对于插入和不成功的查找来说大约是$\frac{1}{2}(1+\frac{1}{(1-\lambda)^2})$，对于成功的查找来说是$\frac{1}{2}(1+\frac{1}{1-\lambda})$</li>
+<li>使用线性探测的预期探测次数对于插入和不成功的查找来说大约是<span class="arithmatex">\(\frac{1}{2}(1+\frac{1}{(1-\lambda)^2})\)</span>，对于成功的查找来说是<span class="arithmatex">\(\frac{1}{2}(1+\frac{1}{1-\lambda})\)</span></li>
 <li>Cause <strong>primary clustering</strong> : any key that hashes into the cluster will add to the cluster after several attempts to resolve the collision.</li>
 </ul>
 

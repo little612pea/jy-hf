@@ -1525,9 +1525,9 @@
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MaxSum</span><span class="p">;</span><span class="w"> </span>
 <span class="p">}</span>
 </code></pre></div>
-<p>$$
+<div class="arithmatex">\[
 T(N)=O(N^3)
-$$</p>
+\]</div>
 <p><strong>Algotithm 2</strong></p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w">  </span><span class="nf">MaxSubsequenceSum</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">  </span><span class="kt">int</span><span class="w">  </span><span class="n">N</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
 <span class="p">{</span><span class="w"> </span>
@@ -1544,9 +1544,9 @@ $$</p>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MaxSum</span><span class="p">;</span><span class="w"> </span>
 <span class="p">}</span><span class="w"> </span>
 </code></pre></div>
-<p>$$
+<div class="arithmatex">\[
 T(N)=O(N^2)
-$$</p>
+\]</div>
 <p><strong>Algorithm 3 Divide and Conquer</strong>  分治法</p>
 <div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">MaxSubSum</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Left</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Right</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1613,9 +1613,9 @@ $$
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MaxSum</span><span class="p">;</span><span class="w"> </span>
 <span class="p">}</span><span class="w"> </span>
 </code></pre></div>
-<p>$$
+<div class="arithmatex">\[
 T(N)=O(N)
-$$</p>
+\]</div>
 <ul>
 <li>A[ ] is scanned <strong>once</strong> only. 扫描一次，无需存储（处理streaming data）</li>
 <li>在任意时刻，算法都能对它已经读入的数据给出子序列问题的正确答案(其他算法不具有这个特性)</li>
@@ -1623,7 +1623,7 @@ $$</p>
 <hr />
 <h3 id="14-logrithms-in-the-running-time">1.4 Logrithms in the Running Time</h3>
 <ul>
-<li>如果一个算法用常数时间将问题的大小削减为其一部分(通常是1/2)，那么该算法就是$O(logN)$的</li>
+<li>如果一个算法用常数时间将问题的大小削减为其一部分(通常是1/2)，那么该算法就是<span class="arithmatex">\(O(logN)\)</span>的</li>
 </ul>
 <h4 id="example-binary-search">[Example] Binary Search</h4>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">BinarySearch</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
@@ -1643,9 +1643,9 @@ $$</p>
 <span class="w">    </span><span class="k">return</span><span class="w">  </span><span class="n">NotFound</span><span class="p">;</span><span class="w"> </span><span class="cm">/* NotFound is defined as -1 */</span><span class="w"> </span>
 <span class="p">}</span><span class="w"> </span>
 </code></pre></div>
-<p>$$
+<div class="arithmatex">\[
 T_{worst}(N)=O(\log N)
-$$</p>
+\]</div>
 <h4 id="example-euclids-algorithm">[Example] Euclid’s Algorithm</h4>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">Gcd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1672,11 +1672,11 @@ $$</p>
 <hr />
 <h3 id="15-checking-your-analysis">1.5 Checking Your Analysis</h3>
 <h4 id="method-1">Method 1</h4>
-<p>When $T(N)=O(N)$, check if $T(2N)/T(N)\approx2$</p>
-<p>When $T(N)=O(N^2)$, check if $T(2N)/T(N)\approx4$</p>
-<p>When $T(N)=O(N^3)$, check if $T(2N)/T(N)\approx8$</p>
+<p>When <span class="arithmatex">\(T(N)=O(N)\)</span>, check if <span class="arithmatex">\(T(2N)/T(N)\approx2\)</span></p>
+<p>When <span class="arithmatex">\(T(N)=O(N^2)\)</span>, check if <span class="arithmatex">\(T(2N)/T(N)\approx4\)</span></p>
+<p>When <span class="arithmatex">\(T(N)=O(N^3)\)</span>, check if <span class="arithmatex">\(T(2N)/T(N)\approx8\)</span></p>
 <h4 id="method-2">Method 2</h4>
-<p>When $T(N)=O(f(N))$, check if $\lim\limits_{N\rightarrow\infty}\frac{T(N)}{f(N)}\approx C $</p>
+<p>When <span class="arithmatex">\(T(N)=O(f(N))\)</span>, check if $\lim\limits_{N\rightarrow\infty}\frac{T(N)}{f(N)}\approx C $</p>
 <hr />
 <h2 id="2-list-stacks-and-queues">2 LIst, Stacks and Queues</h2>
 <h3 id="21-abstract-data-typeadt">2.1 Abstract Data Type(ADT)  抽象数据类型</h3>
@@ -1702,13 +1702,13 @@ $$</p>
 <p>Sequential mapping 连续存储，访问快</p>
 </li>
 <li>
-<p>Find_Kth take $O(1)$ time.</p>
+<p>Find_Kth take <span class="arithmatex">\(O(1)\)</span> time.</p>
 </li>
 <li>
 <p>MaxSize has to be estimated.</p>
 </li>
 <li>
-<p>Insertion and Deletion not only take $O(N)$ times, but also involve a lot of data movements which takes time.</p>
+<p>Insertion and Deletion not only take <span class="arithmatex">\(O(N)\)</span> times, but also involve a lot of data movements which takes time.</p>
 </li>
 </ul>
 <p><img alt="2-3" src="../picture/2-3.png" /></p>
@@ -1728,7 +1728,7 @@ $$</p>
 <p>频繁malloc和free系统开销较大</p>
 </li>
 <li>
-<p>Finding take $O(N)$ times.</p>
+<p>Finding take <span class="arithmatex">\(O(N)\)</span> times.</p>
 </li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="cm">/*Return true if L is empty*/</span>
@@ -1814,7 +1814,7 @@ $$</p>
 </code></pre></div>
 <h4 id="doubly-linked-circular-lists">Doubly Linked Circular Lists</h4>
 <ul>
-<li>Finding take $O(\frac N 2)$ times.</li>
+<li>Finding take <span class="arithmatex">\(O(\frac N 2)\)</span> times.</li>
 </ul>
 <p><img src="picture/2-1.png" alt="2-1" style="zoom:80%;" /></p>
 <p>The correct answer is D.</p>
