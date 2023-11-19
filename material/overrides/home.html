@@ -1,61 +1,61 @@
 {#-
-This file was automatically generated - do not edit
--#}
-{% extends "main.html" %}
-{% block tabs %}
-{{ super() }}
-<style>
-  .md-header {
-    position: initial
-  }
-
-  .md-main__inner {
-    margin: 0
-  }
-
-  .md-content {
-    display: none
-  }
-
-  body {
-      background-color: rgb(31, 48, 85); /* 设置背景颜色为黑色 */
-      color: white; /* 设置文字颜色为白色 */
-  }
-
-  @media screen and (min-width:60em) {
-    .md-sidebar--secondary {
+  This file was automatically generated - do not edit
+  -#}
+  {% extends "main.html" %}
+  {% block tabs %}
+  {{ super() }}
+  <style>
+    .md-header {
+      position: initial
+    }
+  
+    .md-main__inner {
+      margin: 0
+    }
+  
+    .md-content {
       display: none
     }
-  }
-
-  @media screen and (min-width:76.25em) {
-    .md-sidebar--primary {
-      display: none
+  
+    body {
+        background-color: rgb(31, 48, 85); /* 设置背景颜色为黑色 */
+        color: white; /* 设置文字颜色为白色 */
     }
-  }
-</style>
-<section class="mdx-container">
-  <div class="md-grid md-typeset">
-    <div class="mdx-hero">
-      <div class="mdx-hero__image">
-        <img
-          src="https://upload-bbs.miyoushe.com/upload/2023/11/05/11316600/63cb78f6e4b55900d5c80a3b5f54de65_8615193900844086.png?x-oss-process=image/auto-orient,0/interlace,1/format,png"
-          alt="" width="1659" height="819.37" draggable="false">
-      </div>
-      <div class="mdx-hero__content">
-        <h1>Technical documentation that just works</h1>
-        <p>{{ config.site_description }}. Set up in 5 minutes.</p>
-        <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}"
-          class="md-button md-button--primary">
-          Quick start
-        </a>
-        <a href="{{ 'insiders/' | url }}" title="Material for MkDocs Insiders" class="md-button">
-          Get Insiders
-        </a>
+  
+    @media screen and (min-width:60em) {
+      .md-sidebar--secondary {
+        display: none
+      }
+    }
+  
+    @media screen and (min-width:76.25em) {
+      .md-sidebar--primary {
+        display: none
+      }
+    }
+  </style>
+  <section class="mdx-container">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
+        <div class="mdx-hero__image">
+          <img
+            src="https://upload-bbs.miyoushe.com/upload/2023/11/05/11316600/63cb78f6e4b55900d5c80a3b5f54de65_8615193900844086.png?x-oss-process=image/auto-orient,0/interlace,1/format,png"
+            alt="" width="1659" height="819.37" draggable="false">
+        </div>
+        <div class="mdx-hero__content">
+          <h1>Welcome to the coding space of JY-HF!</h1>
+          <p>{{ config.site_description }}. We hope to continue uploading and sharing our course notes in the years to come</p>
+          <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}"
+            class="md-button md-button--primary">
+            Quick start
+          </a>
+          <a href="{{ 'insiders/' | url }}" title="Material for MkDocs Insiders" class="md-button">
+            Get Insiders
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-{% endblock %}
-{% block content %}{% endblock %}
-{% block footer %}{% endblock %}
+  </section>
+  {% endblock %}
+  {% block content %}{% endblock %}
+  {% block footer %}{% endblock %}
