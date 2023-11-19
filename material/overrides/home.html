@@ -33,6 +33,7 @@
         display: none
       }
     }
+
   </style>
   <section class="mdx-container">
     <div class="md-grid md-typeset">
@@ -43,13 +44,13 @@
             alt="" width="1659" height="819.37" draggable="false">
         </div>
         <div class="mdx-hero__content">
-          <h1>Welcome to the coding space of JY-HF!</h1>
-          <p>{{ config.site_description }}. We hope to continue uploading and sharing our course notes in the years to come</p>
+          <h1 style="color: antiquewhite;font-family: 'Courier New', Courier, monospace;font-weight: 1000;">Welcome to the coding space of JY-HF!</h1>
+          <p style="color: antiquewhite;font-family: 'Courier New', Courier, monospace;">{{ config.site_description }}. We hope to integrate knowledge we've consumed so far and continue sharing our course notes in the years to come</p>
           <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}"
             class="md-button md-button--primary">
             Quick start
           </a>
-          <a href="{{ 'insiders/' | url }}" title="Material for MkDocs Insiders" class="md-button">
+          <a href="{{ 'insiders/' | url }}" title="Material for MkDocs Insiders" class="md-button" style="display: inline-block;margin: 10px;">
             Get Insiders
           </a>
         </div>

@@ -1,5 +1,5 @@
 site_name: JY-HF learning site
-site_description: learning site created by jy on 2023/11/18
+site_description: The learning site you are viewing is created by Jy Hu and Jy Feng when they were sophomores at ZJU
 repo_name: little612pea/jy-hf
 repo_url: https://github.com/little612pea/jy-hf
 copyright: Copyright &copy; 2023 jy Hu
@@ -38,7 +38,7 @@ nav:
       - 赶快补课抄笔记: 3 ZJU-AI-ML/notes for ZJU-AI-ML.md
       - 一些截图: 3 ZJU-AI-ML/ML-zju.md
     - 课程Lab&hw: 3 ZJU-AI-ML/labs & hw review.md
-  - 4 图像信息处理 DIP - 默写课~: 4 图像信息处理 DIP/DIP.md
+  - 4 图像信息处理 DIP: 4 图像信息处理 DIP/DIP.md
 
   - Other:
     - Linux服务器运维(x)把玩(√): Others/linux 启动.md
@@ -72,13 +72,13 @@ theme:
         icon: material/brightness-7 
         name: Switch to dark mode
       primary: indigo #, [red, pink, purple, deep, purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue, grey, black, white]
-      accent: cyan # [red, pink, purple, deep, purple, indigo, blue, light, blue, cyan, teal, green, light, green, lime, yellow, amber, orange, deep orange]
+      accent: light blue # [red, pink, purple, deep, purple, indigo, blue, light, blue, cyan, teal, green, light, green, lime, yellow, amber, orange, deep orange]
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal #, [red, pink, purple, deep, purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue, grey, black, white]
-      accent: cyan # [red, pink, purple, deep, purple, indigo, blue, light, blue, cyan, teal, green, light, green, lime, yellow, amber, orange, deep orange]
+      primary: light blue #, [red, pink, purple, deep, purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue, grey, black, white]
+      accent: indigo # [red, pink, purple, deep, purple, indigo, blue, light, blue, cyan, teal, green, light, green, lime, yellow, amber, orange, deep orange]
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
