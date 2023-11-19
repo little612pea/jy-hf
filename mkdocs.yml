@@ -87,6 +87,7 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.superfences
   - pymdownx.tasklist 
+  - markdown.extensions.extra
   #python markdown 无法显示内联公式，需要使用pymdownx.arithmatex
   - pymdownx.arithmatex:
       generic: true

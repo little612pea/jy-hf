@@ -1462,25 +1462,25 @@
 
 <h1 id="week-11">WEEK 11</h1>
 <h3 id="67-applications-of-depth-first-search">6.7 Applications of Depth-First Search</h3>
-<div class="highlight"><pre><span></span><code><span class="cm">/*a generalization of preorder traversal*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">DFS</span><span class="p">(</span><span class="n">Vertex</span><span class="w"> </span><span class="n">V</span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="n">visited</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">  </span><span class="cm">/*mark this vertex to avoid cycles*/</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">DFS</span><span class="p">(</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="cm">/*T = O(|E|+|V|) as long as adjacency lists are used*/</span>
-</code></pre></div>
+<pre><code class="language-c">/*a generalization of preorder traversal*/
+void DFS(Vertex V)
+{   
+    visited[ V ] = true;  /*mark this vertex to avoid cycles*/
+    for ( each W adjacent to V )
+        if ( !visited[ W ] ) DFS( W );
+} /*T = O(|E|+|V|) as long as adjacency lists are used*/
+</code></pre>
 <h4 id="undirected-graphs">Undirected Graphs</h4>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">ListComponents</span><span class="p">(</span><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">DFS</span><span class="p">(</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">);</span>
-<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">void ListComponents(Graph G)
+{   
+    for ( each V in G ) 
+        if ( !visited[ V ] ) 
+        {
+            DFS( V );
+            printf(&quot;\n&quot;);
+        }
+}
+</code></pre>
 <h4 id="biconnectivity">Biconnectivity</h4>
 <ul>
 <li><span class="arithmatex">\(v\)</span> is an <strong>articulation point</strong> if <span class="arithmatex">\(G'=DeleteVertex(G, v)\)</span> has <strong>at least 2</strong> connected components.</li>
@@ -1518,7 +1518,7 @@
   Low(u)=\min{Num(u),\min{Low(w)|w\,is\,a\,child\,of\,u},\min{Num(w)|(u,w)\,is\,a\,back\,edge}}
   $$</li>
 </ul>
-<div class="highlight"><pre><span></span><code>/*Assign Num and compute Parents*/
+<pre><code class="language-pseudocode">/*Assign Num and compute Parents*/
 void AssignNum(Vertex V)
 {
     Vertex W;
@@ -1531,8 +1531,8 @@ void AssignNum(Vertex V)
             AssignNum(W);
         }
 }
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>/*Assign Low; also check for articulation points*/
+</code></pre>
+<pre><code class="language-pseudocode">/*Assign Low; also check for articulation points*/
 void AssignLow(Vertex V)
 {
     Vertex W;
@@ -1551,8 +1551,8 @@ void AssignLow(Vertex V)
                 Low[V] ＝ Min(Low[V], Num[W]); /*Rule 2*/
     }
 }
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>void FindArt(Vertex V)
+</code></pre>
+<pre><code class="language-pseudocode">void FindArt(Vertex V)
 {
     Vertex W;
     Visited[V] = True;
@@ -1572,7 +1572,7 @@ void AssignLow(Vertex V)
                 Low[V] = Min(Low[V], Num[W]); /*Rule 2*/
     }
 }
-</code></pre></div>
+</code></pre>
 <h4 id="euler-circuits">Euler Circuits</h4>
 <h5 id="proposition-an-euler-circuit-is-possible-only-if-the-graph-is-connected-and-each-vertex-has-an-even-degree">[Proposition] An Euler circuit is possible only if the graph is connected and each vertex has an <em>even</em> degree.</h5>
 <h5 id="proposition-an-euler-tour-is-possible-if-there-are-exactly-two-vertices-having-odd-degree-one-must-start-at-one-of-the-odd-degree-vertices">[Proposition] An Euler tour is possible if there are exactly <em>two</em> vertices having odd degree.  One must start at one of the odd-degree vertices.</h5>
@@ -1587,8 +1587,8 @@ void AssignLow(Vertex V)
 <hr />
 <h2 id="7-sorting">7 Sorting</h2>
 <h3 id="71-preliminaries">7.1 Preliminaries</h3>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">X_Sort</span><span class="w"> </span><span class="p">(</span><span class="n">ElementType</span><span class="w"> </span><span class="n">A</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span>
-</code></pre></div>
+<pre><code class="language-c">void X_Sort (ElementType A[], int N)
+</code></pre>
 <ul>
 <li>N must be a legal integer.</li>
 <li>Assume integer array for the sake of simplicity.</li>
@@ -1597,21 +1597,21 @@ void AssignLow(Vertex V)
 </ul>
 <hr />
 <h3 id="72-insertion-sort">7.2 Insertion Sort</h3>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Insertion</span><span class="p">(</span><span class="n">ElementType</span><span class="w"> </span><span class="n">A</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span>
-<span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">Tmp</span><span class="p">;</span><span class="w"> </span>
+<pre><code class="language-c">void Insertion(ElementType A[], int N)
+{ 
+    int j, P; 
+    ElementType Tmp; 
 
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">P</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span>
-<span class="w">        </span><span class="n">Tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="p">];</span><span class="w">  </span><span class="cm">/*the next coming card*/</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Tmp</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">--</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">            </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">];</span><span class="w"> </span>
-<span class="w">            </span><span class="cm">/*shift sorted cards to provide a position for the new coming card*/</span>
-<span class="w">        </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Tmp</span><span class="p">;</span><span class="w">  </span><span class="cm">/*place the new card at the proper position*/</span>
-<span class="w">    </span><span class="p">}</span><span class="cm">/*end for-P-loop*/</span>
-<span class="p">}</span>
-</code></pre></div>
+    for ( P = 1; P &lt; N; P++ ) 
+    { 
+        Tmp = A[ P ];  /*the next coming card*/
+        for ( j = P; j &gt; 0 &amp;&amp; A[ j - 1 ] &gt; Tmp; j-- ) 
+            A[ j ] = A[ j - 1 ]; 
+            /*shift sorted cards to provide a position for the new coming card*/
+        A[ j ] = Tmp;  /*place the new card at the proper position*/
+    }/*end for-P-loop*/
+}
+</code></pre>
 <ul>
 <li>
 <p>The worst case : Input A[ ] is in reverse order

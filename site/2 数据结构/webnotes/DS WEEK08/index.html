@@ -1741,50 +1741,50 @@ G'\subset G=V(G')\subseteq V(G) \&amp;\&amp; E(G')\subseteq E(G)
 <blockquote>
 <p>Note : The topological orders may <strong>not be unique</strong> for a network.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="cm">/*Test an AOV for feasibility, and generate a topological order if possible*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">Topsort</span><span class="p">(</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Counter</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">Counter</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NumVertex</span><span class="p">;</span><span class="w"> </span><span class="n">Counter</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FindNewVertexOfDegreeZero</span><span class="p">(</span><span class="w"> </span><span class="p">);</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">NotAVertex</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="c1">//确认图中无环？</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">Error</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="err">“</span><span class="n">Graph</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">cycle</span><span class="err">”</span><span class="w"> </span><span class="p">);</span><span class="w">   </span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w">  </span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">TopNum</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Counter</span><span class="p">;</span><span class="w"> </span><span class="cm">/* or output V */</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">            </span><span class="n">Indegree</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">]</span><span class="err">––</span><span class="p">;</span><span class="w"> </span><span class="c1">//对所有前置选课要求有V的课程，在修之前必须修完的课少了一门</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">/*Test an AOV for feasibility, and generate a topological order if possible*/
+void Topsort( Graph G )
+{   
+    int Counter;
+    Vertex V, W;
+    for ( Counter = 0; Counter &lt; NumVertex; Counter++ ) 
+    {
+        V = FindNewVertexOfDegreeZero( );
+        if ( V == NotAVertex ) //确认图中无环？
+        {
+            Error ( “Graph has a cycle” );   
+            break;  
+        }
+        TopNum[ V ] = Counter; /* or output V */
+        for ( each W adjacent to V )
+            Indegree[ W ]––; //对所有前置选课要求有V的课程，在修之前必须修完的课少了一门
+    }
+}
+</code></pre>
 <div class="arithmatex">\[
 T=O(|V|^2+|E|) = O(|V|^2)
 \]</div>
-<div class="highlight"><pre><span></span><code><span class="cm">/*Improvment:Keep all the unassigned vertices of degree 0 in a special box (queue or stack)*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">Topsort</span><span class="p">(</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="n">Queue</span><span class="w"> </span><span class="n">Q</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateQueue</span><span class="p">(</span><span class="w"> </span><span class="n">NumVertex</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-<span class="w">    </span><span class="n">MakeEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">vertex</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Indegree</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">Enqueue</span><span class="p">(</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">IsEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dequeue</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">        </span><span class="n">TopNum</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">Counter</span><span class="p">;</span><span class="w"> </span><span class="cm">/* assign next */</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="err">––</span><span class="n">Indegree</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">Enqueue</span><span class="p">(</span><span class="w"> </span><span class="n">W</span><span class="p">,</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="cm">/* end-while */</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Counter</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">NumVertex</span><span class="w"> </span><span class="p">)</span>
-<span class="w">    </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="err">“</span><span class="n">Graph</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">cycle</span><span class="err">”</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="n">DisposeQueue</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="cm">/* free memory */</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">/*Improvment:Keep all the unassigned vertices of degree 0 in a special box (queue or stack)*/
+void Topsort( Graph G )
+{   
+    Queue Q;
+    int Counter = 0;
+    Vertex V, W;
+    Q = CreateQueue( NumVertex );  
+    MakeEmpty( Q );
+    for ( each vertex V )
+        if ( Indegree[ V ] == 0 ) Enqueue( V, Q );
+    while ( !IsEmpty( Q ) ) 
+    {
+        V = Dequeue( Q );
+        TopNum[ V ] = ++Counter; /* assign next */
+        for ( each W adjacent to V )
+            if (––Indegree[ W ] == 0 ) Enqueue( W, Q );
+    }  /* end-while */
+    if ( Counter != NumVertex )
+    Error( “Graph has a cycle” );
+    DisposeQueue( Q ); /* free memory */
+}
+</code></pre>
 <div class="arithmatex">\[
 T=O(|V|+|E|)
 \]</div>

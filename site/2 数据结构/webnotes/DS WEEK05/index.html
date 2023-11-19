@@ -1410,86 +1410,86 @@
 <ol>
 <li>Find</li>
 </ol>
-<div class="highlight"><pre><span></span><code>Position Find( ElementType X, SearchTree T ) 
-{ 
- if ( T == NULL ) 
-     return NULL;  /* not found in an empty tree */
-    if ( X &lt; T-&gt;Element )  /* if smaller than root */
-        return Find( X, T-&gt;Left );  /* search left subtree */
-    else 
-     if ( X &gt; T-&gt;Element )  /* if larger than root */
-         return  Find( X, T-&gt;Right );  /* search right subtree */
-        else   /* if X == root */
-         return  T;  /* found */
-} 
-</code></pre></div>
+<p><code>pseudocode
+   Position Find( ElementType X, SearchTree T ) 
+   { 
+    if ( T == NULL ) 
+        return NULL;  /* not found in an empty tree */
+       if ( X &lt; T-&gt;Element )  /* if smaller than root */
+           return Find( X, T-&gt;Left );  /* search left subtree */
+       else 
+        if ( X &gt; T-&gt;Element )  /* if larger than root */
+            return  Find( X, T-&gt;Right );  /* search right subtree */
+           else   /* if X == root */
+            return  T;  /* found */
+   }</code></p>
 <ul>
 <li><span class="arithmatex">\(T(N)=S(N)=O(d)\)</span> where <span class="arithmatex">\(d\)</span> is the depth of X</li>
 </ul>
 <p>Iterative program :</p>
-<div class="highlight"><pre><span></span><code>Position Iter_Find( ElementType X, SearchTree T ) 
-{ 
- while ( T )
- {
-     if ( X == T-&gt;Element )  
-         return T;  /* found */
-        if ( X &lt; T-&gt;Element )
-            T = T-&gt;Left; /*move down along left path */
-        else
-             T = T-&gt; Right; /* move down along right path */
-    }  /* end while-loop */
-    return NULL;   /* not found */
-} 
-</code></pre></div>
+<p><code>pseudocode
+   Position Iter_Find( ElementType X, SearchTree T ) 
+   { 
+    while ( T )
+    {
+        if ( X == T-&gt;Element )  
+            return T;  /* found */
+           if ( X &lt; T-&gt;Element )
+               T = T-&gt;Left; /*move down along left path */
+           else
+                T = T-&gt; Right; /* move down along right path */
+       }  /* end while-loop */
+       return NULL;   /* not found */
+   }</code></p>
 <ol>
 <li>FindMin</li>
 </ol>
-<div class="highlight"><pre><span></span><code>Position FindMin( SearchTree T ) 
-{ 
- if ( T == NULL )   
-     return NULL; /* not found in an empty tree */
-    else 
-        if ( T-&gt;Left == NULL ) return T;  /* found left most */
-        else return FindMin( T-&gt;Left );   /* keep moving to left */
-} 
-</code></pre></div>
+<p><code>pseudocode
+   Position FindMin( SearchTree T ) 
+   { 
+    if ( T == NULL )   
+        return NULL; /* not found in an empty tree */
+       else 
+           if ( T-&gt;Left == NULL ) return T;  /* found left most */
+           else return FindMin( T-&gt;Left );   /* keep moving to left */
+   }</code></p>
 <ol>
 <li>FindMax</li>
 </ol>
-<div class="highlight"><pre><span></span><code>Position FindMax( SearchTree T ) 
-{ 
- if ( T != NULL ) 
-     while ( T-&gt;Right != NULL )   
-         T = T-&gt;Right;   /* keep moving to find right most */
-    return T;  /* return NULL or the right most */
-} 
-</code></pre></div>
+<p><code>pseudocode
+   Position FindMax( SearchTree T ) 
+   { 
+    if ( T != NULL ) 
+        while ( T-&gt;Right != NULL )   
+            T = T-&gt;Right;   /* keep moving to find right most */
+       return T;  /* return NULL or the right most */
+   }</code></p>
 <ol>
 <li>Insert</li>
 </ol>
-<div class="highlight"><pre><span></span><code>SearchTree Insert( ElementType X, SearchTree T ) 
-{ 
-    if ( T == NULL ) /* Create and return a one-node tree */ 
-    { 
-     T = malloc( sizeof( struct TreeNode ) ); 
-     if ( T == NULL ) 
-         FatalError( &quot;Out of space!!!&quot; ); 
-     else 
-     { 
-         T-&gt;Element = X; 
-         T-&gt;Left = T-&gt;Right = NULL; 
-     } 
-    }  /* End creating a one-node tree */
-    else  /* If there is a tree */
-         if ( X &lt; T-&gt;Element ) 
-         T-&gt;Left = Insert( X, T-&gt;Left ); 
-     else 
-         if ( X &gt; T-&gt;Element ) 
-             T-&gt;Right = Insert( X, T-&gt;Right ); 
-     /* Else X is in the tree already; we&#39;ll do nothing */ 
-    return  T;   /* Do not forget this line!! */ 
-}
-</code></pre></div>
+<p><code>pseudocode
+   SearchTree Insert( ElementType X, SearchTree T ) 
+   { 
+       if ( T == NULL ) /* Create and return a one-node tree */ 
+       { 
+        T = malloc( sizeof( struct TreeNode ) ); 
+        if ( T == NULL ) 
+            FatalError( "Out of space!!!" ); 
+        else 
+        { 
+            T-&gt;Element = X; 
+            T-&gt;Left = T-&gt;Right = NULL; 
+        } 
+       }  /* End creating a one-node tree */
+       else  /* If there is a tree */
+            if ( X &lt; T-&gt;Element ) 
+            T-&gt;Left = Insert( X, T-&gt;Left ); 
+        else 
+            if ( X &gt; T-&gt;Element ) 
+                T-&gt;Right = Insert( X, T-&gt;Right ); 
+        /* Else X is in the tree already; we'll do nothing */ 
+       return  T;   /* Do not forget this line!! */ 
+   }</code></p>
 <ul>
 <li>内存越界后不会马上报错，在下一次free或malloc时会失败</li>
 <li>Handle duplicated keys</li>
@@ -1505,32 +1505,32 @@
 <li>Delete a degree 1 node : Replace the node by its single child</li>
 <li>Delete a degree 2 node : 用左子树最大值结点或右子树最小值结点替换</li>
 </ul>
-<div class="highlight"><pre><span></span><code>SearchTree Delete( ElementType X, SearchTree T ) 
-{    
- Position TmpCell; 
-    if ( T == NULL ) Error( &quot;Element not found&quot; ); 
-    else if ( X &lt; T-&gt;Element )  /* Go left */ 
-     T-&gt;Left = Delete( X, T-&gt;Left ); 
-    else if ( X &gt; T-&gt;Element )  /* Go right */ 
-     T-&gt;Right = Delete( X, T-&gt;Right ); 
- else  /* Found element to be deleted */ 
-     if ( T-&gt;Left &amp;&amp; T-&gt;Right ) {  /* Two children */ 
-     /* Replace with smallest in right subtree */ 
-         TmpCell = FindMin( T-&gt;Right ); 
-         T-&gt;Element = TmpCell-&gt;Element; 
-         T-&gt;Right = Delete( T-&gt;Element, T-&gt;Right );  } /* End if */
-     else 
-     {  /* One or zero child */ 
-         TmpCell = T; 
-         if ( T-&gt;Left == NULL ) /* Also handles 0 child */ 
-             T = T-&gt;Right; 
-         else if ( T-&gt;Right == NULL )  
-             T = T-&gt;Left; 
-         free( TmpCell );  
-      }  /* End else 1 or 0 child */
-      return  T; 
-}
-</code></pre></div>
+<p><code>pseudocode
+   SearchTree Delete( ElementType X, SearchTree T ) 
+   {    
+    Position TmpCell; 
+       if ( T == NULL ) Error( "Element not found" ); 
+       else if ( X &lt; T-&gt;Element )  /* Go left */ 
+        T-&gt;Left = Delete( X, T-&gt;Left ); 
+       else if ( X &gt; T-&gt;Element )  /* Go right */ 
+        T-&gt;Right = Delete( X, T-&gt;Right ); 
+    else  /* Found element to be deleted */ 
+        if ( T-&gt;Left &amp;&amp; T-&gt;Right ) {  /* Two children */ 
+        /* Replace with smallest in right subtree */ 
+            TmpCell = FindMin( T-&gt;Right ); 
+            T-&gt;Element = TmpCell-&gt;Element; 
+            T-&gt;Right = Delete( T-&gt;Element, T-&gt;Right );  } /* End if */
+        else 
+        {  /* One or zero child */ 
+            TmpCell = T; 
+            if ( T-&gt;Left == NULL ) /* Also handles 0 child */ 
+                T = T-&gt;Right; 
+            else if ( T-&gt;Right == NULL )  
+                T = T-&gt;Left; 
+            free( TmpCell );  
+         }  /* End else 1 or 0 child */
+         return  T; 
+   }</code></p>
 <ul>
 <li><span class="arithmatex">\(T(N)=O(d)\)</span></li>
 </ul>

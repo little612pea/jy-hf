@@ -1502,7 +1502,7 @@
 <li>the <strong>fastest</strong> known sorting algorithm in practice</li>
 </ul>
 <h4 id="algorithm">Algorithm</h4>
-<div class="highlight"><pre><span></span><code>void Quicksort( ElementType A[ ], int N )
+<pre><code class="language-pseudocode">void Quicksort( ElementType A[ ], int N )
 {
     if (N &lt; 2) return;
     pivot = pick any element in A[ ]; 
@@ -1510,7 +1510,7 @@
         A1 = { a in S | a &lt;= pivot } and A2 = { a in S | a &gt;= pivot };
     A = Quicksort(A1, N1) and { pivot } and Quicksort(A2, N2);
 }
-</code></pre></div>
+</code></pre>
 <ul>
 <li>The pivot is placed at the right place <strong>once and for all</strong>.</li>
 <li>要研究的问题是如何选取枢纽元和如何划分</li>
@@ -1546,56 +1546,56 @@
 <li>Cutoff when <span class="arithmatex">\(N\)</span> gets small and use other efficient algorithms (such as insertion sort).</li>
 </ul>
 <h4 id="implementation">Implementation</h4>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Quicksort</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="n">Qsort</span><span class="p">(</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="mi">-1</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="cm">/*A:the array*/</span>
-<span class="w">    </span><span class="cm">/*0:Left index*/</span>
-<span class="w">    </span><span class="cm">/*N–1:Right index*/</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="cm">/* Return median of Left, Center, and Right */</span><span class="w"> </span>
-<span class="cm">/* Order these and hide the pivot */</span><span class="w"> </span>
-<span class="n">ElementType</span><span class="w"> </span><span class="nf">Median3</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Left</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Right</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Left</span><span class="o">+</span><span class="n">Right</span><span class="w"> </span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Left</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Center</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">        </span><span class="n">Swap</span><span class="p">(</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Left</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Center</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Left</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Right</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">        </span><span class="n">Swap</span><span class="p">(</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Left</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Right</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Center</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Right</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">        </span><span class="n">Swap</span><span class="p">(</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Center</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Right</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="cm">/*Invariant: A[ Left ] &lt;= A[ Center ] &lt;= A[ Right ]*/</span><span class="w"> </span>
-<span class="w">    </span><span class="n">Swap</span><span class="p">(</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Center</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Right</span><span class="mi">-1</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="cm">/*Hide pivot*/</span><span class="w"> </span>
-<span class="w">    </span><span class="cm">/*only need to sort A[ Left+1 ] … A[ Right–2 ]*/</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Right</span><span class="mi">-1</span><span class="w"> </span><span class="p">];</span><span class="w">  </span><span class="cm">/*Return pivot*/</span><span class="w"> </span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Qsort</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Left</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Right</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">Pivot</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Cutoff</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">Right</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span><span class="w">   </span><span class="cm">/*if the sequence is not too short*/</span>
-<span class="w">        </span><span class="n">Pivot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Median3</span><span class="p">(</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">Left</span><span class="p">,</span><span class="w"> </span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/*select pivot*/</span>
-<span class="w">        </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Left</span><span class="p">;</span><span class="w">     </span>
-<span class="w">        </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Right</span><span class="w"> </span><span class="err">–</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="cm">/*why not set Left+1 and Right-2?*/</span>
-<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">        </span><span class="p">{</span><span class="w"> </span>
-<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Pivot</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="cm">/*scan from left*/</span>
-<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="o">--</span><span class="n">j</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Pivot</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="cm">/*scan from right*/</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">                </span><span class="n">Swap</span><span class="p">(</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/*adjust partition*/</span>
-<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">  </span><span class="cm">/*partition done*/</span>
-<span class="w">        </span><span class="p">}</span><span class="w"> </span>
-<span class="w">        </span><span class="n">Swap</span><span class="p">(</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Right</span><span class="mi">-1</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="cm">/*restore pivot */</span><span class="w"> </span>
-<span class="w">        </span><span class="n">Qsort</span><span class="p">(</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">Left</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="mi">-1</span><span class="w"> </span><span class="p">);</span><span class="w">    </span><span class="cm">/*recursively sort left part*/</span>
-<span class="w">        </span><span class="n">Qsort</span><span class="p">(</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w">   </span><span class="cm">/*recursively sort right part*/</span>
-<span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="cm">/*end if - the sequence is long*/</span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="cm">/*do an insertion sort on the short subarray*/</span><span class="w"> </span>
-<span class="w">        </span><span class="n">InsertionSort</span><span class="p">(</span><span class="w"> </span><span class="n">A</span><span class="o">+</span><span class="n">Left</span><span class="p">,</span><span class="w"> </span><span class="n">Right</span><span class="o">-</span><span class="n">Left</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">void Quicksort( ElementType A[ ], int N ) 
+{ 
+    Qsort( A, 0, N-1 ); 
+    /*A:the array*/
+    /*0:Left index*/
+    /*N–1:Right index*/
+}
+</code></pre>
+<pre><code class="language-c">/* Return median of Left, Center, and Right */ 
+/* Order these and hide the pivot */ 
+ElementType Median3( ElementType A[ ], int Left, int Right ) 
+{
+    int Center = ( Left+Right )/2; 
+    if ( A[ Left ] &gt; A[ Center ] ) 
+        Swap( &amp;A[ Left ], &amp;A[ Center ] ); 
+    if ( A[ Left ] &gt; A[ Right ] ) 
+        Swap( &amp;A[ Left ], &amp;A[ Right ] ); 
+    if ( A[ Center ] &gt; A[ Right ] ) 
+        Swap( &amp;A[ Center ], &amp;A[ Right ] ); 
+    /*Invariant: A[ Left ] &lt;= A[ Center ] &lt;= A[ Right ]*/ 
+    Swap( &amp;A[ Center ], &amp;A[ Right-1 ] ); /*Hide pivot*/ 
+    /*only need to sort A[ Left+1 ] … A[ Right–2 ]*/
+    return A[ Right-1 ];  /*Return pivot*/ 
+}
+</code></pre>
+<pre><code class="language-c">void Qsort( ElementType A[ ], int Left, int Right ) 
+{
+    int i, j; 
+    ElementType Pivot; 
+    if ( Left + Cutoff &lt;= Right ) 
+    {   /*if the sequence is not too short*/
+        Pivot = Median3( A, Left, Right );  /*select pivot*/
+        i = Left;     
+        j = Right – 1;  /*why not set Left+1 and Right-2?*/
+        for( ; ; ) 
+        { 
+            while ( A[ ++i ] &lt; Pivot ) { }  /*scan from left*/
+            while ( A[ --j ] &gt; Pivot ) { }  /*scan from right*/
+            if ( i &lt; j ) 
+                Swap( &amp;A[ i ], &amp;A[ j ] );  /*adjust partition*/
+            else break;  /*partition done*/
+        } 
+        Swap( &amp;A[ i ], &amp;A[ Right-1 ] ); /*restore pivot */ 
+        Qsort( A, Left, i-1 );    /*recursively sort left part*/
+        Qsort( A, i+1, Right );   /*recursively sort right part*/
+    }  /*end if - the sequence is long*/
+    else /*do an insertion sort on the short subarray*/ 
+        InsertionSort( A+Left, Right-Left+1 );
+}
+</code></pre>
 <blockquote>
 <p>Note : If set i = Left+1 and j = Right-2, there will be an infinite loop if A[i] = A[j] = pivot.</p>
 </blockquote>
@@ -1695,38 +1695,38 @@ T(N)=T(i)+T(N-i-1)+cN
 <ul>
 <li>查找第<span class="arithmatex">\(K\)</span>最大(最小)元</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="cm">/*Places the kth sma11est element in the kth position*/</span>
-<span class="cm">/*Because arrays start at 0, this will be index k-1*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">Qselect</span><span class="p">(</span><span class="n">ElementType</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Left</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Right</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
-<span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">Pivot</span><span class="p">;</span>
+<pre><code class="language-c">/*Places the kth sma11est element in the kth position*/
+/*Because arrays start at 0, this will be index k-1*/
+void Qselect(ElementType A[ ], int k, int Left, int Right)
+{
+    int i, j;
+    ElementType Pivot;
 
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Cutoff</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">Right</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Pivot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Median3</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">Left</span><span class="p">,</span><span class="w"> </span><span class="n">Right</span><span class="p">);</span>
-<span class="w">        </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Left</span><span class="p">;</span><span class="w"> </span>
-<span class="w">        </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Right</span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">)</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="k">while</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Pivot</span><span class="p">){</span><span class="w"> </span><span class="p">}</span>
-<span class="w">            </span><span class="k">while</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="o">--</span><span class="n">j</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Pivot</span><span class="p">){</span><span class="w"> </span><span class="p">}</span>
-<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">)</span>
-<span class="w">                </span><span class="n">Swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">]);</span>
-<span class="w">            </span><span class="k">else</span>
-<span class="w">                </span><span class="k">break</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">Swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Right</span><span class="mi">-1</span><span class="w"> </span><span class="p">]);</span><span class="w"> </span><span class="cm">/*Restore pivot*/</span>
+    if (Left + Cutoff &lt;= Right)
+    {
+        Pivot = Median3(A, Left, Right);
+        i = Left; 
+        j = Right-1;
+        for( ; ; )
+        {
+            while(A[ ++i ] &lt; Pivot){ }
+            while(A[ --j ] &gt; Pivot){ }
+            if(i &lt; j)
+                Swap(&amp;A[ i ], &amp;A[ j ]);
+            else
+                break;
+        }
+        Swap(&amp;A[ i ], &amp;A[ Right-1 ]); /*Restore pivot*/
 
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">i</span><span class="p">)</span>
-<span class="w">            </span><span class="n">Qselect</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">Left</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="mi">-1</span><span class="p">);</span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-<span class="w">            </span><span class="n">Qselect</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Right</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="cm">/*Doan insertion sort on the subarray*/</span>
-<span class="w">        </span><span class="n">InsertionSort</span><span class="p">(</span><span class="n">A</span><span class="o">+</span><span class="n">Left</span><span class="p">,</span><span class="w"> </span><span class="n">Right</span><span class="o">-</span><span class="n">Left</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+        if(k &lt;= i)
+            Qselect(A, k, Left, i-1);
+        else if (k &gt; i+1)
+            Qselect(A, k, i+1, Right);
+    }
+    else /*Doan insertion sort on the subarray*/
+        InsertionSort(A+Left, Right-Left+1);
+}
+</code></pre>
 <p><img alt="image-20210125115951471" src="../picture/image-20210125115951471.png" /></p>
 <p>正确答案是D</p>
 <hr />
@@ -1749,7 +1749,7 @@ T(N)=T(i)+T(N-i-1)+cN
 <hr />
 <h3 id="710-bucket-sort">7.10 Bucket Sort</h3>
 <p><img alt="image-20201221203533117" src="../picture/image-20201221203533117.png" /></p>
-<div class="highlight"><pre><span></span><code>Algorithm
+<pre><code class="language-pseudocode">Algorithm
 {
     initialize count[ ];
     while(read in a student’s record)
@@ -1759,7 +1759,7 @@ T(N)=T(i)+T(N-i-1)+cN
         if(count[i]) output list count[i];
     }
 }
-</code></pre></div>
+</code></pre>
 <div class="arithmatex">\[
 T(N,M)=O(M+N)
 \]</div>

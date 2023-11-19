@@ -1539,23 +1539,23 @@
 <ul>
 <li>Given an equivalence relation ~, decide for any <em>a</em> and <em>b</em> if <em>a ~ b</em></li>
 </ul>
-<div class="highlight"><pre><span></span><code>Algorithm: (Union/Find)
-{
-  /* step 1: read the relations in */
-    Initialize N disjoint sets;
-    while ( read in a ~ b )
-    {
-      if ( !(Find(a) == Find(b)) )  /*Dynamic(on-line)*/
-          Union the two sets;
-    } /* end-while */
-    /* step 2: decide if a ~ b */
-    while ( read in a and b )
-        if ( Find(a) == Find(b) )
-          output( true );
-        else   
-          output( false );
-}
-</code></pre></div>
+<p><code>pseudocode
+  Algorithm: (Union/Find)
+  {
+    /* step 1: read the relations in */
+      Initialize N disjoint sets;
+      while ( read in a ~ b )
+      {
+        if ( !(Find(a) == Find(b)) )  /*Dynamic(on-line)*/
+            Union the two sets;
+      } /* end-while */
+      /* step 2: decide if a ~ b */
+      while ( read in a and b )
+          if ( Find(a) == Find(b) )
+            output( true );
+          else   
+            output( false );
+  }</code></p>
 <ul>
 <li><strong>Elements</strong> of the sets : <span class="arithmatex">\(1,2,3,\cdots,N\)</span></li>
 <li><strong>Sets</strong> : <span class="arithmatex">\(S_1,S_2,\cdots\,and\,S_i\bigcap S_j=\emptyset\,(if\quad i\neq j)\)</span></li>
@@ -1594,11 +1594,11 @@
 </li>
 <li>数组初始化全部为0</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">SetUnion</span><span class="p">(</span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Rt1</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Rt2</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">S</span><span class="p">[</span><span class="n">Rt2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Rt1</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<p><code>c
+  void SetUnion(DisjSet S, SetType Rt1, SetType Rt2)
+  {
+    S[Rt2] = Rt1;
+  }</code></p>
 <h4 id="find-i">Find( <span class="arithmatex">\(i\)</span> )</h4>
 <ul>
 <li><strong>Implementation 1</strong> :</li>
@@ -1607,18 +1607,18 @@
 <ul>
 <li><strong>Implementation 2</strong> :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">SetType</span><span class="w"> </span><span class="nf">Find</span><span class="p">(</span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">X</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">X</span><span class="o">=</span><span class="n">S</span><span class="p">[</span><span class="n">X</span><span class="p">]);</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">X</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<p><code>c
+  SetType Find(ElementType X, DisjSet S)
+  {
+    for ( ; S[X]&gt;0; X=S[X]);
+    return X;
+  }</code></p>
 <h4 id="analysis">Analysis</h4>
 <ul>
 <li>Union and find are always paired. Thus we consider the performance of a sequence of <strong>union-find operations</strong>.</li>
 </ul>
 <p><img src="picture/7-3.png" alt="7-3" style="zoom:80%;" /></p>
-<div class="highlight"><pre><span></span><code>Algorithm using union-find operations:
+<pre><code class="language-pseudocode">Algorithm using union-find operations:
 {  
     Initialize Si = { i }  for  i = 1, ..., 12 ;
     for ( k = 1; k &lt;= 9; k++ )  /* for each pair i R j */
@@ -1627,7 +1627,7 @@
             SetUnion( Find( i ), Find( j ) );
     }
 }
-</code></pre></div>
+</code></pre>
 <ul>
 <li>Worst case : <span class="arithmatex">\(T(N)=\Theta(N^2)\)</span></li>
 </ul>
@@ -1649,64 +1649,64 @@
 <ul>
 <li><strong>Time complexity</strong> of <span class="arithmatex">\(N\)</span> Union and <span class="arithmatex">\(M\)</span> Find operations is now <span class="arithmatex">\(O(N+M\log_2N)\)</span>.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="cm">/* Assumes Rootl and Root2 are roots*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">SetUnion</span><span class="p">(</span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Root1</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Root2</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">])</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">];</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Root1</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">];</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Root2</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">/* Assumes Rootl and Root2 are roots*/
+void SetUnion(DisjSet S, SetType Root1, SetType Root2)
+{
+    if (S[Root1] &lt;= S[Root2])
+    {
+        S[Root1] += S[Root2];
+        S[Root2] = Root1;
+    }
+    else
+    {
+        S[Root2] += S[Root1];
+        S[Root1] = Root2;
+    }
+}
+</code></pre>
 <h4 id="union-by-height">Union-by-Height</h4>
 <ul>
 <li>Always change the shallow tree</li>
 <li>保证所有的树的深度最多是<span class="arithmatex">\(O(logN)\)</span></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="cm">/* Assumes Rootl and Root2 are roots*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">SetUnion</span><span class="p">(</span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Root1</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Root2</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">])</span><span class="w">  </span><span class="cm">/*Root2 is deeper set*/</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Root2</span><span class="p">;</span><span class="w">      </span><span class="cm">/*Make Root2 new root*/</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">])</span><span class="w">  </span><span class="cm">/*Same height*/</span>
-<span class="w">            </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Root1</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">/* Assumes Rootl and Root2 are roots*/
+void SetUnion(DisjSet S, SetType Root1, SetType Root2)
+{
+    if ( S[Root2] &lt; S[Root1])  /*Root2 is deeper set*/
+        S[Root1] = Root2;      /*Make Root2 new root*/
+    else
+    {
+        if (S[Root1] == S[Root2])  /*Same height*/
+            S[Root1]--;
+        S[Root2] = Root1;
+    }
+}
+</code></pre>
 <hr />
 <h3 id="55-path-compression">5.5 Path Compression</h3>
 <ul>
 <li>从X到Root的路径上的每一个结点都使它的父结点变成Root</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">SetType</span><span class="w"> </span><span class="nf">Find</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w">    </span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">X</span><span class="p">;</span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Find</span><span class="p">(</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">SetType</span><span class="w"> </span><span class="nf">Find</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">trail</span><span class="p">,</span><span class="w"> </span><span class="n">lead</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/* find the root */</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">root</span><span class="p">;</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lead</span><span class="w"> </span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">lead</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="p">];</span><span class="w">   </span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="p">;</span><span class="w">   </span>
-<span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="cm">/* collapsing */</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">root</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">SetType Find( ElementType X, DisjSet S )
+{
+    if ( S[ X ] &lt;= 0 )    
+        return X;
+    else 
+        return S[ X ] = Find( S[ X ], S );
+}
+</code></pre>
+<pre><code class="language-c">SetType Find( ElementType X, DisjSet S )
+{   
+    ElementType root, trail, lead;
+    for ( root = X; S[ root ] &gt; 0; root = S[ root ] );  /* find the root */
+    for ( trail = X; trail != root; trail = lead )
+    {
+        lead = S[ trail ];   
+        S[ trail ] = root;   
+    }  /* collapsing */
+    return root;
+}
+</code></pre>
 <ul>
 <li>Note : Not compatible with union-by-height since it changes the heights.  Just take “height” as an estimated <strong>rank</strong>.</li>
 </ul>

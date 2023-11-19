@@ -1520,50 +1520,51 @@
 </li>
 <li>
 <p>连续地按照最小的权选择边,，并且当所选的边不产生环时就把它作为取定的边</p>
-<div class="highlight"><pre><span></span><code>void Kruskal( Graph G )
-{   
-   T = { };
-    while ( T contains less than |V|-1 edges &amp;&amp; E is not empty ) 
+<p><code>pseudocode
+ void Kruskal( Graph G )
+ {   
+    T = { };
+     while ( T contains less than |V|-1 edges &amp;&amp; E is not empty ) 
+     {
+         choose a least cost edge (v, w) from E;  /*DeleteMin*/
+         delete (v, w) from E;
+         if ( (v, w) does not create a cycle in T )     
+            add (v, w) to T;  /*Union/Find*/
+         else     
+            discard (v, w);
+     }
+     if ( T contains fewer than |V|-1 edges )
+        Error( “No spanning tree” );
+ }</code></p>
+<p>```c
+ void Kruskal(Graph G)
+ {
+    int EdgesAccepted;
+    DisjSet S;
+    PriorityQueue H;
+    Vertex U, V;
+    SetType Uset, Vset;
+    Edge E;</p>
+<pre><code>Initialize(S);
+ReadGraphIntoHeapArray(G, H);
+BuildHeap(H);
+
+EdgesAccepted = 0;
+while(EdgesAccepted &lt; NumVertex-1)
+{
+    E = DeleteMin(H); /*E = (U,V)*/
+    Uset = Find(U, S);
+    Vset = Find(V, S);
+    if(Uset != Vset)
     {
-        choose a least cost edge (v, w) from E;  /*DeleteMin*/
-        delete (v, w) from E;
-        if ( (v, w) does not create a cycle in T )     
-           add (v, w) to T;  /*Union/Find*/
-        else     
-           discard (v, w);
+        /*Accept the edge*/
+        EdgesAccepted++;
+        SetUnion(S, USet, VSet);
     }
-    if ( T contains fewer than |V|-1 edges )
-       Error( “No spanning tree” );
 }
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Kruskal</span><span class="p">(</span><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">EdgesAccepted</span><span class="p">;</span>
-<span class="w">   </span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="p">;</span>
-<span class="w">   </span><span class="n">PriorityQueue</span><span class="w"> </span><span class="n">H</span><span class="p">;</span>
-<span class="w">   </span><span class="n">Vertex</span><span class="w"> </span><span class="n">U</span><span class="p">,</span><span class="w"> </span><span class="n">V</span><span class="p">;</span>
-<span class="w">   </span><span class="n">SetType</span><span class="w"> </span><span class="n">Uset</span><span class="p">,</span><span class="w"> </span><span class="n">Vset</span><span class="p">;</span>
-<span class="w">   </span><span class="n">Edge</span><span class="w"> </span><span class="n">E</span><span class="p">;</span>
-
-<span class="w">   </span><span class="n">Initialize</span><span class="p">(</span><span class="n">S</span><span class="p">);</span>
-<span class="w">   </span><span class="n">ReadGraphIntoHeapArray</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">H</span><span class="p">);</span>
-<span class="w">   </span><span class="n">BuildHeap</span><span class="p">(</span><span class="n">H</span><span class="p">);</span>
-
-<span class="w">   </span><span class="n">EdgesAccepted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">   </span><span class="k">while</span><span class="p">(</span><span class="n">EdgesAccepted</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NumVertex</span><span class="mi">-1</span><span class="p">)</span>
-<span class="w">   </span><span class="p">{</span>
-<span class="w">       </span><span class="n">E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DeleteMin</span><span class="p">(</span><span class="n">H</span><span class="p">);</span><span class="w"> </span><span class="cm">/*E = (U,V)*/</span>
-<span class="w">       </span><span class="n">Uset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Find</span><span class="p">(</span><span class="n">U</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">);</span>
-<span class="w">       </span><span class="n">Vset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Find</span><span class="p">(</span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">);</span>
-<span class="w">       </span><span class="k">if</span><span class="p">(</span><span class="n">Uset</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">Vset</span><span class="p">)</span>
-<span class="w">       </span><span class="p">{</span>
-<span class="w">           </span><span class="cm">/*Accept the edge*/</span>
-<span class="w">           </span><span class="n">EdgesAccepted</span><span class="o">++</span><span class="p">;</span>
-<span class="w">           </span><span class="n">SetUnion</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">USet</span><span class="p">,</span><span class="w"> </span><span class="n">VSet</span><span class="p">);</span>
-<span class="w">       </span><span class="p">}</span>
-<span class="w">   </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+</code></pre>
+<p>}
+ ```</p>
 <p>$$
  T=O(|E|\log|E|)
  $$</p>

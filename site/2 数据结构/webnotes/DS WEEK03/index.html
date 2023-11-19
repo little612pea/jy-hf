@@ -1406,73 +1406,73 @@
 <ul>
 <li>The calls to malloc and free are expensive. Simply keep another stack as a recycle bin.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">IsEmpty</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Next</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">Stack</span><span class="w"> </span><span class="nf">CreateStack</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">;</span>
-<span class="w">  </span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="p">));</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">S</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-<span class="w">      </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Out of space!&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Next</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
-<span class="w">  </span><span class="n">MakeEmpty</span><span class="p">(</span><span class="n">S</span><span class="p">);</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">MakeEmpty</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">S</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-<span class="w">      </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Must use CreateStack first&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="k">else</span>
-<span class="w">      </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">IsEmpty</span><span class="p">(</span><span class="n">S</span><span class="p">))</span><span class="w"> </span><span class="n">Pop</span><span class="p">(</span><span class="n">S</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Push</span><span class="p">(</span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">PtrToNode</span><span class="w"> </span><span class="n">TmpCell</span><span class="p">;</span>
-<span class="w">  </span><span class="n">TmpCell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="p">));</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">TmpCell</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-<span class="w">      </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Out of space!&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
-<span class="w">  </span><span class="k">else</span>
-<span class="w">  </span><span class="p">{</span>
-<span class="w">      </span><span class="n">TmpCell</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span>
-<span class="w">      </span><span class="n">TmpCe11</span><span class="o">-&gt;</span><span class="n">Next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Next</span><span class="p">;</span>
-<span class="w">      </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TmpCell</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">ElementType</span><span class="w"> </span><span class="nf">Top</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">IsEmpty</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
-<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Next</span><span class="o">-&gt;</span><span class="n">Element</span><span class="p">;</span>
-<span class="w">  </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Empty stack&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">O</span><span class="p">;</span><span class="w"> </span><span class="cm">/* Return value used to avoid warning*/</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Pop</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">s</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">PtrToNode</span><span class="w"> </span><span class="n">FirstCell</span><span class="p">;</span>
-<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">IsEmpty</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
-<span class="w">      </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Empty stack&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
-<span class="w">  </span><span class="k">else</span>
-<span class="w">  </span><span class="p">{</span>
-<span class="w">      </span><span class="n">FirstCe11</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Next</span><span class="p">;</span>
-<span class="w">      </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Next</span><span class="o">-&gt;</span><span class="n">Next</span><span class="p">;</span>
-<span class="w">      </span><span class="n">free</span><span class="p">(</span><span class="n">FirstCe11</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<p><code>c
+  int IsEmpty(Stack S)
+  {
+    return S-&gt;Next == NULL;
+  }</code></p>
+<p>```c
+  Stack CreateStack(void)
+  {
+    Stack S;
+    S = malloc(sizeof(struct Node));
+    if (S == NULL)
+        Fatal Error("Out of space!");
+    S-&gt;Next == NULL;
+    MakeEmpty(S);
+    return S;
+  }</p>
+<p>void MakeEmpty(Stack S)
+  {
+    if (S == NULL)
+        Error("Must use CreateStack first");
+    else
+        while(!IsEmpty(S)) Pop(S);
+  }
+  ```</p>
+<p><code>c
+  void Push(ElementType X, Stack S)
+  {
+    PtrToNode TmpCell;
+    TmpCell = malloc(sizeof(struct Node));
+    if (TmpCell == NULL)
+        Fatal Error("Out of space!") ;
+    else
+    {
+        TmpCell-&gt;Element = X;
+        TmpCe11-&gt;Next = S-&gt;Next;
+        S-&gt;Next = TmpCell;
+    }
+  }</code></p>
+<p><code>c
+  ElementType Top(Stack S)
+  {
+    if(!IsEmpty(S))
+        return S-&gt;Next-&gt;Element;
+    Error("Empty stack") ;
+    return O; /* Return value used to avoid warning*/
+  }</code></p>
+<p><code>c
+  void Pop(Stack s)
+  {
+    PtrToNode FirstCell;
+    if(IsEmpty(S))
+        Error("Empty stack") ;
+    else
+    {
+        FirstCe11 = S-&gt;Next;
+        S-&gt;Next = S-&gt;Next-&gt;Next;
+        free(FirstCe11);
+    }
+  }</code></p>
 <h4 id="array-implementation-of-stacks">Array Implementation of Stacks</h4>
-<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">StackRecord</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Capacity</span><span class="p">;</span><span class="w">          </span><span class="cm">/* size of stack */</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">TopOfStack</span><span class="p">;</span><span class="w">        </span><span class="cm">/* the top pointer */</span>
-<span class="w">    </span><span class="cm">/* ++ for push, -- for pop, -1 for empty stack */</span>
-<span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="o">*</span><span class="n">Array</span><span class="p">;</span><span class="w">    </span><span class="cm">/* array for stack elements */</span>
-<span class="p">};</span><span class="w"> </span>
-</code></pre></div>
+<pre><code class="language-c">struct StackRecord {
+    int Capacity;          /* size of stack */
+    int TopOfStack;        /* the top pointer */
+    /* ++ for push, -- for pop, -1 for empty stack */
+    ElementType *Array;    /* array for stack elements */
+}; 
+</code></pre>
 <ul>
 <li>
 <p>The stack model must be well <strong>encapsulated(封装)</strong>.  That is, no part of your code, except for the stack routines, can attempt to access the Array or TopOfStack variable.</p>
@@ -1481,95 +1481,96 @@
 <p>Error check must be done before Push or Pop (Top).</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">Stack</span><span class="w"> </span><span class="nf">CreateStack</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">MaxElements</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">;</span>
-<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">MaxElements</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MinStackSize</span><span class="p">)</span>
-<span class="w">  </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Stack size is too small&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
-<span class="w">  </span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">StackRecord</span><span class="p">));</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">S</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-<span class="w">      </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Out of space!!!&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
-
-<span class="w">  </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">ElementType</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">MaxElements</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
-<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-<span class="w">      </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Out of space!!!&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Capacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MaxElements</span><span class="p">;</span>
-<span class="w">  </span><span class="n">MakeEmpty</span><span class="p">(</span><span class="n">S</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">DisposeStack</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">S</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-<span class="w">  </span><span class="p">{</span>
-<span class="w">      </span><span class="n">free</span><span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Array</span><span class="p">);</span>
-<span class="w">      </span><span class="n">free</span><span class="p">(</span><span class="n">S</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">IsEmpty</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">TopOfStack</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">EmptyTOS</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">MakeEmpty</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">TopOfStack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EmptyTOS</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Push</span><span class="p">(</span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">IsFull</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
-<span class="w">      </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Full stack&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="k">else</span>
-<span class="w">      </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Array</span><span class="p">[</span><span class="w"> </span><span class="o">++</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">TopOfStack</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">ElementType</span><span class="w"> </span><span class="nf">Top</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="w"> </span><span class="n">IsEmpty</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
-<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Array</span><span class="p">[</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">TopOfStack</span><span class="w"> </span><span class="p">];</span>
-<span class="w">  </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Empty stack&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">O</span><span class="p">;</span><span class="w"> </span><span class="cm">/* Return value used to avoid warning*/</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Pop</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">IsEmpty</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
-<span class="w">      </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Empty stack&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
-<span class="w">  </span><span class="k">else</span>
-<span class="w">      </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">TopOfStack</span><span class="o">--</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">ElementType</span><span class="w"> </span><span class="nf">TopAndPop</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">Is</span><span class="w"> </span><span class="n">Empty</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
-<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Array</span><span class="p">[</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">TopOfStack</span><span class="o">--</span><span class="w"> </span><span class="p">];</span>
-<span class="w">  </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Empty stack&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">O</span><span class="p">;</span><span class="w"> </span><span class="cm">/* Return value used to avoid warnin */</span>
-<span class="p">}</span>
-</code></pre></div>
+<p>```c
+  Stack CreateStack(int MaxElements)
+  {
+    Stack S;
+    if(MaxElements &lt; MinStackSize)
+    Error("Stack size is too small") ;
+    S = malloc(sizeof(struct StackRecord));
+    if (S == NULL)
+        Fatal Error("Out of space!!!") ;</p>
+<pre><code>S-&gt;Array = malloc(sizeof(ElementType) * MaxElements) ;
+if(S-&gt;Array = NULL)
+    Fatal Error("Out of space!!!");
+S-&gt;Capacity = MaxElements;
+MakeEmpty(S) ;
+return S;
+</code></pre>
+<p>}
+  ```</p>
+<p><code>c
+  void DisposeStack(Stack S)
+  {
+    if(S != NULL)
+    {
+        free(S-&gt;Array);
+        free(S);
+    }
+  }</code></p>
+<p><code>c
+  int IsEmpty(Stack S)
+  {
+    return S-&gt;TopOfStack == EmptyTOS;
+  }</code></p>
+<p><code>c
+  void MakeEmpty(Stack S)
+  {
+    S-&gt;TopOfStack = EmptyTOS;
+  }</code></p>
+<p><code>c
+  void Push(ElementType X, Stack S)
+  {
+    if (IsFull(S))
+        Error("Full stack");
+    else
+        S-&gt;Array[ ++S-&gt;TopOfStack ] = X;
+  }</code></p>
+<p><code>c
+  ElementType Top(Stack S)
+  {
+    if(! IsEmpty(S))
+        return S-&gt;Array[ S-&gt;TopOfStack ];
+    Error("Empty stack") ;
+    return O; /* Return value used to avoid warning*/
+  }</code></p>
+<p><code>c
+  void Pop(Stack S)
+  {
+    if(IsEmpty(S))
+        Error("Empty stack") ;
+    else
+        S-&gt;TopOfStack--;
+  }</code></p>
+<p><code>c
+  ElementType TopAndPop(Stack S)
+  {
+    if(!Is Empty(S))
+        return S-&gt;Array[ S-&gt;TopOfStack-- ];
+    Error("Empty stack");
+    return O; /* Return value used to avoid warnin */
+  }</code></p>
 <h4 id="application">Application</h4>
 <ol>
 <li>Balancing Symbols</li>
 </ol>
 <p>检查括号是否平衡</p>
-<div class="highlight"><pre><span></span><code>Algorithm  {
-    Make an empty stack S;
-    while (read in a character c) {
-        if (c is an opening symbol)
-            Push(c, S);
-        else if (c is a closing symbol) {
-            if (S is empty)  { ERROR; exit; }
-            else  {  /* stack is okay */
-                if  (Top(S) doesn’t match c)  { ERROR, exit; }
-                else  Pop(S);
-            }  /* end else-stack is okay */
-        }  /* end else-if-closing symbol */
-    } /* end while-loop */ 
-    if (S is not empty)  ERROR;
-}
-</code></pre></div>
+<p><code>pseudocode
+   Algorithm  {
+       Make an empty stack S;
+       while (read in a character c) {
+           if (c is an opening symbol)
+               Push(c, S);
+           else if (c is a closing symbol) {
+               if (S is empty)  { ERROR; exit; }
+               else  {  /* stack is okay */
+                   if  (Top(S) doesn’t match c)  { ERROR, exit; }
+                   else  Pop(S);
+               }  /* end else-stack is okay */
+           }  /* end else-if-closing symbol */
+       } /* end while-loop */ 
+       if (S is not empty)  ERROR;
+   }</code></p>
 <ol>
 <li>
 <p>Postfix Evaluation 后缀表达式</p>
@@ -1611,14 +1612,14 @@
 <li>Dequeue</li>
 </ul>
 <h4 id="array-implementation-of-queues">Array Implementation of Queues</h4>
-<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">QueueRecord</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Capacity</span><span class="w"> </span><span class="p">;</span><span class="w">       </span><span class="cm">/* max size of queue */</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Front</span><span class="p">;</span><span class="w">           </span><span class="cm">/* the front pointer */</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Rear</span><span class="p">;</span><span class="w">            </span><span class="cm">/* the rear pointer */</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Size</span><span class="p">;</span><span class="w">            </span><span class="cm">/* Optional - the current size of queue */</span>
-<span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="o">*</span><span class="n">Array</span><span class="p">;</span><span class="w">  </span><span class="cm">/* array for queue elements */</span>
-<span class="w"> </span><span class="p">};</span><span class="w"> </span>
-</code></pre></div>
+<pre><code class="language-c">struct QueueRecord {
+    int Capacity ;       /* max size of queue */
+    int Front;           /* the front pointer */
+    int Rear;            /* the rear pointer */
+    int Size;            /* Optional - the current size of queue */
+    ElementType *Array;  /* array for queue elements */
+ }; 
+</code></pre>
 <p><strong>Circular Queue</strong> :</p>
 <p><img src="picture/3-3.png" alt="3-3" style="zoom: 64%;" /><img src="picture/3-4.png" alt="3-4" style="zoom: 64%;" /></p>
 <ul>
