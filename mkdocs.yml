@@ -41,6 +41,16 @@ nav:
       - 一些截图: 3 ZJU-AI-ML/ML-zju.md
     - 课程Lab&hw: 3 ZJU-AI-ML/labs & hw review.md
   - 4 图像信息处理 DIP: 4 图像信息处理 DIP/DIP.md
+  - 5 电路电子技术I实验（爱迪生班） 秋学期: 
+    - Lab 1: 5 电路电子技术I实验/Lab1/Lab1 常用仪器使用练习实验.md
+    - Lab 2: 5 电路电子技术I实验/Lab2/Lab2 半导体二极管特性测试.md
+    - Lab 3: 5 电路电子技术I实验/Lab3/Lab3 数字电路逻辑设计.md
+    - Lab 4: 5 电路电子技术I实验/Lab4/lab4 三极管和门电路特性测试.md
+    - Lab 5: 5 电路电子技术I实验/Lab5/Lab5 小车检测电路和电机驱动电路测试.md
+    - Lab 6: 5 电路电子技术I实验/Lab6/Lab6 智能小车控制.md
+    - Lab 7: 5 电路电子技术I实验/lab7.md
+
+
 
   - Other:
     - Linux服务器运维(x)把玩(√): Others/linux 启动.md
