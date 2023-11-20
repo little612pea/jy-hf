@@ -8,6 +8,8 @@ copyright: Copyright &copy; 2023 jy Hu
 nav:
   - Home: index.md
   - about: mkdocs-guide.md
+  - HowTo:
+    - Embedding a PDF file: artifacts/test.md
   - 1 数字逻辑设计:
     - 实验过程: 1 数字逻辑设计/数逻实验.md
     - 理论部分: 1 数字逻辑设计/数字逻辑设计 notes.md
@@ -44,6 +46,7 @@ nav:
     - Linux服务器运维(x)把玩(√): Others/linux 启动.md
     - CS61A: Others/CS61A-python.md
     - Git 基础: Others/git使用教程.md
+    - memories: Others/memories.md
 
 theme:
   name: material
@@ -90,11 +93,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist 
   - markdown.extensions.extra
-  #python markdown 无法显示内联公式，需要使用pymdownx.arithmatex
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.tabbed:
-      alternate_style: true 
 
 extra_css:
   - static/extra.css
@@ -112,7 +110,7 @@ extra_javascript:
           { left: "$$", right: "$$", display: true },
           { left: "\\[", right: "\\]", display: true },
           { left: "$", right: "$", display: false },
-          { left: "\\(", right: "\\)", display: false }
+          { left: "\\(", right: "\\)", display: true }
         ]
       });
     });

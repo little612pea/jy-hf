@@ -1,5 +1,22 @@
 # git使用教程
 
-docs\pictures\1.jpg
 
-![image-20231119131157151](D:\jy_learning_site\docs\Others\assets\image-20231119131157151.png)
+
+![image-20231119131157151](./assets/image-20231119131157151-1700483378065-5.png)
+
+![image-20231120201822638](./assets/image-20231120201822638.png)
+
+发现只要是在这个文件结构下的图片都会正常显示
+
+因为实际上typora编辑器的设置中拷贝图片时会将assets会单独复制一份
+
+![image-20231120201554458](./assets/image-20231120201554458.png)
+
+然而，拷贝后进行缩放，就是改为了html格式，就不能够正常渲染？
+
+<img src="./assets/image-20231120201906942.png" alt="image-20231120201906942" style="zoom:33%;" />
+
+![image-20231120202158410](./assets/image-20231120202158410.png)
+
+#### 发现mkdocs在渲染导出HTML时是会将除了md格式的所有东西都拷贝一份到自己的目录下面的
+

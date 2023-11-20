@@ -123,3 +123,7 @@ GitHub Pages是GitHub提供的一项免费静态网站托管服务，允许用�
 接下来请冯冯同学帮忙看看图片相对路径设置怎么方便渲染，似乎渲染不了html格式，它只会形如
 
 "[2-2] (/assets/imgs)"的形式
+
+11-20 20：15 pdf嵌入，对相对路径以及pathconverter的内容有基本理解
+
+![f79b764f05e06fb90e8b137d0dd9930](./assets/f79b764f05e06fb90e8b137d0dd9930.jpg)

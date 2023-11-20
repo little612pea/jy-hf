@@ -1,0 +1,11 @@
+# <center>memories should be well kept
+
+![7632ee568647b5f23225b90b68ac767](./assets/7632ee568647b5f23225b90b68ac767.jpg)
+
+![e00d05ed33af0c9f314fdc5e19ec47f](./assets/e00d05ed33af0c9f314fdc5e19ec47f.jpg)
+
+![66646e87f910c17833690f30f578caf](./assets/66646e87f910c17833690f30f578caf.jpg)
+
+![f12baf1ea40a1928d7d717c595c9a07](./assets/f12baf1ea40a1928d7d717c595c9a07.jpg)
+
+![98d47fe968364f4096cb4163f8d0564](./assets/98d47fe968364f4096cb4163f8d0564.jpg)

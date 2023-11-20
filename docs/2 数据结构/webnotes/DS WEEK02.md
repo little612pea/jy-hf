@@ -360,7 +360,7 @@ When $T(N)=O(f(N))$, check if $\lim\limits_{N\rightarrow\infty}\frac{T(N)}{f(N)}
 
 - Finding take $O(\frac N 2)$ times.
 
-  <img src="picture/2-1.png" alt="2-1" style="zoom:80%;" />
+  <img src="./assets/2-1.png" alt="2-1" style="zoom:80%;" />
 
   The correct answer is D.
 
@@ -447,7 +447,7 @@ When $T(N)=O(f(N))$, check if $\lim\limits_{N\rightarrow\infty}\frac{T(N)}{f(N)}
 
 #### Cursor Implementation of Linked Lists(no pointer)
 
-<img src="picture/2-2.png" alt="2-2" style="zoom:80%;" />
+<img src="./assets/2-2.png" alt="2-2" style="zoom:80%;" />
 
 ---
 
