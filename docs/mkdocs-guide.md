@@ -151,4 +151,10 @@ github pages限制存储容量为1GB
 
 11-20 20：15 pdf嵌入，对相对路径以及pathconverter的内容有基本理解
 
+11-22 解决remote文不对板的问题，重定向了remote，参考官网教程正确配置了katex格式，渲染行内公式
+
+使用pymdownx.highlight高亮语法
+
+11-22 20：40 nested tab 格式嵌入 [使用教程](https://little612pea.github.io/jy-hf/Others/content block example)
+
 ![f79b764f05e06fb90e8b137d0dd9930](./assets/f79b764f05e06fb90e8b137d0dd9930.jpg)

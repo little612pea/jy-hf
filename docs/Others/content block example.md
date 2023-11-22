@@ -1,61 +1,72 @@
-!!! example
+!!! info "Nested Code Blocks"
 
     === "Unordered List"
-
-        ``` markdown
+    
+        ```markdown
         * Sed sagittis eleifend rutrum
         * Donec vitae suscipit est
         * Nulla tempor lobortis orci
         ```
-
+    
     === "Ordered List"
-
-        ``` markdown
+    
+        ```markdown
         1. Sed sagittis eleifend rutrum
         2. Donec vitae suscipit est
         3. Nulla tempor lobortis orci
         ```
 
-!!! tip "another list"
+!!! question "Another List"
 
-    === "Unordered list"
-
+    === "Unordered List"
+    
+        ```markdown
         * Sed sagittis eleifend rutrum
         * Donec vitae suscipit est
         * Nulla tempor lobortis orci
-
-    === "Ordered list"
-
+        ```
+    
+    === "Ordered List"
+    
+        ```markdown
         1. Sed sagittis eleifend rutrum
         2. Donec vitae suscipit est
         3. Nulla tempor lobortis orci
+        ```
 
-!!! note "content blocks"
+nested code block
 
-    === "C"
+=== "C"
 
-        ``` c
-        #include <stdio.h>
-        
-        int main(void) {
+    ```c
+    #include <stdio.h>
+    
+    int main(void) {
         printf("Hello world!\n");
         return 0;
-        }
-        ```
+    }
+    ```
 
-    === "C++"
+=== "C++"
 
-        ``` c++
-        #include <iostream>
-        
-        int main(void) {
+    ```c++
+    #include <iostream>
+    
+    int main(void) {
         std::cout << "Hello world!" << std::endl;
         return 0;
-        }
-        ```
+    }
+    ```
 
-??? note
+??? 展开查看nested tab content的使用方法
+    note
+​        ![image-20231122212434109](./assets/image-20231122212434109.png)
+        ![image-20231122212445416](./assets/image-20231122212445416.png)
+        ![image-20231122212455299](./assets/image-20231122212455299.png)
+        ![image-20231122212504669](./assets/image-20231122212504669.png)
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+!!! info "语法格式:"
+    tab间隔，建议在vscode/typora原格式(raw)下编辑，可以选中tab
+    alt text形式是直接采用在md文件的同目录下插入，可以在nested tab中插入
+    ![Alt text](image.png)
+
