@@ -57,7 +57,8 @@ nav:
     - CS61A: Others/CS61A-python.md
     - Git 基础: Others/git使用教程.md
     - memories: Others/memories.md
-
+    - content: Others/content block example.md
+    
 theme:
   name: material
   language: zh
@@ -76,6 +77,20 @@ theme:
     - content.code.copy
   icon:
     repo: fontawesome/brands/github
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
   palette: 
 
     # Palette toggle for light mode
@@ -116,6 +131,9 @@ extra_javascript:
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
 
+extra_css:
+  - stylesheets/extra.css
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -125,3 +143,11 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
 
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
