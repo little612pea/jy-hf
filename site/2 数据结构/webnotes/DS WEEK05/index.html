@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
+      <link rel="stylesheet" href="../../../static/extra.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1754,86 +1754,86 @@
 <ol>
 <li>Find</li>
 </ol>
-<p><code>pseudocode
-   Position Find( ElementType X, SearchTree T ) 
-   { 
-    if ( T == NULL ) 
-        return NULL;  /* not found in an empty tree */
-       if ( X &lt; T-&gt;Element )  /* if smaller than root */
-           return Find( X, T-&gt;Left );  /* search left subtree */
-       else 
-        if ( X &gt; T-&gt;Element )  /* if larger than root */
-            return  Find( X, T-&gt;Right );  /* search right subtree */
-           else   /* if X == root */
-            return  T;  /* found */
-   }</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Position Find( ElementType X, SearchTree T ) 
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>{ 
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> if ( T == NULL ) 
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>     return NULL;  /* not found in an empty tree */
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    if ( X &lt; T-&gt;Element )  /* if smaller than root */
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        return Find( X, T-&gt;Left );  /* search left subtree */
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    else 
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>     if ( X &gt; T-&gt;Element )  /* if larger than root */
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>         return  Find( X, T-&gt;Right );  /* search right subtree */
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        else   /* if X == root */
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>         return  T;  /* found */
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>} 
+</span></code></pre></div>
 <ul>
 <li>$T(N)=S(N)=O(d)$ where $d$ is the depth of X</li>
 </ul>
 <p>Iterative program :</p>
-<p><code>pseudocode
-   Position Iter_Find( ElementType X, SearchTree T ) 
-   { 
-    while ( T )
-    {
-        if ( X == T-&gt;Element )  
-            return T;  /* found */
-           if ( X &lt; T-&gt;Element )
-               T = T-&gt;Left; /*move down along left path */
-           else
-                T = T-&gt; Right; /* move down along right path */
-       }  /* end while-loop */
-       return NULL;   /* not found */
-   }</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Position Iter_Find( ElementType X, SearchTree T ) 
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>{ 
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a> while ( T )
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a> {
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>     if ( X == T-&gt;Element )  
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>         return T;  /* found */
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        if ( X &lt; T-&gt;Element )
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>            T = T-&gt;Left; /*move down along left path */
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        else
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>             T = T-&gt; Right; /* move down along right path */
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    }  /* end while-loop */
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    return NULL;   /* not found */
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>} 
+</span></code></pre></div>
 <ol>
 <li>FindMin</li>
 </ol>
-<p><code>pseudocode
-   Position FindMin( SearchTree T ) 
-   { 
-    if ( T == NULL )   
-        return NULL; /* not found in an empty tree */
-       else 
-           if ( T-&gt;Left == NULL ) return T;  /* found left most */
-           else return FindMin( T-&gt;Left );   /* keep moving to left */
-   }</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Position FindMin( SearchTree T ) 
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>{ 
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a> if ( T == NULL )   
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>     return NULL; /* not found in an empty tree */
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    else 
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        if ( T-&gt;Left == NULL ) return T;  /* found left most */
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        else return FindMin( T-&gt;Left );   /* keep moving to left */
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>} 
+</span></code></pre></div>
 <ol>
 <li>FindMax</li>
 </ol>
-<p><code>pseudocode
-   Position FindMax( SearchTree T ) 
-   { 
-    if ( T != NULL ) 
-        while ( T-&gt;Right != NULL )   
-            T = T-&gt;Right;   /* keep moving to find right most */
-       return T;  /* return NULL or the right most */
-   }</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Position FindMax( SearchTree T ) 
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>{ 
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a> if ( T != NULL ) 
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>     while ( T-&gt;Right != NULL )   
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>         T = T-&gt;Right;   /* keep moving to find right most */
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    return T;  /* return NULL or the right most */
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>} 
+</span></code></pre></div>
 <ol>
 <li>Insert</li>
 </ol>
-<p><code>pseudocode
-   SearchTree Insert( ElementType X, SearchTree T ) 
-   { 
-       if ( T == NULL ) /* Create and return a one-node tree */ 
-       { 
-        T = malloc( sizeof( struct TreeNode ) ); 
-        if ( T == NULL ) 
-            FatalError( "Out of space!!!" ); 
-        else 
-        { 
-            T-&gt;Element = X; 
-            T-&gt;Left = T-&gt;Right = NULL; 
-        } 
-       }  /* End creating a one-node tree */
-       else  /* If there is a tree */
-            if ( X &lt; T-&gt;Element ) 
-            T-&gt;Left = Insert( X, T-&gt;Left ); 
-        else 
-            if ( X &gt; T-&gt;Element ) 
-                T-&gt;Right = Insert( X, T-&gt;Right ); 
-        /* Else X is in the tree already; we'll do nothing */ 
-       return  T;   /* Do not forget this line!! */ 
-   }</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>SearchTree Insert( ElementType X, SearchTree T ) 
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>{ 
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    if ( T == NULL ) /* Create and return a one-node tree */ 
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    { 
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>     T = malloc( sizeof( struct TreeNode ) ); 
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>     if ( T == NULL ) 
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>         FatalError( &quot;Out of space!!!&quot; ); 
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>     else 
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>     { 
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>         T-&gt;Element = X; 
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>         T-&gt;Left = T-&gt;Right = NULL; 
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>     } 
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    }  /* End creating a one-node tree */
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    else  /* If there is a tree */
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>         if ( X &lt; T-&gt;Element ) 
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>         T-&gt;Left = Insert( X, T-&gt;Left ); 
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>     else 
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>         if ( X &gt; T-&gt;Element ) 
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>             T-&gt;Right = Insert( X, T-&gt;Right ); 
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>     /* Else X is in the tree already; we&#39;ll do nothing */ 
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    return  T;   /* Do not forget this line!! */ 
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>}
+</span></code></pre></div>
 <ul>
 <li>内存越界后不会马上报错，在下一次free或malloc时会失败</li>
 <li>Handle duplicated keys</li>
@@ -1849,32 +1849,32 @@
 <li>Delete a degree 1 node : Replace the node by its single child</li>
 <li>Delete a degree 2 node : 用左子树最大值结点或右子树最小值结点替换</li>
 </ul>
-<p><code>pseudocode
-   SearchTree Delete( ElementType X, SearchTree T ) 
-   {    
-    Position TmpCell; 
-       if ( T == NULL ) Error( "Element not found" ); 
-       else if ( X &lt; T-&gt;Element )  /* Go left */ 
-        T-&gt;Left = Delete( X, T-&gt;Left ); 
-       else if ( X &gt; T-&gt;Element )  /* Go right */ 
-        T-&gt;Right = Delete( X, T-&gt;Right ); 
-    else  /* Found element to be deleted */ 
-        if ( T-&gt;Left &amp;&amp; T-&gt;Right ) {  /* Two children */ 
-        /* Replace with smallest in right subtree */ 
-            TmpCell = FindMin( T-&gt;Right ); 
-            T-&gt;Element = TmpCell-&gt;Element; 
-            T-&gt;Right = Delete( T-&gt;Element, T-&gt;Right );  } /* End if */
-        else 
-        {  /* One or zero child */ 
-            TmpCell = T; 
-            if ( T-&gt;Left == NULL ) /* Also handles 0 child */ 
-                T = T-&gt;Right; 
-            else if ( T-&gt;Right == NULL )  
-                T = T-&gt;Left; 
-            free( TmpCell );  
-         }  /* End else 1 or 0 child */
-         return  T; 
-   }</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>SearchTree Delete( ElementType X, SearchTree T ) 
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>{    
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a> Position TmpCell; 
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    if ( T == NULL ) Error( &quot;Element not found&quot; ); 
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    else if ( X &lt; T-&gt;Element )  /* Go left */ 
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>     T-&gt;Left = Delete( X, T-&gt;Left ); 
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    else if ( X &gt; T-&gt;Element )  /* Go right */ 
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>     T-&gt;Right = Delete( X, T-&gt;Right ); 
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a> else  /* Found element to be deleted */ 
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>     if ( T-&gt;Left &amp;&amp; T-&gt;Right ) {  /* Two children */ 
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>     /* Replace with smallest in right subtree */ 
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>         TmpCell = FindMin( T-&gt;Right ); 
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>         T-&gt;Element = TmpCell-&gt;Element; 
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>         T-&gt;Right = Delete( T-&gt;Element, T-&gt;Right );  } /* End if */
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>     else 
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>     {  /* One or zero child */ 
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>         TmpCell = T; 
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>         if ( T-&gt;Left == NULL ) /* Also handles 0 child */ 
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>             T = T-&gt;Right; 
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>         else if ( T-&gt;Right == NULL )  
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>             T = T-&gt;Left; 
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>         free( TmpCell );  
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>      }  /* End else 1 or 0 child */
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>      return  T; 
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>}
+</span></code></pre></div>
 <ul>
 <li>$T(N)=O(d)$</li>
 </ul>
@@ -1986,7 +1986,11 @@
     
       <script src="../../../assets/javascripts/bundle.6c14ae12.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

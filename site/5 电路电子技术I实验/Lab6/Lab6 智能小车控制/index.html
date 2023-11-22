@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
+      <link rel="stylesheet" href="../../../static/extra.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1789,11 +1789,11 @@
 <p>当左轮转动时，in1输出1，in2输出0</p>
 <p>当左轮转动时，in3输出1，in4输出0</p>
 <p><img src="./assets/截屏2023-11-01 21.46.32.png" alt="截屏2023-11-01 21.46.32" style="zoom:30%;" /></p>
-<p><code>vhdl
- -------------直行循轨-------------------------------
- when "0110"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='1';in4&lt;='0';
- when "0010"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';
- when "0100"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';</code></p>
+<div class="language-vhdl highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">-------------直行循轨-------------------------------</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0110&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0010&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0100&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span></code></pre></div>
 </li>
 <li>
 <p>小车遇到岔路判断</p>
@@ -1805,15 +1805,15 @@
 <li>如果在遇到岔路过程中，中间的两盏灯出现了一亮一灭的情况，具体如下图（左边遇到岔路的情况，右边遇到岔路同理）所示，则应该一定地修正轨迹。</li>
 </ul>
 <p><img src="./assets/截屏2023-11-05 18.22.45.png" style="zoom:30%;" /></p>
-<p>```vhdl
- -------------岔路判断-------------------------------
- when "0111"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='1';in4&lt;='0';
- when "0011"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';
- when "0101"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';</p>
-<p>when "1110"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='1';in4&lt;='0';
- when "1010"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';
- when "1100"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';
- ```</p>
+<div class="language-vhdl highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-------------岔路判断-------------------------------</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0111&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0011&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0101&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;1110&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;1010&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;1100&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span></code></pre></div>
 </li>
 <li>
 <p>小车直角转弯</p>
@@ -1823,63 +1823,73 @@
 <li>
 <p>小车停止运行</p>
 <p>当小车四个光电管均位于停车处的黑框时，即tmp=0000时，小车停止运行</p>
-<p><code>vhdl
- when "0000"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='0';in4&lt;='0';
- when "1111"=&gt; in1&lt;='0';in2&lt;='1';in3&lt;='0';in4&lt;='1';</code></p>
+<div class="language-vhdl highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0000&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;1111&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+</span></code></pre></div>
 </li>
 </ul>
 <p>#### 全代码</p>
-<p>```vhdl
-   library IEEE;
-   use IEEE.std_logic_1164.all;
-   use IEEE.std_logic_unsigned.all; 
-   use IEEE.numeric_std.all;
-   use IEEE.std_logic_arith.all;</p>
-<p>entity controller is
-       port (
-    ledc1,ledc2,ledp1,ledp2,swt: in std_logic;
-           ena,enb,in1,in2,in3,in4,swto: out std_logic);
-   end controller;</p>
-<p>architecture runner of controller is</p>
-<p>begin
-   P1:process(ledc1,ledc2,ledp1,ledp2)
-   variable tmp:std_logic_vector(3 downto 0);
-   begin
-   tmp:=ledp1&amp;ledc1&amp;ledc2&ledp2;
-   case tmp is
-   when "0000"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='0';in4&lt;='0';
-   when "1111"=&gt; in1&lt;='0';in2&lt;='1';in3&lt;='0';in4&lt;='1';</p>
-<p>when "0110"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='1';in4&lt;='0';
-   when "0010"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';
-   when "0100"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';</p>
-<p>when "0111"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='1';in4&lt;='0';
-   when "0011"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';
-   when "0101"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';</p>
-<p>when "1110"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='1';in4&lt;='0';
-   when "1010"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';
-   when "1100"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';</p>
-<p>when "1000"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';
-   when "1001"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='0';in4&lt;='0';
-   when "0001"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';
-   when "1101"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='0';in4&lt;='0';
-   when "1011"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='0';in4&lt;='0';
-   when others =&gt;in1&lt;='X';in2&lt;='X';in3&lt;='X';in4&lt;='X';</p>
-<p>end case;
-   end process;</p>
-<p>P2: process(swt)
-   begin
-   if (swt='1') then
-    swto&lt;='1';
-    ena&lt;='1';
-    enb&lt;='1';
-   else
-    swto&lt;='0';
-    ena&lt;='0';
-    enb&lt;='0';
-   end if;
-   end process;
-   end runner;
-   ```</p>
+<div class="language-vhdl highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_arith.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">entity</span><span class="w"> </span><span class="nc">controller</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w"> </span><span class="n">ledc1</span><span class="p">,</span><span class="n">ledc2</span><span class="p">,</span><span class="n">ledp1</span><span class="p">,</span><span class="n">ledp2</span><span class="p">,</span><span class="n">swt</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="n">ena</span><span class="p">,</span><span class="n">enb</span><span class="p">,</span><span class="n">in1</span><span class="p">,</span><span class="n">in2</span><span class="p">,</span><span class="n">in3</span><span class="p">,</span><span class="n">in4</span><span class="p">,</span><span class="n">swto</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="k">end</span><span class="w"> </span><span class="nc">controller</span><span class="p">;</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="k">architecture</span><span class="w"> </span><span class="nc">runner</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">controller</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="k">begin</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="n">P1</span><span class="o">:</span><span class="k">process</span><span class="p">(</span><span class="n">ledc1</span><span class="p">,</span><span class="n">ledc2</span><span class="p">,</span><span class="n">ledp1</span><span class="p">,</span><span class="n">ledp2</span><span class="p">)</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="k">variable</span><span class="w"> </span><span class="n">tmp</span><span class="o">:</span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="k">begin</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="n">tmp</span><span class="o">:=</span><span class="n">ledp1</span><span class="o">&amp;</span><span class="n">ledc1</span><span class="o">&amp;</span><span class="n">ledc2</span><span class="o">&amp;</span><span class="n">ledp2</span><span class="p">;</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="k">case</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0000&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;1111&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0110&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0010&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0100&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0111&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0011&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0101&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;1110&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;1010&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;1100&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;1000&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;1001&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0001&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;1101&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;1011&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="k">when</span><span class="w"> </span><span class="k">others</span><span class="w"> </span><span class="o">=&gt;</span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;X&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;X&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;X&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;X&#39;</span><span class="p">;</span>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="k">end</span><span class="w"> </span><span class="k">case</span><span class="p">;</span>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="nc">P2</span><span class="o">:</span><span class="w"> </span><span class="k">process</span><span class="p">(</span><span class="n">swt</span><span class="p">)</span>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="k">begin</span>
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">swt</span><span class="o">=</span><span class="sc">&#39;1&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a><span class="w"> </span><span class="n">swto</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a><span class="w"> </span><span class="n">ena</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a><span class="w"> </span><span class="n">enb</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a><span class="k">else</span>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a><span class="w"> </span><span class="n">swto</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a><span class="w"> </span><span class="n">ena</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a><span class="w"> </span><span class="n">enb</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a><span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a><span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span>
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a><span class="k">end</span><span class="w"> </span><span class="nc">runner</span><span class="p">;</span>
+</span></code></pre></div>
 <ol>
 <li>连接各功能芯片模块。</li>
 </ol>
@@ -1895,9 +1905,9 @@
 <ol>
 <li>直角转弯时非常困难的一部分，我们发现，小车有概率地在直角转弯处停下，后观察光电管情况，发现，一些时候，tmp可能出现“0001”或者“1000”的情况，即最旁边的引脚在轨道内，而其他光电管偏离轨道。于是，对程序进行修改，</li>
 </ol>
-<p><code>vhdl
-   when "1000"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';
-   when "0001"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';</code></p>
+<div class="language-vhdl highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;1000&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">when</span><span class="w"> </span><span class="s">&quot;0001&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span></code></pre></div>
 <p>修改后，小车能够顺利转弯。</p>
 <ol>
 <li>小车能依照轨道进行运动。</li>
@@ -1997,7 +2007,11 @@
     
       <script src="../../../assets/javascripts/bundle.6c14ae12.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
