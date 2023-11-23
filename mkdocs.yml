@@ -34,6 +34,12 @@ nav:
       - 总集篇: 2 数据结构/webnotes/Foundation-of-Data-Structure.md
     - 个人笔记: 2 数据结构/mynotes/FDS-notes.md
     - Labs & hw: 2 数据结构/labs&hw/FDS Lab&hw review.md
+    - exams:
+      - 15-16: 2 数据结构/exams/15-16-middle.md
+      - 16-17: 2 数据结构/exams/16-17-middle.md
+      - 17-18: 2 数据结构/exams/17-18-middle.md
+      - 18-19: 2 数据结构/exams/18-19-middle.md
+      - 19-20: 2 数据结构/exams/19-20-middle.md
   - 3 ZJU-AI-ML: 
     - 课程笔记: 
       - 反向传播: 3 ZJU-AI-ML/feed forward and backward propagation.md
