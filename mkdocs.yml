@@ -34,6 +34,7 @@ nav:
       - 总集篇: 2 数据结构/webnotes/Foundation-of-Data-Structure.md
     - 个人笔记: 2 数据结构/mynotes/FDS-notes.md
     - Labs & hw: 2 数据结构/labs&hw/FDS Lab&hw review.md
+    - midterm: 2 数据结构/mynotes/midterm.md
     - exams:
       - 15-16: 2 数据结构/exams/15-16-middle.md
       - 16-17: 2 数据结构/exams/16-17-middle.md
@@ -45,6 +46,7 @@ nav:
       - 反向传播: 3 ZJU-AI-ML/feed forward and backward propagation.md
       - 赶快补课抄笔记: 3 ZJU-AI-ML/notes for ZJU-AI-ML.md
       - 一些截图: 3 ZJU-AI-ML/ML-zju.md
+      - Approaching-almost: 3 ZJU-AI-ML/Approach almost.md
     - 课程Lab&hw: 3 ZJU-AI-ML/labs & hw review.md
   - 4 图像信息处理 DIP: 4 图像信息处理 DIP/DIP.md
   - 5 电路电子技术I实验（爱迪生班） 秋学期: 

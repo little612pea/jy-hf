@@ -217,6 +217,8 @@ tree_ptr build_tree(int *pre_order, int pre_left, int pre_right, int *in_order, 
 
 前序【1】 （11 12 17 20）（ 5 8 15）
 
+
+
 ```c
 //自己写写 BST ADT，看看有什么问题
 - SearchTree  MakeEmpty( SearchTree T ){

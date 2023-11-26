@@ -1,5 +1,9 @@
 # WEEK 3
 
+1、栈的链表实现，push，pop和top语句
+
+2、 
+
 ### 2.3 The Stack ADT
 
 - Last-In-First-Out (LIFO)

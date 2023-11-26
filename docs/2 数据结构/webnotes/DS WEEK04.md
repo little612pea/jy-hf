@@ -1,10 +1,16 @@
 # WEEK 4
 
-## 3 Trees 非常重点
+## 3 Trees
 
-preorder+inorder 重构树？
+大纲：
 
+树的定义是递归的，有根节点和从其出发的有向边，连向所有的子树
 
+树的性质，n个节点n-1条边有根节点
+
+二叉树：
+
+树的遍历 四种遍历顺序，层序遍历
 
 ### 3.1 Preliminaries
 
@@ -167,5 +173,5 @@ typedef struct ThreadedTreeNode
 
 - 线索化的实质就是将二叉链表中的空指针改为指向前驱或后继的线索。由于前驱和后继信息只有在遍历该二叉树时才能得到，所以，线索化的过程就是在遍历的过程中修改空指针的过程。
 
-  <img src="picture/4-4.png" alt="4-4" style="zoom:80%;" />
+  <img src="picture/4-4.png" alt="4-4"  />
 
