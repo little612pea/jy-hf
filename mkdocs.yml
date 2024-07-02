@@ -9,69 +9,71 @@ nav:
   - about: mkdocs-guide.md
   - HowTo:
     - Embedding a PDF file: artifacts/test.md
-  - 1 数字逻辑设计:
-    - 实验过程: 1 数字逻辑设计/数逻实验.md
-    - 理论部分: 1 数字逻辑设计/数字逻辑设计 notes.md
-  - 2 数据结构: 
-    - 分课时笔记: 
-      - 写在前面: 2 数据结构/webnotes/README.md
-      - 第1周: 2 数据结构/webnotes/DS WEEK01.md
-      - 第2周: 2 数据结构/webnotes/DS WEEK02.md
-      - 第3周: 2 数据结构/webnotes/DS WEEK03.md
-      - 第4周: 2 数据结构/webnotes/DS WEEK04.md
-      - 第5周: 2 数据结构/webnotes/DS WEEK05.md
-      - 第6周: 2 数据结构/webnotes/DS WEEK06.md
-      - 第7周: 2 数据结构/webnotes/DS WEEK07.md
-      - 第8周: 2 数据结构/webnotes/DS WEEK08.md
-      - 第9周: 2 数据结构/webnotes/DS WEEK09.md
-      - 第10周: 2 数据结构/webnotes/DS WEEK10.md
-      - 第11周: 2 数据结构/webnotes/DS WEEK11.md
-      - 第12周: 2 数据结构/webnotes/DS WEEK12.md
-      - 第13周: 2 数据结构/webnotes/DS WEEK13.md
-      - 第14周: 2 数据结构/webnotes/DS WEEK14.md
-      - 第15周: 2 数据结构/webnotes/DS WEEK15.md
-      - 总集篇: 2 数据结构/webnotes/Foundation-of-Data-Structure.md
-    - 个人笔记: 2 数据结构/mynotes/FDS-notes.md
-    - Labs & hw: 2 数据结构/labs&hw/FDS Lab&hw review.md
-    - midterm: 2 数据结构/mynotes/midterm.md
-    - exams:
-      - 15-16: 2 数据结构/exams/15-16-middle.md
-      - 16-17: 2 数据结构/exams/16-17-middle.md
-      - 17-18: 2 数据结构/exams/17-18-middle.md
-      - 18-19: 2 数据结构/exams/18-19-middle.md
-      - 19-20: 2 数据结构/exams/19-20-middle.md
-  - 3 ZJU-AI-ML: 
-    - 课程笔记: 
-      - 反向传播: 3 ZJU-AI-ML/feed forward and backward propagation.md
-      - 赶快补课抄笔记: 3 ZJU-AI-ML/notes for ZJU-AI-ML.md
-      - 一些截图: 3 ZJU-AI-ML/ML-zju.md
-      - Approaching-almost: 3 ZJU-AI-ML/Approach almost.md
-    - 课程Lab&hw: 3 ZJU-AI-ML/labs & hw review.md
-  - 4 图像信息处理 DIP: 4 图像信息处理 DIP/DIP.md
-  - 5 电路电子技术I实验（爱迪生班） 秋学期: 
-    - Lab 1: 5 电路电子技术I实验/Lab1/Lab1 常用仪器使用练习实验.md
-    - Lab 2: 5 电路电子技术I实验/Lab2/Lab2 半导体二极管特性测试.md
-    - Lab 3: 5 电路电子技术I实验/Lab3/Lab3 数字电路逻辑设计.md
-    - Lab 4: 5 电路电子技术I实验/Lab4/lab4 三极管和门电路特性测试.md
-    - Lab 5: 5 电路电子技术I实验/Lab5/Lab5 小车检测电路和电机驱动电路测试.md
-    - Lab 6: 5 电路电子技术I实验/Lab6/Lab6 智能小车控制.md
-    - Lab 7: 5 电路电子技术I实验/lab7.md
+  - Jy Hu CS:
+    - 1 数字逻辑设计:
+      - 实验过程: JY_HU/1 数字逻辑设计/数逻实验.md
+      - 理论部分: JY_HU/1 数字逻辑设计/数字逻辑设计 notes.md
+    - 2 数据结构: 
+      - 分课时笔记: 
+        - 写在前面: JY_HU/2 数据结构/webnotes/README.md
+        - 第1周: JY_HU/2 数据结构/webnotes/DS WEEK01.md
+        - 第2周: JY_HU/2 数据结构/webnotes/DS WEEK02.md
+        - 第3周: JY_HU/2 数据结构/webnotes/DS WEEK03.md
+        - 第4周: JY_HU/2 数据结构/webnotes/DS WEEK04.md
+        - 第5周: JY_HU/2 数据结构/webnotes/DS WEEK05.md
+        - 第6周: JY_HU/2 数据结构/webnotes/DS WEEK06.md
+        - 第7周: JY_HU/2 数据结构/webnotes/DS WEEK07.md
+        - 第8周: JY_HU/2 数据结构/webnotes/DS WEEK08.md
+        - 第9周: JY_HU/2 数据结构/webnotes/DS WEEK09.md
+        - 第10周: JY_HU/2 数据结构/webnotes/DS WEEK10.md
+        - 第11周: JY_HU/2 数据结构/webnotes/DS WEEK11.md
+        - 第12周: JY_HU/2 数据结构/webnotes/DS WEEK12.md
+        - 第13周: JY_HU/2 数据结构/webnotes/DS WEEK13.md
+        - 第14周: JY_HU/2 数据结构/webnotes/DS WEEK14.md
+        - 第15周: JY_HU/2 数据结构/webnotes/DS WEEK15.md
+        - 总集篇: JY_HU/2 数据结构/webnotes/Foundation-of-Data-Structure.md
+      - 个人笔记: JY_HU/2 数据结构/mynotes/FDS-notes.md
+      - Labs & hw: JY_HU/2 数据结构/labs&hw/FDS Lab&hw review.md
+      - midterm: JY_HU/2 数据结构/mynotes/midterm.md
+      - exams:
+        - 15-16: JY_HU/2 数据结构/exams/15-16-middle.md
+        - 16-17: JY_HU/2 数据结构/exams/16-17-middle.md
+        - 17-18: JY_HU/2 数据结构/exams/17-18-middle.md
+        - 18-19: JY_HU/2 数据结构/exams/18-19-middle.md
+        - 19-20: JY_HU/2 数据结构/exams/19-20-middle.md
+    - 3 ZJU-AI-ML: 
+      - 课程笔记: 
+        - 反向传播: JY_HU/3 ZJU-AI-ML/feed forward and backward propagation.md
+        - 赶快补课抄笔记: JY_HU/3 ZJU-AI-ML/notes for ZJU-AI-ML.md
+        - 一些截图: JY_HU/3 ZJU-AI-ML/ML-zju.md
+        - Approaching-almost: JY_HU/3 ZJU-AI-ML/Approach almost.md
+      - 课程Lab&hw: JY_HU/3 ZJU-AI-ML/labs & hw review.md
+    - 4 图像信息处理 DIP: JY_HU/4 图像信息处理 DIP/DIP.md
+  - Jy Feng EE:
+    - 1 电路电子技术I实验（爱迪生班） 秋学期: 
+        - Lab 1: JY_FENG/1 电路电子技术I实验/Lab1/Lab1 常用仪器使用练习实验.md
+        - Lab 2: JY_FENG/1 电路电子技术I实验/Lab2/Lab2 半导体二极管特性测试.md
+        - Lab 3: JY_FENG/1 电路电子技术I实验/Lab3/Lab3 数字电路逻辑设计.md
+        - Lab 4: JY_FENG/1 电路电子技术I实验/Lab4/lab4 三极管和门电路特性测试.md
+        - Lab 5: JY_FENG/1 电路电子技术I实验/Lab5/Lab5 小车检测电路和电机驱动电路测试.md
+        - Lab 6: JY_FENG/1 电路电子技术I实验/Lab6/Lab6 智能小车控制.md
+        - Lab 7: JY_FENG/1 电路电子技术I实验/lab7.md
 
-  - 6 电路电子技术II实验:
-    - Lab 1 PSpice使用练习: 6 电路电子技术II实验/Lab1/Lab1.md
-    - Lab 2 信号发生电路实验: 6 电路电子技术II实验/Lab2/Lab2.md
-    - Lab 3 电压比较器: 6 电路电子技术II实验/Lab3/Lab3.md
-    - Lab 4 光耦合电路及其应用实验: 6 电路电子技术II实验/Lab4/Lab4.md
-    - Lab 5 仪用放大电路及其应用实验: 6 电路电子技术II实验/Lab5/Lab5.md
-    - Lab 6 滤波器的设计与实现: 6 电路电子技术II实验/Lab6/Lab6.md
-    - Lab 7 扩音机电路的设计制作与测试: 6 电路电子技术II实验/Lab7/Lab7.md
-    - Lab 8 数字钟: 6 电路电子技术II实验/Lab8/Lab8.md
-    - Lab 9 全加器与奇偶位检验电路: 6 电路电子技术II实验/Lab9/Lab9.md
-    - Lab 10 触发器: 6 电路电子技术II实验/Lab10/Lab10.md
-    - Lab 11 时序电路: 6 电路电子技术II实验/Lab11/Lab11.md
-    - Lab 12 一位全加器和四位加法器: 6 电路电子技术II实验/Lab12/Lab12.md
-    - Lab 13 数字钟（Quartus）: 6 电路电子技术II实验/Lab13/Lab13.md
-    - Lab 14 步进电机脉冲分配器: 6 电路电子技术II实验/Lab14/Lab14.md
+    - 2 电路电子技术II实验:
+      - Lab 1 PSpice使用练习:            JY_FENG/2 电路电子技术II实验/Lab1/Lab1.md
+      - Lab 2 信号发生电路实验:           JY_FENG/2 电路电子技术II实验/Lab2/Lab2.md
+      - Lab 3 电压比较器:                 JY_FENG/2 电路电子技术II实验/Lab3/Lab3.md
+      - Lab 4 光耦合电路及其应用实验:      JY_FENG/2 电路电子技术II实验/Lab4/Lab4.md
+      - Lab 5 仪用放大电路及其应用实验:    JY_FENG/2 电路电子技术II实验/Lab5/Lab5.md
+      - Lab 6 滤波器的设计与实现:          JY_FENG/2 电路电子技术II实验/Lab6/Lab6.md
+      - Lab 7 扩音机电路的设计制作与测试:   JY_FENG/2 电路电子技术II实验/Lab7/Lab7.md
+      - Lab 8 数字钟:                     JY_FENG/2 电路电子技术II实验/Lab8/Lab8.md
+      - Lab 9 全加器与奇偶位检验电路:      JY_FENG/2 电路电子技术II实验/Lab9/Lab9.md
+      - Lab 10 触发器:                   JY_FENG/2 电路电子技术II实验/Lab10/Lab10.md
+      - Lab 11 时序电路:                 JY_FENG/2 电路电子技术II实验/Lab11/Lab11.md
+      - Lab 12 一位全加器和四位加法器:    JY_FENG/2 电路电子技术II实验/Lab12/Lab12.md
+      - Lab 13 数字钟（Quartus）:        JY_FENG/2 电路电子技术II实验/Lab13/Lab13.md
+      - Lab 14 步进电机脉冲分配器:        JY_FENG/2 电路电子技术II实验/Lab14/Lab14.md
 
 
   - Other:
