@@ -50,7 +50,8 @@ nav:
       - 课程Lab&hw: JY_HU/3 ZJU-AI-ML/labs & hw review.md
     - 4 图像信息处理 DIP: JY_HU/4 图像信息处理 DIP/DIP.md
   - Jy Feng EE:
-    - 1 电路电子技术I实验（爱迪生班） 秋学期: 
+    - 1 电路电子技术I实验（爱迪生班） : 
+        - Preview: JY_FENG/1 电路电子技术I实验/preview.md
         - Lab 1: JY_FENG/1 电路电子技术I实验/Lab1/Lab1 常用仪器使用练习实验.md
         - Lab 2: JY_FENG/1 电路电子技术I实验/Lab2/Lab2 半导体二极管特性测试.md
         - Lab 3: JY_FENG/1 电路电子技术I实验/Lab3/Lab3 数字电路逻辑设计.md
@@ -58,8 +59,15 @@ nav:
         - Lab 5: JY_FENG/1 电路电子技术I实验/Lab5/Lab5 小车检测电路和电机驱动电路测试.md
         - Lab 6: JY_FENG/1 电路电子技术I实验/Lab6/Lab6 智能小车控制.md
         - Lab 7: JY_FENG/1 电路电子技术I实验/lab7.md
+        - WLab 1: JY_FENG/1 电路电子技术I实验/WLab1/WLab1.md
+        - WLab 2: JY_FENG/1 电路电子技术I实验/WLab2/WLab2.md
+        - WLab 3: JY_FENG/1 电路电子技术I实验/WLab3/WLab3.md
+        - WLab 4: JY_FENG/1 电路电子技术I实验/WLab4/WLab4.md
+        - WLab 6: JY_FENG/1 电路电子技术I实验/WLab6/WLab6.md
+        - WLab 7: JY_FENG/1 电路电子技术I实验/WLab7/WLab7.md
+        - WLab Final: JY_FENG/1 电路电子技术I实验/Final/Final.md
 
-    - 2 电路电子技术II实验:
+    - 2 电路电子技术II实验（爱迪生班）:
       - Lab 1 PSpice使用练习:            JY_FENG/2 电路电子技术II实验/Lab1/Lab1.md
       - Lab 2 信号发生电路实验:           JY_FENG/2 电路电子技术II实验/Lab2/Lab2.md
       - Lab 3 电压比较器:                 JY_FENG/2 电路电子技术II实验/Lab3/Lab3.md
@@ -100,7 +108,7 @@ theme:
     - navigation.footer
     - content.code.copy
   icon:
-    repo: fontawesome/brands/github
+    repo: material/robot-love
   palette: 
 
     # Palette toggle for light mode
@@ -160,3 +168,17 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Firisy
+      
+    - icon: fontawesome/brands/github
+      link: https://github.com/little612pea
+
+
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+      format: "YYYY-MM-DD HH:mm:ss"
