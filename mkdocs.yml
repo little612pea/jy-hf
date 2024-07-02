@@ -4,7 +4,6 @@ repo_name: little612pea/jy-hf
 repo_url: https://github.com/little612pea/jy-hf
 copyright: Copyright &copy; 2023 jy Hu
 
-
 nav:
   - Home: index.md
   - about: mkdocs-guide.md
@@ -58,6 +57,21 @@ nav:
     - Lab 6: 5 电路电子技术I实验/Lab6/Lab6 智能小车控制.md
     - Lab 7: 5 电路电子技术I实验/lab7.md
 
+  - 6 电路电子技术II实验:
+    - Lab 1 PSpice使用练习: 6 电路电子技术II实验/Lab1/Lab1.md
+    - Lab 2 信号发生电路实验: 6 电路电子技术II实验/Lab2/Lab2.md
+    - Lab 3 电压比较器: 6 电路电子技术II实验/Lab3/Lab3.md
+    - Lab 4 光耦合电路及其应用实验: 6 电路电子技术II实验/Lab4/Lab4.md
+    - Lab 5 仪用放大电路及其应用实验: 6 电路电子技术II实验/Lab5/Lab5.md
+    - Lab 6 滤波器的设计与实现: 6 电路电子技术II实验/Lab6/Lab6.md
+    - Lab 7 扩音机电路的设计制作与测试: 6 电路电子技术II实验/Lab7/Lab7.md
+    - Lab 8 数字钟: 6 电路电子技术II实验/Lab8/Lab8.md
+    - Lab 9 全加器与奇偶位检验电路: 6 电路电子技术II实验/Lab9/Lab9.md
+    - Lab 10 触发器: 6 电路电子技术II实验/Lab10/Lab10.md
+    - Lab 11 时序电路: 6 电路电子技术II实验/Lab11/Lab11.md
+    - Lab 12 一位全加器和四位加法器: 6 电路电子技术II实验/Lab12/Lab12.md
+    - Lab 13 数字钟（Quartus）: 6 电路电子技术II实验/Lab13/Lab13.md
+    - Lab 14 步进电机脉冲分配器: 6 电路电子技术II实验/Lab14/Lab14.md
 
 
   - Other:
