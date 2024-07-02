@@ -143,7 +143,7 @@ end BEHAV;
 
 #### 仿真结果
 
-![](../assets/result.png)
+![](./assets/result.png)
 
 根据波形图结果，可知，该元件的代码编写正确，可以进行下一操作。
 
@@ -151,11 +151,11 @@ end BEHAV;
 
 1. 新建project
 
-   ![](../assets/3.png)
+   ![](./assets/3.png)
 
 2. 导入关于元件的文件task1.vhd
 
-   ![](../assets/4.png)
+   ![](./assets/4.png)
 
 3. 编译生成文件，并导入DE10芯片
 
@@ -165,23 +165,23 @@ end BEHAV;
    * Fitter
    * Assemble
 
-   ![](../assets/5.png)
+   ![](./assets/5.png)
 
    * pin planner，进行线脚安排
      * ABC以开关的形式输入输出
      * Z以LED的方式显示
 
-   ![](../assets/6.png)
+   ![](./assets/6.png)
 
 ### 实验成果
 
-![](../assets/task1.png)
+![](./assets/task1.png)
 
 ## 实验二：二进制全加器
 
 ### 1. 分析真值表
 
-![image-20231016132054066](../assets/image-20231016132054066.png)
+![image-20231016132054066](./assets/image-20231016132054066.png)
 
 ### 2. 仿真模拟
 
@@ -262,17 +262,17 @@ end BEHAV;
 
 #### 仿真结果
 
-![](../assets/2-7433947.png)
+![](./assets/2-7433947.png)
 
 与预期一致，所以可以进行下一步操作
 
 ### 3. 生成编程文件
 
-1. 编译输出，得到以下逻辑图![](../assets/4-7434005.png)
+1. 编译输出，得到以下逻辑图![](./assets/4-7434005.png)
 
 2. pin planner
 
-   ![](../assets/pin.png)
+   ![](./assets/pin.png)
 
    * A, B, C0对应三个开关
    * C与Z对应两盏LED灯
@@ -393,7 +393,7 @@ end BEHAV;
 
 1. 编译输出
 
-   ![](../assets/result1.png)
+   ![](./assets/result1.png)
 
 2. Pin Planner
 

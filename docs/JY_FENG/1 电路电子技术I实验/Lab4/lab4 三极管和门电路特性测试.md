@@ -62,40 +62,40 @@
 
 3. 利用Matlab绘制伏安特性曲线。
 
-   ```matlab
-   % 使用xlsread函数从Excel文件中读取数据
-   data1 = readtable('./1016all.xlsx', 'Sheet','0V','Range', 'C2:D17');
-   data2 = readtable('./1016all.xlsx', 'Sheet','15V', 'Range','C2:D19');
-   
-   % 提取电压和电流数据
-   vbe1 = data1{:, 1};
-   ib1 = data1{:, 2};
-   vbe2 = data2{:,1};
-   ib2 = data2{:,2};
-   
-   % 绘制伏安特性曲线
-   plot(vbe1, ib1, 'o'); % 绘制数据点和连接线
-   title('固定VCE下三极管输出VA曲线'); % 添加标题
-   xlabel('V_{BE}(V)'); % 添加x轴标签
-   ylabel('I_B(uA)'); % 添加y轴标签
-   grid on; % 添加网格线
-   
-   % 对曲线进行平滑处理
-   smoothed_ib1 = smooth(ib1, 5, 'loess'); 
-   hold on; % 在同一图中叠加平滑曲线
-   plot(vbe1, smoothed_ib1, 'b-', 'LineWidth', 1); % 绘制平滑曲线
-   
-   %绘制曲线2
-   hold on;
-   plot(vbe2, ib2, 'o'); % 绘制数据点和连接线
-   grid on; % 添加网格线
-   
-   % 对曲线进行平滑处理
-   smoothed_ib2 = smooth(ib2, 5, 'loess'); % 使用rloess平滑算法
-   hold on; % 在同一图中叠加平滑曲线
-   plot(vbe2, smoothed_ib2, 'r-', 'LineWidth', 1); % 绘制平滑曲线
-   legend('原始数据(0V)', '曲线（0V下）','原始数据(15V)', '曲线（15V下）');
-   ```
+```matlab
+% 使用xlsread函数从Excel文件中读取数据
+data1 = readtable('./1016all.xlsx', 'Sheet','0V','Range', 'C2:D17');
+data2 = readtable('./1016all.xlsx', 'Sheet','15V', 'Range','C2:D19');
+
+% 提取电压和电流数据
+vbe1 = data1{:, 1};
+ib1 = data1{:, 2};
+vbe2 = data2{:,1};
+ib2 = data2{:,2};
+
+% 绘制伏安特性曲线
+plot(vbe1, ib1, 'o'); % 绘制数据点和连接线
+title('固定VCE下三极管输出VA曲线'); % 添加标题
+xlabel('V_{BE}(V)'); % 添加x轴标签
+ylabel('I_B(uA)'); % 添加y轴标签
+grid on; % 添加网格线
+
+% 对曲线进行平滑处理
+smoothed_ib1 = smooth(ib1, 5, 'loess'); 
+hold on; % 在同一图中叠加平滑曲线
+plot(vbe1, smoothed_ib1, 'b-', 'LineWidth', 1); % 绘制平滑曲线
+
+%绘制曲线2
+hold on;
+plot(vbe2, ib2, 'o'); % 绘制数据点和连接线
+grid on; % 添加网格线
+
+% 对曲线进行平滑处理
+smoothed_ib2 = smooth(ib2, 5, 'loess'); % 使用rloess平滑算法
+hold on; % 在同一图中叠加平滑曲线
+plot(vbe2, smoothed_ib2, 'r-', 'LineWidth', 1); % 绘制平滑曲线
+legend('原始数据(0V)', '曲线（0V下）','原始数据(15V)', '曲线（15V下）');
+```
 
 ###### 实验结果与分析
 
@@ -269,7 +269,7 @@ legend('V_{CE}=0V','V_{CE}=15V');
 
 3. 记录数据，并根据数据绘制图线。
 
-   ![截屏2023-10-22 20.57.37](../assets/截屏2023-10-22 20.57.37.png)
+   ![截屏2023-10-22 20.57.37](./assets/截屏2023-10-22 20.57.37.png)
 
    <img src="../assets/untitledp20.bmp" style="zoom:50%;" />
 
@@ -315,7 +315,7 @@ legend('V_{CE}=0V','V_{CE}=15V');
 
 2. 利用万用表测量电压，并记录数据
 
-   ![](../assets/截屏2023-10-22 21.25.32.png)
+   ![](./assets/截屏2023-10-22 21.25.32.png)
 
 ### 结果分析
 
@@ -348,11 +348,11 @@ legend('V_{CE}=0V','V_{CE}=15V');
 
 ### 实验结果与分析
 
-![](../assets/截屏2023-10-22 21.56.17.png)
+![](./assets/截屏2023-10-22 21.56.17.png)
 
 <img src="../assets/image-20231022220805720.png" alt="image-20231022220805720" style="zoom:50%;" />
 
 可以看到与非门输出在外端串联电阻时，尤其是小电阻，输出并不是标准的高电平或者低电平。与非门内部呈现一定的定值电阻特性（由两段曲线呈现直线可以看出）。经过一定的计算，可以得出与非门内部的电阻可以近似估计为0.02Ω。
 
-![](../assets/截屏2023-10-22 22.10.24.png)
+![](./assets/截屏2023-10-22 22.10.24.png)
 
