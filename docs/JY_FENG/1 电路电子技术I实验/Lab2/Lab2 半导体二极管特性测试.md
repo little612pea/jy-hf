@@ -48,21 +48,21 @@
 
 1. 认识万用表测量二极管档
 
-<img src="./assets/截屏2023-09-27 18.45.41.png" alt="截屏2023-09-27 18.45.41" style="zoom:30%;" /><img src="./assets/截屏2023-09-27 18.47.04.png" alt="截屏2023-09-27 18.47.04" style="zoom:30%;" />
+<img src="../assets/截屏2023-09-27 18.45.41.png" alt="截屏2023-09-27 18.45.41" style="zoom:30%;" /><img src="../assets/截屏2023-09-27 18.47.04.png" alt="截屏2023-09-27 18.47.04" style="zoom:30%;" />
 
 2. 将黑表笔插入`COM`口，红表笔插入二极管测试对应二极管测试插口，并将档位调至二极管测量档位。由于蜂鸣器档位和二极管是同一档位，点按左上角`Select`按钮，切换至二极管档位。
 
 3. 将万用表红表笔接入1N4007正级，黑色接负极，此时万用表显示二极管导通电压。如下图所示，测得1N4007的正向导通电压约为0.568V。
 
-   <img src="./assets/IMG_9031.jpg" style="zoom:10%;" />
+   <img src="../assets/IMG_9031.jpg" style="zoom:10%;" />
 
 4. 将红黑表笔交换，测量方向电压，如下图所示，显示OL，超出量程。
 
-   <img src="./assets/IMG_9032.jpeg" style="zoom:10%;" />
+   <img src="../assets/IMG_9032.jpeg" style="zoom:10%;" />
 
 5. 利用相同方法测量稳压二极管，得到相似结果
 
-   <img src="./assets/IMG_9033.jpeg" style="zoom:8%;" /><img src="./assets/IMG_9034.jpeg" alt="IMG_9034" style="zoom:8%;" />
+   <img src="../assets/IMG_9033.jpeg" style="zoom:8%;" /><img src="./assets/IMG_9034.jpeg" alt="IMG_9034" style="zoom:8%;" />
 
    
 
@@ -80,7 +80,7 @@
 
 采用以下电路，利用欧姆定律对二极管在每一点电压下的阻值进行测量。最后利用excel对数据进行处理，绘制曲线。
 
-<img src="./assets/截屏2023-10-02 12.43.34.png" alt="截屏2023-10-02 12.43.34" style="zoom:25%;" />
+<img src="../assets/截屏2023-10-02 12.43.34.png" alt="截屏2023-10-02 12.43.34" style="zoom:25%;" />
 
 由于万用表的安培表阻值在该测试条件下（mA级别），视为短路；而相反，电压表的阻值足够大，可以视为开路，所以实验中只使用电压表来进行测量，将电压表并联在R~1~两端。并且利用电压源的示数，通过计算得出二极管两端电压与电流。
 
@@ -88,7 +88,7 @@
 
 1. 连接电路，并将电压源输出值调为0。
 
-   <img src="./assets/IMG_9035.jpg" style="zoom:10%;" />
+   <img src="../assets/IMG_9035.jpg" style="zoom:10%;" />
 
 2. 将万用表并联在电阻两端，测得电压示数。将此示数和电压源示数，一起记录到excel表格中。
 
@@ -128,7 +128,7 @@
 | 9.55                | 8.92            | 0.63                     | 0.00892          |
 | 11.049              | 10.42           | 0.629                    | 0.01042          |
 
-<img src="./assets/截屏2023-10-02 12.56.02.png" alt="截屏2023-10-02 12.56.02" style="zoom:50%;" />
+<img src="../assets/截屏2023-10-02 12.56.02.png" alt="截屏2023-10-02 12.56.02" style="zoom:50%;" />
 
 -------
 
@@ -143,7 +143,7 @@
 
 3. 后通过matlab等数据处理，生成正确的曲线。
 
-<img src="./assets/截屏2023-10-02 15.33.04.png" alt="截屏2023-10-02 15.33.04" style="zoom:50%;" />
+<img src="../assets/截屏2023-10-02 15.33.04.png" alt="截屏2023-10-02 15.33.04" style="zoom:50%;" />
 
 ### 测试过程与结果
 
@@ -155,27 +155,27 @@
 
    Matlab代码如下：
 
-   ```matlab
-   % 读取数据
-   data = readmatrix('./Lab2/数据/111.csv');
-   
-   % 获取vd和id列
-   v1 = data(:, 2);
-   v2= data(:, 3);
-   vd=v1-v2;
-   id=v2/51*1000;
-   plot(vd, id);
-   
-   %生成平滑曲线
-   smoothed_vd = smooth(vd, 0.1, 'loess'); 
-   smoothed_id = smooth(id, 0.1, 'loess');
-   hold on;
-   plot(smoothed_vd, smoothed_id, 'b-', 'LineWidth', 0.2);
-   legend('原始数据', '光滑曲线');
-   xlabel('电压（V）');
-   ylabel('电流（mA）');
-   legend('实验数据','VA特性曲线');
-   ```
+```matlab
+% 读取数据
+data = readmatrix('./Lab2/数据/111.csv');
+
+% 获取vd和id列
+v1 = data(:, 2);
+v2= data(:, 3);
+vd=v1-v2;
+id=v2/51*1000;
+plot(vd, id);
+
+%生成平滑曲线
+smoothed_vd = smooth(vd, 0.1, 'loess'); 
+smoothed_id = smooth(id, 0.1, 'loess');
+hold on;
+plot(smoothed_vd, smoothed_id, 'b-', 'LineWidth', 0.2);
+legend('原始数据', '光滑曲线');
+xlabel('电压（V）');
+ylabel('电流（mA）');
+legend('实验数据','VA特性曲线');
+```
 
 4. 将二极管更换为稳压二极管，重复上述步骤。
 
@@ -183,7 +183,7 @@
 
 #### 整流二极管
 
-<img src="./assets/111.jpg" style="zoom:30%;" />
+<img src="../assets/111.jpg" style="zoom:30%;" />
 
 观察到以下几个特殊的地方：
 
@@ -195,7 +195,7 @@
 
 #### 稳压二极管
 
-<img src="./assets/222.jpg" style="zoom:30%;" />
+<img src="../assets/222.jpg" style="zoom:30%;" />
 
 可以观察到，稳压二极管的截止电压约为5.2V左右，与标称的5V/1W相匹配，同时可以观察到，稳压二极管相比于整流二极管，在两端电压增大的情况下，能保持一个较为稳定的电压值，约为0.76V左右。
 
@@ -211,7 +211,7 @@
 
 Multisim平台一定需要一个接地端，同时示波器的接地端并不影响电路中的电位，因而实验电路如下：
 
-<img src="./assets/电路图.png" style="zoom:30%;" />
+<img src="../assets/电路图.png" style="zoom:30%;" />
 
 示波器A接口为二极管两端电压，B接口为R1两端电压。利用示波器的B/A按钮，定性地显示VA特性曲线，再利用Matlab处理输出的数据。
 
@@ -268,11 +268,11 @@ legend('实验数据','VA特性曲线');
 
 #### 1V，主要分析二极管由导通到截止这一段的特点
 
-<img src="./assets/111aaa.jpg" style="zoom:30%;" />
+<img src="../assets/111aaa.jpg" style="zoom:30%;" />
 
 #### 700V，主要分析1N4007截止电压的特性
 
-<img src="./assets/777.jpg" style="zoom:30%;" />
+<img src="../assets/777.jpg" style="zoom:30%;" />
 
 可以看出，由导通到截止这一部分，二极管的性质并不是非常稳定，所以曲线几乎填满了该段区域。
 
@@ -280,7 +280,7 @@ legend('实验数据','VA特性曲线');
 
 ### 引入
 
-<img src="./assets/ab99.png" style="zoom:50%;" />
+<img src="../assets/ab99.png" style="zoom:50%;" />
 
 观察上面的黄色曲线，会发现，当二极管导通后，峰值电压骤降。而分析可知，Channel1所测的是信号源两端电压，而电压骤降说明了信号源内部有电阻，进行分压，导致其峰值减小。现测量信号源两端的电阻大小。
 
@@ -288,21 +288,21 @@ legend('实验数据','VA特性曲线');
 
 采用以下电路，利用欧姆定律对其进行测量。通过测量峰值电压的变化，得出信号源内部电阻大小
 
-<img src="./assets/截屏2023-10-04 10.56.35.png" alt="截屏2023-10-04 10.56.35" style="zoom:30%;" />
+<img src="../assets/截屏2023-10-04 10.56.35.png" alt="截屏2023-10-04 10.56.35" style="zoom:30%;" />
 
 ### 测试过程与结果
 
 1. 将示波器接口两端与信号源两端连接。测出原本输出的电压幅值，$V_{p1}=10.5V$。
 
-   <img src="./assets/IMG_9072.jpeg" style="zoom:15%;" />
+   <img src="../assets/IMG_9072.jpeg" style="zoom:15%;" />
 
 2. 连接方案中的电路图。
 
-   <img src="./assets/IMG_9073.jpeg" style="zoom:15%;" />
+   <img src="../assets/IMG_9073.jpeg" style="zoom:15%;" />
 
 3. 测出此时的电压峰值为，$V_{p2}=5.23V$
 
-   <img src="./assets/IMG_9074.jpeg" style="zoom:15%;" />
+   <img src="../assets/IMG_9074.jpeg" style="zoom:15%;" />
 
 4. 再次测量信号源两端电压，发现保持在10.5V，因此可以将信号源两端电压视为10.5V。
 

@@ -34,15 +34,15 @@
 
 * 将三极管从右到左三只脚命名为a,b,c，利用万用表二极管测试级，测量三极管三只脚的极性。
 
-  <img src="./assets/截屏2023-10-22 15.53.51.png" alt="截屏2023-10-22 15.53.51" style="zoom:67%;" />
+  <img src="../assets/截屏2023-10-22 15.53.51.png" alt="截屏2023-10-22 15.53.51" style="zoom:67%;" />
 
-  <img src="./assets/IMG_9687.jpeg" style="zoom:10%;" /><img src="./assets/IMG_9689.jpeg " style="zoom:10%;" />
+  <img src="../assets/IMG_9687.jpeg" style="zoom:10%;" /><img src="../assets/IMG_9689.jpeg " style="zoom:10%;" />
 
 根据以上表格可以判断，该三极管中间的端口为b基极，且为NPN型三极管。
 
 * 接下来判断E和C极
 
-  <img src="./assets/IMG_9690.jpeg" style="zoom:10%;" /><img src="./assets/IMG_9691.jpeg" alt="IMG_9691" style="zoom:10%;" />
+  <img src="../assets/IMG_9690.jpeg" style="zoom:10%;" /><img src="../assets/IMG_9691.jpeg" alt="IMG_9691" style="zoom:10%;" />
 
 将万用表切换到HFE档，通过对三极管的放大倍数的测量，判断三极管的e和c极。已知正常的ß应该在100～300之间。
 
@@ -54,7 +54,7 @@
 
 1. 将电路连接为下图
 
-   <img src="./assets/image-20231022155558924.png" alt="image-20231022155558924" style="zoom:50%;" />
+   <img src="../assets/image-20231022155558924.png" alt="image-20231022155558924" style="zoom:50%;" />
 
    <center>fig1 固定VCE下的实验电路图</center>
 
@@ -103,13 +103,13 @@
 
 <center>VCE=0V</center>
 
-<img src="./assets/截屏2023-10-22 16.51.12.png" alt="截屏2023-10-22 16.51.12" style="zoom:50%;" />
+<img src="../assets/截屏2023-10-22 16.51.12.png" alt="截屏2023-10-22 16.51.12" style="zoom:50%;" />
 
 <center>VCE=15V下</center>
 
-<img src="./assets/截屏2023-10-22 16.49.53.png" alt="截屏2023-10-22 16.49.53" style="zoom:43%;" />
+<img src="../assets/截屏2023-10-22 16.49.53.png" alt="截屏2023-10-22 16.49.53" style="zoom:43%;" />
 
-<img src="./assets/figure1.bmp" style="zoom:50%;" />
+<img src="../assets/figure1.bmp" style="zoom:50%;" />
 
 <center>fig2 三极管VA特性曲线</center>
 
@@ -117,7 +117,7 @@
 
 1. 将电路图连接为下图
 
-   <img src="./assets/image-20231022165919379.png" alt="image-20231022165919379" style="zoom:50%;" />
+   <img src="../assets/image-20231022165919379.png" alt="image-20231022165919379" style="zoom:50%;" />
 
 <center>fig3 固定Ib下的实验电路图</center>
 
@@ -129,33 +129,33 @@
 
 <center>Ib=2.5uA</center>
 
-<img src="./assets/截屏2023-10-22 17.06.55.png" style="zoom:40%;" />
+<img src="../assets/截屏2023-10-22 17.06.55.png" style="zoom:40%;" />
 
 <center>Ib=5uA</center>
 
-<img src="./assets/截屏2023-10-22 17.07.30.png" alt="截屏2023-10-22 17.07.30" style="zoom:33%;" />
+<img src="../assets/截屏2023-10-22 17.07.30.png" alt="截屏2023-10-22 17.07.30" style="zoom:33%;" />
 
 <center>Ib=7.5uA</center>
 
-<img src="./assets/截屏2023-10-22 17.07.42.png" alt="截屏2023-10-22 17.07.42" style="zoom:33%;" />
+<img src="../assets/截屏2023-10-22 17.07.42.png" alt="截屏2023-10-22 17.07.42" style="zoom:33%;" />
 
 <center>Ib=10uA</center>
 
-<img src="./assets/截屏2023-10-22 17.07.20.png" alt="截屏2023-10-22 17.07.20" style="zoom:40%;" />
+<img src="../assets/截屏2023-10-22 17.07.20.png" alt="截屏2023-10-22 17.07.20" style="zoom:40%;" />
 
-<img src="./assets/figure2.bmp" style="zoom:50%;" />
+<img src="../assets/figure2.bmp" style="zoom:50%;" />
 
 <center>fig4 绘制VA特性曲线</center>
 
 ###### 一些特殊点的分析
 
-<img src="./assets/figure25.bmp" style="zoom:50%;" />
+<img src="../assets/figure25.bmp" style="zoom:50%;" />
 
 <center>fig5 I_b=2.5uA下的VA曲线</center>
 
 我们发现，当I~b~=2.5uA时ce的压降使得Ic到达饱和区时，放大电流随着压降增大而减小。
 
-<img src="./assets/figure10.bmp" style="zoom:50%;" />
+<img src="../assets/figure10.bmp" style="zoom:50%;" />
 
 <center>fig6 I=10uA下的VA曲线</center>
 
@@ -171,17 +171,17 @@
 
 1. 利用MULTISIM软件搭建以下电路：
 
-   <img src="./assets/circ1.jpg" style="zoom:75%;" />
+   <img src="../assets/circ1.jpg" style="zoom:75%;" />
 
 <center>fig7 控制VCE不变下的实验电路</center>
 
-<img src="./assets/3的副本.png" style="zoom:75%;" />
+<img src="../assets/3的副本.png" style="zoom:75%;" />
 
 <center>fig8 控制Ib不变下的实验电路</center>
 
 2. 利用软件自带的仿真功能`仿真`->`直流扫描`功能，改变所要调节的参数，获得所要的特性曲线。
 
-<img src="./assets/2.png" style="zoom:50%;" />
+<img src="../assets/2.png" style="zoom:50%;" />
 
 <center>fig9 固定Vce=15V，改变V1的值，获得的扫描曲线</center>
 
@@ -189,38 +189,38 @@
 
    固定Vce
 
-   ```matlab
-   data1 = readmatrix('./1016/1_0V.csv','NumHeaderLines',1);
-   % 提取电压和电流数据
-   vbe1 = data1(:, 5);
-   ib1 = data1(:, 2);
-   
-   % 对曲线进行平滑处理
-   smoothed_ib1 = smooth(ib1, 5, 'loess'); 
-   plot(vbe1, smoothed_ib1, 'b-', 'LineWidth', 1); % 绘制平滑曲线
-   title('固定VCE下三极管输出VA曲线'); % 添加标题
-   xlabel('V_{BE}(V)'); % 添加x轴标签
-   ylabel('I_B(uA)'); % 添加y轴标签
-   grid on; % 添加网格线
-   
-   data2 = readmatrix('./1016/2_15V.csv','NumHeaderLines',1);
-   % 提取电压和电流数据
-   vbe2 = data2(:,5);
-   ib2 = data2(:,2);
-   % 对曲线进行平滑处理
-   smoothed_ib2 = smooth(ib2, 5, 'loess'); % 使用rloess平滑算法
-   hold on; % 在同一图中叠加平滑曲线
-   plot(vbe2, smoothed_ib2, 'r-', 'LineWidth', 1); % 绘制平滑曲线
-   legend('V_{CE}=0V','V_{CE}=15V');
-   ```
+```matlab
+data1 = readmatrix('./1016/1_0V.csv','NumHeaderLines',1);
+% 提取电压和电流数据
+vbe1 = data1(:, 5);
+ib1 = data1(:, 2);
+
+% 对曲线进行平滑处理
+smoothed_ib1 = smooth(ib1, 5, 'loess'); 
+plot(vbe1, smoothed_ib1, 'b-', 'LineWidth', 1); % 绘制平滑曲线
+title('固定VCE下三极管输出VA曲线'); % 添加标题
+xlabel('V_{BE}(V)'); % 添加x轴标签
+ylabel('I_B(uA)'); % 添加y轴标签
+grid on; % 添加网格线
+
+data2 = readmatrix('./1016/2_15V.csv','NumHeaderLines',1);
+% 提取电压和电流数据
+vbe2 = data2(:,5);
+ib2 = data2(:,2);
+% 对曲线进行平滑处理
+smoothed_ib2 = smooth(ib2, 5, 'loess'); % 使用rloess平滑算法
+hold on; % 在同一图中叠加平滑曲线
+plot(vbe2, smoothed_ib2, 'r-', 'LineWidth', 1); % 绘制平滑曲线
+legend('V_{CE}=0V','V_{CE}=15V');
+```
 
    
 
 ### 实验结果
 
-<img src="./assets/MVCE.bmp" style="zoom:40%;" />
+<img src="../assets/MVCE.bmp" style="zoom:40%;" />
 
-<img src="./assets/ib.bmp" style="zoom:50%;" />
+<img src="../assets/ib.bmp" style="zoom:50%;" />
 
 ## 实验三：测试与非门逻辑功能
 
@@ -234,7 +234,7 @@
 
 1. 连接电路为下图，注意7脚接地和14脚接高电平
 
-   <img src="./assets/IMG_9697.jpg" style="zoom:15%;" />
+   <img src="../assets/IMG_9697.jpg" style="zoom:15%;" />
 
    <center>fig10 连接电路</center>
 
@@ -243,7 +243,7 @@
 
 ### 实验结果
 
-<img src="./assets/截屏2023-10-22 20.21.21.png" style="zoom:50%;" />
+<img src="../assets/截屏2023-10-22 20.21.21.png" style="zoom:50%;" />
 
 ## 实验四：与非门传输特性测量
 
@@ -261,7 +261,7 @@
 
 1. 连接电路
 
-   <img src="./assets/image-20231022204950152.png" alt="image-20231022204950152" style="zoom:33%;" />
+   <img src="../assets/image-20231022204950152.png" alt="image-20231022204950152" style="zoom:33%;" />
 
    <center>fig11 测试电路</center>
 
@@ -269,15 +269,15 @@
 
 3. 记录数据，并根据数据绘制图线。
 
-   ![截屏2023-10-22 20.57.37](./assets/截屏2023-10-22 20.57.37.png)
+   ![截屏2023-10-22 20.57.37](../assets/截屏2023-10-22 20.57.37.png)
 
-   <img src="./assets/untitledp20.bmp" style="zoom:50%;" />
+   <img src="../assets/untitledp20.bmp" style="zoom:50%;" />
 
 #### （2）输入0至5V变化的电压，利用扫描法测量传输特性
 
 1. 连接电路。
 
-   <img src="./assets/image-20231022211723785.png" alt="image-20231022211723785" style="zoom:50%;" />
+   <img src="../assets/image-20231022211723785.png" alt="image-20231022211723785" style="zoom:50%;" />
 
    <center>fig12 测试电路</center>
 
@@ -285,11 +285,11 @@
 
 3. 调节示波器至显示清晰稳定图像。
 
-   <img src="./assets/bcope_6.bmp" style="zoom:75%;" />
+   <img src="../assets/bcope_6.bmp" style="zoom:75%;" />
 
 4. 切换观察选项为XY显示。
 
-   <img src="./assets/bcope_9.bmp" style="zoom:75%;" />
+   <img src="../assets/bcope_9.bmp" style="zoom:75%;" />
 
 ### 结果分析
 
@@ -311,11 +311,11 @@
 
 1. 连接电路
 
-   <img src="./assets/image-20231022212159202.png" alt="image-20231022212159202" style="zoom:50%;" />
+   <img src="../assets/image-20231022212159202.png" alt="image-20231022212159202" style="zoom:50%;" />
 
 2. 利用万用表测量电压，并记录数据
 
-   ![](./assets/截屏2023-10-22 21.25.32.png)
+   ![](../assets/截屏2023-10-22 21.25.32.png)
 
 ### 结果分析
 
@@ -334,7 +334,7 @@
 
 1. 连接电路
 
-   <img src="./assets/image-20231022213340242.png" alt="image-20231022213340242" style="zoom:50%;" />
+   <img src="../assets/image-20231022213340242.png" alt="image-20231022213340242" style="zoom:50%;" />
 
    <center>输出高电平&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;输出低电平</center>
 
@@ -348,11 +348,11 @@
 
 ### 实验结果与分析
 
-![](./assets/截屏2023-10-22 21.56.17.png)
+![](../assets/截屏2023-10-22 21.56.17.png)
 
-<img src="./assets/image-20231022220805720.png" alt="image-20231022220805720" style="zoom:50%;" />
+<img src="../assets/image-20231022220805720.png" alt="image-20231022220805720" style="zoom:50%;" />
 
 可以看到与非门输出在外端串联电阻时，尤其是小电阻，输出并不是标准的高电平或者低电平。与非门内部呈现一定的定值电阻特性（由两段曲线呈现直线可以看出）。经过一定的计算，可以得出与非门内部的电阻可以近似估计为0.02Ω。
 
-![](./assets/截屏2023-10-22 22.10.24.png)
+![](../assets/截屏2023-10-22 22.10.24.png)
 
