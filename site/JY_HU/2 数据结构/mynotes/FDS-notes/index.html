@@ -1073,9 +1073,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -1084,7 +1082,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -2491,10 +2489,10 @@
   
 
 
-<h1 id="fds-notes-2023">FDS-notes-2023<a class="headerlink" href="#fds-notes-2023" title="Permanent link">&para;</a></h1>
+<h1 id="fds-notes-2023">FDS-notes-2023</h1>
 <p>注意复习：填空题，以下内容均可能作为填空</p>
 <p><img alt="zigzag.jpg" src="D:\notes\assets\337cbfb0-a7b2-4500-9664-318e9ffc870e.jpg" /></p>
-<h2 id="_1">树<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">树</h2>
 <p>四种遍历顺序</p>
 <p>层序 1 11 5 12 17 8 20 15</p>
 <p>中序 12 11 20 17 1 15 8 5</p>
@@ -2618,7 +2616,7 @@ post-order(Tree T){
 </code></pre>
 <p>前序的第一个元素和后序的最后一个元素为根节点</p>
 <p>中序从左到右，实际上的根节点将数组分成了完整的两个部分，因此只要确定当前的根节点，就能找出左、右子树的区间</p>
-<h2 id="week-4-hw">中序遍历+后序遍历建树：week-4-hw<a class="headerlink" href="#week-4-hw" title="Permanent link">&para;</a></h2>
+<h2 id="week-4-hw">中序遍历+后序遍历建树：week-4-hw</h2>
 <pre><code class="language-c">//由中序遍历和后序遍历建立上面的树：
 //中序遍历：12 11 20 17 1 15 8 5 
 //后序遍历：12 20 17 11 15 8 5 1
@@ -2653,7 +2651,7 @@ tree_ptr build_tree(int *in_order, int *post_order, int n)
 <p>两遍后：</p>
 <p>中序 （（12） 11 （20 17） ）【1】 （（15 8 ）{5}（））</p>
 <p>后序 （（12） （20 17） {11}）（ （15 8） {5}）【1】</p>
-<h2 id="lab2">前序遍历+中序遍历建树：lab2<a class="headerlink" href="#lab2" title="Permanent link">&para;</a></h2>
+<h2 id="lab2">前序遍历+中序遍历建树：lab2</h2>
 <pre><code class="language-c">tree_ptr build_tree(int *pre_order, int pre_left, int pre_right, int *in_order, int in_left, int in_right)
 {
     // 先序遍历建树,先处理根节点，再处理左子树，再处理右子树
@@ -2764,7 +2762,7 @@ tree_ptr build_tree(int *in_order, int *post_order, int n)
 }
 
 </code></pre>
-<h2 id="double-ended-queuedeque">双端队列 double-ended queue，简称Deque<a class="headerlink" href="#double-ended-queuedeque" title="Permanent link">&para;</a></h2>
+<h2 id="double-ended-queuedeque">双端队列 double-ended queue，简称Deque</h2>
 <p>链表实现</p>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
@@ -3003,7 +3001,7 @@ int main() {
 
 
 </code></pre>
-<h2 id="_2">循环队列<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">循环队列</h2>
 <p>链表实现</p>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
@@ -3214,7 +3212,7 @@ int main() {
     return 0;
 }
 </code></pre>
-<h2 id="_3">双向循环链表<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">双向循环链表</h2>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 

@@ -815,9 +815,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -826,9 +824,18 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties-of-binary-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties of Binary Trees
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#33-binary-search-trees" class="md-nav__link">
@@ -836,6 +843,39 @@
       3.3 Binary Search Trees
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="3.3 Binary Search Trees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-a-binary-search-tree-is-a-binary-tree-it-may-be-empty-if-it-is-not-empty-it-satisfies-the-following-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Definition] A binary search tree is a binary tree. It may be empty. If it is not empty, it satisfies the following properties:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adt" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2448,11 +2488,11 @@
   
 
 
-<h1 id="week-5">WEEK 5<a class="headerlink" href="#week-5" title="Permanent link">&para;</a></h1>
+<h1 id="week-5">WEEK 5</h1>
 <ul>
 <li>In a tree, the order of children does not matter. But in a binary tree, left child and right child are different.</li>
 </ul>
-<h4 id="properties-of-binary-trees">Properties of Binary Trees<a class="headerlink" href="#properties-of-binary-trees" title="Permanent link">&para;</a></h4>
+<h4 id="properties-of-binary-trees">Properties of Binary Trees</h4>
 <blockquote>
 <ul>
 <li>The maximum number of nodes on level <span class="arithmatex">\(i\)</span> is <span class="arithmatex">\(2^{i-1},i\geq1\)</span>.</li>
@@ -2464,15 +2504,15 @@
 <p>合并两个式子可得：<span class="arithmatex">\(2n_2 + n_1 +1 =n_0 + n_1 + n_2\)</span> ，则计算可知 <span class="arithmatex">\(n_0=n_2+1\)</span></p>
 </blockquote>
 <hr />
-<h3 id="33-binary-search-trees">3.3 Binary Search Trees<a class="headerlink" href="#33-binary-search-trees" title="Permanent link">&para;</a></h3>
-<h4 id="definition-a-binary-search-tree-is-a-binary-tree-it-may-be-empty-if-it-is-not-empty-it-satisfies-the-following-properties">[Definition] A binary search tree is a binary tree.  It may be empty.  If it is not empty, it satisfies the following properties:<a class="headerlink" href="#definition-a-binary-search-tree-is-a-binary-tree-it-may-be-empty-if-it-is-not-empty-it-satisfies-the-following-properties" title="Permanent link">&para;</a></h4>
+<h3 id="33-binary-search-trees">3.3 Binary Search Trees</h3>
+<h4 id="definition-a-binary-search-tree-is-a-binary-tree-it-may-be-empty-if-it-is-not-empty-it-satisfies-the-following-properties">[Definition] A binary search tree is a binary tree.  It may be empty.  If it is not empty, it satisfies the following properties:</h4>
 <ul>
 <li>每个结点有一个互不不同的值</li>
 <li>若左子树非空，则左子树上所有结点的值均小于根结点的值</li>
 <li>若右子树非空，则右子树上所有结点的值均大于根结点的值</li>
 <li>左、右子树也是是一棵二叉查找树</li>
 </ul>
-<h4 id="adt">ADT<a class="headerlink" href="#adt" title="Permanent link">&para;</a></h4>
+<h4 id="adt">ADT</h4>
 <ul>
 <li><strong>Objects</strong> : A finite ordered list with zero or more elements.</li>
 <li><strong>Operations</strong> :</li>
@@ -2484,7 +2524,7 @@
 <li>SearchTree  Delete( ElementType X, SearchTree T )</li>
 <li>ElementType  Retrieve( Position P )</li>
 </ul>
-<h4 id="implementations">Implementations<a class="headerlink" href="#implementations" title="Permanent link">&para;</a></h4>
+<h4 id="implementations">Implementations</h4>
 <ol>
 <li>Find</li>
 </ol>

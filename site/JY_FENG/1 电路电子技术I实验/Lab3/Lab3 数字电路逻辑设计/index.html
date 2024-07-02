@@ -1659,9 +1659,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -1670,7 +1668,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1727,6 +1725,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. 利用QUARTUS INTEL FPGA软件自带的Multisim软件先进行模拟">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task1vhd" class="md-nav__link">
+    <span class="md-ellipsis">
+      逻辑设计输入 task1.vhd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tbvhd" class="md-nav__link">
+    <span class="md-ellipsis">
+      逻辑设计仿真 test_tb.vhd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      仿真结果
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1778,6 +1809,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. 仿真模拟">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task2vhd" class="md-nav__link">
+    <span class="md-ellipsis">
+      逻辑设计输入 task2.vhd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_tbvhd_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      逻辑设计仿真 test_tb.vhd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      仿真结果
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1828,6 +1892,39 @@
       2. 仿真模拟
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2. 仿真模拟">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task3vhd" class="md-nav__link">
+    <span class="md-ellipsis">
+      设计元件 task3.vhd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task3_tbvhd" class="md-nav__link">
+    <span class="md-ellipsis">
+      仿真task3_tb.vhd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      仿真结果
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2617,16 +2714,16 @@
   
 
 
-<h1 id="_1">数字电路逻辑设计<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_1">数字电路逻辑设计</h1>
 <p>实验日期：2023/10/9</p>
 <p>地点：东3-406</p>
-<h2 id="_2">实验目的<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">实验目的</h2>
 <ol>
 <li>了解数字电路基础知识</li>
 <li>掌握简单数字逻辑电路的设计</li>
 <li>学习FPGA开发工具</li>
 </ol>
-<h2 id="_3">实验内容<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">实验内容</h2>
 <p>用QUARTUS软件和DE10开发板设计并实现如下逻辑功能</p>
 <ol>
 <li>
@@ -2640,14 +2737,14 @@
 </li>
 </ol>
 <p>灯A的亮灭，并在DE10开发板上模拟此逻辑电路的功能。</p>
-<h2 id="_4">实验器材<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_4">实验器材</h2>
 <ol>
 <li>QUARTUS软件</li>
 <li>DE10开发板</li>
 <li>电脑</li>
 </ol>
-<h2 id="23">实验一：判断2或3的倍数<a class="headerlink" href="#23" title="Permanent link">&para;</a></h2>
-<h3 id="1">1. 分析真值表<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<h2 id="23">实验一：判断2或3的倍数</h2>
+<h3 id="1">1. 分析真值表</h3>
 <table>
 <thead>
 <tr>
@@ -2718,8 +2815,8 @@
 </tbody>
 </table>
 <p>由于总情况较少，所以选择打表的方式列写代码。</p>
-<h3 id="2-quartus-intel-fpgamultisim">2. 利用QUARTUS INTEL FPGA软件自带的Multisim软件先进行模拟<a class="headerlink" href="#2-quartus-intel-fpgamultisim" title="Permanent link">&para;</a></h3>
-<h4 id="task1vhd">逻辑设计输入 task1.vhd<a class="headerlink" href="#task1vhd" title="Permanent link">&para;</a></h4>
+<h3 id="2-quartus-intel-fpgamultisim">2. 利用QUARTUS INTEL FPGA软件自带的Multisim软件先进行模拟</h3>
+<h4 id="task1vhd">逻辑设计输入 task1.vhd</h4>
 <pre><code class="language-vhdl">---------库说明与库引用------------
 library IEEE;
 use IEEE.std_logic_1164.all;
@@ -2764,7 +2861,7 @@ end process;
 end BEHAV ;
 ---------------------------------
 </code></pre>
-<h4 id="test_tbvhd">逻辑设计仿真 test_tb.vhd<a class="headerlink" href="#test_tbvhd" title="Permanent link">&para;</a></h4>
+<h4 id="test_tbvhd">逻辑设计仿真 test_tb.vhd</h4>
 <pre><code class="language-vhdl">---------库说明与库引用------------
 library IEEE;
 use IEEE.std_logic_1164.all;
@@ -2803,10 +2900,10 @@ begin -- 仿真
 end process;
 end BEHAV;
 </code></pre>
-<h4 id="_5">仿真结果<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h4 id="_5">仿真结果</h4>
 <p><img alt="" src="../assets/result.png" /></p>
 <p>根据波形图结果，可知，该元件的代码编写正确，可以进行下一操作。</p>
-<h3 id="3">3. 生成编程文件<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<h3 id="3">3. 生成编程文件</h3>
 <ol>
 <li>新建project</li>
 </ol>
@@ -2833,13 +2930,13 @@ end BEHAV;
 </li>
 </ul>
 <p><img alt="" src="../assets/6.png" /></p>
-<h3 id="_6">实验成果<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_6">实验成果</h3>
 <p><img alt="" src="../assets/task1.png" /></p>
-<h2 id="_7">实验二：二进制全加器<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<h3 id="1_1">1. 分析真值表<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<h2 id="_7">实验二：二进制全加器</h2>
+<h3 id="1_1">1. 分析真值表</h3>
 <p><img alt="image-20231016132054066" src="../assets/image-20231016132054066.png" /></p>
-<h3 id="2">2. 仿真模拟<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<h4 id="task2vhd">逻辑设计输入 task2.vhd<a class="headerlink" href="#task2vhd" title="Permanent link">&para;</a></h4>
+<h3 id="2">2. 仿真模拟</h3>
+<h4 id="task2vhd">逻辑设计输入 task2.vhd</h4>
 <pre><code class="language-vhdl">library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_unsigned.all; 
@@ -2872,7 +2969,7 @@ begin
 end process;
 end BEHAV ;
 </code></pre>
-<h4 id="test_tbvhd_1">逻辑设计仿真 test_tb.vhd<a class="headerlink" href="#test_tbvhd_1" title="Permanent link">&para;</a></h4>
+<h4 id="test_tbvhd_1">逻辑设计仿真 test_tb.vhd</h4>
 <pre><code class="language-vhdl">library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_unsigned.all; 
@@ -2908,10 +3005,10 @@ begin
 end process;
 end BEHAV;
 </code></pre>
-<h4 id="_8">仿真结果<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<h4 id="_8">仿真结果</h4>
 <p><img alt="" src="../assets/2-7433947.png" /></p>
 <p>与预期一致，所以可以进行下一步操作</p>
-<h3 id="3_1">3. 生成编程文件<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<h3 id="3_1">3. 生成编程文件</h3>
 <ol>
 <li>
 <p>编译输出，得到以下逻辑图<img alt="" src="../assets/4-7434005.png" /></p>
@@ -2925,20 +3022,20 @@ end BEHAV;
 <li>A, B, C0对应三个开关</li>
 <li>C与Z对应两盏LED灯</li>
 </ul>
-<h3 id="_9">实验成果<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p><img src="./assets/IMG_9547.jpeg" style="zoom:10%;" /></p>
+<h3 id="_9">实验成果</h3>
+<p><img src="../assets/IMG_9547.jpeg" style="zoom:10%;" /></p>
 <p>上图对应A=0, B=0, C0=0的情况，输出C=0，Z=0的情况。</p>
-<p><img src="./assets/IMG_9548.jpeg" alt="IMG_9548" style="zoom:10%;" /></p>
+<p><img src="../assets/IMG_9548.jpeg" alt="IMG_9548" style="zoom:10%;" /></p>
 <p>上图对应A=0, B=1, C0=0的情况，输出C=0，Z=1的情况。</p>
-<p><img src="./assets/IMG_9549.jpeg" alt="IMG_9549" style="zoom:10%;" /></p>
+<p><img src="../assets/IMG_9549.jpeg" alt="IMG_9549" style="zoom:10%;" /></p>
 <p>上图对应A=1, B=1, C0=0的情况，输出C=1，Z=0的情况。</p>
-<p><img src="./assets/IMG_9550.jpeg" alt="IMG_9550" style="zoom:10%;" /></p>
+<p><img src="../assets/IMG_9550.jpeg" alt="IMG_9550" style="zoom:10%;" /></p>
 <p>上图对应A=1, B=1, C0=1的情况，输出C=1，Z=1的情况。</p>
-<h2 id="_10">实验三：开灯关灯的探究性实验<font color="red">  !注意：这个部分我写的些许有点错误，直接单数开关开则打开的思路即可</font><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<h3 id="1_2">1. 分析电路逻辑<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h3>
+<h2 id="_10">实验三：开灯关灯的探究性实验<font color="red">  !注意：这个部分我写的些许有点错误，直接单数开关开则打开的思路即可</font></h2>
+<h3 id="1_2">1. 分析电路逻辑</h3>
 <p>ABCD作为四个开关，任意的改变状态都将改变电灯的状态，不同于上面的电路，该电路没有真值表。</p>
-<h3 id="2_1">2. 仿真模拟<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
-<h4 id="task3vhd">设计元件 task3.vhd<a class="headerlink" href="#task3vhd" title="Permanent link">&para;</a></h4>
+<h3 id="2_1">2. 仿真模拟</h3>
+<h4 id="task3vhd">设计元件 task3.vhd</h4>
 <pre><code class="language-vhdl">library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_unsigned.all; 
@@ -2981,7 +3078,7 @@ end process;
 
 end BEHAV ;
 </code></pre>
-<h4 id="task3_tbvhd">仿真task3_tb.vhd<a class="headerlink" href="#task3_tbvhd" title="Permanent link">&para;</a></h4>
+<h4 id="task3_tbvhd">仿真task3_tb.vhd</h4>
 <pre><code class="language-vhdl">library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_unsigned.all; 
@@ -3012,10 +3109,10 @@ begin
 end process;
 end BEHAV;
 </code></pre>
-<h4 id="_11">仿真结果<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<h4 id="_11">仿真结果</h4>
 <p><img alt="" src="../assets/11.png" /></p>
 <p>任意改变ABCD四个开关中任意状态，Z就会输出与原来相反的结果，仿真结果正确。</p>
-<h3 id="3_2">3. 生成编程文件<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h3>
+<h3 id="3_2">3. 生成编程文件</h3>
 <ol>
 <li>编译输出</li>
 </ol>
@@ -3029,10 +3126,10 @@ end BEHAV;
 </li>
 <li>Z对应一个LED灯</li>
 </ol>
-<h3 id="_12">实验成果<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<video src="./assets/111.mp4"></video>
+<h3 id="_12">实验成果</h3>
+<video src="../assets/111.mp4"></video>
 
-<p><a href="../assets/111.mp4">实验结果视频</a></p>
+<p><a href="..\assets\111.mp4">实验结果视频</a></p>
 <p>结果分析，由于这个代码的问题，也就是在芯片最开始执行结构体部分的代码时，由于mA与A并不一定相匹配，所以刚刚开始，Z的灯可能混乱闪烁。但是一段时间后，也就是当所有mA，mB，mC，mD都已经与现实情况相匹配以后，就能够正常显示。</p>
 
 
@@ -3056,7 +3153,7 @@ end BEHAV;
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-02T06:59:07+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-02</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-02T14:37:28+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-02</span>
   </span>
 
     

@@ -731,9 +731,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -742,7 +740,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -757,11 +755,62 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#definition-an-algorithm-is-a-finite-set-of-instructions-that-if-followed-accomplishes-a-particular-task-in-addition-all-algorithms-must-satisfy-the-following-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Definition] An algorithm is a finite set of instructions that, if followed, accomplishes a particular task. In addition, all algorithms must satisfy the following criteria.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-selection-sort-sort-a-set-of-ngeq1-integers-in-increasing-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Example] Selection Sort : Sort a set of \(n\geq1\) integers in increasing order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#11-what-to-analyze" class="md-nav__link">
     <span class="md-ellipsis">
       1.1 What to Analyze
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1.1 What to Analyze">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-matrix-addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Example] Matrix addition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-iterative-function-for-summing-a-list-of-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Example] Iterative function for summing a list of numbers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-recursive-function-for-summing-a-list-of-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Example] Recursive function for summing a list of numbers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -771,6 +820,66 @@
       1.2 Asymptotic Notation(\(O,\Omega,\Theta,o\))
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1.2 Asymptotic Notation(\(O,\Omega,\Theta,o\))">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-tnofn-if-there-are-positive-constants-c-and-n_0-such-that-tnleq-ccdot-fn-for-all-ngeq-n_0upper-bound" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Definition] \(T(N)=O(f(N))\) if there are positive constants \(c\) and \(n_0\) such that \(T(N)\leq c\cdot f(N)\) for all \(N\geq n_0\).(upper bound)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-tnomegagn-if-there-are-positive-constants-c-and-n_0-such-that-tngeq-ccdot-fn-for-all-ngeq-n_0lower-bound" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Definition] \(T(N)=\Omega(g(N))\) if there are positive constants \(c\) and \(n_0\) such that \(T(N)\geq c\cdot f(N)\) for all \(N\geq n_0\).(lower bound)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-tnthetahn-if-and-only-if-tnohn-and-tnomegahn" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Definition] \(T(N)=\Theta(h(N))\) if and only if \(T(N)=O(h(N))\) and \(T(N)=\Omega(h(N))\).
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-tnopn-if-tnopn-and-tnneqthetapn" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Definition] \(T(N)=o(p(N))\) if \(T(n)=O(p(N))\) and \(T(N)\neq\Theta(p(N))\).
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-matrix-addition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Example] Matrix addition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2472,9 +2581,9 @@
   
 
 
-<h1 id="week-1">WEEK 1<a class="headerlink" href="#week-1" title="Permanent link">&para;</a></h1>
-<h2 id="1-algorithm-analysis">1 Algorithm Analysis<a class="headerlink" href="#1-algorithm-analysis" title="Permanent link">&para;</a></h2>
-<h4 id="definition-an-algorithm-is-a-finite-set-of-instructions-that-if-followed-accomplishes-a-particular-task-in-addition-all-algorithms-must-satisfy-the-following-criteria">[Definition] An <em>algorithm</em> is a finite set of instructions that, if followed, accomplishes a particular task. In addition, all algorithms must satisfy the following criteria.<a class="headerlink" href="#definition-an-algorithm-is-a-finite-set-of-instructions-that-if-followed-accomplishes-a-particular-task-in-addition-all-algorithms-must-satisfy-the-following-criteria" title="Permanent link">&para;</a></h4>
+<h1 id="week-1">WEEK 1</h1>
+<h2 id="1-algorithm-analysis">1 Algorithm Analysis</h2>
+<h4 id="definition-an-algorithm-is-a-finite-set-of-instructions-that-if-followed-accomplishes-a-particular-task-in-addition-all-algorithms-must-satisfy-the-following-criteria">[Definition] An <em>algorithm</em> is a finite set of instructions that, if followed, accomplishes a particular task. In addition, all algorithms must satisfy the following criteria.</h4>
 <ol>
 <li>
 <p><strong>Input</strong> : There are zero or more quantities that are externally supplied.</p>
@@ -2498,14 +2607,14 @@
 <p>An algorithm can be described by human languages, flow charts, some programming languages, or pseudocode.</p>
 </li>
 </ol>
-<h4 id="example-selection-sort-sort-a-set-of-ngeq1-integers-in-increasing-order">[Example] Selection Sort : Sort a set of <span class="arithmatex">\(n\geq1\)</span> integers in increasing order<a class="headerlink" href="#example-selection-sort-sort-a-set-of-ngeq1-integers-in-increasing-order" title="Permanent link">&para;</a></h4>
+<h4 id="example-selection-sort-sort-a-set-of-ngeq1-integers-in-increasing-order">[Example] Selection Sort : Sort a set of <span class="arithmatex">\(n\geq1\)</span> integers in increasing order</h4>
 <pre><code class="language-pseudocode">for (i = 0; i &lt; n; i++){
     Examine list[i] to list[n-1] and suppose that the smallest integer is at list[min];
     Interchange list[i] and list[min];
 }
 </code></pre>
 <hr />
-<h3 id="11-what-to-analyze">1.1 What to Analyze<a class="headerlink" href="#11-what-to-analyze" title="Permanent link">&para;</a></h3>
+<h3 id="11-what-to-analyze">1.1 What to Analyze</h3>
 <ul>
 <li>
 <p>Machine and compiler-dependent run times.</p>
@@ -2531,7 +2640,7 @@
 <ul>
 <li><span class="arithmatex">\(T_{avg}(N)\, and\, T_{worst}(N)\)</span> : the average and worst case time complexities as functions of input size <span class="arithmatex">\(N\)</span></li>
 </ul>
-<h4 id="example-matrix-addition">[Example] Matrix addition<a class="headerlink" href="#example-matrix-addition" title="Permanent link">&para;</a></h4>
+<h4 id="example-matrix-addition">[Example] Matrix addition</h4>
 <pre><code class="language-c">void add(int a[][MAX_SIZE],
          int b[][MAX_SIZE],
          int c[][MAX_SIZE],
@@ -2549,7 +2658,7 @@ T(rows, cols) = 2rows\times cols + 2rows+1
 <ul>
 <li>非对称</li>
 </ul>
-<h4 id="example-iterative-function-for-summing-a-list-of-numbers">[Example] Iterative function for summing a list of numbers<a class="headerlink" href="#example-iterative-function-for-summing-a-list-of-numbers" title="Permanent link">&para;</a></h4>
+<h4 id="example-iterative-function-for-summing-a-list-of-numbers">[Example] Iterative function for summing a list of numbers</h4>
 <pre><code class="language-c">float sum (float list[], int n)
 {  /*add a list of numbers*/
     float tempsum = 0; /*count = 1*/
@@ -2564,7 +2673,7 @@ T(rows, cols) = 2rows\times cols + 2rows+1
 <div class="arithmatex">\[
 T_{sum}(n)=2n+3
 \]</div>
-<h4 id="example-recursive-function-for-summing-a-list-of-numbers">[Example] Recursive function for summing a list of numbers<a class="headerlink" href="#example-recursive-function-for-summing-a-list-of-numbers" title="Permanent link">&para;</a></h4>
+<h4 id="example-recursive-function-for-summing-a-list-of-numbers">[Example] Recursive function for summing a list of numbers</h4>
 <pre><code class="language-c">float rsum (float list[], int n)
 {/*add a list of numbers*/
     if (n) /*count++*/
@@ -2578,14 +2687,14 @@ T_{rsum}(n)=2n+2
 \]</div>
 <p>But it takes more time to compute each step.</p>
 <hr />
-<h3 id="12-asymptotic-notationoomegathetao">1.2 Asymptotic Notation(<span class="arithmatex">\(O,\Omega,\Theta,o\)</span>)<a class="headerlink" href="#12-asymptotic-notationoomegathetao" title="Permanent link">&para;</a></h3>
+<h3 id="12-asymptotic-notationoomegathetao">1.2 Asymptotic Notation(<span class="arithmatex">\(O,\Omega,\Theta,o\)</span>)</h3>
 <ul>
 <li>predict the growth ; compare the time complexities of two programs ; asymptotic(渐进的) behavior</li>
 </ul>
-<h4 id="definition-tnofn-if-there-are-positive-constants-c-and-n_0-such-that-tnleq-ccdot-fn-for-all-ngeq-n_0upper-bound">[Definition] <span class="arithmatex">\(T(N)=O(f(N))\)</span> if there are positive constants <span class="arithmatex">\(c\)</span> and <span class="arithmatex">\(n_0\)</span> such that <span class="arithmatex">\(T(N)\leq c\cdot f(N)\)</span> for all <span class="arithmatex">\(N\geq n_0\)</span>.(<em>upper bound</em>)<a class="headerlink" href="#definition-tnofn-if-there-are-positive-constants-c-and-n_0-such-that-tnleq-ccdot-fn-for-all-ngeq-n_0upper-bound" title="Permanent link">&para;</a></h4>
-<h4 id="definition-tnomegagn-if-there-are-positive-constants-c-and-n_0-such-that-tngeq-ccdot-fn-for-all-ngeq-n_0lower-bound">[Definition] <span class="arithmatex">\(T(N)=\Omega(g(N))\)</span> if there are positive constants <span class="arithmatex">\(c\)</span> and <span class="arithmatex">\(n_0\)</span> such that <span class="arithmatex">\(T(N)\geq c\cdot f(N)\)</span> for all <span class="arithmatex">\(N\geq n_0\)</span>.(<em>lower bound</em>)<a class="headerlink" href="#definition-tnomegagn-if-there-are-positive-constants-c-and-n_0-such-that-tngeq-ccdot-fn-for-all-ngeq-n_0lower-bound" title="Permanent link">&para;</a></h4>
-<h4 id="definition-tnthetahn-if-and-only-if-tnohn-and-tnomegahn">[Definition] <span class="arithmatex">\(T(N)=\Theta(h(N))\)</span> if and only if <span class="arithmatex">\(T(N)=O(h(N))\)</span> and <span class="arithmatex">\(T(N)=\Omega(h(N))\)</span>.<a class="headerlink" href="#definition-tnthetahn-if-and-only-if-tnohn-and-tnomegahn" title="Permanent link">&para;</a></h4>
-<h4 id="definition-tnopn-if-tnopn-and-tnneqthetapn">[Definition] <span class="arithmatex">\(T(N)=o(p(N))\)</span> if <span class="arithmatex">\(T(n)=O(p(N))\)</span> and <span class="arithmatex">\(T(N)\neq\Theta(p(N))\)</span>.<a class="headerlink" href="#definition-tnopn-if-tnopn-and-tnneqthetapn" title="Permanent link">&para;</a></h4>
+<h4 id="definition-tnofn-if-there-are-positive-constants-c-and-n_0-such-that-tnleq-ccdot-fn-for-all-ngeq-n_0upper-bound">[Definition] <span class="arithmatex">\(T(N)=O(f(N))\)</span> if there are positive constants <span class="arithmatex">\(c\)</span> and <span class="arithmatex">\(n_0\)</span> such that <span class="arithmatex">\(T(N)\leq c\cdot f(N)\)</span> for all <span class="arithmatex">\(N\geq n_0\)</span>.(<em>upper bound</em>)</h4>
+<h4 id="definition-tnomegagn-if-there-are-positive-constants-c-and-n_0-such-that-tngeq-ccdot-fn-for-all-ngeq-n_0lower-bound">[Definition] <span class="arithmatex">\(T(N)=\Omega(g(N))\)</span> if there are positive constants <span class="arithmatex">\(c\)</span> and <span class="arithmatex">\(n_0\)</span> such that <span class="arithmatex">\(T(N)\geq c\cdot f(N)\)</span> for all <span class="arithmatex">\(N\geq n_0\)</span>.(<em>lower bound</em>)</h4>
+<h4 id="definition-tnthetahn-if-and-only-if-tnohn-and-tnomegahn">[Definition] <span class="arithmatex">\(T(N)=\Theta(h(N))\)</span> if and only if <span class="arithmatex">\(T(N)=O(h(N))\)</span> and <span class="arithmatex">\(T(N)=\Omega(h(N))\)</span>.</h4>
+<h4 id="definition-tnopn-if-tnopn-and-tnneqthetapn">[Definition] <span class="arithmatex">\(T(N)=o(p(N))\)</span> if <span class="arithmatex">\(T(n)=O(p(N))\)</span> and <span class="arithmatex">\(T(N)\neq\Theta(p(N))\)</span>.</h4>
 <ul>
 <li>
 <p><span class="arithmatex">\(2N+3=O(N)=O(N^{k\geq1})=O(2^N)=\ldots\)</span> take the <strong>smallest</strong> <span class="arithmatex">\(f(N)\)</span></p>
@@ -2614,7 +2723,7 @@ T_{rsum}(n)=2n+2
 </blockquote>
 <p><img src="picture/1-1.png" alt="1-1" style="zoom: 45%;" /></p>
 <p><img src="picture/1-2.png" alt="1-2" style="zoom:43%;" /></p>
-<h4 id="example-matrix-addition_1">[Example] Matrix addition<a class="headerlink" href="#example-matrix-addition_1" title="Permanent link">&para;</a></h4>
+<h4 id="example-matrix-addition_1">[Example] Matrix addition</h4>
 <pre><code class="language-C">void add(int a[][MAX_SIZE],
          int b[][MAX_SIZE],
          int c[][MAX_SIZE],
@@ -2629,7 +2738,7 @@ T_{rsum}(n)=2n+2
 <div class="arithmatex">\[
 T(rows,cols)=\Theta(rows\cdot cols)
 \]</div>
-<h4 id="general-rules">General Rules<a class="headerlink" href="#general-rules" title="Permanent link">&para;</a></h4>
+<h4 id="general-rules">General Rules</h4>
 <blockquote>
 <ul>
 <li>

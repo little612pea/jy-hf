@@ -773,9 +773,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -784,7 +782,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -795,6 +793,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2.3 The Stack ADT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linked-list-implementation-with-a-header-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linked List Implementation (with a header node)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-implementation-of-stacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array Implementation of Stacks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -803,6 +834,21 @@
       2.4 The Queue ADT
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2.4 The Queue ADT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#array-implementation-of-queues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array Implementation of Queues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2457,10 +2503,10 @@
   
 
 
-<h1 id="week-3">WEEK 3<a class="headerlink" href="#week-3" title="Permanent link">&para;</a></h1>
+<h1 id="week-3">WEEK 3</h1>
 <p>1、栈的链表实现，push，pop和top语句</p>
 <p>2、 </p>
-<h3 id="23-the-stack-adt">2.3 The Stack ADT<a class="headerlink" href="#23-the-stack-adt" title="Permanent link">&para;</a></h3>
+<h3 id="23-the-stack-adt">2.3 The Stack ADT</h3>
 <ul>
 <li>Last-In-First-Out (LIFO)</li>
 <li><strong>Objects</strong> : A finite ordered list with zero or more elements.</li>
@@ -2475,7 +2521,7 @@
 <li>A Pop(or Top) on an empty stack in an error in the stack ADT.</li>
 <li>Push on a full stack is an implementation error but not an ADT error.</li>
 </ul>
-<h4 id="linked-list-implementation-with-a-header-node">Linked List Implementation (with a header node)<a class="headerlink" href="#linked-list-implementation-with-a-header-node" title="Permanent link">&para;</a></h4>
+<h4 id="linked-list-implementation-with-a-header-node">Linked List Implementation (with a header node)</h4>
 <p><img alt="3-1" src="../picture/3-1.png" /></p>
 <ul>
 <li>The calls to malloc and free are expensive. Simply keep another stack as a recycle bin.</li>
@@ -2539,7 +2585,7 @@
         free(FirstCe11);
     }
   }</code></p>
-<h4 id="array-implementation-of-stacks">Array Implementation of Stacks<a class="headerlink" href="#array-implementation-of-stacks" title="Permanent link">&para;</a></h4>
+<h4 id="array-implementation-of-stacks">Array Implementation of Stacks</h4>
 <pre><code class="language-c">struct StackRecord {
     int Capacity;          /* size of stack */
     int TopOfStack;        /* the top pointer */
@@ -2624,7 +2670,7 @@ return S;
     Error("Empty stack");
     return O; /* Return value used to avoid warnin */
   }</code></p>
-<h4 id="application">Application<a class="headerlink" href="#application" title="Permanent link">&para;</a></h4>
+<h4 id="application">Application</h4>
 <ol>
 <li>Balancing Symbols</li>
 </ol>
@@ -2672,7 +2718,7 @@ return S;
 </li>
 </ol>
 <hr />
-<h3 id="24-the-queue-adt">2.4 The Queue ADT<a class="headerlink" href="#24-the-queue-adt" title="Permanent link">&para;</a></h3>
+<h3 id="24-the-queue-adt">2.4 The Queue ADT</h3>
 <ul>
 <li>First-In-First-Out (FIFO)</li>
 <li><strong>Objects</strong> : A finite ordered list with zero or more elements.</li>
@@ -2685,7 +2731,7 @@ return S;
 <li>Front</li>
 <li>Dequeue</li>
 </ul>
-<h4 id="array-implementation-of-queues">Array Implementation of Queues<a class="headerlink" href="#array-implementation-of-queues" title="Permanent link">&para;</a></h4>
+<h4 id="array-implementation-of-queues">Array Implementation of Queues</h4>
 <pre><code class="language-c">struct QueueRecord {
     int Capacity ;       /* max size of queue */
     int Front;           /* the front pointer */

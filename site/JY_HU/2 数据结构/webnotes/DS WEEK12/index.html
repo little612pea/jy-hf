@@ -962,9 +962,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -973,7 +971,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -984,6 +982,48 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="7.4 Shellsort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shells-increment-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell’s Increment Sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hibbards-increment-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hibbard's Increment Sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conjecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conjecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -993,6 +1033,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="7.5 Heapsort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#algorithm1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1001,6 +1065,21 @@
       7.6 Mergesort
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="7.6 Mergesort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2466,8 +2545,8 @@
   
 
 
-<h1 id="week-12">WEEK 12<a class="headerlink" href="#week-12" title="Permanent link">&para;</a></h1>
-<h3 id="74-shellsort">7.4 Shellsort<a class="headerlink" href="#74-shellsort" title="Permanent link">&para;</a></h3>
+<h1 id="week-12">WEEK 12</h1>
+<h3 id="74-shellsort">7.4 Shellsort</h3>
 <p><img alt="image-20201214133747061" src="../picture/image-20201214133747061.png" /></p>
 <ul>
 <li>Define an <strong>increment sequence</strong> <span class="arithmatex">\(h_1 &lt; h_2 &lt; \cdots &lt; h_t  ( h_1 = 1 )\)</span></li>
@@ -2481,7 +2560,7 @@
 <blockquote>
 <p>Note : An <span class="arithmatex">\(h_k\)</span>-sorted file that is then <span class="arithmatex">\(h_{k-1}\)</span>-sorted remains <span class="arithmatex">\(h_k\)</span>-sorted.</p>
 </blockquote>
-<h4 id="shells-increment-sequence">Shell’s Increment Sequence<a class="headerlink" href="#shells-increment-sequence" title="Permanent link">&para;</a></h4>
+<h4 id="shells-increment-sequence">Shell’s Increment Sequence</h4>
 <div class="arithmatex">\[
 h_t=\lfloor N/2\rfloor,h_k=\lfloor h_{k+1}/2\rfloor
 \]</div>
@@ -2505,27 +2584,27 @@ h_t=\lfloor N/2\rfloor,h_k=\lfloor h_{k+1}/2\rfloor
 <ul>
 <li>[Theorem] The worst-case running time of Shellsort, using Shell’s increments, is  <span class="arithmatex">\(\Theta( N^2 )\)</span>.</li>
 </ul>
-<h4 id="hibbards-increment-sequence">Hibbard's Increment Sequence<a class="headerlink" href="#hibbards-increment-sequence" title="Permanent link">&para;</a></h4>
+<h4 id="hibbards-increment-sequence">Hibbard's Increment Sequence</h4>
 <div class="arithmatex">\[
 h_k=2^k-1
 \]</div>
 <ul>
 <li>[Theorem] The worst-case running time of Shellsort, using Hibbard's increments, is  <span class="arithmatex">\(\Theta( N^{3/2} )\)</span>.</li>
 </ul>
-<h4 id="conjecture">Conjecture<a class="headerlink" href="#conjecture" title="Permanent link">&para;</a></h4>
+<h4 id="conjecture">Conjecture</h4>
 <ul>
 <li><span class="arithmatex">\(T_{avg – Hibbard} ( N ) = O ( N^{5/4} )\)</span></li>
 <li>Sedgewick’s best sequence is <span class="arithmatex">\(\{1, 5, 19, 41, 109, \cdots \}\)</span> in which the terms are either of the form <span class="arithmatex">\(9\times4^i – 9\times2^i + 1\)</span> or 
   <span class="arithmatex">\(4^i – 3\times2^i + 1\)</span>.  <span class="arithmatex">\(T_{avg} ( N ) = O ( N^{7/6} )\)</span> and <span class="arithmatex">\(T_{worst}( N ) = O( N^{4/3} )\)</span>.</li>
 </ul>
-<h4 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h4>
+<h4 id="conclusion">Conclusion</h4>
 <ul>
 <li>Shellsort is a very simple algorithm, yet with an extremely complex analysis.  </li>
 <li>It is good for sorting up to moderately large input (tens of thousands).</li>
 </ul>
 <hr />
-<h3 id="75-heapsort">7.5 Heapsort<a class="headerlink" href="#75-heapsort" title="Permanent link">&para;</a></h3>
-<h4 id="algorithm1">Algorithm1<a class="headerlink" href="#algorithm1" title="Permanent link">&para;</a></h4>
+<h3 id="75-heapsort">7.5 Heapsort</h3>
+<h4 id="algorithm1">Algorithm1</h4>
 <pre><code class="language-c">void Heapsort( int N ) 
 {
     BuildHeap( H );
@@ -2541,7 +2620,7 @@ T(N)=O(N\log N)
 <ul>
 <li>The space requirement is doubled.</li>
 </ul>
-<h4 id="algorithm2">Algorithm2<a class="headerlink" href="#algorithm2" title="Permanent link">&para;</a></h4>
+<h4 id="algorithm2">Algorithm2</h4>
 <pre><code class="language-c">void Heapsort( ElementType A[ ], int N ) 
 {
     int i; 
@@ -2561,7 +2640,7 @@ T(N)=O(N\log N)
 <p>Note : Although Heapsort gives <strong>the best average time</strong>, in practice it is slower than a version of Shellsort that uses Sedgewick’s increment sequence.</p>
 </blockquote>
 <hr />
-<h3 id="76-mergesort">7.6 Mergesort<a class="headerlink" href="#76-mergesort" title="Permanent link">&para;</a></h3>
+<h3 id="76-mergesort">7.6 Mergesort</h3>
 <pre><code class="language-c">void MSort( ElementType A[ ], ElementType TmpArray[ ], int Left, int Right ) 
 {   
     int Center; 
@@ -2610,7 +2689,7 @@ void Merge( ElementType A[ ], ElementType TmpArray[ ], int Lpos, int Rpos, int R
         A[ RightEnd ] = TmpArray[ RightEnd ]; 
 }
 </code></pre>
-<h4 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h4>
+<h4 id="analysis">Analysis</h4>
 <div class="arithmatex">\[
 T(1)=O(1)\\
 T(N)=2T(\frac{N}{2})+O(N)\\

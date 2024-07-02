@@ -794,9 +794,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -805,7 +803,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -826,6 +824,48 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="3.1 Preliminaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-a-tree-is-a-collection-of-nodes-the-collection-can-be-empty-otherwise-a-tree-consists-of-1-a-distinguished-node-r-called-the-root-2-and-zero-or-more-nonempty-subtrees-each-of-whose-roots-are-connected-by-a-directed-edge-from-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Definition] A tree is a collection of nodes. The collection can be empty; otherwise, a tree consists of (1) a distinguished node r, called the root; (2) and zero or more nonempty (sub)trees, each of whose roots are connected by a directed edge from r.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firstchild-nextsibling-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      FirstChild-NextSibling Representation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -834,6 +874,39 @@
       3.2 Binary Trees
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="3.2 Binary Trees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-a-binary-tree-is-a-tree-in-which-no-node-can-have-more-than-two-children" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Definition] A binary tree is a tree in which no node can have more than two children.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree-traversals-visit-each-node-exactly-once" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree Traversals (visit each node exactly once)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threaded-binary-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threaded Binary Trees
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2472,15 +2545,15 @@
   
 
 
-<h1 id="week-4">WEEK 4<a class="headerlink" href="#week-4" title="Permanent link">&para;</a></h1>
-<h2 id="3-trees">3 Trees<a class="headerlink" href="#3-trees" title="Permanent link">&para;</a></h2>
+<h1 id="week-4">WEEK 4</h1>
+<h2 id="3-trees">3 Trees</h2>
 <p>大纲：</p>
 <p>树的定义是递归的，有根节点和从其出发的有向边，连向所有的子树</p>
 <p>树的性质，n个节点n-1条边有根节点</p>
 <p>二叉树：</p>
 <p>树的遍历 四种遍历顺序，层序遍历</p>
-<h3 id="31-preliminaries">3.1 Preliminaries<a class="headerlink" href="#31-preliminaries" title="Permanent link">&para;</a></h3>
-<h4 id="definition-a-tree-is-a-collection-of-nodes-the-collection-can-be-empty-otherwise-a-tree-consists-of-1-a-distinguished-node-r-called-the-root-2-and-zero-or-more-nonempty-subtrees-each-of-whose-roots-are-connected-by-a-directed-edge-from-r">[Definition] A tree is a  collection of nodes. The collection can be empty; otherwise, a tree consists of (1)  a distinguished node r, called the root; (2) and zero or more nonempty (sub)trees, each of whose roots are connected by a directed edge from r.<a class="headerlink" href="#definition-a-tree-is-a-collection-of-nodes-the-collection-can-be-empty-otherwise-a-tree-consists-of-1-a-distinguished-node-r-called-the-root-2-and-zero-or-more-nonempty-subtrees-each-of-whose-roots-are-connected-by-a-directed-edge-from-r" title="Permanent link">&para;</a></h4>
+<h3 id="31-preliminaries">3.1 Preliminaries</h3>
+<h4 id="definition-a-tree-is-a-collection-of-nodes-the-collection-can-be-empty-otherwise-a-tree-consists-of-1-a-distinguished-node-r-called-the-root-2-and-zero-or-more-nonempty-subtrees-each-of-whose-roots-are-connected-by-a-directed-edge-from-r">[Definition] A tree is a  collection of nodes. The collection can be empty; otherwise, a tree consists of (1)  a distinguished node r, called the root; (2) and zero or more nonempty (sub)trees, each of whose roots are connected by a directed edge from r.</h4>
 <ul>
 <li>
 <p>Subtrees must not connect together.  Therefore every node in the tree is the root of some subtree.</p>
@@ -2489,7 +2562,7 @@
 <p>There are N-1 edges in a tree with N nodes</p>
 </li>
 </ul>
-<h4 id="terminologies">Terminologies<a class="headerlink" href="#terminologies" title="Permanent link">&para;</a></h4>
+<h4 id="terminologies">Terminologies</h4>
 <blockquote>
 <ul>
 <li>degree of a node : 结点的子树个数</li>
@@ -2507,21 +2580,21 @@
 <li>descendants of a node : 此结点的子树中的所有结点</li>
 </ul>
 </blockquote>
-<h4 id="list-representation">List Representation<a class="headerlink" href="#list-representation" title="Permanent link">&para;</a></h4>
+<h4 id="list-representation">List Representation</h4>
 <ul>
 <li>The size of each node depends on the number of branches.</li>
 </ul>
 <p><img src="picture/4-2.png" alt="4-2" style="zoom: 120%;" /></p>
 <p>The correct answer is T.</p>
-<h4 id="firstchild-nextsibling-representation">FirstChild-NextSibling Representation<a class="headerlink" href="#firstchild-nextsibling-representation" title="Permanent link">&para;</a></h4>
+<h4 id="firstchild-nextsibling-representation">FirstChild-NextSibling Representation</h4>
 <p><img src="picture/4-1.png" alt="4-1" style="zoom:80%;" /></p>
 <ul>
 <li>The representation is <strong>not unique</strong> since the children in a tree can be of any order.</li>
 </ul>
 <hr />
-<h3 id="32-binary-trees">3.2 Binary Trees<a class="headerlink" href="#32-binary-trees" title="Permanent link">&para;</a></h3>
-<h4 id="definition-a-binary-tree-is-a-tree-in-which-no-node-can-have-more-than-two-children">[Definition] A binary tree is a tree in which no node can have more than two children.<a class="headerlink" href="#definition-a-binary-tree-is-a-tree-in-which-no-node-can-have-more-than-two-children" title="Permanent link">&para;</a></h4>
-<h4 id="tree-traversals-visit-each-node-exactly-once">Tree Traversals (visit each node exactly once)<a class="headerlink" href="#tree-traversals-visit-each-node-exactly-once" title="Permanent link">&para;</a></h4>
+<h3 id="32-binary-trees">3.2 Binary Trees</h3>
+<h4 id="definition-a-binary-tree-is-a-tree-in-which-no-node-can-have-more-than-two-children">[Definition] A binary tree is a tree in which no node can have more than two children.</h4>
+<h4 id="tree-traversals-visit-each-node-exactly-once">Tree Traversals (visit each node exactly once)</h4>
 <p>线性复杂度<span class="arithmatex">\(O(n)\)</span>，因为每个节点只访问一次</p>
 <p>遍历不改变操作数的顺序</p>
 <p>visit（可以是print）</p>
@@ -2596,7 +2669,7 @@
        }
    }</code></p>
 <p><img alt="4-3" src="../picture/4-3.png" /></p>
-<h4 id="threaded-binary-trees">Threaded Binary Trees<a class="headerlink" href="#threaded-binary-trees" title="Permanent link">&para;</a></h4>
+<h4 id="threaded-binary-trees">Threaded Binary Trees</h4>
 <ul>
 <li>
 <p>A full binary tree with <span class="arithmatex">\(n\)</span> nodes has <span class="arithmatex">\(2n\)</span> links, and <span class="arithmatex">\(n+1\)</span> of them are NULL.</p>

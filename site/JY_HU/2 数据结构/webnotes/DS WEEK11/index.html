@@ -941,9 +941,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -952,7 +950,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -962,6 +960,63 @@
       6.7 Applications of Depth-First Search
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="6.7 Applications of Depth-First Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#undirected-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Undirected Graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#biconnectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Biconnectivity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#euler-circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Euler Circuits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Euler Circuits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proposition-an-euler-circuit-is-possible-only-if-the-graph-is-connected-and-each-vertex-has-an-even-degree" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Proposition] An Euler circuit is possible only if the graph is connected and each vertex has an even degree.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proposition-an-euler-tour-is-possible-if-there-are-exactly-two-vertices-having-odd-degree-one-must-start-at-one-of-the-odd-degree-vertices" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Proposition] An Euler tour is possible if there are exactly two vertices having odd degree. One must start at one of the odd-degree vertices.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -999,6 +1054,39 @@
       7.3 A Lower Bound for Simple Sorting Algorithms
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="7.3 A Lower Bound for Simple Sorting Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-an-inversion-in-an-array-of-numbers-is-any-ordered-pairij-having-the-property-that-ij-but-aiaj" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Definition] An inversion in an array of numbers is any ordered pair\((i,j)\) having the property that \(i&lt;j\) but \(A[i]&gt;A[j]\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-the-average-number-of-inversions-in-an-array-of-n-distinct-numbers-is-nn-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Theorem] The average number of inversions in an array of \(N\) distinct numbers is \(N(N-1)/4\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-any-algorithm-that-sorts-by-exchanging-adjacent-elements-requires-omegan2-time-on-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Theorem] Any algorithm that sorts by exchanging adjacent elements requires \(\Omega(N^2)\) time on average
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2490,8 +2578,8 @@
   
 
 
-<h1 id="week-11">WEEK 11<a class="headerlink" href="#week-11" title="Permanent link">&para;</a></h1>
-<h3 id="67-applications-of-depth-first-search">6.7 Applications of Depth-First Search<a class="headerlink" href="#67-applications-of-depth-first-search" title="Permanent link">&para;</a></h3>
+<h1 id="week-11">WEEK 11</h1>
+<h3 id="67-applications-of-depth-first-search">6.7 Applications of Depth-First Search</h3>
 <pre><code class="language-c">/*a generalization of preorder traversal*/
 void DFS(Vertex V)
 {   
@@ -2500,7 +2588,7 @@ void DFS(Vertex V)
         if ( !visited[ W ] ) DFS( W );
 } /*T = O(|E|+|V|) as long as adjacency lists are used*/
 </code></pre>
-<h4 id="undirected-graphs">Undirected Graphs<a class="headerlink" href="#undirected-graphs" title="Permanent link">&para;</a></h4>
+<h4 id="undirected-graphs">Undirected Graphs</h4>
 <pre><code class="language-c">void ListComponents(Graph G)
 {   
     for ( each V in G ) 
@@ -2511,7 +2599,7 @@ void DFS(Vertex V)
         }
 }
 </code></pre>
-<h4 id="biconnectivity">Biconnectivity<a class="headerlink" href="#biconnectivity" title="Permanent link">&para;</a></h4>
+<h4 id="biconnectivity">Biconnectivity</h4>
 <ul>
 <li><span class="arithmatex">\(v\)</span> is an <strong>articulation point</strong> if <span class="arithmatex">\(G'=DeleteVertex(G, v)\)</span> has <strong>at least 2</strong> connected components.</li>
 <li><span class="arithmatex">\(G\)</span> is a <strong>biconnected graph</strong> if <span class="arithmatex">\(G\)</span> is connected and has no articulation points.</li>
@@ -2603,9 +2691,9 @@ void AssignLow(Vertex V)
     }
 }
 </code></pre>
-<h4 id="euler-circuits">Euler Circuits<a class="headerlink" href="#euler-circuits" title="Permanent link">&para;</a></h4>
-<h5 id="proposition-an-euler-circuit-is-possible-only-if-the-graph-is-connected-and-each-vertex-has-an-even-degree">[Proposition] An Euler circuit is possible only if the graph is connected and each vertex has an <em>even</em> degree.<a class="headerlink" href="#proposition-an-euler-circuit-is-possible-only-if-the-graph-is-connected-and-each-vertex-has-an-even-degree" title="Permanent link">&para;</a></h5>
-<h5 id="proposition-an-euler-tour-is-possible-if-there-are-exactly-two-vertices-having-odd-degree-one-must-start-at-one-of-the-odd-degree-vertices">[Proposition] An Euler tour is possible if there are exactly <em>two</em> vertices having odd degree.  One must start at one of the odd-degree vertices.<a class="headerlink" href="#proposition-an-euler-tour-is-possible-if-there-are-exactly-two-vertices-having-odd-degree-one-must-start-at-one-of-the-odd-degree-vertices" title="Permanent link">&para;</a></h5>
+<h4 id="euler-circuits">Euler Circuits</h4>
+<h5 id="proposition-an-euler-circuit-is-possible-only-if-the-graph-is-connected-and-each-vertex-has-an-even-degree">[Proposition] An Euler circuit is possible only if the graph is connected and each vertex has an <em>even</em> degree.</h5>
+<h5 id="proposition-an-euler-tour-is-possible-if-there-are-exactly-two-vertices-having-odd-degree-one-must-start-at-one-of-the-odd-degree-vertices">[Proposition] An Euler tour is possible if there are exactly <em>two</em> vertices having odd degree.  One must start at one of the odd-degree vertices.</h5>
 <blockquote>
 <p>Note:</p>
 <ul>
@@ -2615,8 +2703,8 @@ void AssignLow(Vertex V)
 </ul>
 </blockquote>
 <hr />
-<h2 id="7-sorting">7 Sorting<a class="headerlink" href="#7-sorting" title="Permanent link">&para;</a></h2>
-<h3 id="71-preliminaries">7.1 Preliminaries<a class="headerlink" href="#71-preliminaries" title="Permanent link">&para;</a></h3>
+<h2 id="7-sorting">7 Sorting</h2>
+<h3 id="71-preliminaries">7.1 Preliminaries</h3>
 <pre><code class="language-c">void X_Sort (ElementType A[], int N)
 </code></pre>
 <ul>
@@ -2626,7 +2714,7 @@ void AssignLow(Vertex V)
 <li>Consider internal sorting only. The entire sort can be done in main memory.</li>
 </ul>
 <hr />
-<h3 id="72-insertion-sort">7.2 Insertion Sort<a class="headerlink" href="#72-insertion-sort" title="Permanent link">&para;</a></h3>
+<h3 id="72-insertion-sort">7.2 Insertion Sort</h3>
 <pre><code class="language-c">void Insertion(ElementType A[], int N)
 { 
     int j, P; 
@@ -2657,8 +2745,8 @@ void AssignLow(Vertex V)
 </li>
 </ul>
 <hr />
-<h3 id="73-a-lower-bound-for-simple-sorting-algorithms">7.3 A Lower Bound for Simple Sorting Algorithms<a class="headerlink" href="#73-a-lower-bound-for-simple-sorting-algorithms" title="Permanent link">&para;</a></h3>
-<h4 id="definition-an-inversion-in-an-array-of-numbers-is-any-ordered-pairij-having-the-property-that-ij-but-aiaj">[Definition] An <em>inversion</em> in an array of numbers is any ordered pair<span class="arithmatex">\((i,j)\)</span> having the property that <span class="arithmatex">\(i&lt;j\)</span> but <span class="arithmatex">\(A[i]&gt;A[j]\)</span><a class="headerlink" href="#definition-an-inversion-in-an-array-of-numbers-is-any-ordered-pairij-having-the-property-that-ij-but-aiaj" title="Permanent link">&para;</a></h4>
+<h3 id="73-a-lower-bound-for-simple-sorting-algorithms">7.3 A Lower Bound for Simple Sorting Algorithms</h3>
+<h4 id="definition-an-inversion-in-an-array-of-numbers-is-any-ordered-pairij-having-the-property-that-ij-but-aiaj">[Definition] An <em>inversion</em> in an array of numbers is any ordered pair<span class="arithmatex">\((i,j)\)</span> having the property that <span class="arithmatex">\(i&lt;j\)</span> but <span class="arithmatex">\(A[i]&gt;A[j]\)</span></h4>
 <ul>
 <li>
 <p>Swapping two adjacent elements that are out of place removes <strong>exactly one</strong> inversion.</p>
@@ -2667,8 +2755,8 @@ void AssignLow(Vertex V)
 <p><span class="arithmatex">\(T(N,I)=O(I+N)\)</span> where <span class="arithmatex">\(I\)</span> is the number of inversions in the original array.</p>
 </li>
 </ul>
-<h4 id="theorem-the-average-number-of-inversions-in-an-array-of-n-distinct-numbers-is-nn-14">[Theorem] The average number of inversions in an array of <span class="arithmatex">\(N\)</span> distinct numbers is <span class="arithmatex">\(N(N-1)/4\)</span><a class="headerlink" href="#theorem-the-average-number-of-inversions-in-an-array-of-n-distinct-numbers-is-nn-14" title="Permanent link">&para;</a></h4>
-<h4 id="theorem-any-algorithm-that-sorts-by-exchanging-adjacent-elements-requires-omegan2-time-on-average">[Theorem] Any algorithm that sorts by exchanging adjacent elements requires <span class="arithmatex">\(\Omega(N^2)\)</span> time on average<a class="headerlink" href="#theorem-any-algorithm-that-sorts-by-exchanging-adjacent-elements-requires-omegan2-time-on-average" title="Permanent link">&para;</a></h4>
+<h4 id="theorem-the-average-number-of-inversions-in-an-array-of-n-distinct-numbers-is-nn-14">[Theorem] The average number of inversions in an array of <span class="arithmatex">\(N\)</span> distinct numbers is <span class="arithmatex">\(N(N-1)/4\)</span></h4>
+<h4 id="theorem-any-algorithm-that-sorts-by-exchanging-adjacent-elements-requires-omegan2-time-on-average">[Theorem] Any algorithm that sorts by exchanging adjacent elements requires <span class="arithmatex">\(\Omega(N^2)\)</span> time on average</h4>
 <hr />
 
 

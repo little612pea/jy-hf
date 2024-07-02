@@ -1004,9 +1004,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -1015,7 +1013,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1036,6 +1034,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="8.1 General Idea">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbol-table-adt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symbol Table ADT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hash Tables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1054,6 +1076,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="8.3 Separate Chaining">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-an-empty-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an empty table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-a-key-from-a-hash-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find a key from a hash table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert-a-key-into-a-hash-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insert a key into a hash table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1062,6 +1117,21 @@
       8.4 Open Addressing
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="8.4 Open Addressing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear-probing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear Probing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2490,11 +2560,11 @@
   
 
 
-<h1 id="week-14">WEEK 14<a class="headerlink" href="#week-14" title="Permanent link">&para;</a></h1>
-<h2 id="8-hashing">8 Hashing<a class="headerlink" href="#8-hashing" title="Permanent link">&para;</a></h2>
-<h3 id="81-general-idea">8.1 General Idea<a class="headerlink" href="#81-general-idea" title="Permanent link">&para;</a></h3>
+<h1 id="week-14">WEEK 14</h1>
+<h2 id="8-hashing">8 Hashing</h2>
+<h3 id="81-general-idea">8.1 General Idea</h3>
 <p><img src="picture/image-20210102212103035.png" alt="image-20210102212103035" style="zoom: 75%;" /></p>
-<h4 id="symbol-table-adt">Symbol Table ADT<a class="headerlink" href="#symbol-table-adt" title="Permanent link">&para;</a></h4>
+<h4 id="symbol-table-adt">Symbol Table ADT</h4>
 <ul>
 <li><strong>Objects</strong> : A set of name-attribute pairs, where the names are unique</li>
 <li><strong>Operations</strong> :</li>
@@ -2504,20 +2574,20 @@
 <li>SymTab  Insert(symtab, name, attr)</li>
 <li>SymTab  Delete(symtab, name) </li>
 </ul>
-<h4 id="hash-tables">Hash Tables<a class="headerlink" href="#hash-tables" title="Permanent link">&para;</a></h4>
+<h4 id="hash-tables">Hash Tables</h4>
 <p><img src="picture/image-20210102212608844.png" alt="image-20210102212608844" style="zoom:75%;" /></p>
 <ul>
 <li>A <strong>collision</strong> occurs when we hash two nonidentical identifiers into the same bucket.</li>
 <li>An <strong>overflow</strong> occurs when we hash a new identifier into a full bucket.</li>
 </ul>
 <hr />
-<h3 id="82-hash-function">8.2 Hash Function<a class="headerlink" href="#82-hash-function" title="Permanent link">&para;</a></h3>
+<h3 id="82-hash-function">8.2 Hash Function</h3>
 <ul>
 <li><span class="arithmatex">\(f(x)\)</span> must be <strong>easy</strong> to compute and <strong>minimize</strong> the number of <strong>collisions</strong>.</li>
 <li><span class="arithmatex">\(f(x)\)</span> should be unbiased. For any <span class="arithmatex">\(x\)</span> and any <span class="arithmatex">\(i\)</span>, we have that <span class="arithmatex">\(Probability(f(x)=i)=\frac{1}{b}\)</span>. Such kind of a hash function is called a <strong>uniform hash function</strong>.</li>
 </ul>
 <hr />
-<h3 id="83-separate-chaining">8.3 Separate Chaining<a class="headerlink" href="#83-separate-chaining" title="Permanent link">&para;</a></h3>
+<h3 id="83-separate-chaining">8.3 Separate Chaining</h3>
 <ul>
 <li>keep a list of all keys that hash to the same value</li>
 </ul>
@@ -2538,7 +2608,7 @@ struct HashTbl {
     List *TheLists; 
 }; 
 </code></pre>
-<h4 id="create-an-empty-table">Create an empty table<a class="headerlink" href="#create-an-empty-table" title="Permanent link">&para;</a></h4>
+<h4 id="create-an-empty-table">Create an empty table</h4>
 <pre><code class="language-c">HashTable InitializeTable( int TableSize ) 
 {   
     HashTable H; 
@@ -2563,7 +2633,7 @@ struct HashTbl {
     return H; 
 } 
 </code></pre>
-<h4 id="find-a-key-from-a-hash-table">Find a key from a hash table<a class="headerlink" href="#find-a-key-from-a-hash-table" title="Permanent link">&para;</a></h4>
+<h4 id="find-a-key-from-a-hash-table">Find a key from a hash table</h4>
 <pre><code class="language-c">Position Find ( ElementType Key, HashTable H ) 
 { 
     Position P; 
@@ -2575,7 +2645,7 @@ struct HashTbl {
     return P; 
 } 
 </code></pre>
-<h4 id="insert-a-key-into-a-hash-table">Insert a key into a hash table<a class="headerlink" href="#insert-a-key-into-a-hash-table" title="Permanent link">&para;</a></h4>
+<h4 id="insert-a-key-into-a-hash-table">Insert a key into a hash table</h4>
 <pre><code class="language-c">void Insert ( ElementType Key, HashTable H ) 
 { 
     Position Pos, NewCell; 
@@ -2599,7 +2669,7 @@ struct HashTbl {
 <p>Note : Make the TableSize about as large as the number of keys expected (i.e. to make the loading density factor <span class="arithmatex">\(\lambda\approx\)</span>1).</p>
 </blockquote>
 <hr />
-<h3 id="84-open-addressing">8.4 Open Addressing<a class="headerlink" href="#84-open-addressing" title="Permanent link">&para;</a></h3>
+<h3 id="84-open-addressing">8.4 Open Addressing</h3>
 <ul>
 <li>find another empty cell to solve collision(avoiding pointers)</li>
 </ul>
@@ -2620,7 +2690,7 @@ struct HashTbl {
 <blockquote>
 <p>Note : Generally <span class="arithmatex">\(\lambda&lt;0.5\)</span>.</p>
 </blockquote>
-<h4 id="linear-probing">Linear Probing<a class="headerlink" href="#linear-probing" title="Permanent link">&para;</a></h4>
+<h4 id="linear-probing">Linear Probing</h4>
 <ul>
 <li><span class="arithmatex">\(F(i)\)</span> is a linear function of <span class="arithmatex">\(i\)</span>, such as <span class="arithmatex">\(F(i)=i\)</span>.</li>
 <li>逐个探测每个单元(必要时可以绕回)以查找出一个空单元</li>

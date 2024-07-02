@@ -1025,9 +1025,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -1036,9 +1034,42 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quadratic-probing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quadratic Probing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quadratic Probing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-if-quadratic-probing-is-used-and-the-table-size-is-prime-then-a-new-element-can-always-be-inserted-if-the-table-is-at-least-half-empty" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Theorem] If quadratic probing is used, and the table size is prime, then a new element can always be inserted if the table is at least half empty.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#double-hashing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Double Hashing
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#85-rehashing" class="md-nav__link">
@@ -2448,12 +2479,12 @@
   
 
 
-<h1 id="week-15">WEEK 15<a class="headerlink" href="#week-15" title="Permanent link">&para;</a></h1>
-<h4 id="quadratic-probing">Quadratic Probing<a class="headerlink" href="#quadratic-probing" title="Permanent link">&para;</a></h4>
+<h1 id="week-15">WEEK 15</h1>
+<h4 id="quadratic-probing">Quadratic Probing</h4>
 <ul>
 <li><span class="arithmatex">\(F(i)\)</span> is a quadratic function of <span class="arithmatex">\(i\)</span>, such as <span class="arithmatex">\(F(i)=i^2\)</span>.</li>
 </ul>
-<h5 id="theorem-if-quadratic-probing-is-used-and-the-table-size-is-prime-then-a-new-element-can-always-be-inserted-if-the-table-is-at-least-half-empty">[Theorem] If quadratic probing is used, and the table size is <em>prime</em>, then a new element can always be inserted if the table is <em>at least half empty</em>.<a class="headerlink" href="#theorem-if-quadratic-probing-is-used-and-the-table-size-is-prime-then-a-new-element-can-always-be-inserted-if-the-table-is-at-least-half-empty" title="Permanent link">&para;</a></h5>
+<h5 id="theorem-if-quadratic-probing-is-used-and-the-table-size-is-prime-then-a-new-element-can-always-be-inserted-if-the-table-is-at-least-half-empty">[Theorem] If quadratic probing is used, and the table size is <em>prime</em>, then a new element can always be inserted if the table is <em>at least half empty</em>.</h5>
 <p><img src="picture/image-20210104154133711.png" alt="image-20210104154133711" style="zoom:75%;" /></p>
 <blockquote>
 <p>Note : If the table size is a prime of the form <span class="arithmatex">\(4k + 3\)</span>, then the quadratic probing  <span class="arithmatex">\(f(i) = \pm i^2\)</span> can probe the entire table.</p>
@@ -2517,7 +2548,7 @@
 <li>Although primary clustering is solved, <strong>secondary clustering</strong> occurs, that is, keys that hash to the same position will probe the same alternative cells.</li>
 </ul>
 </blockquote>
-<h4 id="double-hashing">Double Hashing<a class="headerlink" href="#double-hashing" title="Permanent link">&para;</a></h4>
+<h4 id="double-hashing">Double Hashing</h4>
 <ul>
 <li><span class="arithmatex">\(f(i)=i*hash_2(x)\)</span></li>
 <li><span class="arithmatex">\(hash_2(x)\not\equiv 0\)</span></li>
@@ -2532,7 +2563,7 @@
 </ul>
 </blockquote>
 <hr />
-<h3 id="85-rehashing">8.5 Rehashing<a class="headerlink" href="#85-rehashing" title="Permanent link">&para;</a></h3>
+<h3 id="85-rehashing">8.5 Rehashing</h3>
 <ul>
 <li>Build another table that is about twice as big.</li>
 <li>Scan down the entire original hash table for non-deleted elements.</li>

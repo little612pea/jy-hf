@@ -899,9 +899,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -910,7 +908,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -920,6 +918,153 @@
       6.4 Shortest Path Algorithms
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="6.4 Shortest Path Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-source-shortest-path-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single-Source Shortest-Path Problem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Single-Source Shortest-Path Problem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unweighted-shortest-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unweighted Shortest Path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weighted-shorted-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weighted Shorted Path
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Weighted Shorted Path">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dijkstras-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dijkstra’s Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphs-with-negative-edge-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphs with Negative Edge Costs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acyclic-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acyclic Graphs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Acyclic Graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aoeactivity-on-edge-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      AOE(Activity on Edge) Networks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-pairs-shortest-path-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      All-Pairs Shortest Path Problem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="All-Pairs Shortest Path Problem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2448,16 +2593,16 @@
   
 
 
-<h1 id="week-9">WEEK 9<a class="headerlink" href="#week-9" title="Permanent link">&para;</a></h1>
-<h3 id="64-shortest-path-algorithms">6.4 Shortest Path Algorithms<a class="headerlink" href="#64-shortest-path-algorithms" title="Permanent link">&para;</a></h3>
+<h1 id="week-9">WEEK 9</h1>
+<h3 id="64-shortest-path-algorithms">6.4 Shortest Path Algorithms</h3>
 <p>Given a digraph <span class="arithmatex">\(G = ( V, E )\)</span>, and a cost function <span class="arithmatex">\(c( e )\)</span> for <span class="arithmatex">\(e \in E( G )\)</span>. </p>
 <p>The <strong>length</strong> of a path <span class="arithmatex">\(P\)</span> from <strong>source</strong> to <strong>destination</strong> is <span class="arithmatex">\(\sum_{e_i\subset P} c(e_i)\)</span>(also called <strong>weighted path length</strong>).</p>
-<h4 id="single-source-shortest-path-problem">Single-Source Shortest-Path Problem<a class="headerlink" href="#single-source-shortest-path-problem" title="Permanent link">&para;</a></h4>
+<h4 id="single-source-shortest-path-problem">Single-Source Shortest-Path Problem</h4>
 <p>Given as input a weighted graph, <span class="arithmatex">\(G = ( V, E )\)</span>, and a distinguished vertex <span class="arithmatex">\(s\)</span>, find the shortest weighted path from <span class="arithmatex">\(s\)</span> to every other vertex in <span class="arithmatex">\(G\)</span>.</p>
 <blockquote>
 <p>Note: If there is no negative-cost cycle, the shortest path from <span class="arithmatex">\(s\)</span> to <span class="arithmatex">\(s\)</span> is defined to be zero.</p>
 </blockquote>
-<h5 id="unweighted-shortest-path">Unweighted Shortest Path<a class="headerlink" href="#unweighted-shortest-path" title="Permanent link">&para;</a></h5>
+<h5 id="unweighted-shortest-path">Unweighted Shortest Path</h5>
 <ul>
 <li>Breadth-first search 广度优先遍历</li>
 </ul>
@@ -2519,8 +2664,8 @@ Improvement :</p>
 <div class="arithmatex">\[
 T=O(|V|+|E|)
 \]</div>
-<h5 id="weighted-shorted-path">Weighted Shorted Path<a class="headerlink" href="#weighted-shorted-path" title="Permanent link">&para;</a></h5>
-<h6 id="dijkstras-algorithm">Dijkstra’s Algorithm<a class="headerlink" href="#dijkstras-algorithm" title="Permanent link">&para;</a></h6>
+<h5 id="weighted-shorted-path">Weighted Shorted Path</h5>
+<h6 id="dijkstras-algorithm">Dijkstra’s Algorithm</h6>
 <ul>
 <li>Let S = { <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(v_i\)</span>’s whose shortest paths have been found }</li>
 <li>For any <span class="arithmatex">\(u\notin S\)</span>,  define distance [ u ] = minimal length of path { <span class="arithmatex">\(s\rightarrow(v_i\in S)\rightarrow u\)</span> }.  If the paths are generated in non-decreasing order, then :</li>
@@ -2582,7 +2727,7 @@ void PrintPath(Vertex V, Table T)
     } /* end-for( ; ; ) */
 }
 </code></pre>
-<h6 id="implementation-1">Implementation 1<a class="headerlink" href="#implementation-1" title="Permanent link">&para;</a></h6>
+<h6 id="implementation-1">Implementation 1</h6>
 <ul>
 <li>Simply scan the table to find the smallest unknown distance vertex.——<span class="arithmatex">\(O(|V|)\)</span></li>
 <li>Good if the graph is dense</li>
@@ -2590,7 +2735,7 @@ void PrintPath(Vertex V, Table T)
 <div class="arithmatex">\[
 T=O(|V|^2+|E|)
 \]</div>
-<h6 id="implementation-2">Implementation 2<a class="headerlink" href="#implementation-2" title="Permanent link">&para;</a></h6>
+<h6 id="implementation-2">Implementation 2</h6>
 <ul>
 <li>
 <p>堆优化</p>
@@ -2614,12 +2759,12 @@ T=O(|V|^2+|E|)
 <p>Good if the graph is sparse</p>
 </li>
 </ul>
-<h6 id="improvements">Improvements<a class="headerlink" href="#improvements" title="Permanent link">&para;</a></h6>
+<h6 id="improvements">Improvements</h6>
 <ul>
 <li>Pairing heap</li>
 <li>Fibonacci heap</li>
 </ul>
-<h5 id="graphs-with-negative-edge-costs">Graphs with Negative Edge Costs<a class="headerlink" href="#graphs-with-negative-edge-costs" title="Permanent link">&para;</a></h5>
+<h5 id="graphs-with-negative-edge-costs">Graphs with Negative Edge Costs</h5>
 <pre><code class="language-c">void WeightedNegative( Table T )
 {
     Queue Q;
@@ -2648,25 +2793,25 @@ T=O(|V|^2+|E|)
 <div class="arithmatex">\[
 T=O(|V|\times|E|)
 \]</div>
-<h5 id="acyclic-graphs">Acyclic Graphs<a class="headerlink" href="#acyclic-graphs" title="Permanent link">&para;</a></h5>
+<h5 id="acyclic-graphs">Acyclic Graphs</h5>
 <ul>
 <li>If the graph is acyclic, vertices may be selected in <strong>topological order</strong> since when a vertex is selected, its distance can no longer be lowered without any incoming edges from unknown nodes.</li>
 <li><span class="arithmatex">\(T=O(|E|+|V|)\)</span> and no priority queue is needed.</li>
 </ul>
-<h6 id="aoeactivity-on-edge-networks">AOE(Activity on Edge) Networks<a class="headerlink" href="#aoeactivity-on-edge-networks" title="Permanent link">&para;</a></h6>
+<h6 id="aoeactivity-on-edge-networks">AOE(Activity on Edge) Networks</h6>
 <p><img alt="image-20210124185420522" src="../picture/image-20210124185420522.png" /></p>
 <p><img alt="image-20210124185541801" src="../picture/image-20210124185541801.png" /></p>
 <p><img alt="image-20210124185508683" src="../picture/image-20210124185508683.png" /></p>
-<h4 id="all-pairs-shortest-path-problem">All-Pairs Shortest Path Problem<a class="headerlink" href="#all-pairs-shortest-path-problem" title="Permanent link">&para;</a></h4>
+<h4 id="all-pairs-shortest-path-problem">All-Pairs Shortest Path Problem</h4>
 <ul>
 <li>For all pairs of <span class="arithmatex">\(v_i\)</span> and <span class="arithmatex">\(v_j\)</span> ( <span class="arithmatex">\(i\neq j\)</span> ), find the shortest path between.</li>
 </ul>
-<h5 id="method-1">Method 1<a class="headerlink" href="#method-1" title="Permanent link">&para;</a></h5>
+<h5 id="method-1">Method 1</h5>
 <ul>
 <li>Use <strong>single-source algorithm</strong> for <span class="arithmatex">\(|V|\)</span> times.</li>
 <li><span class="arithmatex">\(T=O(|V|^3)\)</span>, works fast on sparse graph.</li>
 </ul>
-<h5 id="method-2">Method 2<a class="headerlink" href="#method-2" title="Permanent link">&para;</a></h5>
+<h5 id="method-2">Method 2</h5>
 <ul>
 <li>动态规划</li>
 <li><span class="arithmatex">\(O(|V|^3)\)</span> algorithm given in Chapter 10, works faster on dense graphs.</li>

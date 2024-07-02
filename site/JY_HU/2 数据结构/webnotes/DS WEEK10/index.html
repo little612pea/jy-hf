@@ -920,9 +920,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -931,7 +929,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -942,6 +940,54 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="6.5 Network Flow Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-simple-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Simple Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      A solution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proposition-if-the-edge-capabilities-are-rational-numbers-this-algorithm-always-terminate-with-a-maximum-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Proposition] If the edge capabilities are rational numbers, this algorithm always terminate with a maximum flow.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -950,6 +996,30 @@
       6.6 Minimum Spanning Tree
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="6.6 Minimum Spanning Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-a-spanning-tree-of-a-graph-g-is-a-tree-which-consists-of-vg-and-a-subset-of-eg" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Definition] A spanning tree of a graph \(G\) is a tree which consists of \(V(G)\) and a subset of \(E(G)\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greedy-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Greedy Method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2457,8 +2527,8 @@
   
 
 
-<h1 id="week-10">WEEK 10<a class="headerlink" href="#week-10" title="Permanent link">&para;</a></h1>
-<h3 id="65-network-flow-problems">6.5 Network Flow Problems<a class="headerlink" href="#65-network-flow-problems" title="Permanent link">&para;</a></h3>
+<h1 id="week-10">WEEK 10</h1>
+<h3 id="65-network-flow-problems">6.5 Network Flow Problems</h3>
 <p><img alt="image-20201206175230349" src="../picture/image-20201206175230349.png" /></p>
 <ul>
 <li>Determine the maximum amount of flow that can pass from <span class="arithmatex">\(s\)</span> to <span class="arithmatex">\(t\)</span>.</li>
@@ -2466,7 +2536,7 @@
 <blockquote>
 <p>Note : Total coming in (<span class="arithmatex">\(v\)</span>) = Total going out (<span class="arithmatex">\(v\)</span>) where <span class="arithmatex">\(v \notin \{ s, t \}\)</span></p>
 </blockquote>
-<h4 id="a-simple-algorithm">A Simple Algorithm<a class="headerlink" href="#a-simple-algorithm" title="Permanent link">&para;</a></h4>
+<h4 id="a-simple-algorithm">A Simple Algorithm</h4>
 <ul>
 <li>流图<span class="arithmatex">\(G_f\)</span>表示算法的任意阶段已经达到的流，开始时<span class="arithmatex">\(G_f\)</span>的所有边都没有流，算法终止时<span class="arithmatex">\(G_f\)</span>包含最大流</li>
 <li>残余图(residual graph)<span class="arithmatex">\(G_r\)</span>表示对于每条边还能添加上多少流，<span class="arithmatex">\(G_r\)</span>的边叫做残余边(residual edge)</li>
@@ -2480,7 +2550,7 @@
 <ul>
 <li>Step 1中初始选择的路径可能使算法不能找到最优解，贪心算法行不通</li>
 </ul>
-<h4 id="a-solution">A solution<a class="headerlink" href="#a-solution" title="Permanent link">&para;</a></h4>
+<h4 id="a-solution">A solution</h4>
 <ul>
 <li>allow the algorithm to <strong>undo</strong> its decisions</li>
 <li>For each edge <span class="arithmatex">\(( v, w )\)</span> with flow <span class="arithmatex">\(f_{v, w}\)</span> in <span class="arithmatex">\(G_f\)</span>, add an edge <span class="arithmatex">\(( w, v )\)</span> with flow <span class="arithmatex">\(f_{v, w}\)</span> in <span class="arithmatex">\(G_r\)</span> .</li>
@@ -2488,8 +2558,8 @@
 <blockquote>
 <p>Note : The algorithm works for <span class="arithmatex">\(G\)</span> with <strong>cycles</strong> as well.</p>
 </blockquote>
-<h5 id="proposition-if-the-edge-capabilities-are-rational-numbers-this-algorithm-always-terminate-with-a-maximum-flow">[Proposition] If the edge capabilities are <em>rational numbers</em>, this algorithm always terminate with a maximum flow.<a class="headerlink" href="#proposition-if-the-edge-capabilities-are-rational-numbers-this-algorithm-always-terminate-with-a-maximum-flow" title="Permanent link">&para;</a></h5>
-<h4 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h4>
+<h5 id="proposition-if-the-edge-capabilities-are-rational-numbers-this-algorithm-always-terminate-with-a-maximum-flow">[Proposition] If the edge capabilities are <em>rational numbers</em>, this algorithm always terminate with a maximum flow.</h5>
+<h4 id="analysis">Analysis</h4>
 <ul>
 <li>
 <p>An augmenting path can be found by an unweighted shortest path algorithm.</p>
@@ -2532,8 +2602,8 @@
 </ul>
 </blockquote>
 <hr />
-<h3 id="66-minimum-spanning-tree">6.6 Minimum Spanning Tree<a class="headerlink" href="#66-minimum-spanning-tree" title="Permanent link">&para;</a></h3>
-<h5 id="definition-a-spanning-tree-of-a-graph-g-is-a-tree-which-consists-of-vg-and-a-subset-of-eg">[Definition] A <em>spanning tree</em> of a graph <span class="arithmatex">\(G\)</span> is a tree which consists of <span class="arithmatex">\(V(G)\)</span> and a subset of <span class="arithmatex">\(E(G)\)</span><a class="headerlink" href="#definition-a-spanning-tree-of-a-graph-g-is-a-tree-which-consists-of-vg-and-a-subset-of-eg" title="Permanent link">&para;</a></h5>
+<h3 id="66-minimum-spanning-tree">6.6 Minimum Spanning Tree</h3>
+<h5 id="definition-a-spanning-tree-of-a-graph-g-is-a-tree-which-consists-of-vg-and-a-subset-of-eg">[Definition] A <em>spanning tree</em> of a graph <span class="arithmatex">\(G\)</span> is a tree which consists of <span class="arithmatex">\(V(G)\)</span> and a subset of <span class="arithmatex">\(E(G)\)</span></h5>
 <blockquote>
 <p>Note :</p>
 <ul>
@@ -2544,7 +2614,7 @@
 <li>Adding a non-tree edge to a spanning tree, we obtain a cycle.</li>
 </ul>
 </blockquote>
-<h5 id="greedy-method">Greedy Method<a class="headerlink" href="#greedy-method" title="Permanent link">&para;</a></h5>
+<h5 id="greedy-method">Greedy Method</h5>
 <p>Make the best decision for each stage, under the following constrains :</p>
 <blockquote>
 <ul>

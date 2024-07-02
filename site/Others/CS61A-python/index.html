@@ -2321,9 +2321,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -2332,7 +2330,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -2487,7 +2485,7 @@
   
 
 
-<h1 id="cs61a-python">CS61a PYTHON<a class="headerlink" href="#cs61a-python" title="Permanent link">&para;</a></h1>
+<h1 id="cs61a-python">CS61a PYTHON</h1>
 <p>answer = get_string()</p>
 <p>print("hello,",answer)  两个参数中间自动加括号</p>
 <p>print(f"hello,{answer}")</p>
@@ -2539,16 +2537,16 @@ else:
 =print(&quot;?&quot;*4)
 #没有分配内存，没有指针
 </code></pre>
-<h3 id="global-frame">global frame(全局帧)<a class="headerlink" href="#global-frame" title="Permanent link">&para;</a></h3>
+<h3 id="global-frame">global frame(全局帧)</h3>
 <p>全局帧是程序的顶层帧，包含了全局范围内定义的变量。这些变量被称为全局变量，因为它们可以在整个程序的任何地方访问。全局帧中的变量对整个程序都是可见的。</p>
-<h3 id="local-frame">local frame（局部帧）<a class="headerlink" href="#local-frame" title="Permanent link">&para;</a></h3>
+<h3 id="local-frame">local frame（局部帧）</h3>
 <p>每当你调用一个函数，Python会为该函数创建一个局部帧。这个局部帧包含了函数中定义的局部变量和参数。这些变量只能在函数内部访问，而在函数执行完毕后，局部帧也会被销毁。这有助于保持变量的隔离性，防止不同函数之间的变量名冲突。</p>
 <p>举例来说，如果你在Python中定义一个函数，函数内的变量会存在于该函数的局部帧中。同时，如果你在函数外定义一个变量，它会存在于全局帧中。这种分层的帧结构有助于组织和管理变量，使其具有适当的作用域。局部帧和全局帧的交互是Python中变量作用域的核心概念，它确保了变量在程序中的合理可见性和隔离性。</p>
-<h3 id="python3-i-examplepy">$python3 -i example.py<a class="headerlink" href="#python3-i-examplepy" title="Permanent link">&para;</a></h3>
+<h3 id="python3-i-examplepy">$python3 -i example.py</h3>
 <p>以交互式命令行运行python，可以通过键入变量值查看执行完成后的各个变量，无需print</p>
-<h3 id="python3-m-doctest-examplepy">$python3 -m doctest example.py<a class="headerlink" href="#python3-m-doctest-examplepy" title="Permanent link">&para;</a></h3>
+<h3 id="python3-m-doctest-examplepy">$python3 -m doctest example.py</h3>
 <p>运行docstring所指定的示例，如果没有输出则直接返回</p>
-<h3 id="python3-m-doctest-v-examplepy">$python3 -m doctest -v example.py<a class="headerlink" href="#python3-m-doctest-v-examplepy" title="Permanent link">&para;</a></h3>
+<h3 id="python3-m-doctest-v-examplepy">$python3 -m doctest -v example.py</h3>
 <p>打印输出所有的docstring测试结果，相当于自测情况</p>
 <p>def嵌套定义</p>
 <p><img alt="image-20231025192930643" src="D:\notes\assets\image-20231025192930643.png" /></p>
@@ -2560,7 +2558,7 @@ else:
 <p><img alt="image-20231025201319301" src="D:\notes\assets\image-20231025201319301.png" /></p>
 <p>control statements</p>
 <p><img alt="image-20231025213614688" src="D:\notes\assets\image-20231025213614688.png" /></p>
-<h3 id="-n-1n-1n">验证递归的正确性/如何写递归-&gt;分解问题，就好像n-1的答案已经写好了，只需要从n-1得到n<a class="headerlink" href="#-n-1n-1n" title="Permanent link">&para;</a></h3>
+<h3 id="-n-1n-1n">验证递归的正确性/如何写递归-&gt;分解问题，就好像n-1的答案已经写好了，只需要从n-1得到n</h3>
 <p>用数归！</p>
 <p>1.base case</p>
 <p>2.假设n-1的情况正确执行，正确返回，如何利用n-1的情况得出n</p>

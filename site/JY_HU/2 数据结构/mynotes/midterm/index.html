@@ -1115,9 +1115,7 @@
       
         
 
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -1126,7 +1124,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      On this page
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1208,6 +1206,21 @@
       zigzagging on a tree
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="zigzagging on a tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hw3-m1n" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW3: 栈最多容纳M个数，数字1~N依次入栈，而出栈顺序任意，验证给定的序列是否为出栈序列
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2542,7 +2555,7 @@
   
 
 
-<h1 id="midterm">midterm<a class="headerlink" href="#midterm" title="Permanent link">&para;</a></h1>
+<h1 id="midterm">midterm</h1>
 <p>易错复杂度分析</p>
 <p>建堆（不是一个个插入）的算法：<span class="arithmatex">\(O(N)\)</span>,对i=n/2到1的所有节点都pecolate down</p>
 <p>指针比较多，注意调试不要打印或者访问NULL的某个属性，避免越界等段错误</p>
@@ -2589,17 +2602,17 @@ void PercolateDown(int p, PriorityQueue H)
 <p>用最后一个元素替换堆顶元素，并进行minHeapify</p>
 <p><strong>minHeapify</strong>过程，就是percolate down的过程</p>
 <p>递归传递的参数为堆指针和当前节点的下标i，首先计算出左右节点下标（2i，2i+1），比较左右节点选出较小值与根节点交换，递归持续进行到越界或最小值就是i结束。</p>
-<h3 id="1">1.堆：<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<h3 id="2">2.栈、队列<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<h3 id="3">3.并查集：<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<h3 id="naive-implementaion">naive implementaion:<a class="headerlink" href="#naive-implementaion" title="Permanent link">&para;</a></h3>
+<h3 id="1">1.堆：</h3>
+<h3 id="2">2.栈、队列</h3>
+<h3 id="3">3.并查集：</h3>
+<h3 id="naive-implementaion">naive implementaion:</h3>
 <pre><code class="language-c">union(r1,r2):
     S[r2]=r1  //将r2指向r1
 //问题：r1,r2必须都是root,因此在执行上面之前要先find
 =&gt; union(find(node1),find(node2))
 </code></pre>
 <p>最坏情况复杂度达到<span class="arithmatex">\(O(N^2)\)</span>!!!!</p>
-<h3 id="union-by-size">union-by-size:总是使较小的树成为较大的树的子树<a class="headerlink" href="#union-by-size" title="Permanent link">&para;</a></h3>
+<h3 id="union-by-size">union-by-size:总是使较小的树成为较大的树的子树</h3>
 <ul>
 <li><strong>[Lemma]</strong> Let T be a tree created by union-by-size with N nodes, then <span class="arithmatex">\(height(T)\leq\lfloor\log_2N\rfloor+1\)</span>.</li>
 </ul>
@@ -2627,7 +2640,7 @@ void SetUnion(DisjSet S, SetType Root1, SetType Root2)
     }
 }
 </code></pre>
-<h3 id="union-by-height">union-by-height：只有当两颗相同深度的树合并时才要求增加树的深度?<a class="headerlink" href="#union-by-height" title="Permanent link">&para;</a></h3>
+<h3 id="union-by-height">union-by-height：只有当两颗相同深度的树合并时才要求增加树的深度?</h3>
 <ul>
 <li>Always change the shallow tree</li>
 <li>保证所有的树的深度最多是<span class="arithmatex">\(O(logN)\)</span></li>
@@ -2646,7 +2659,7 @@ void SetUnion(DisjSet S, SetType Root1, SetType Root2)
     }
 }
 </code></pre>
-<h3 id="path-compression-akaman-algorithm">path-compression akaman-algorithm<a class="headerlink" href="#path-compression-akaman-algorithm" title="Permanent link">&para;</a></h3>
+<h3 id="path-compression-akaman-algorithm">path-compression akaman-algorithm</h3>
 <pre><code class="language-c">SetType Find( ElementType X, DisjSet S )
 {   
     ElementType root, trail, lead;
@@ -2668,8 +2681,8 @@ void SetUnion(DisjSet S, SetType Root1, SetType Root2)
         return S[ X ] = Find( S[ X ], S );
 }
 </code></pre>
-<h3 id="4">4.树：二叉树，搜索树<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
-<h3 id="zigzagging-on-a-tree">zigzagging on a tree<a class="headerlink" href="#zigzagging-on-a-tree" title="Permanent link">&para;</a></h3>
+<h3 id="4">4.树：二叉树，搜索树</h3>
+<h3 id="zigzagging-on-a-tree">zigzagging on a tree</h3>
 <p><img alt="zigzag.jpg" src="../assets/337cbfb0-a7b2-4500-9664-318e9ffc870e.jpg" /></p>
 <pre><code class="language-c">sample input:
 8
@@ -2887,7 +2900,7 @@ int main()
 <p><img alt="image-20231123171418423" src="../assets/image-20231123171418423.png" /></p>
 <p>disjoint sets</p>
 <p><img alt="2023-11-23 (7)" src="../assets/2023-11-23%20%287%29.png" /></p>
-<h5 id="hw3-m1n">HW3: 栈最多容纳M个数，数字1~N依次入栈，而出栈顺序任意，验证给定的序列是否为出栈序列<a class="headerlink" href="#hw3-m1n" title="Permanent link">&para;</a></h5>
+<h5 id="hw3-m1n">HW3: 栈最多容纳M个数，数字1~N依次入栈，而出栈顺序任意，验证给定的序列是否为出栈序列</h5>
 <p>对于某个序列，如3，2，1，7，5，6，4，栈的大小为5</p>
 <p>预设flag=1，假设是合法出栈序列 </p>
 <p>初始化栈顶指针为-1，先将1入栈，因为1一定是第一个入栈，使用i记录下一个将要入栈的元素</p>
@@ -2964,7 +2977,7 @@ int test(int *num, int M, int N)
 <p><img alt="img" src="../assets/v2-abeac41c041deb327ed4dd41a0747ad2_r.jpg" /></p>
 <p>倒序输出为ABC+*DEF+/-</p>
 <p>操作数顺序不会变化，一定是叶子节点</p>
-<h2 id="1-1">二分查找+1-1问题处理<a class="headerlink" href="#1-1" title="Permanent link">&para;</a></h2>
+<h2 id="1-1">二分查找+1-1问题处理</h2>
 <p><img alt="img" src="../assets/v2-3554e8997059b1b41ae95a3e47ffd8b5_r.jpg" /></p>
 <ul>
 <li>左、中、右索引的分配。</li>
@@ -2997,14 +3010,14 @@ int test(int *num, int M, int N)
 <li>保证查找空间在每个步骤中至少有 3 个元素。</li>
 <li>需要进行后处理。 当剩下 2 个元素时，循环 / 递归结束。 需要评估其余元素是否符合条件。</li>
 </ul>
-<h3 id="k-th-largest-num">K-th largest Num<a class="headerlink" href="#k-th-largest-num" title="Permanent link">&para;</a></h3>
+<h3 id="k-th-largest-num">K-th largest Num</h3>
 <p>在N个元素的数组中找第K大的数：</p>
 <p>N个元素的前K个先做minHeapify，后面的元素依次插入堆的对应位置：</p>
 <p>方法：insert，如果比H[1]（堆顶元素，下标从1开始）小，则不插入堆中，因为堆顶就是第K个大的数</p>
 <p>若比H[1]大，则percolate down，沿途子节点向上替换父节点，也就是H[1]被替换</p>
 <p>将余下的K+1~N个元素全部判断并插入后，最终堆顶元素就是N个数中第K大的数</p>
-<h1 id="_1">期中考试刷题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h1 id="15-16">15-16<a class="headerlink" href="#15-16" title="Permanent link">&para;</a></h1>
+<h1 id="_1">期中考试刷题</h1>
+<h1 id="15-16">15-16</h1>
 <p>No Greater Than X in BST</p>
 <p>(20分)</p>
 <p>You are supposed to output, in decreasing order, all the elements no greater than <code>X</code> in a binary search tree <code>T</code>.</p>
