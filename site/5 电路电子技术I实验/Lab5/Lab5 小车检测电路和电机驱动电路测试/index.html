@@ -146,6 +146,7 @@
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+<<<<<<< HEAD
     
     
       <label class="md-header__button md-icon" for="__search">
@@ -184,6 +185,9 @@
     </div>
   </div>
 </div>
+=======
+    
+>>>>>>> cada1f79efa77e6d09aea0c6b9a01c6e78a2f174
     
     
       <div class="md-header__source">
@@ -2112,7 +2116,7 @@
   
 
 
-<h1 id="_1">小车检测电路和电机驱动电路测试</h1>
+<div><h1 id="_1">小车检测电路和电机驱动电路测试</h1>
 <p>实验日期：2023/10/23</p>
 <p>地点：东3-406</p>
 <h2 id="_2">实验目的</h2>
@@ -2144,8 +2148,8 @@
 <ol>
 <li>分析电路</li>
 </ol>
-<p><img src="./assets/2.png" style="zoom:22%;" /></p>
-<p><center><I>fig1 OPTO5内部电路</I></center></p>
+<p><img src="./assets/2.png" style="zoom:22%;"></p>
+<p></p><center><i>fig1 OPTO5内部电路</i></center>
 <p>我们主要讨论R17的阻值，R19的阻值和W5为什么为大电阻（10k）。</p>
 <ol>
 <li>
@@ -2211,8 +2215,8 @@
  U_{LED}=V_{I}-U_{R_{19}}=3.329-1.253=2.076V
  \end{array}
  $$</p>
-<p><img src="./assets/diode-diode12-8502958.gif" style="zoom:50%;" /></p>
-<p><center><I>fig2 发光二极管I-V特性曲线</I></center></p>
+<p><img src="./assets/diode-diode12-8502958.gif" style="zoom:50%;"></p>
+<p></p><center><i>fig2 发光二极管I-V特性曲线</i></center>
 <p>根据<a href="https://www.electronics-tutorials.ws/diode/diode_8.html">上述图表</a>，同时根据我们的二极管为绿色二极管可知，当选用3.3V的发光二极管时，已经能够较好地体现发光特性，电流以毫安级别通过。</p>
 <p><strong>R20</strong>作为并联电阻，搜索资料得知，在LED两端并联大电阻，当有反向电流流过时，能稳定LED两端电压，避免所有分压在一个LED灯上，导致LED灯反向击穿；同时，能够很好的释放LED内部存储的能量，使得LED灯快速熄灭。</p>
 </li>
@@ -2289,22 +2293,22 @@
 <p>测量LED06阻值两端的电压与LED05所得结果基本相似。</p>
 <h5 id="12">【1.2 不同表面，光电管反射电压测量】</h5>
 <h5 id="13">【1.3 区分黑白地面的比较电压值】</h5>
-<p><img src="./assets/截屏2023-10-29 13.51.21.png" alt="截屏2023-10-29 13.51.21" style="zoom:50%;" /></p>
+<p><img src="./assets/%E6%88%AA%E5%B1%8F2023-10-29%2013.51.21.png" alt="截屏2023-10-29 13.51.21" style="zoom:50%;"></p>
 <p>根据实验结果，可以得到以下结论：反射表面对红外线吸收能力越强，光电管反射电压越高。</p>
 <p>随着反射表面对红外线能力的吸收增强，光电管两端电压增加，当超过另外一只引脚的输入电压后，比较器输出相反的性质。</p>
 <ol>
 <li>将红外探测仪置于白色表面不同高度处（通过小车下面垫置书本实现），测量光电管反射电压。</li>
 </ol>
 <h5 id="1426cm">【1.4不同高度（2至6CM)，光电管反射电压测量比较】</h5>
-<p><img src="./assets/截屏2023-10-29 13.52.21.png" alt="截屏2023-10-29 13.52.21" style="zoom:20%;" /></p>
-<p><img src="./assets/截屏2023-10-29 13.25.50.png" alt="截屏2023-10-29 13.25.50" style="zoom:20%;" /></p>
+<p><img src="./assets/%E6%88%AA%E5%B1%8F2023-10-29%2013.52.21.png" alt="截屏2023-10-29 13.52.21" style="zoom:20%;"></p>
+<p><img src="./assets/%E6%88%AA%E5%B1%8F2023-10-29%2013.25.50.png" alt="截屏2023-10-29 13.25.50" style="zoom:20%;"></p>
 <ul>
 <li>当光电管离地越来越高，所能吸收的红外光线越来越少，两端电压越来越大。</li>
 <li>当光电管高度大约为3.5～3.7cm左右时，光电管两端电压逐渐靠近1.992V（另一只脚的电压），此时从比较器从输出低电压转变为高电压，在这个电压值以下，指示LED灯发光，以上则熄灭。</li>
 <li>在实际使用中，为了避免高度对测量结果的影响，当一只脚的引脚为2V左右，应该将光电管置于&lt;2.5cm的位置。当然，也要根据具体的另一只脚的电位，具体调整光电管离地高度。</li>
 </ul>
 <h5 id="15">【1.5 观察环境光亮对光电检测电路的影响】</h5>
-<p><img src="./assets/截屏2023-10-29 13.34.58.png" alt="截屏2023-10-29 13.34.58" style="zoom:30%;" /></p>
+<p><img src="./assets/%E6%88%AA%E5%B1%8F2023-10-29%2013.34.58.png" alt="截屏2023-10-29 13.34.58" style="zoom:30%;"></p>
 <ul>
 <li>可见，环境对实验有一定的影响，当其影响在1%左右，所以可以忽略不计。</li>
 <li>在昏暗环境下，去除了日光中的红外线对光电管的影响，从而使得其引脚11两端电压略微升高</li>
@@ -2319,8 +2323,8 @@
 <li>调节直流稳压源的电压，记录万用表读数</li>
 <li>交换输入电压源正负极，测量电机反转时的VA特性。</li>
 </ol>
-<p><img src="./assets/截屏2023-10-29 13.54.32.png" alt="截屏2023-10-29 13.54.32" style="zoom:30%;" /></p>
-<p><img src="./assets/1.bmp" style="zoom:40%;" /></p>
+<p><img src="./assets/%E6%88%AA%E5%B1%8F2023-10-29%2013.54.32.png" alt="截屏2023-10-29 13.54.32" style="zoom:30%;"></p>
+<p><img src="./assets/1.bmp" style="zoom:40%;"></p>
 <ul>
 <li>直流电压源从高到低变化时，电流逐渐较小，同时也可以观察到，电动机的转速慢慢减小。</li>
 <li>当电压源电压过小时，电动机停转，同时电流急剧上升，此时不再对外输出机械能，而是等效为一个电阻，只输出热能。</li>
@@ -2332,8 +2336,8 @@
 <ol>
 <li>分析PCB板上的电路图。</li>
 </ol>
-<p><img alt="截屏2023-10-29 18.46.29" src="../assets/%E6%88%AA%E5%B1%8F2023-10-29%2018.46.29.png" /></p>
-<p><center><I>fig3 电机控制电路电路图</I></center></p>
+<p><img alt="截屏2023-10-29 18.46.29" src="../assets/%E6%88%AA%E5%B1%8F2023-10-29%2018.46.29.png"></p>
+<p></p><center><i>fig3 电机控制电路电路图</i></center>
 <p>该电路分为三个模块：</p>
 <ul>
 <li><strong>光电控制电路</strong></li>
@@ -2351,13 +2355,13 @@
 <ol>
 <li>将电板接入电源，根据引脚图连接电路</li>
 </ol>
-<p><img src="./assets/截屏2023-10-29 19.19.00.png" alt="截屏2023-10-29 19.19.00" style="zoom:20%;" /></p>
-<p><center><I>fig4 引脚输入图</I></center></p>
+<p><img src="./assets/%E6%88%AA%E5%B1%8F2023-10-29%2019.19.00.png" alt="截屏2023-10-29 19.19.00" style="zoom:20%;"></p>
+<p></p><center><i>fig4 引脚输入图</i></center>
 <p>将输入脚ENA总控制开关，IN1、IN2等输入引脚与3.3V或者GND脚连接，以控制输入电位的高低。</p>
 <ol>
 <li>利用万用表测量各电位电压，记录数据。</li>
 </ol>
-<p><img alt="" src="../assets/%E6%88%AA%E5%B1%8F2023-10-29%2019.38.19.png" /></p>
+<p><img alt="" src="../assets/%E6%88%AA%E5%B1%8F2023-10-29%2019.38.19.png"></p>
 <ul>
 <li>输入IN1，IN2，输入端的高电压对应了OUT1和OUT2的高电压。</li>
 <li>当输出端OUT1、OUT2对应的电压有一定的电压差时，电机转动。</li>
@@ -2371,12 +2375,19 @@
 <li>ENA输入高电压。调节IN1、IN2、IN3、IN4的输入逻辑以控制电机正反转。</li>
 <li>观察小车的运转情况。</li>
 </ol>
-<p><img src="./assets/截屏2023-10-29 20.02.13.png" alt="截屏2023-10-29 20.02.13" style="zoom:30%;" /></p>
+<p><img src="./assets/%E6%88%AA%E5%B1%8F2023-10-29%2020.02.13.png" alt="截屏2023-10-29 20.02.13" style="zoom:30%;"></p>
 <ul>
 <li>当两端均正转后，由于两端的电机并不一定完全一致，所以在实际情况中，两电机均正转时，并不如设想一般直走，而是有微微的偏移，在我们实验过程中，小车微微左转，可见左边电机的转速略微慢于右边。在后续编程小车的时候，需要对电路进行一定的改进，使得输出电压能够使小车正走。</li>
 <li>左右电机一正一反时，小车绕两轮线段的中心旋转。</li>
 <li>左右电机中一个为正，一个停转时，这基本上绕停转的轮转。</li>
-</ul>
+</ul></div>
+
+
+
+
+
+
+
 
 
 

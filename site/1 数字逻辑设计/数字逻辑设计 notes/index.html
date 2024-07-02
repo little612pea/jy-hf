@@ -146,6 +146,7 @@
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+<<<<<<< HEAD
     
     
       <label class="md-header__button md-icon" for="__search">
@@ -184,6 +185,9 @@
     </div>
   </div>
 </div>
+=======
+    
+>>>>>>> cada1f79efa77e6d09aea0c6b9a01c6e78a2f174
     
     
       <div class="md-header__source">
@@ -1965,7 +1969,7 @@
   
 
 
-<h1 id="notes">数字逻辑设计 notes</h1>
+<div><h1 id="notes">数字逻辑设计 notes</h1>
 <p>SOP：sum of minterms</p>
 <p>对函数求complement</p>
 <h2 id="implicant-squares-in-the-map">Implicant: squares in the map</h2>
@@ -1975,15 +1979,15 @@
 <h3 id="essential-prime-implicant">简单来说就是如果没有这个圈有的格子就包裹不进去，就是 essential prime implicant</h3>
 <p>1.3 implicant
 蕴含项其实就是我们文章最开始提到的“圈”，每一种可能的圈就是一个蕴含项</p>
-<p><img alt="在这里插入图片描述" src="D:\notes\assets\20191011191319505.png" /></p>
+<p><img alt="在这里插入图片描述" src="D:\notes\assets\20191011191319505.png"></p>
 <p>上图中就有7个一次蕴含项，6个二次蕴含项和1个四次蕴含项，共计14个蕴含项</p>
 <p>1.4 prime implicant
 质蕴含项就是不能与其它蕴含项合并的蕴含项，在1.3中，我们发现四次蕴含项中有4个二次蕴含项，那么它们就不是质蕴含项</p>
-<p><img alt="在这里插入图片描述" src="D:\notes\assets\20191011191821622.png" /></p>
+<p><img alt="在这里插入图片描述" src="D:\notes\assets\20191011191821622.png"></p>
 <p>可以看到上图中的每一个圈都不能和其它圈合并，所以上图有共计4个质蕴含项</p>
 <p>1.5 essential prime implicant
 实质本源蕴含项中必须含有至少一个没被包含在其它蕴含项中的项，而且不能被更大的圈包裹</p>
-<p><img alt="在这里插入图片描述" src="D:\notes\assets\20191011192107335.png" /></p>
+<p><img alt="在这里插入图片描述" src="D:\notes\assets\20191011192107335.png"></p>
 <p>上图中有三个实质本源蕴含项，而我们找到最简SOP的方式就是找到所有的实质本源蕴含项</p>
 <h1 id="cost-criteria">cost criteria</h1>
 <h2 id="literal-cost-l">Literal cost L</h2>
@@ -1993,12 +1997,12 @@
 <h3 id="t_phl">$t_{PHL}$是</h3>
 <p>propagation : 传输</p>
 <h2 id="transport-delay-inertia-delayrejection-time">分为transport delay 和 inertia delay（有rejection time属性）</h2>
-<p><img alt="image-20231015200001435" src="D:\notes\assets\image-20231015200001435.png" /></p>
-<p><img alt="image-20231015200046111" src="D:\notes\assets\image-20231015200046111.png" /></p>
+<p><img alt="image-20231015200001435" src="D:\notes\assets\image-20231015200001435.png"></p>
+<p><img alt="image-20231015200046111" src="D:\notes\assets\image-20231015200046111.png"></p>
 <p>三个串联？四个可以吗</p>
 <p>74LS00与非门传输延迟测量：3个74LS00门串联，4个可以吗？</p>
 <p>$(\overline{A B})$</p>
-<p><img alt="image-20231017153245413" src="D:\notes\assets\image-20231017153245413.png" /></p>
+<p><img alt="image-20231017153245413" src="D:\notes\assets\image-20231017153245413.png"></p>
 <p>2-12怎么化简</p>
 <p>4位全加器的延时较长</p>
 <p>因此采用carry look ahead adder</p>
@@ -2011,7 +2015,7 @@
 <p>同理，C12 = G8~11+ P8~11*C8</p>
 <p>C16 = G12~15+ P12~15*C12</p>
 <p>依赖关系和4位的CLA相似</p>
-<p><img alt="Carry Lookahead Adder in VHDL and Verilog with Full-Adders" src="D:\notes\assets\carry-lookahead-adder-4-bit.png" /></p>
+<p><img alt="Carry Lookahead Adder in VHDL and Verilog with Full-Adders" src="D:\notes\assets\carry-lookahead-adder-4-bit.png"></p>
 <h1 id="1">小测1 复习</h1>
 <h2 id="1_1">1、逻辑表达式化简：</h2>
 <h3 id="aoverlineababaoverlineaab">$A+\overline{A}B=(A+B)(A+\overline{A})=A+B$</h3>
@@ -2019,7 +2023,14 @@
 <h2 id="2">2、门代价计算：</h2>
 <h2 id="3">3、卡诺图化简</h2>
 <p>4变量的卡诺图，16个格子，圈的大小为8-&gt;1个变量</p>
-<p><img alt="image-20231113230459090" src="D:\notes\assets\image-20231113230459090.png" /></p>
+<p><img alt="image-20231113230459090" src="D:\notes\assets\image-20231113230459090.png"></p></div>
+
+
+
+
+
+
+
 
 
 

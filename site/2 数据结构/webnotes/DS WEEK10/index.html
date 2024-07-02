@@ -146,6 +146,7 @@
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+<<<<<<< HEAD
     
     
       <label class="md-header__button md-icon" for="__search">
@@ -184,6 +185,9 @@
     </div>
   </div>
 </div>
+=======
+    
+>>>>>>> cada1f79efa77e6d09aea0c6b9a01c6e78a2f174
     
     
       <div class="md-header__source">
@@ -2008,9 +2012,9 @@
   
 
 
-<h1 id="week-10">WEEK 10</h1>
+<div><h1 id="week-10">WEEK 10</h1>
 <h3 id="65-network-flow-problems">6.5 Network Flow Problems</h3>
-<p><img alt="image-20201206175230349" src="../picture/image-20201206175230349.png" /></p>
+<p><img alt="image-20201206175230349" src="../picture/image-20201206175230349.png"></p>
 <ul>
 <li>Determine the maximum amount of flow that can pass from $s$ to $t$.</li>
 </ul>
@@ -2082,7 +2086,7 @@
 <li>The <strong>min-cost flow</strong> problem is to find, among all maximum flows, the one flow of minimum cost provided that each edge has a cost per unit of flow.</li>
 </ul>
 </blockquote>
-<hr />
+<hr>
 <h3 id="66-minimum-spanning-tree">6.6 Minimum Spanning Tree</h3>
 <h5 id="definition-a-spanning-tree-of-a-graph-g-is-a-tree-which-consists-of-vg-and-a-subset-of-eg">[Definition] A <em>spanning tree</em> of a graph $G$ is a tree which consists of $V(G)$ and a subset of $E(G)$</h5>
 <blockquote>
@@ -2119,57 +2123,65 @@
 </li>
 <li>
 <p>连续地按照最小的权选择边,，并且当所选的边不产生环时就把它作为取定的边</p>
-<div class="highlight"><pre><span></span><code>void Kruskal( Graph G )
-{   
-   T = { };
-    while ( T contains less than |V|-1 edges &amp;&amp; E is not empty ) 
+<p><code>pseudocode
+ void Kruskal( Graph G )
+ {   
+    T = { };
+     while ( T contains less than |V|-1 edges &amp;&amp; E is not empty ) 
+     {
+         choose a least cost edge (v, w) from E;  /*DeleteMin*/
+         delete (v, w) from E;
+         if ( (v, w) does not create a cycle in T )     
+            add (v, w) to T;  /*Union/Find*/
+         else     
+            discard (v, w);
+     }
+     if ( T contains fewer than |V|-1 edges )
+        Error( “No spanning tree” );
+ }</code></p>
+<p>```c
+ void Kruskal(Graph G)
+ {
+    int EdgesAccepted;
+    DisjSet S;
+    PriorityQueue H;
+    Vertex U, V;
+    SetType Uset, Vset;
+    Edge E;</p>
+<pre><code>Initialize(S);
+ReadGraphIntoHeapArray(G, H);
+BuildHeap(H);
+
+EdgesAccepted = 0;
+while(EdgesAccepted &lt; NumVertex-1)
+{
+    E = DeleteMin(H); /*E = (U,V)*/
+    Uset = Find(U, S);
+    Vset = Find(V, S);
+    if(Uset != Vset)
     {
-        choose a least cost edge (v, w) from E;  /*DeleteMin*/
-        delete (v, w) from E;
-        if ( (v, w) does not create a cycle in T )     
-           add (v, w) to T;  /*Union/Find*/
-        else     
-           discard (v, w);
+        /*Accept the edge*/
+        EdgesAccepted++;
+        SetUnion(S, USet, VSet);
     }
-    if ( T contains fewer than |V|-1 edges )
-       Error( “No spanning tree” );
 }
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Kruskal</span><span class="p">(</span><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">EdgesAccepted</span><span class="p">;</span>
-<span class="w">   </span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="p">;</span>
-<span class="w">   </span><span class="n">PriorityQueue</span><span class="w"> </span><span class="n">H</span><span class="p">;</span>
-<span class="w">   </span><span class="n">Vertex</span><span class="w"> </span><span class="n">U</span><span class="p">,</span><span class="w"> </span><span class="n">V</span><span class="p">;</span>
-<span class="w">   </span><span class="n">SetType</span><span class="w"> </span><span class="n">Uset</span><span class="p">,</span><span class="w"> </span><span class="n">Vset</span><span class="p">;</span>
-<span class="w">   </span><span class="n">Edge</span><span class="w"> </span><span class="n">E</span><span class="p">;</span>
-
-<span class="w">   </span><span class="n">Initialize</span><span class="p">(</span><span class="n">S</span><span class="p">);</span>
-<span class="w">   </span><span class="n">ReadGraphIntoHeapArray</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">H</span><span class="p">);</span>
-<span class="w">   </span><span class="n">BuildHeap</span><span class="p">(</span><span class="n">H</span><span class="p">);</span>
-
-<span class="w">   </span><span class="n">EdgesAccepted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">   </span><span class="k">while</span><span class="p">(</span><span class="n">EdgesAccepted</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NumVertex</span><span class="mi">-1</span><span class="p">)</span>
-<span class="w">   </span><span class="p">{</span>
-<span class="w">       </span><span class="n">E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DeleteMin</span><span class="p">(</span><span class="n">H</span><span class="p">);</span><span class="w"> </span><span class="cm">/*E = (U,V)*/</span>
-<span class="w">       </span><span class="n">Uset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Find</span><span class="p">(</span><span class="n">U</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">);</span>
-<span class="w">       </span><span class="n">Vset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Find</span><span class="p">(</span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">);</span>
-<span class="w">       </span><span class="k">if</span><span class="p">(</span><span class="n">Uset</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">Vset</span><span class="p">)</span>
-<span class="w">       </span><span class="p">{</span>
-<span class="w">           </span><span class="cm">/*Accept the edge*/</span>
-<span class="w">           </span><span class="n">EdgesAccepted</span><span class="o">++</span><span class="p">;</span>
-<span class="w">           </span><span class="n">SetUnion</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">USet</span><span class="p">,</span><span class="w"> </span><span class="n">VSet</span><span class="p">);</span>
-<span class="w">       </span><span class="p">}</span>
-<span class="w">   </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+</code></pre>
+<p>}
+ ```</p>
 <p>$$
  T=O(|E|\log|E|)
  $$</p>
-<p><img alt="image-20210124214008496" src="../picture/image-20210124214008496.png" /></p>
-<hr />
+<p><img alt="image-20210124214008496" src="../picture/image-20210124214008496.png"></p>
+<hr>
 </li>
-</ol>
+</ol></div>
+
+
+
+
+
+
+
 
 
 

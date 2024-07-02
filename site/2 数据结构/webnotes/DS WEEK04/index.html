@@ -146,6 +146,7 @@
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+<<<<<<< HEAD
     
     
       <label class="md-header__button md-icon" for="__search">
@@ -184,6 +185,9 @@
     </div>
   </div>
 </div>
+=======
+    
+>>>>>>> cada1f79efa77e6d09aea0c6b9a01c6e78a2f174
     
     
       <div class="md-header__source">
@@ -2026,7 +2030,7 @@
   
 
 
-<h1 id="week-4">WEEK 4</h1>
+<div><h1 id="week-4">WEEK 4</h1>
 <h2 id="3-trees">3 Trees</h2>
 <p>大纲：</p>
 <p>树的定义是递归的，有根节点和从其出发的有向边，连向所有的子树</p>
@@ -2065,14 +2069,14 @@
 <ul>
 <li>The size of each node depends on the number of branches.</li>
 </ul>
-<p><img src="picture/4-2.png" alt="4-2" style="zoom: 120%;" /></p>
+<p><img src="picture/4-2.png" alt="4-2" style="zoom: 120%;"></p>
 <p>The correct answer is T.</p>
 <h4 id="firstchild-nextsibling-representation">FirstChild-NextSibling Representation</h4>
-<p><img src="picture/4-1.png" alt="4-1" style="zoom:80%;" /></p>
+<p><img src="picture/4-1.png" alt="4-1" style="zoom:80%;"></p>
 <ul>
 <li>The representation is <strong>not unique</strong> since the children in a tree can be of any order.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="32-binary-trees">3.2 Binary Trees</h3>
 <h4 id="definition-a-binary-tree-is-a-tree-in-which-no-node-can-have-more-than-two-children">[Definition] A binary tree is a tree in which no node can have more than two children.</h4>
 <h4 id="tree-traversals-visit-each-node-exactly-once">Tree Traversals (visit each node exactly once)</h4>
@@ -2082,74 +2086,74 @@
 <ol>
 <li>Preorder Traversal 先处理根节点，再处理左右节点，因此preorder中第一个遍历到的为根节点</li>
 </ol>
-<div class="highlight"><pre><span></span><code>void preorder( tree_ptr tree )
-{ 
-    if( tree )   
-    {
-        visit ( tree );
-        for (each child C of tree )
-            preorder ( C );
-    }
-}
-</code></pre></div>
+<p><code>pseudocode
+   void preorder( tree_ptr tree )
+   { 
+       if( tree )   
+       {
+           visit ( tree );
+           for (each child C of tree )
+               preorder ( C );
+       }
+   }</code></p>
 <ol>
 <li>Postorder Traversal先处理左右子树，根节点最后返回，因此postorder中根节点最后返回</li>
 </ol>
-<div class="highlight"><pre><span></span><code>void postorder( tree_ptr tree )
-{  
- if( tree )   
- {
-        for (each child C of tree )
-         postorder ( C );
-        visit ( tree );
-    }
-}
-</code></pre></div>
+<p><code>pseudocode
+   void postorder( tree_ptr tree )
+   {  
+    if( tree )   
+    {
+           for (each child C of tree )
+            postorder ( C );
+           visit ( tree );
+       }
+   }</code></p>
 <ol>
 <li>Levelorder Traversal 层序遍历，使用一个queue</li>
 </ol>
-<div class="highlight"><pre><span></span><code>void levelorder( tree_ptr tree )
-{   
- enqueue ( tree );
-    while (queue is not empty) 
-    {
-        visit ( T = dequeue ( ) );
-        for (each child C of T )
-            enqueue ( C );
-    }
-}
-</code></pre></div>
+<p><code>pseudocode
+   void levelorder( tree_ptr tree )
+   {   
+    enqueue ( tree );
+       while (queue is not empty) 
+       {
+           visit ( T = dequeue ( ) );
+           for (each child C of T )
+               enqueue ( C );
+       }
+   }</code></p>
 <ol>
 <li>Inorder Traversal 返回顺序为左、根、右，中序遍历最为关键</li>
 </ol>
-<div class="highlight"><pre><span></span><code>void inorder( tree_ptr  tree )
-{  
-     if( tree )   
- {
-     inorder ( tree-&gt;Left );
-         visit ( tree-&gt;Element );
-         inorder ( tree-&gt;Right );
-   }
-}
-</code></pre></div>
+<p><code>pseudocode
+   void inorder( tree_ptr  tree )
+   {  
+        if( tree )   
+    {
+        inorder ( tree-&gt;Left );
+            visit ( tree-&gt;Element );
+            inorder ( tree-&gt;Right );
+      }
+   }</code></p>
 <p>Iterative Program : 使用自己定义的栈替换系统的栈，实现中序遍历</p>
 <p>leftmost 的左节点和rightmost的右节点都是NULL</p>
-<div class="highlight"><pre><span></span><code>void iter_inorder( tree_ptr tree )
-{ 
- Stack  S = CreateStack( MAX_SIZE );
- for ( ; ; )  
- {
-     for ( ; tree; tree = tree-&gt;Left )
-         Push ( tree, S );
-         tree = Top ( S );  
-         Pop( S );
-         if ( !tree ) break;
-         visit ( tree-&gt;Element );
-         tree = tree-&gt;Right; 
-    }
-}
-</code></pre></div>
-<p><img alt="4-3" src="../picture/4-3.png" /></p>
+<p><code>pseudocode
+   void iter_inorder( tree_ptr tree )
+   { 
+    Stack  S = CreateStack( MAX_SIZE );
+    for ( ; ; )  
+    {
+        for ( ; tree; tree = tree-&gt;Left )
+            Push ( tree, S );
+            tree = Top ( S );  
+            Pop( S );
+            if ( !tree ) break;
+            visit ( tree-&gt;Element );
+            tree = tree-&gt;Right; 
+       }
+   }</code></p>
+<p><img alt="4-3" src="../picture/4-3.png"></p>
 <h4 id="threaded-binary-trees">Threaded Binary Trees</h4>
 <ul>
 <li>
@@ -2169,21 +2173,28 @@
 <li>There must not be any loose threads.  Therefore a threaded binary tree must have a <strong>head node</strong> of which the left child points to the first node.（右节点指针指向自身）</li>
 </ul>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ThreadedTreeNode</span><span class="w"> </span><span class="o">*</span><span class="n">PtrToThreadedNode</span><span class="p">;</span>
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">PtrToThreadedNode</span><span class="w"> </span><span class="n">ThreadedTree</span><span class="p">;</span>
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ThreadedTreeNode</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">LeftThread</span><span class="p">;</span><span class="w">        </span><span class="cm">/* if it is TRUE, then Left */</span>
-<span class="w">    </span><span class="n">ThreadedTree</span><span class="w"> </span><span class="n">Left</span><span class="p">;</span><span class="w">     </span><span class="cm">/* is a thread, not a child ptr.*/</span>
-<span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">Element</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">RightThread</span><span class="p">;</span><span class="w">       </span><span class="cm">/* if it is TRUE, then Right */</span>
-<span class="w">    </span><span class="n">ThreadedTree</span><span class="w"> </span><span class="n">Right</span><span class="p">;</span><span class="w">    </span><span class="cm">/* is a thread, not a child ptr.*/</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">typedef struct ThreadedTreeNode *PtrToThreadedNode;
+typedef struct PtrToThreadedNode ThreadedTree;
+typedef struct ThreadedTreeNode 
+{
+    int LeftThread;        /* if it is TRUE, then Left */
+    ThreadedTree Left;     /* is a thread, not a child ptr.*/
+    ElementType Element;
+    int RightThread;       /* if it is TRUE, then Right */
+    ThreadedTree Right;    /* is a thread, not a child ptr.*/
+}
+</code></pre>
 <ul>
 <li>线索化的实质就是将二叉链表中的空指针改为指向前驱或后继的线索。由于前驱和后继信息只有在遍历该二叉树时才能得到，所以，线索化的过程就是在遍历的过程中修改空指针的过程。</li>
 </ul>
-<p><img src="picture/4-4.png" alt="4-4"  /></p>
+<p><img src="picture/4-4.png" alt="4-4"></p></div>
+
+
+
+
+
+
+
 
 
 

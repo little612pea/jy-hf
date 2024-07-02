@@ -146,6 +146,7 @@
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+<<<<<<< HEAD
     
     
       <label class="md-header__button md-icon" for="__search">
@@ -184,6 +185,9 @@
     </div>
   </div>
 </div>
+=======
+    
+>>>>>>> cada1f79efa77e6d09aea0c6b9a01c6e78a2f174
     
     
       <div class="md-header__source">
@@ -2194,7 +2198,7 @@
   
 
 
-<h1 id="week-8">WEEK 8</h1>
+<div><h1 id="week-8">WEEK 8</h1>
 <h2 id="6-graph-algorithms">6 Graph Algorithms</h2>
 <h3 id="61-definitions">6.1 Definitions</h3>
 <ul>
@@ -2205,7 +2209,7 @@
 <li>$( v_i , v_j ) = ( v_j , v_i )$ = the same edge.</li>
 </ul>
 <h4 id="directed-graphdiagraph">Directed graph(diagraph)</h4>
-<p><img src="picture/8-1.png" alt="8-1" style="zoom:120%;" /></p>
+<p><img src="picture/8-1.png" alt="8-1" style="zoom:120%;"></p>
 <h4 id="restrictions">Restrictions</h4>
 <ul>
 <li><strong>Self loop</strong> is illegal.</li>
@@ -2215,10 +2219,10 @@
 <ul>
 <li>A graph that has the maximum number of edges.</li>
 </ul>
-<p><img alt="image-20210124163038265" src="../picture/image-20210124163038265.png" /></p>
+<p><img alt="image-20210124163038265" src="../picture/image-20210124163038265.png"></p>
 <h4 id="adjacent">Adjacent</h4>
-<p><img src="picture/image-20210124163324744.png" alt="image-20210124163324744" style="zoom:120%;" /></p>
-<p><img src="picture/image-20210124163301833.png" alt="image-20210124163301833" style="zoom:120%;" /></p>
+<p><img src="picture/image-20210124163324744.png" alt="image-20210124163324744" style="zoom:120%;"></p>
+<p><img src="picture/image-20210124163301833.png" alt="image-20210124163301833" style="zoom:120%;"></p>
 <h4 id="subgraph">Subgraph</h4>
 <p>$$
 G'\subset G=V(G')\subseteq V(G) \&amp;\&amp; E(G')\subseteq E(G)
@@ -2280,14 +2284,14 @@ $$</p>
   $$</p>
 </li>
 </ul>
-<hr />
+<hr>
 <h3 id="62-representation-of-graphs">6.2 Representation of Graphs</h3>
 <h4 id="adjacency-matrix">Adjacency Matrix</h4>
-<p><img alt="image-20210124163641976" src="../picture/image-20210124163641976.png" /></p>
+<p><img alt="image-20210124163641976" src="../picture/image-20210124163641976.png"></p>
 <blockquote>
 <p>Note : If G is undirected, then adj_mat[][] is symmetric. Thus we can save space by storing only half of the matrix.</p>
 </blockquote>
-<p><img src="picture/image-20210123194735917.png" alt="image-20210123194735917"  /></p>
+<p><img src="picture/image-20210123194735917.png" alt="image-20210123194735917"></p>
 <ul>
 <li>
 <p>This representation wastes space if the graph has a lot of vertices but very few edges.</p>
@@ -2300,7 +2304,7 @@ $$</p>
 <ul>
 <li>Replace each row by a linked list</li>
 </ul>
-<p><img alt="image-20210124164723362" src="../picture/image-20210124164723362.png" /></p>
+<p><img alt="image-20210124164723362" src="../picture/image-20210124164723362.png"></p>
 <blockquote>
 <p>Note : The order of nodes in each list does not matter.</p>
 </blockquote>
@@ -2309,9 +2313,9 @@ $$</p>
 <li>Degree(i) = number of nodes in graph[i](if $G$ is undirected)</li>
 <li>$T$ of examine $E(G)$ = $O(n+e)$</li>
 </ul>
-<p><img alt="image-20210124165346405" src="../picture/image-20210124165346405.png" /></p>
+<p><img alt="image-20210124165346405" src="../picture/image-20210124165346405.png"></p>
 <h4 id="adjacency-multilists">Adjacency Multilists</h4>
-<p><img alt="image-20210124164607434" src="../picture/image-20210124164607434.png" /></p>
+<p><img alt="image-20210124164607434" src="../picture/image-20210124164607434.png"></p>
 <ul>
 <li>Sometimes we need to mark the edge after examine it, and then find the next edge.</li>
 </ul>
@@ -2320,7 +2324,7 @@ $$</p>
 <li>adj_mat [ i ] [ j ] = weight</li>
 <li>adjacency lists / multilists :  add a weight field to the node</li>
 </ul>
-<hr />
+<hr>
 <h3 id="63-topological-sort">6.3 Topological Sort 拓扑排序 不是一种严格意义的排序算法</h3>
 <h4 id="aov-activity-on-vertices-network">AOV  activity on vertices  Network 有向无环图</h4>
 <ul>
@@ -2340,55 +2344,62 @@ $$</p>
 <blockquote>
 <p>Note : The topological orders may <strong>not be unique</strong> for a network.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="cm">/*Test an AOV for feasibility, and generate a topological order if possible*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">Topsort</span><span class="p">(</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Counter</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">Counter</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NumVertex</span><span class="p">;</span><span class="w"> </span><span class="n">Counter</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FindNewVertexOfDegreeZero</span><span class="p">(</span><span class="w"> </span><span class="p">);</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">NotAVertex</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="c1">//确认图中无环？</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">Error</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="err">“</span><span class="n">Graph</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">cycle</span><span class="err">”</span><span class="w"> </span><span class="p">);</span><span class="w">   </span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w">  </span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">TopNum</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Counter</span><span class="p">;</span><span class="w"> </span><span class="cm">/* or output V */</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">            </span><span class="n">Indegree</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">]</span><span class="err">––</span><span class="p">;</span><span class="w"> </span><span class="c1">//对所有前置选课要求有V的课程，在修之前必须修完的课少了一门</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">/*Test an AOV for feasibility, and generate a topological order if possible*/
+void Topsort( Graph G )
+{   
+    int Counter;
+    Vertex V, W;
+    for ( Counter = 0; Counter &lt; NumVertex; Counter++ ) 
+    {
+        V = FindNewVertexOfDegreeZero( );
+        if ( V == NotAVertex ) //确认图中无环？
+        {
+            Error ( “Graph has a cycle” );   
+            break;  
+        }
+        TopNum[ V ] = Counter; /* or output V */
+        for ( each W adjacent to V )
+            Indegree[ W ]––; //对所有前置选课要求有V的课程，在修之前必须修完的课少了一门
+    }
+}
+</code></pre>
 <p>$$
 T=O(|V|^2+|E|) = O(|V|^2)
 $$</p>
-<div class="highlight"><pre><span></span><code><span class="cm">/*Improvment:Keep all the unassigned vertices of degree 0 in a special box (queue or stack)*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">Topsort</span><span class="p">(</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="n">Queue</span><span class="w"> </span><span class="n">Q</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateQueue</span><span class="p">(</span><span class="w"> </span><span class="n">NumVertex</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-<span class="w">    </span><span class="n">MakeEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">vertex</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Indegree</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">Enqueue</span><span class="p">(</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">IsEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dequeue</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">        </span><span class="n">TopNum</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">Counter</span><span class="p">;</span><span class="w"> </span><span class="cm">/* assign next */</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="err">––</span><span class="n">Indegree</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">Enqueue</span><span class="p">(</span><span class="w"> </span><span class="n">W</span><span class="p">,</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="cm">/* end-while */</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Counter</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">NumVertex</span><span class="w"> </span><span class="p">)</span>
-<span class="w">    </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="err">“</span><span class="n">Graph</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">cycle</span><span class="err">”</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="n">DisposeQueue</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="cm">/* free memory */</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">/*Improvment:Keep all the unassigned vertices of degree 0 in a special box (queue or stack)*/
+void Topsort( Graph G )
+{   
+    Queue Q;
+    int Counter = 0;
+    Vertex V, W;
+    Q = CreateQueue( NumVertex );  
+    MakeEmpty( Q );
+    for ( each vertex V )
+        if ( Indegree[ V ] == 0 ) Enqueue( V, Q );
+    while ( !IsEmpty( Q ) ) 
+    {
+        V = Dequeue( Q );
+        TopNum[ V ] = ++Counter; /* assign next */
+        for ( each W adjacent to V )
+            if (––Indegree[ W ] == 0 ) Enqueue( W, Q );
+    }  /* end-while */
+    if ( Counter != NumVertex )
+    Error( “Graph has a cycle” );
+    DisposeQueue( Q ); /* free memory */
+}
+</code></pre>
 <p>$$
 T=O(|V|+|E|)
 $$</p>
-<hr />
-<p>$注意E的范围 最小 V 最大 |V|^2$</p>
+<hr>
+<p>$注意E的范围 最小 V 最大 |V|^2$</p></div>
+
+
+
+
+
+
+
 
 
 

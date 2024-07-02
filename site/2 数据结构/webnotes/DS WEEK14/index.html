@@ -146,6 +146,7 @@
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+<<<<<<< HEAD
     
     
       <label class="md-header__button md-icon" for="__search">
@@ -184,6 +185,9 @@
     </div>
   </div>
 </div>
+=======
+    
+>>>>>>> cada1f79efa77e6d09aea0c6b9a01c6e78a2f174
     
     
       <div class="md-header__source">
@@ -2041,10 +2045,10 @@
   
 
 
-<h1 id="week-14">WEEK 14</h1>
+<div><h1 id="week-14">WEEK 14</h1>
 <h2 id="8-hashing">8 Hashing</h2>
 <h3 id="81-general-idea">8.1 General Idea</h3>
-<p><img src="picture/image-20210102212103035.png" alt="image-20210102212103035" style="zoom: 75%;" /></p>
+<p><img src="picture/image-20210102212103035.png" alt="image-20210102212103035" style="zoom: 75%;"></p>
 <h4 id="symbol-table-adt">Symbol Table ADT</h4>
 <ul>
 <li><strong>Objects</strong> : A set of name-attribute pairs, where the names are unique</li>
@@ -2056,105 +2060,105 @@
 <li>SymTab  Delete(symtab, name) </li>
 </ul>
 <h4 id="hash-tables">Hash Tables</h4>
-<p><img src="picture/image-20210102212608844.png" alt="image-20210102212608844" style="zoom:75%;" /></p>
+<p><img src="picture/image-20210102212608844.png" alt="image-20210102212608844" style="zoom:75%;"></p>
 <ul>
 <li>A <strong>collision</strong> occurs when we hash two nonidentical identifiers into the same bucket.</li>
 <li>An <strong>overflow</strong> occurs when we hash a new identifier into a full bucket.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="82-hash-function">8.2 Hash Function</h3>
 <ul>
 <li>$f(x)$ must be <strong>easy</strong> to compute and <strong>minimize</strong> the number of <strong>collisions</strong>.</li>
 <li>$f(x)$ should be unbiased. For any $x$ and any $i$, we have that $Probability(f(x)=i)=\frac{1}{b}$. Such kind of a hash function is called a <strong>uniform hash function</strong>.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="83-separate-chaining">8.3 Separate Chaining</h3>
 <ul>
 <li>keep a list of all keys that hash to the same value</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">ListNode</span><span class="p">;</span><span class="w"> </span>
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ListNode</span><span class="w"> </span><span class="o">*</span><span class="n">Position</span><span class="p">;</span><span class="w"> </span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">HashTbl</span><span class="p">;</span><span class="w"> </span>
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">HashTbl</span><span class="w"> </span><span class="o">*</span><span class="n">HashTable</span><span class="p">;</span><span class="w"> </span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">ListNode</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">Element</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">Position</span><span class="w"> </span><span class="n">Next</span><span class="p">;</span><span class="w"> </span>
-<span class="p">};</span><span class="w"> </span>
-<span class="k">typedef</span><span class="w"> </span><span class="n">Position</span><span class="w"> </span><span class="n">List</span><span class="p">;</span><span class="w"> </span>
-<span class="cm">/* List *TheList will be an array of lists, allocated later */</span><span class="w"> </span>
-<span class="cm">/* The lists use headers (for simplicity), */</span><span class="w"> </span>
-<span class="cm">/* though this wastes space */</span><span class="w"> </span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">HashTbl</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">TableSize</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">List</span><span class="w"> </span><span class="o">*</span><span class="n">TheLists</span><span class="p">;</span><span class="w"> </span>
-<span class="p">};</span><span class="w"> </span>
-</code></pre></div>
+<pre><code class="language-c">struct ListNode; 
+typedef struct ListNode *Position; 
+struct HashTbl; 
+typedef struct HashTbl *HashTable; 
+struct ListNode { 
+    ElementType Element; 
+    Position Next; 
+}; 
+typedef Position List; 
+/* List *TheList will be an array of lists, allocated later */ 
+/* The lists use headers (for simplicity), */ 
+/* though this wastes space */ 
+struct HashTbl { 
+    int TableSize; 
+    List *TheLists; 
+}; 
+</code></pre>
 <h4 id="create-an-empty-table">Create an empty table</h4>
-<div class="highlight"><pre><span></span><code><span class="n">HashTable</span><span class="w"> </span><span class="nf">InitializeTable</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">TableSize</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="n">HashTable</span><span class="w"> </span><span class="n">H</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">TableSize</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MinTableSize</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span>
-<span class="w">        </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Table size too small&quot;</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w">  </span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span>
-<span class="w">    </span><span class="n">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">HashTbl</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/*Allocate table*/</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NextPrime</span><span class="p">(</span><span class="w"> </span><span class="n">TableSize</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/*Better be prime*/</span>
-<span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheLists</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="n">List</span><span class="w"> </span><span class="p">)</span><span class="o">*</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/*Array of lists*/</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheLists</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">ListNode</span><span class="p">));</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span><span class="w">   </span><span class="cm">/*Allocate list headers*/</span>
-<span class="w">        </span><span class="c1">//H-&gt;TheLists[ i ] = malloc( sizeof( struct ListNode ) ); /* Slow! */</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheLists</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheLists</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="o">-&gt;</span><span class="n">Next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">H</span><span class="p">;</span><span class="w"> </span>
-<span class="p">}</span><span class="w"> </span>
-</code></pre></div>
+<pre><code class="language-c">HashTable InitializeTable( int TableSize ) 
+{   
+    HashTable H; 
+    int i; 
+    if ( TableSize &lt; MinTableSize ) 
+    { 
+        Error( "Table size too small" );  
+        return NULL;  
+    } 
+    H = malloc( sizeof( struct HashTbl ) );  /*Allocate table*/
+    if ( H == NULL ) FatalError( "Out of space!!!" ); 
+    H-&gt;TableSize = NextPrime( TableSize );  /*Better be prime*/
+    H-&gt;TheLists = malloc( sizeof( List )* H-&gt;TableSize );  /*Array of lists*/
+    if ( H-&gt;TheLists == NULL ) FatalError( "Out of space!!!" );
+    H-&gt;TheList = malloc(H-&gt;TableSize*sizeof(struct ListNode));
+    for( i = 0; i &lt; H-&gt;TableSize; i++ ) 
+    {   /*Allocate list headers*/
+        //H-&gt;TheLists[ i ] = malloc( sizeof( struct ListNode ) ); /* Slow! */
+        if ( H-&gt;TheLists[ i ] == NULL ) FatalError( "Out of space!!!" ); 
+        else H-&gt;TheLists[ i ]-&gt;Next = NULL;
+    } 
+    return H; 
+} 
+</code></pre>
 <h4 id="find-a-key-from-a-hash-table">Find a key from a hash table</h4>
-<div class="highlight"><pre><span></span><code><span class="n">Position</span><span class="w"> </span><span class="nf">Find</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">Key</span><span class="p">,</span><span class="w"> </span><span class="n">HashTable</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="n">Position</span><span class="w"> </span><span class="n">P</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">List</span><span class="w"> </span><span class="n">L</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheLists</span><span class="p">[</span><span class="w"> </span><span class="n">Hash</span><span class="p">(</span><span class="w"> </span><span class="n">Key</span><span class="p">,</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">];</span><span class="w"> </span>
-<span class="w">    </span><span class="n">P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">L</span><span class="o">-&gt;</span><span class="n">Next</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">P</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="cm">/*Probably need strcmp*/</span><span class="w"> </span>
-<span class="w">        </span><span class="n">P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="o">-&gt;</span><span class="n">Next</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">P</span><span class="p">;</span><span class="w"> </span>
-<span class="p">}</span><span class="w"> </span>
-</code></pre></div>
+<pre><code class="language-c">Position Find ( ElementType Key, HashTable H ) 
+{ 
+    Position P; 
+    List L; 
+    L = H-&gt;TheLists[ Hash( Key, H-&gt;TableSize ) ]; 
+    P = L-&gt;Next; 
+    while( P != NULL &amp;&amp; P-&gt;Element != Key )  /*Probably need strcmp*/ 
+        P = P-&gt;Next; 
+    return P; 
+} 
+</code></pre>
 <h4 id="insert-a-key-into-a-hash-table">Insert a key into a hash table</h4>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Insert</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">Key</span><span class="p">,</span><span class="w"> </span><span class="n">HashTable</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="n">Position</span><span class="w"> </span><span class="n">Pos</span><span class="p">,</span><span class="w"> </span><span class="n">NewCell</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">List</span><span class="w"> </span><span class="n">L</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">Pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Find</span><span class="p">(</span><span class="w"> </span><span class="n">Key</span><span class="p">,</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Pos</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span><span class="w">   </span><span class="cm">/*Key is not found, then insert*/</span>
-<span class="w">        </span><span class="n">NewCell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ListNode</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">NewCell</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span>
-<span class="w">        </span><span class="p">{</span><span class="w"> </span>
-<span class="w">            </span><span class="n">L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheLists</span><span class="p">[</span><span class="w"> </span><span class="n">Hash</span><span class="p">(</span><span class="w"> </span><span class="n">Key</span><span class="p">,</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">];</span><span class="w"> </span><span class="cm">/*Compute again is bad*/</span>
-<span class="w">            </span><span class="n">NewCell</span><span class="o">-&gt;</span><span class="n">Next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">L</span><span class="o">-&gt;</span><span class="n">Next</span><span class="p">;</span><span class="w"> </span>
-<span class="w">            </span><span class="n">NewCell</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Key</span><span class="p">;</span><span class="w"> </span><span class="cm">/*Probably need strcpy!*/</span><span class="w"> </span>
-<span class="w">            </span><span class="n">L</span><span class="o">-&gt;</span><span class="n">Next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NewCell</span><span class="p">;</span><span class="w"> </span>
-<span class="w">        </span><span class="p">}</span><span class="w"> </span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span>
-<span class="p">}</span><span class="w"> </span>
-</code></pre></div>
+<pre><code class="language-c">void Insert ( ElementType Key, HashTable H ) 
+{ 
+    Position Pos, NewCell; 
+    List L; 
+    Pos = Find( Key, H ); 
+    if ( Pos == NULL ) 
+    {   /*Key is not found, then insert*/
+        NewCell = malloc( sizeof( struct ListNode ) ); 
+        if ( NewCell == NULL ) FatalError( "Out of space!!!" ); 
+        else 
+        { 
+            L = H-&gt;TheLists[ Hash( Key, H-&gt;TableSize ) ]; /*Compute again is bad*/
+            NewCell-&gt;Next = L-&gt;Next; 
+            NewCell-&gt;Element = Key; /*Probably need strcpy!*/ 
+            L-&gt;Next = NewCell; 
+        } 
+    } 
+} 
+</code></pre>
 <blockquote>
 <p>Note : Make the TableSize about as large as the number of keys expected (i.e. to make the loading density factor $\lambda\approx$1).</p>
 </blockquote>
-<hr />
+<hr>
 <h3 id="84-open-addressing">8.4 Open Addressing</h3>
 <ul>
 <li>find another empty cell to solve collision(avoiding pointers)</li>
 </ul>
-<div class="highlight"><pre><span></span><code>Algorithm: insert key into an array of hash table
+<pre><code class="language-pseudocode">Algorithm: insert key into an array of hash table
 {
     index = hash(key);
     initialize i = 0 ------ the counter of probing;
@@ -2167,7 +2171,7 @@
     if (table is full) ERROR (“No space left”);
     else insert key at index;
 }
-</code></pre></div>
+</code></pre>
 <blockquote>
 <p>Note : Generally $\lambda&lt;0.5$.</p>
 </blockquote>
@@ -2177,7 +2181,14 @@
 <li>逐个探测每个单元(必要时可以绕回)以查找出一个空单元</li>
 <li>使用线性探测的预期探测次数对于插入和不成功的查找来说大约是$\frac{1}{2}(1+\frac{1}{(1-\lambda)^2})$，对于成功的查找来说是$\frac{1}{2}(1+\frac{1}{1-\lambda})$</li>
 <li>Cause <strong>primary clustering</strong> : any key that hashes into the cluster will add to the cluster after several attempts to resolve the collision.</li>
-</ul>
+</ul></div>
+
+
+
+
+
+
+
 
 
 
