@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -855,7 +857,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -864,7 +868,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -885,39 +889,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5.1 Equivalence Relations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition-a-relation-r-is-defined-on-a-set-s-if-for-every-pair-of-elements-a-b-a-b-in-s-a-r-b-is-either-true-or-false-if-a-r-b-is-true-then-we-say-that-a-is-related-to-b" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Definition] A relation R is defined on a set S if for every pair of elements (a, b), a, b $\in$ S, a R b is either true or false. If a R b is true, then we say that a is related to b.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#definition-a-relation-over-a-set-s-is-said-to-be-an-equivalence-relation-over-s-if-it-is-symmetric-reflexive-and-transitive-over-s" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Definition] A relation, ~, over a set, S, is said to be an equivalence relation over S if it is symmetric, reflexive, and transitive over S.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#definition-two-members-x-and-y-of-a-set-s-are-said-to-be-in-the-same-equivalence-class-if-x-y" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Definition] Two members x and y of a set S are said to be in the same equivalence class if x ~ y.
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -936,39 +907,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5.3 Basic Data Structure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#union-i-j" class="md-nav__link">
-    <span class="md-ellipsis">
-      Union( $i, j$ )
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#find-i" class="md-nav__link">
-    <span class="md-ellipsis">
-      Find( $i$ )
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#analysis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Analysis
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -977,30 +915,6 @@
       5.4 Smart Union Algorithms
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="5.4 Smart Union Algorithms">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#union-by-size" class="md-nav__link">
-    <span class="md-ellipsis">
-      Union-by-Size
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#union-by-height" class="md-nav__link">
-    <span class="md-ellipsis">
-      Union-by-Height
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1019,21 +933,6 @@
       5.6 Worst Case for Union-by-Rank and Path Compression
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="5.6 Worst Case for Union-by-Rank and Path Compression">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lemma-let-tmn-be-the-maximum-time-required-to-process-an-intermixed-sequence-of-mgeq-n-finds-and-n-1-unions-then-k_1malphamnleq-tmnleq-k_2malphamn-for-some-positive-constants-k_1-and-k_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Lemma] Let $T(M,N)$ be the maximum time required to process an intermixed sequence of $M\geq N$ finds and $N-1$ unions, then $k_1M\alpha(M,N)\leq T(M,N)\leq k_2M\alpha(M,N)$ for some positive constants $k_1$ and $k_2$.
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2633,12 +2532,12 @@
   
 
 
-<h1 id="week-7">WEEK 7</h1>
-<h2 id="5-the-disjoint-set">5 The Disjoint Set</h2>
-<h3 id="51-equivalence-relations">5.1 Equivalence Relations</h3>
-<h4 id="definition-a-relation-r-is-defined-on-a-set-s-if-for-every-pair-of-elements-a-b-a-b-in-s-a-r-b-is-either-true-or-false-if-a-r-b-is-true-then-we-say-that-a-is-related-to-b">[Definition] A <em>relation R</em> is defined on a set <em>S</em> if for every pair of elements <em>(a, b)</em>, <em>a, b $\in$ S</em>, <em>a R b</em> is either true or false.  If <em>a R b</em> is true, then we say that <em>a</em> is related to <em>b</em>.</h4>
-<h4 id="definition-a-relation-over-a-set-s-is-said-to-be-an-equivalence-relation-over-s-if-it-is-symmetric-reflexive-and-transitive-over-s">[Definition] A relation, ~, over a set, <em>S</em>, is said to be an <em>equivalence relation</em> over <em>S</em> if it is symmetric, reflexive, and transitive over <em>S</em>.</h4>
-<h4 id="definition-two-members-x-and-y-of-a-set-s-are-said-to-be-in-the-same-equivalence-class-if-x-y">[Definition] Two members <em>x</em> and <em>y</em> of a set <em>S</em> are said to be in the same <em>equivalence class</em> if <em>x ~ y</em>.</h4>
+<h1 id="week-7">WEEK 7<a class="headerlink" href="#week-7" title="Permanent link">&para;</a></h1>
+<h2 id="5-the-disjoint-set">5 The Disjoint Set<a class="headerlink" href="#5-the-disjoint-set" title="Permanent link">&para;</a></h2>
+<h3 id="51-equivalence-relations">5.1 Equivalence Relations<a class="headerlink" href="#51-equivalence-relations" title="Permanent link">&para;</a></h3>
+<h4 id="definition-a-relation-r-is-defined-on-a-set-s-if-for-every-pair-of-elements-a-b-a-b-in-s-a-r-b-is-either-true-or-false-if-a-r-b-is-true-then-we-say-that-a-is-related-to-b">[Definition] A <em>relation R</em> is defined on a set <em>S</em> if for every pair of elements <em>(a, b)</em>, <em>a, b <span class="arithmatex">\(\in\)</span> S</em>, <em>a R b</em> is either true or false.  If <em>a R b</em> is true, then we say that <em>a</em> is related to <em>b</em>.<a class="headerlink" href="#definition-a-relation-r-is-defined-on-a-set-s-if-for-every-pair-of-elements-a-b-a-b-in-s-a-r-b-is-either-true-or-false-if-a-r-b-is-true-then-we-say-that-a-is-related-to-b" title="Permanent link">&para;</a></h4>
+<h4 id="definition-a-relation-over-a-set-s-is-said-to-be-an-equivalence-relation-over-s-if-it-is-symmetric-reflexive-and-transitive-over-s">[Definition] A relation, ~, over a set, <em>S</em>, is said to be an <em>equivalence relation</em> over <em>S</em> if it is symmetric, reflexive, and transitive over <em>S</em>.<a class="headerlink" href="#definition-a-relation-over-a-set-s-is-said-to-be-an-equivalence-relation-over-s-if-it-is-symmetric-reflexive-and-transitive-over-s" title="Permanent link">&para;</a></h4>
+<h4 id="definition-two-members-x-and-y-of-a-set-s-are-said-to-be-in-the-same-equivalence-class-if-x-y">[Definition] Two members <em>x</em> and <em>y</em> of a set <em>S</em> are said to be in the same <em>equivalence class</em> if <em>x ~ y</em>.<a class="headerlink" href="#definition-two-members-x-and-y-of-a-set-s-are-said-to-be-in-the-same-equivalence-class-if-x-y" title="Permanent link">&para;</a></h4>
 <p>关系的几种类型
 自反关系（reflexive）
 设 R是 A上的一个二元关系，若对于 A中的每一个元素 a， (a,a)都属于 R，则称 R为自反关系。</p>
@@ -2651,44 +2550,44 @@
 <p>反对称关系（antisymmetric）</p>
 <p><img alt="img" src="D:\数据结构与算法分析\Notes-for-Data-Structure-master\assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JheW5vckZURA==,size_16,color_FFFFFF,t_70.png" /></p>
 <hr />
-<h3 id="52-the-dynamic-equivalence-problem">5.2 The Dynamic Equivalence Problem</h3>
+<h3 id="52-the-dynamic-equivalence-problem">5.2 The Dynamic Equivalence Problem<a class="headerlink" href="#52-the-dynamic-equivalence-problem" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Given an equivalence relation ~, decide for any <em>a</em> and <em>b</em> if <em>a ~ b</em></li>
 </ul>
-<div class="highlight"><pre><span></span><code>Algorithm: (Union/Find)
-{
-  /* step 1: read the relations in */
-    Initialize N disjoint sets;
-    while ( read in a ~ b )
-    {
-      if ( !(Find(a) == Find(b)) )  /*Dynamic(on-line)*/
-          Union the two sets;
-    } /* end-while */
-    /* step 2: decide if a ~ b */
-    while ( read in a and b )
-        if ( Find(a) == Find(b) )
-          output( true );
-        else   
-          output( false );
-}
-</code></pre></div>
+<p><code>pseudocode
+  Algorithm: (Union/Find)
+  {
+    /* step 1: read the relations in */
+      Initialize N disjoint sets;
+      while ( read in a ~ b )
+      {
+        if ( !(Find(a) == Find(b)) )  /*Dynamic(on-line)*/
+            Union the two sets;
+      } /* end-while */
+      /* step 2: decide if a ~ b */
+      while ( read in a and b )
+          if ( Find(a) == Find(b) )
+            output( true );
+          else   
+            output( false );
+  }</code></p>
 <ul>
-<li><strong>Elements</strong> of the sets : $1,2,3,\cdots,N$</li>
-<li><strong>Sets</strong> : $S_1,S_2,\cdots\,and\,S_i\bigcap S_j=\emptyset\,(if\quad i\neq j)$</li>
+<li><strong>Elements</strong> of the sets : <span class="arithmatex">\(1,2,3,\cdots,N\)</span></li>
+<li><strong>Sets</strong> : <span class="arithmatex">\(S_1,S_2,\cdots\,and\,S_i\bigcap S_j=\emptyset\,(if\quad i\neq j)\)</span></li>
 <li>
 <p><strong>Operations</strong> :</p>
 </li>
 <li>
-<p>Union( $i, j$ ) = Replace $S_i$ and $S_j$ by $S=S_i\bigcup S_j$</p>
+<p>Union( <span class="arithmatex">\(i, j\)</span> ) = Replace <span class="arithmatex">\(S_i\)</span> and <span class="arithmatex">\(S_j\)</span> by <span class="arithmatex">\(S=S_i\bigcup S_j\)</span></p>
 </li>
-<li>Find( $i$ ) = Find the set $S_k$ which contains the element $i$</li>
+<li>Find( <span class="arithmatex">\(i\)</span> ) = Find the set <span class="arithmatex">\(S_k\)</span> which contains the element <span class="arithmatex">\(i\)</span></li>
 </ul>
 <hr />
-<h3 id="53-basic-data-structure">5.3 Basic Data Structure</h3>
-<h4 id="union-i-j">Union( $i, j$ )</h4>
+<h3 id="53-basic-data-structure">5.3 Basic Data Structure<a class="headerlink" href="#53-basic-data-structure" title="Permanent link">&para;</a></h3>
+<h4 id="union-i-j">Union( <span class="arithmatex">\(i, j\)</span> )<a class="headerlink" href="#union-i-j" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Make $S_i$ a subtree of $S_j$, or vice versa, that is to set the parent pointer of one of the roots to the other root.</p>
+<p>Make <span class="arithmatex">\(S_i\)</span> a subtree of <span class="arithmatex">\(S_j\)</span>, or vice versa, that is to set the parent pointer of one of the roots to the other root.</p>
 </li>
 <li>
 <p><strong>Implementation 1</strong> :</p>
@@ -2710,12 +2609,12 @@
 </li>
 <li>数组初始化全部为0</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">SetUnion</span><span class="p">(</span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Rt1</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Rt2</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">S</span><span class="p">[</span><span class="n">Rt2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Rt1</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<h4 id="find-i">Find( $i$ )</h4>
+<p><code>c
+  void SetUnion(DisjSet S, SetType Rt1, SetType Rt2)
+  {
+    S[Rt2] = Rt1;
+  }</code></p>
+<h4 id="find-i">Find( <span class="arithmatex">\(i\)</span> )<a class="headerlink" href="#find-i" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Implementation 1</strong> :</li>
 </ul>
@@ -2723,18 +2622,18 @@
 <ul>
 <li><strong>Implementation 2</strong> :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">SetType</span><span class="w"> </span><span class="nf">Find</span><span class="p">(</span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">X</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">X</span><span class="o">=</span><span class="n">S</span><span class="p">[</span><span class="n">X</span><span class="p">]);</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">X</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<h4 id="analysis">Analysis</h4>
+<p><code>c
+  SetType Find(ElementType X, DisjSet S)
+  {
+    for ( ; S[X]&gt;0; X=S[X]);
+    return X;
+  }</code></p>
+<h4 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Union and find are always paired. Thus we consider the performance of a sequence of <strong>union-find operations</strong>.</li>
 </ul>
 <p><img src="picture/7-3.png" alt="7-3" style="zoom:80%;" /></p>
-<div class="highlight"><pre><span></span><code>Algorithm using union-find operations:
+<pre><code class="language-pseudocode">Algorithm using union-find operations:
 {  
     Initialize Si = { i }  for  i = 1, ..., 12 ;
     for ( k = 1; k &lt;= 9; k++ )  /* for each pair i R j */
@@ -2743,13 +2642,13 @@
             SetUnion( Find( i ), Find( j ) );
     }
 }
-</code></pre></div>
+</code></pre>
 <ul>
-<li>Worst case : $T(N)=\Theta(N^2)$</li>
+<li>Worst case : <span class="arithmatex">\(T(N)=\Theta(N^2)\)</span></li>
 </ul>
 <hr />
-<h3 id="54-smart-union-algorithms">5.4 Smart Union Algorithms</h3>
-<h4 id="union-by-size">Union-by-Size</h4>
+<h3 id="54-smart-union-algorithms">5.4 Smart Union Algorithms<a class="headerlink" href="#54-smart-union-algorithms" title="Permanent link">&para;</a></h3>
+<h4 id="union-by-size">Union-by-Size<a class="headerlink" href="#union-by-size" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p>Always change the smaller tree</p>
@@ -2758,77 +2657,77 @@
 <p>S[Root] = -size, initialized to be -1</p>
 </li>
 <li>
-<p><strong>[Lemma]</strong> Let T be a tree created by union-by-size with N nodes, then $height(T)\leq\lfloor\log_2N\rfloor+1$.</p>
+<p><strong>[Lemma]</strong> Let T be a tree created by union-by-size with N nodes, then <span class="arithmatex">\(height(T)\leq\lfloor\log_2N\rfloor+1\)</span>.</p>
 </li>
 </ul>
-<p>Proved by induction. Each element can have its set name changed at most $\log_2N$ times.</p>
+<p>Proved by induction. Each element can have its set name changed at most <span class="arithmatex">\(\log_2N\)</span> times.</p>
 <ul>
-<li><strong>Time complexity</strong> of $N$ Union and $M$ Find operations is now $O(N+M\log_2N)$.</li>
+<li><strong>Time complexity</strong> of <span class="arithmatex">\(N\)</span> Union and <span class="arithmatex">\(M\)</span> Find operations is now <span class="arithmatex">\(O(N+M\log_2N)\)</span>.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="cm">/* Assumes Rootl and Root2 are roots*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">SetUnion</span><span class="p">(</span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Root1</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Root2</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">])</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">];</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Root1</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">];</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Root2</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h4 id="union-by-height">Union-by-Height</h4>
+<pre><code class="language-c">/* Assumes Rootl and Root2 are roots*/
+void SetUnion(DisjSet S, SetType Root1, SetType Root2)
+{
+    if (S[Root1] &lt;= S[Root2])
+    {
+        S[Root1] += S[Root2];
+        S[Root2] = Root1;
+    }
+    else
+    {
+        S[Root2] += S[Root1];
+        S[Root1] = Root2;
+    }
+}
+</code></pre>
+<h4 id="union-by-height">Union-by-Height<a class="headerlink" href="#union-by-height" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Always change the shallow tree</li>
-<li>保证所有的树的深度最多是$O(logN)$</li>
+<li>保证所有的树的深度最多是<span class="arithmatex">\(O(logN)\)</span></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="cm">/* Assumes Rootl and Root2 are roots*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">SetUnion</span><span class="p">(</span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Root1</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Root2</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">])</span><span class="w">  </span><span class="cm">/*Root2 is deeper set*/</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Root2</span><span class="p">;</span><span class="w">      </span><span class="cm">/*Make Root2 new root*/</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">])</span><span class="w">  </span><span class="cm">/*Same height*/</span>
-<span class="w">            </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Root1</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">/* Assumes Rootl and Root2 are roots*/
+void SetUnion(DisjSet S, SetType Root1, SetType Root2)
+{
+    if ( S[Root2] &lt; S[Root1])  /*Root2 is deeper set*/
+        S[Root1] = Root2;      /*Make Root2 new root*/
+    else
+    {
+        if (S[Root1] == S[Root2])  /*Same height*/
+            S[Root1]--;
+        S[Root2] = Root1;
+    }
+}
+</code></pre>
 <hr />
-<h3 id="55-path-compression">5.5 Path Compression</h3>
+<h3 id="55-path-compression">5.5 Path Compression<a class="headerlink" href="#55-path-compression" title="Permanent link">&para;</a></h3>
 <ul>
 <li>从X到Root的路径上的每一个结点都使它的父结点变成Root</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">SetType</span><span class="w"> </span><span class="nf">Find</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w">    </span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">X</span><span class="p">;</span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Find</span><span class="p">(</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">SetType</span><span class="w"> </span><span class="nf">Find</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">trail</span><span class="p">,</span><span class="w"> </span><span class="n">lead</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/* find the root */</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">root</span><span class="p">;</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lead</span><span class="w"> </span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">lead</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="p">];</span><span class="w">   </span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="p">;</span><span class="w">   </span>
-<span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="cm">/* collapsing */</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">root</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">SetType Find( ElementType X, DisjSet S )
+{
+    if ( S[ X ] &lt;= 0 )    
+        return X;
+    else 
+        return S[ X ] = Find( S[ X ], S );
+}
+</code></pre>
+<pre><code class="language-c">SetType Find( ElementType X, DisjSet S )
+{   
+    ElementType root, trail, lead;
+    for ( root = X; S[ root ] &gt; 0; root = S[ root ] );  /* find the root */
+    for ( trail = X; trail != root; trail = lead )
+    {
+        lead = S[ trail ];   
+        S[ trail ] = root;   
+    }  /* collapsing */
+    return root;
+}
+</code></pre>
 <ul>
 <li>Note : Not compatible with union-by-height since it changes the heights.  Just take “height” as an estimated <strong>rank</strong>.</li>
 </ul>
 <hr />
-<h3 id="56-worst-case-for-union-by-rank-and-path-compression">5.6 Worst Case for Union-by-Rank and Path Compression</h3>
-<h4 id="lemma-let-tmn-be-the-maximum-time-required-to-process-an-intermixed-sequence-of-mgeq-n-finds-and-n-1-unions-then-k_1malphamnleq-tmnleq-k_2malphamn-for-some-positive-constants-k_1-and-k_2">[Lemma] Let $T(M,N)$ be the maximum time required to process an intermixed sequence of $M\geq N$ finds and $N-1$ unions, then $k_1M\alpha(M,N)\leq T(M,N)\leq k_2M\alpha(M,N)$ for some positive constants $k_1$ and $k_2$.</h4>
+<h3 id="56-worst-case-for-union-by-rank-and-path-compression">5.6 Worst Case for Union-by-Rank and Path Compression<a class="headerlink" href="#56-worst-case-for-union-by-rank-and-path-compression" title="Permanent link">&para;</a></h3>
+<h4 id="lemma-let-tmn-be-the-maximum-time-required-to-process-an-intermixed-sequence-of-mgeq-n-finds-and-n-1-unions-then-k_1malphamnleq-tmnleq-k_2malphamn-for-some-positive-constants-k_1-and-k_2">[Lemma] Let <span class="arithmatex">\(T(M,N)\)</span> be the maximum time required to process an intermixed sequence of <span class="arithmatex">\(M\geq N\)</span> finds and <span class="arithmatex">\(N-1\)</span> unions, then <span class="arithmatex">\(k_1M\alpha(M,N)\leq T(M,N)\leq k_2M\alpha(M,N)\)</span> for some positive constants <span class="arithmatex">\(k_1\)</span> and <span class="arithmatex">\(k_2\)</span>.<a class="headerlink" href="#lemma-let-tmn-be-the-maximum-time-required-to-process-an-intermixed-sequence-of-mgeq-n-finds-and-n-1-unions-then-k_1malphamnleq-tmnleq-k_2malphamn-for-some-positive-constants-k_1-and-k_2" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Ackermann’s Function
   $$
@@ -2844,12 +2743,12 @@
   A(2,4)=2^{2^{2^{2^2}}}=2^{65536}
   $$</p>
 <ul>
-<li>$\alpha(M,N)=min{i\geq1|A(i,\lfloor M/N\rfloor)&gt;\log N}\leq O(\log^*N)\leq4$</li>
+<li><span class="arithmatex">\(\alpha(M,N)=min\{i\geq1|A(i,\lfloor M/N\rfloor)&gt;\log N\}\leq O(\log^*N)\leq4\)</span></li>
 </ul>
-<p>$\log^*N$ (inverse Ackermann function) = number of times the logarithm is applied to $N$ until the result $\leq1$.</p>
+<p><span class="arithmatex">\(\log^*N\)</span> (inverse Ackermann function) = number of times the logarithm is applied to <span class="arithmatex">\(N\)</span> until the result <span class="arithmatex">\(\leq1\)</span>.</p>
 <hr />
-<h2 id="_1"><strong>要求时间复杂度证明</strong></h2>
-<h3 id="57-conclusion">5.7 Conclusion</h3>
+<h2 id="_1"><strong>要求时间复杂度证明</strong><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="57-conclusion">5.7 Conclusion<a class="headerlink" href="#57-conclusion" title="Permanent link">&para;</a></h3>
 <p>一共有五种算法，注意看清题设</p>
 <ul>
 <li>
@@ -3034,9 +2933,9 @@
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

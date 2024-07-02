@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -2298,7 +2300,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -2307,7 +2311,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -2447,7 +2451,7 @@
   
 
 
-<h1 id="linux">linux</h1>
+<h1 id="linux">linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h1>
 <ol>
 <li><strong>云计算和虚拟化：</strong></li>
 <li>学习如何配置和管理云服务器，理解云计算概念和服务模型。</li>
@@ -2479,36 +2483,32 @@
 <li><strong>生成密钥对：</strong> 在本地机器上生成一对密钥，包括私钥和公钥。私钥存储在本地机器上，而公钥会被传输到远程机器上。</li>
 </ol>
 <p>使用以下命令生成密钥对：</p>
-<div class="highlight"><pre><span></span><code>bashCopy code
-ssh-keygen -t rsa
-</code></pre></div>
+<p><code>bashCopy code
+   ssh-keygen -t rsa</code></p>
 <p>这会在<code>~/.ssh/</code>目录下生成<code>id_rsa</code>（私钥）和<code>id_rsa.pub</code>（公钥）文件。</p>
 <ol>
 <li><strong>将公钥复制到远程服务器：</strong> 将本地生成的公钥复制到远程服务器的<code>~/.ssh/authorized_keys</code>文件中。可以使用<code>ssh-copy-id</code>命令，它会自动将公钥添加到目标用户的<code>authorized_keys</code>文件中。</li>
 </ol>
-<div class="highlight"><pre><span></span><code>bashCopy code
-ssh-copy-id username@remote_host
-</code></pre></div>
+<p><code>bashCopy code
+   ssh-copy-id username@remote_host</code></p>
 <p>如果<code>ssh-copy-id</code>命令不可用，可以手动将公钥内容追加到远程服务器的<code>~/.ssh/authorized_keys</code>文件中。</p>
 <ol>
 <li><strong>设置权限：</strong> 确保<code>~/.ssh/</code> 目录和 <code>~/.ssh/authorized_keys</code> 文件的权限正确。权限设置对于SSH的安全性至关重要。</li>
 </ol>
-<div class="highlight"><pre><span></span><code>bashCopy codechmod 700 ~/.ssh
-chmod 600 ~/.ssh/authorized_keys
-</code></pre></div>
+<p><code>bashCopy codechmod 700 ~/.ssh
+   chmod 600 ~/.ssh/authorized_keys</code></p>
 <ol>
 <li><strong>测试SSH免密登录：</strong> 尝试使用SSH连接到远程服务器，应该不再需要输入密码。</li>
 </ol>
-<div class="highlight"><pre><span></span><code>bashCopy code
-ssh username@remote_host
-</code></pre></div>
+<p><code>bashCopy code
+   ssh username@remote_host</code></p>
 <p>如果一切设置正确，你将可以无密码登录到远程服务器。</p>
 <p>请注意，为了安全起见，私钥文件（<code>id_rsa</code>）应该保持在本地机器上，并且不应该分享给其他人。同时，公钥文件（<code>id_rsa.pub</code>）需要传输到需要访问的远程服务器。</p>
 <p>[<a href="https://zhuanlan.zhihu.com/p/205217949">Linux]创建新用户及用户权限 - 知乎 (zhihu.com)</a></p>
-<div class="highlight"><pre><span></span><code><span class="n">scp</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">documents</span><span class="w"> </span><span class="n">username</span><span class="err">@</span><span class="n">remote_host</span><span class="o">:/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span>
-<span class="n">scp</span><span class="w"> </span><span class="o">-</span><span class="n">P</span><span class="w"> </span><span class="mi">80</span><span class="w"> </span><span class="n">baseline2</span><span class="p">.</span><span class="n">cu</span><span class="w"> </span><span class="n">hjy</span><span class="err">@</span><span class="mf">10.78.18.247</span><span class="o">:~/</span><span class="n">gemm</span>
-</code></pre></div>
-<h3 id="11-16">11-16</h3>
+<pre><code class="language-c">scp -r /home/user/documents username@remote_host:/var/www/
+scp -P 80 baseline2.cu hjy@10.78.18.247:~/gemm
+</code></pre>
+<h3 id="11-16">11-16<a class="headerlink" href="#11-16" title="Permanent link">&para;</a></h3>
 <p>服务器改名</p>
 <p>找到/etc/hosts  sudo vim hosts 添加一行  101.201.46.135  server_jy 再在ssh时重新add一下这个别名，完成</p>
 <p>以后就叫server_jy了~</p>
@@ -2526,8 +2526,9 @@ ssh username@remote_host
 /etc/rc.d/init.d/nginx
 /usr/bin/nginx
 /usr/local/nginx
-[root@iZ2ze72tpnr9ta1r8uvbujZ /]#
-<div class="highlight"><pre><span></span><code>/usr/bin
+[root@iZ2ze72tpnr9ta1r8uvbujZ /]#</p>
+<pre><code>
+/usr/bin
 
 /usr/local
 
@@ -2553,13 +2554,13 @@ nginx     269834 root    9u  IPv4 679139      0t0  TCP *:http (LISTEN)
 nginx     269835  www    9u  IPv4 679139      0t0  TCP *:http (LISTEN)
 nginx     269836  www    9u  IPv4 679139      0t0  TCP *:http (LISTEN)
 [root@iZ2ze72tpnr9ta1r8uvbujZ /]#
-</code></pre></div></p>
-<h2 id="grep">grep</h2>
+</code></pre>
+<h2 id="grep">grep<a class="headerlink" href="#grep" title="Permanent link">&para;</a></h2>
 <p><code>grep</code>是一个在文本中搜索模式的强大命令行工具。它的名字来源于全局正则表达式打印（Global Regular Expression Print）。</p>
 <p>下面是<code>grep</code>命令的基本用法和一些常见选项：</p>
-<div class="highlight"><pre><span></span><code>bashCopy code
+<pre><code>bashCopy code
 grep [options] pattern [file...]
-</code></pre></div>
+</code></pre>
 <ul>
 <li><code>pattern</code>：要搜索的模式，可以是字符串或正则表达式。</li>
 <li><code>file</code>：要在其中搜索模式的文件。如果没有提供文件名，<code>grep</code>将从标准输入中读取。</li>
@@ -2579,56 +2580,49 @@ grep [options] pattern [file...]
 <ol>
 <li>在文件中搜索包含关键字的行：</li>
 </ol>
-<div class="highlight"><pre><span></span><code>bashCopy code
-grep &quot;keyword&quot; filename
-</code></pre></div>
+<p><code>bashCopy code
+   grep "keyword" filename</code></p>
 <ol>
 <li>递归搜索目录下所有文件中包含关键字的行：</li>
 </ol>
-<div class="highlight"><pre><span></span><code>bashCopy code
-grep -r &quot;keyword&quot; directory
-</code></pre></div>
+<p><code>bashCopy code
+   grep -r "keyword" directory</code></p>
 <ol>
 <li>忽略大小写：</li>
 </ol>
-<div class="highlight"><pre><span></span><code>bashCopy code
-grep -i &quot;keyword&quot; filename
-</code></pre></div>
+<p><code>bashCopy code
+   grep -i "keyword" filename</code></p>
 <ol>
 <li>显示匹配行的行号：</li>
 </ol>
-<div class="highlight"><pre><span></span><code>bashCopy code
-grep -n &quot;keyword&quot; filename
-</code></pre></div>
+<p><code>bashCopy code
+   grep -n "keyword" filename</code></p>
 <ol>
 <li>反向选择，显示不匹配的行：</li>
 </ol>
-<div class="highlight"><pre><span></span><code>bashCopy code
-grep -v &quot;keyword&quot; filename
-</code></pre></div>
+<p><code>bashCopy code
+   grep -v "keyword" filename</code></p>
 <p>这只是一些<code>grep</code>命令的基本用法和选项，<code>grep</code>有很多其他选项和功能，你可以通过<code>man grep</code>查看<code>grep</code>的手册页以获取更多详细信息。\</p>
 <p>竟然没有apt-get？？</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">root</span><span class="err">@</span><span class="n">iZ2ze72tpnr9ta1r8uvbujZ</span><span class="w"> </span><span class="n">hjy</span><span class="p">]</span><span class="err">#</span><span class="w"> </span><span class="n">lsb_release</span><span class="w"> </span><span class="o">-</span><span class="n">a</span>
-<span class="n">LSB</span><span class="w"> </span><span class="n">Version</span><span class="o">:</span><span class="w">    </span><span class="o">:</span><span class="n">core</span><span class="mf">-4.1</span><span class="o">-</span><span class="n">amd64</span><span class="o">:</span><span class="n">core</span><span class="mf">-4.1</span><span class="o">-</span><span class="n">noarch</span>
-<span class="n">Distributor</span><span class="w"> </span><span class="n">ID</span><span class="o">:</span><span class="w"> </span><span class="n">AlibabaCloud</span>
-<span class="nl">Description</span><span class="p">:</span><span class="w">    </span><span class="n">Alibaba</span><span class="w"> </span><span class="n">Cloud</span><span class="w"> </span><span class="n">Linux</span><span class="w"> </span><span class="n">release</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">(</span><span class="n">Soaring</span><span class="w"> </span><span class="n">Falcon</span><span class="p">)</span>
-<span class="nl">Release</span><span class="p">:</span><span class="w">        </span><span class="mi">3</span>
-<span class="nl">Codename</span><span class="p">:</span><span class="w">       </span><span class="n">SoaringFalcon</span>
-</code></pre></div>
+<pre><code class="language-c">[root@iZ2ze72tpnr9ta1r8uvbujZ hjy]# lsb_release -a
+LSB Version:    :core-4.1-amd64:core-4.1-noarch
+Distributor ID: AlibabaCloud
+Description:    Alibaba Cloud Linux release 3 (Soaring Falcon)
+Release:        3
+Codename:       SoaringFalcon
+</code></pre>
 <p>为什么命令查找不到是bash打头</p>
-<div class="highlight"><pre><span></span><code><span class="nl">bash</span><span class="p">:</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="o">:</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">found</span>
-</code></pre></div>
+<pre><code class="language-c">bash: apt-get: command not found
+</code></pre>
 <p>如果你在使用命令时遇到 "命令找不到" 的错误，这可能有多个原因。一种可能性是系统无法找到或识别该命令，这可能与环境变量或命令的位置有关。以下是一些可能的原因和解决方法：</p>
 <ol>
 <li><strong>环境变量问题：</strong> 确保命令所在的路径包含在系统的<code>PATH</code>环境变量中。<code>PATH</code>环境变量包含一组目录，系统在这些目录中查找可执行文件。你可以使用以下命令查看<code>PATH</code>：</li>
 </ol>
-<div class="highlight"><pre><span></span><code>bashCopy code
-echo $PATH
-</code></pre></div>
+<p><code>bashCopy code
+   echo $PATH</code></p>
 <p>如果命令所在的目录不在<code>PATH</code>中，你可以将其添加到<code>PATH</code>。例如：</p>
-<div class="highlight"><pre><span></span><code>bashCopy code
-export PATH=$PATH:/path/to/your/command
-</code></pre></div>
+<p><code>bashCopy code
+   export PATH=$PATH:/path/to/your/command</code></p>
 <p>在这里，将<code>/path/to/your/command</code>替换为包含你的命令的实际路径。</p>
 <ol>
 <li>
@@ -2638,28 +2632,26 @@ export PATH=$PATH:/path/to/your/command
 <p><strong>文件权限问题：</strong> 检查命令文件的权限，确保你有执行权限。你可以使用<code>ls -l</code>命令查看文件权限，例如：</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code>bashCopy code
-ls -l /path/to/your/command
-</code></pre></div>
+<p><code>bashCopy code
+   ls -l /path/to/your/command</code></p>
 <p>如果没有执行权限，可以使用<code>chmod</code>命令添加执行权限：</p>
-<div class="highlight"><pre><span></span><code>bashCopy code
-chmod +x /path/to/your/command
-</code></pre></div>
+<p><code>bashCopy code
+   chmod +x /path/to/your/command</code></p>
 <ol>
 <li><strong>命令拼写错误：</strong> 请确保你正确拼写了要运行的命令。</li>
 </ol>
 <p>如果你能提供更具体的错误信息或命令示例，我可以提供更详细的帮助。</p>
-<div class="highlight"><pre><span></span><code>[root@iZ2ze72tpnr9ta1r8uvbujZ hjy]# echo $PATH
+<pre><code>[root@iZ2ze72tpnr9ta1r8uvbujZ hjy]# echo $PATH
 /home/hjy/.local/bin:/home/hjy/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
-</code></pre></div>
+</code></pre>
 <p>发行版问题</p>
 <p>没有apt-get</p>
-<div class="highlight"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">?</span>
-<span class="p">[</span><span class="n">root</span><span class="err">@</span><span class="n">iZ2ze72tpnr9ta1r8uvbujZ</span><span class="w"> </span><span class="n">hjy</span><span class="p">]</span><span class="err">#</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">dnf</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">pip</span>
-<span class="n">Last</span><span class="w"> </span><span class="n">metadata</span><span class="w"> </span><span class="n">expiration</span><span class="w"> </span><span class="n">check</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span><span class="o">:</span><span class="mi">41</span><span class="o">:</span><span class="mi">20</span><span class="w"> </span><span class="n">ago</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Sat</span><span class="w"> </span><span class="n">Nov</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="mi">08</span><span class="o">:</span><span class="mo">06</span><span class="o">:</span><span class="mi">48</span><span class="w"> </span><span class="mf">2023.</span>
-<span class="n">No</span><span class="w"> </span><span class="n">match</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">argument</span><span class="o">:</span><span class="w"> </span><span class="n">pip</span>
-<span class="nl">Error</span><span class="p">:</span><span class="w"> </span><span class="n">Unable</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">match</span><span class="o">:</span><span class="w"> </span><span class="n">pip</span>
-</code></pre></div>
+<pre><code class="language-c">sudo dnf install ?
+[root@iZ2ze72tpnr9ta1r8uvbujZ hjy]# sudo dnf install pip
+Last metadata expiration check: 3:41:20 ago on Sat Nov 18 08:06:48 2023.
+No match for argument: pip
+Error: Unable to find a match: pip
+</code></pre>
 <p>wordpress建站  ok</p>
 <p>mysql数据库使用</p>
 <p>域名只不过是将101.201.46.135之类的ip地址用DNS服务器映射到可记忆的字符串？</p>
@@ -2850,9 +2842,9 @@ chmod +x /path/to/your/command
       
         <script src="../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

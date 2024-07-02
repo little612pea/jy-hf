@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -1636,7 +1638,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -1645,7 +1649,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1801,30 +1805,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="结果分析">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      整流二极管
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    <span class="md-ellipsis">
-      稳压二极管
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -1858,30 +1838,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="测试过程与结果">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1v" class="md-nav__link">
-    <span class="md-ellipsis">
-      1V，没有为负数的点，因而采用了指数的拟合方式
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#700v" class="md-nav__link">
-    <span class="md-ellipsis">
-      700V，由于数据点非常多，直接输出即位较光滑的曲线
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1890,30 +1846,6 @@
       结果分析
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="结果分析">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1v_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1V，主要分析二极管由导通到截止这一段的特点
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#700v1n4007" class="md-nav__link">
-    <span class="md-ellipsis">
-      700V，主要分析1N4007截止电压的特性
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2757,17 +2689,17 @@
   
 
 
-<h1 id="_1">半导体⼆极管特性测试</h1>
+<h1 id="_1">半导体⼆极管特性测试<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>实验日期：2023/9/26</p>
 <p>地点：东3-406</p>
-<h2 id="_2">实验目的</h2>
+<h2 id="_2">实验目的<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
 <li>掌握半导体⼆极管特性测试</li>
 <li>学习MULTISIM电路仿真软件的使⽤</li>
 <li>进⼀步熟悉电⼦仪器的使⽤</li>
 </ol>
-<h2 id="_3">基本实验内容</h2>
-<h3 id="_4">实验器材</h3>
+<h2 id="_3">基本实验内容<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">实验器材<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ol>
 <li>万用表（HY63）</li>
 <li>ADCL-I模拟数字电子技术实验箱中的半导体二极管【1N4007的整流二极管，5V/1W的稳压二极管】</li>
@@ -2775,7 +2707,7 @@
 <li>示波器（1000 X-Series）</li>
 <li>信号源（ SDG2000X）</li>
 </ol>
-<h3 id="_5">实验方案</h3>
+<h3 id="_5">实验方案<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>本实验首先掌握判断二极管好坏的方法。接着采用三种方法绘制二极管VA特性曲线。具体流程如下：</p>
 <ol>
 <li>
@@ -2793,8 +2725,8 @@
 <li>应⽤MULTISIM软件仿真⼆极管的VA特性。</li>
 </ol>
 <hr />
-<h2 id="_6">实验一：应⽤万⽤表初步测试⼆极管的好坏</h2>
-<h3 id="_7">测试过程与结果</h3>
+<h2 id="_6">实验一：应⽤万⽤表初步测试⼆极管的好坏<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="_7">测试过程与结果<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <ol>
 <li>认识万用表测量二极管档</li>
 </ol>
@@ -2816,15 +2748,15 @@
 <li>利用相同方法测量稳压二极管，得到相似结果</li>
 </ol>
 <p><img src="./assets/IMG_9033.jpeg" style="zoom:8%;" /><img src="./assets/IMG_9034.jpeg" alt="IMG_9034" style="zoom:8%;" /></p>
-<h3 id="_8">结果分析</h3>
+<h3 id="_8">结果分析<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>首先通过万用表可以很好地对二极管进行检测，如检验其是否被击穿。同时可以看到，在同样的测量条件下，稳压二极管比整流二极管正向导通电压要高。可以与课上所给的VA特性曲线相联系，万用表所提供的电压为三伏，稳压二极管导通后，电压将保持0.7V左右，而整流二极管的曲线类似于大电阻，因而万用表显示的电压值在0.568V。</p>
 <hr />
-<h2 id="va">实验二：逐点法测量二极管VA特性曲线</h2>
-<h3 id="_9">实验方案</h3>
+<h2 id="va">实验二：逐点法测量二极管VA特性曲线<a class="headerlink" href="#va" title="Permanent link">&para;</a></h2>
+<h3 id="_9">实验方案<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>采用以下电路，利用欧姆定律对二极管在每一点电压下的阻值进行测量。最后利用excel对数据进行处理，绘制曲线。</p>
 <p><img src="./assets/截屏2023-10-02 12.43.34.png" alt="截屏2023-10-02 12.43.34" style="zoom:25%;" /></p>
 <p>由于万用表的安培表阻值在该测试条件下（mA级别），视为短路；而相反，电压表的阻值足够大，可以视为开路，所以实验中只使用电压表来进行测量，将电压表并联在R~1~两端。并且利用电压源的示数，通过计算得出二极管两端电压与电流。</p>
-<h3 id="_10">测试过程与结果</h3>
+<h3 id="_10">测试过程与结果<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <ol>
 <li>连接电路，并将电压源输出值调为0。</li>
 </ol>
@@ -2840,7 +2772,7 @@
 <p>使用excel处理数据，并且绘制曲线，在变化较为剧烈处，增加多组数据测量，从而得到更为光滑、准确的曲线。</p>
 </li>
 </ol>
-<h3 id="_11">数据处理与分析</h3>
+<h3 id="_11">数据处理与分析<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3017,19 +2949,19 @@
 </table>
 <p><img src="./assets/截屏2023-10-02 12.56.02.png" alt="截屏2023-10-02 12.56.02" style="zoom:50%;" /></p>
 <hr />
-<h2 id="va_1">实验三：扫描法测量二极管VA特性曲线</h2>
-<h3 id="_12">实验方案</h3>
+<h2 id="va_1">实验三：扫描法测量二极管VA特性曲线<a class="headerlink" href="#va_1" title="Permanent link">&para;</a></h2>
+<h3 id="_12">实验方案<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <ol>
 <li>将电路连接成下图所示。由于信号源与示波器的接地设置，装置只能设置为如图所示，所有的接地线应该连接在一起。</li>
 <li>
-<p>并将信号源设置为1kHz，10Vp的锯齿波。通过信号源的XY显示，展示VA特性曲线直观样式。由于$U_{diode}=U_{ch1}-U_{ch2},I_{diode}=\dfrac{U_{ch1}}{51Ω}$，因此，XY曲线一定程度上反映了最终结果的图线。</p>
+<p>并将信号源设置为1kHz，10Vp的锯齿波。通过信号源的XY显示，展示VA特性曲线直观样式。由于<span class="arithmatex">\(U_{diode}=U_{ch1}-U_{ch2},I_{diode}=\dfrac{U_{ch1}}{51Ω}\)</span>，因此，XY曲线一定程度上反映了最终结果的图线。</p>
 </li>
 <li>
 <p>后通过matlab等数据处理，生成正确的曲线。</p>
 </li>
 </ol>
 <p><img src="./assets/截屏2023-10-02 15.33.04.png" alt="截屏2023-10-02 15.33.04" style="zoom:50%;" /></p>
-<h3 id="_13">测试过程与结果</h3>
+<h3 id="_13">测试过程与结果<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>连接电路（二极管选择1N4007整流二极管，电阻选择51Ω），调节信号源、示波器，观察图样。</p>
@@ -3042,31 +2974,30 @@
 </li>
 </ol>
 <p>Matlab代码如下：</p>
-<div class="highlight"><pre><span></span><code><span class="c">% 读取数据</span>
-<span class="n">data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readmatrix</span><span class="p">(</span><span class="s">&#39;./Lab2/数据/111.csv&#39;</span><span class="p">);</span>
-
-<span class="c">% 获取vd和id列</span>
-<span class="n">v1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data</span><span class="p">(:,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-<span class="n">v2</span><span class="p">=</span><span class="w"> </span><span class="n">data</span><span class="p">(:,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
-<span class="n">vd</span><span class="p">=</span><span class="n">v1</span><span class="o">-</span><span class="n">v2</span><span class="p">;</span>
-<span class="n">id</span><span class="p">=</span><span class="n">v2</span><span class="o">/</span><span class="mi">51</span><span class="o">*</span><span class="mi">1000</span><span class="p">;</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">vd</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
-
-<span class="c">%生成平滑曲线</span>
-<span class="n">smoothed_vd</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">smooth</span><span class="p">(</span><span class="n">vd</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;loess&#39;</span><span class="p">);</span><span class="w"> </span>
-<span class="n">smoothed_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">smooth</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;loess&#39;</span><span class="p">);</span>
-<span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">smoothed_vd</span><span class="p">,</span><span class="w"> </span><span class="n">smoothed_id</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span>
-<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;原始数据&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;光滑曲线&#39;</span><span class="p">);</span>
-<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;电压（V）&#39;</span><span class="p">);</span>
-<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;电流（mA）&#39;</span><span class="p">);</span>
-<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;实验数据&#39;</span><span class="p">,</span><span class="s">&#39;VA特性曲线&#39;</span><span class="p">);</span>
-</code></pre></div>
+<p>```matlab
+   % 读取数据
+   data = readmatrix('./Lab2/数据/111.csv');</p>
+<p>% 获取vd和id列
+   v1 = data(:, 2);
+   v2= data(:, 3);
+   vd=v1-v2;
+   id=v2/51*1000;
+   plot(vd, id);</p>
+<p>%生成平滑曲线
+   smoothed_vd = smooth(vd, 0.1, 'loess'); 
+   smoothed_id = smooth(id, 0.1, 'loess');
+   hold on;
+   plot(smoothed_vd, smoothed_id, 'b-', 'LineWidth', 0.2);
+   legend('原始数据', '光滑曲线');
+   xlabel('电压（V）');
+   ylabel('电流（mA）');
+   legend('实验数据','VA特性曲线');
+   ```</p>
 <ol>
 <li>将二极管更换为稳压二极管，重复上述步骤。</li>
 </ol>
-<h3 id="_14">结果分析</h3>
-<h4 id="_15">整流二极管</h4>
+<h3 id="_14">结果分析<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<h4 id="_15">整流二极管<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <p><img src="./assets/111.jpg" style="zoom:30%;" /></p>
 <p>观察到以下几个特殊的地方：</p>
 <ol>
@@ -3078,17 +3009,17 @@
 </li>
 </ol>
 <p><strong>二极管方向恢复电流（Reverse Recovery Current）</strong> 在二极管由导通状态转变为截止状态时，电流反向流动的现象。当二极管从正向导通状态切换到反向截止状态时，载流子需要一定时间来清除。在这个短暂的时间内，二极管中的电流会反向流动，这就是方向恢复电流。方向恢复电流的大小和持续时间取决于二极管的特性和工作条件。</p>
-<h4 id="_16">稳压二极管</h4>
+<h4 id="_16">稳压二极管<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <p><img src="./assets/222.jpg" style="zoom:30%;" /></p>
 <p>可以观察到，稳压二极管的截止电压约为5.2V左右，与标称的5V/1W相匹配，同时可以观察到，稳压二极管相比于整流二极管，在两端电压增大的情况下，能保持一个较为稳定的电压值，约为0.76V左右。</p>
 <hr />
-<h2 id="va_2">实验三：仿真⼆极管的VA特性</h2>
-<h3 id="_17">实验方案</h3>
+<h2 id="va_2">实验三：仿真⼆极管的VA特性<a class="headerlink" href="#va_2" title="Permanent link">&para;</a></h2>
+<h3 id="_17">实验方案<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>利用Multisim平台搭建电路，利用扫描法绘制二极管曲线。</p>
 <p>Multisim平台一定需要一个接地端，同时示波器的接地端并不影响电路中的电位，因而实验电路如下：</p>
 <p><img src="./assets/电路图.png" style="zoom:30%;" /></p>
 <p>示波器A接口为二极管两端电压，B接口为R1两端电压。利用示波器的B/A按钮，定性地显示VA特性曲线，再利用Matlab处理输出的数据。</p>
-<h3 id="_18">测试过程与结果</h3>
+<h3 id="_18">测试过程与结果<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
 <ol>
 <li>打开Multisim平台，选择器件，并将器件连接为上图所示。</li>
 <li>双击信号源和示波器，将信号源调为1kHz每秒，振幅分别为1V和700V，示波器视图为B/A。</li>
@@ -3096,56 +3027,56 @@
 <li>利用Matlab处理csv中的数据。</li>
 </ol>
 <p>根据不同曲线的特点，采用了以下两种方式进行数据拟合：</p>
-<h4 id="1v">1V，没有为负数的点，因而采用了指数的拟合方式</h4>
-<div class="highlight"><pre><span></span><code><span class="n">data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readmatrix</span><span class="p">(</span><span class="s">&#39;./Lab2/数据/1V.csv&#39;</span><span class="p">);</span>
-<span class="n">vd</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data</span><span class="p">(:,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<span class="n">vr</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data</span><span class="p">(:,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-<span class="n">id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">vr</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span>
+<h4 id="1v">1V，没有为负数的点，因而采用了指数的拟合方式<a class="headerlink" href="#1v" title="Permanent link">&para;</a></h4>
+<pre><code class="language-matlab">data = readmatrix('./Lab2/数据/1V.csv');
+vd = data(:, 1);
+vr = data(:, 2);
+id = vr * 0.1;
 
-<span class="c">% 使用fit函数进行数据拟合</span>
-<span class="n">fitType</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fittype</span><span class="p">(</span><span class="s">&#39;a * exp(b * x)&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 选择适当的拟合函数</span>
-<span class="n">fitOptions</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fitoptions</span><span class="p">(</span><span class="s">&#39;Method&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;NonlinearLeastSquares&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 选择拟合方法</span>
-<span class="n">fitOptions</span><span class="p">.</span><span class="n">StartPoint</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.1</span><span class="p">];</span><span class="w"> </span><span class="c">% 初始拟合参数猜测</span>
+% 使用fit函数进行数据拟合
+fitType = fittype('a * exp(b * x)'); % 选择适当的拟合函数
+fitOptions = fitoptions('Method', 'NonlinearLeastSquares'); % 选择拟合方法
+fitOptions.StartPoint = [1, -0.1]; % 初始拟合参数猜测
 
-<span class="c">% 进行数据拟合</span>
-<span class="n">fitResult</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fit</span><span class="p">(</span><span class="n">vd</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">fitType</span><span class="p">,</span><span class="w"> </span><span class="n">fitOptions</span><span class="p">);</span>
+% 进行数据拟合
+fitResult = fit(vd, id, fitType, fitOptions);
 
-<span class="c">% 绘制拟合曲线</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">fitResult</span><span class="p">,</span><span class="n">vd</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
-<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;电压（V）&#39;</span><span class="p">);</span>
-<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;电流（mA）&#39;</span><span class="p">);</span>
-<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;VA特性曲线&#39;</span><span class="p">);</span>
-</code></pre></div>
-<h4 id="700v">700V，由于数据点非常多，直接输出即位较光滑的曲线</h4>
-<div class="highlight"><pre><span></span><code><span class="c">% 读取数据</span>
-<span class="n">data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readmatrix</span><span class="p">(</span><span class="s">&#39;./Lab2/数据/700V_2.csv&#39;</span><span class="p">);</span>
+% 绘制拟合曲线
+plot(fitResult,vd, id);
+xlabel('电压（V）');
+ylabel('电流（mA）');
+legend('VA特性曲线');
+</code></pre>
+<h4 id="700v">700V，由于数据点非常多，直接输出即位较光滑的曲线<a class="headerlink" href="#700v" title="Permanent link">&para;</a></h4>
+<pre><code class="language-Matlab">% 读取数据
+data = readmatrix('./Lab2/数据/700V_2.csv');
 
-<span class="c">% 获取vd和id列</span>
-<span class="n">v1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data</span><span class="p">(:,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<span class="n">v2</span><span class="p">=</span><span class="w"> </span><span class="n">data</span><span class="p">(:,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-<span class="n">vd</span><span class="p">=</span><span class="n">v1</span><span class="p">;</span>
-<span class="n">id</span><span class="p">=</span><span class="n">v2</span><span class="o">*</span><span class="mf">0.1</span><span class="p">;</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">vd</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
-<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;电压（V）&#39;</span><span class="p">);</span>
-<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;电流（mA）&#39;</span><span class="p">);</span>
-<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;实验数据&#39;</span><span class="p">,</span><span class="s">&#39;VA特性曲线&#39;</span><span class="p">);</span>
-</code></pre></div>
-<h3 id="_19">结果分析</h3>
-<h4 id="1v_1">1V，主要分析二极管由导通到截止这一段的特点</h4>
+% 获取vd和id列
+v1 = data(:, 1);
+v2= data(:, 2);
+vd=v1;
+id=v2*0.1;
+plot(vd, id);
+xlabel('电压（V）');
+ylabel('电流（mA）');
+legend('实验数据','VA特性曲线');
+</code></pre>
+<h3 id="_19">结果分析<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<h4 id="1v_1">1V，主要分析二极管由导通到截止这一段的特点<a class="headerlink" href="#1v_1" title="Permanent link">&para;</a></h4>
 <p><img src="./assets/111aaa.jpg" style="zoom:30%;" /></p>
-<h4 id="700v1n4007">700V，主要分析1N4007截止电压的特性</h4>
+<h4 id="700v1n4007">700V，主要分析1N4007截止电压的特性<a class="headerlink" href="#700v1n4007" title="Permanent link">&para;</a></h4>
 <p><img src="./assets/777.jpg" style="zoom:30%;" /></p>
 <p>可以看出，由导通到截止这一部分，二极管的性质并不是非常稳定，所以曲线几乎填满了该段区域。</p>
-<h2 id="_20">探究性实验：信号源内部电阻</h2>
-<h3 id="_21">引入</h3>
+<h2 id="_20">探究性实验：信号源内部电阻<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<h3 id="_21">引入<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
 <p><img src="./assets/ab99.png" style="zoom:50%;" /></p>
 <p>观察上面的黄色曲线，会发现，当二极管导通后，峰值电压骤降。而分析可知，Channel1所测的是信号源两端电压，而电压骤降说明了信号源内部有电阻，进行分压，导致其峰值减小。现测量信号源两端的电阻大小。</p>
-<h3 id="_22">实验方案</h3>
+<h3 id="_22">实验方案<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
 <p>采用以下电路，利用欧姆定律对其进行测量。通过测量峰值电压的变化，得出信号源内部电阻大小</p>
 <p><img src="./assets/截屏2023-10-04 10.56.35.png" alt="截屏2023-10-04 10.56.35" style="zoom:30%;" /></p>
-<h3 id="_23">测试过程与结果</h3>
+<h3 id="_23">测试过程与结果<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
 <ol>
-<li>将示波器接口两端与信号源两端连接。测出原本输出的电压幅值，$V_{p1}=10.5V$。</li>
+<li>将示波器接口两端与信号源两端连接。测出原本输出的电压幅值，<span class="arithmatex">\(V_{p1}=10.5V\)</span>。</li>
 </ol>
 <p><img src="./assets/IMG_9072.jpeg" style="zoom:15%;" /></p>
 <ol>
@@ -3153,17 +3084,17 @@
 </ol>
 <p><img src="./assets/IMG_9073.jpeg" style="zoom:15%;" /></p>
 <ol>
-<li>测出此时的电压峰值为，$V_{p2}=5.23V$</li>
+<li>测出此时的电压峰值为，<span class="arithmatex">\(V_{p2}=5.23V\)</span></li>
 </ol>
 <p><img src="./assets/IMG_9074.jpeg" style="zoom:15%;" /></p>
 <ol>
 <li>再次测量信号源两端电压，发现保持在10.5V，因此可以将信号源两端电压视为10.5V。</li>
 </ol>
-<h3 id="_24">结果分析</h3>
-<p>$$
-I_R=\dfrac{V_{p2}}{R}=5.23V÷51Ω=0.102A\
+<h3 id="_24">结果分析<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+I_R=\dfrac{V_{p2}}{R}=5.23V÷51Ω=0.102A\\
 R_S=\dfrac{V_{p1}-V_{p2}}{I_R}=5.27V÷0.102A=51.7Ω
-$$</p>
+\]</div>
 <p>计算得到，信号源内阻为51.7Ω，查阅说明书，得知Channel1输出的内阻在50Ω左右，因此可知测量基本准确。</p>
 <p>信号源内部有50Ω左右的阻值，所以，以后在定量测量的时候，需要将内阻考虑在内，以免影响最后结果的准确性。</p>
 
@@ -3331,9 +3262,9 @@ $$</p>
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

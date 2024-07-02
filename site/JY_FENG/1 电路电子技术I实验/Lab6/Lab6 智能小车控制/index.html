@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -1720,7 +1722,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -1729,7 +1733,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -2487,29 +2491,29 @@
   
 
 
-<h1 id="_1">智能小车控制</h1>
+<h1 id="_1">智能小车控制<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>实验日期：2023/10/30</p>
 <p>地点：东3-406</p>
-<h2 id="_2">实验目的</h2>
+<h2 id="_2">实验目的<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
 <li>复习之前所学知识：FPGA板的编程，小车各控制芯片的连接。</li>
 <li>编写程序，使小车能够沿着轨道运行。</li>
 </ol>
-<h2 id="_3">实验器材</h2>
+<h2 id="_3">实验器材<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ol>
 <li>智能小车一台</li>
 <li>编程电脑</li>
 <li>连接线</li>
 <li>电源</li>
 </ol>
-<h2 id="_4">实验方案</h2>
+<h2 id="_4">实验方案<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ol>
 <li>编写程序，并仿真。</li>
 <li>将各功能模块芯片连接。</li>
 <li>利用Quartus软件将辨析的好的程序传入FPGA板。</li>
 <li>连入电源，测试小车。</li>
 </ol>
-<h2 id="_5">测试过程与结果</h2>
+<h2 id="_5">测试过程与结果<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>测量轨道部分数据，选择合适的红外检测管，作为本次试验作为判定的光电管。</p>
@@ -2563,11 +2567,11 @@
 <p>当左轮转动时，in1输出1，in2输出0</p>
 <p>当左轮转动时，in3输出1，in4输出0</p>
 <p><img src="./assets/截屏2023-11-01 21.46.32.png" alt="截屏2023-11-01 21.46.32" style="zoom:30%;" /></p>
-<div class="highlight"><pre><span></span><code><span class="c1">-------------直行循轨-------------------------------</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0110&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0010&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0100&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-</code></pre></div>
+<p><code>vhdl
+ -------------直行循轨-------------------------------
+ when "0110"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='1';in4&lt;='0';
+ when "0010"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';
+ when "0100"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';</code></p>
 </li>
 <li>
 <p>小车遇到岔路判断</p>
@@ -2579,15 +2583,15 @@
 <li>如果在遇到岔路过程中，中间的两盏灯出现了一亮一灭的情况，具体如下图（左边遇到岔路的情况，右边遇到岔路同理）所示，则应该一定地修正轨迹。</li>
 </ul>
 <p><img src="./assets/截屏2023-11-05 18.22.45.png" style="zoom:30%;" /></p>
-<div class="highlight"><pre><span></span><code><span class="c1">-------------岔路判断-------------------------------</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0111&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0011&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0101&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;1110&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;1010&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;1100&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-</code></pre></div>
+<p>```vhdl
+ -------------岔路判断-------------------------------
+ when "0111"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='1';in4&lt;='0';
+ when "0011"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';
+ when "0101"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';</p>
+<p>when "1110"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='1';in4&lt;='0';
+ when "1010"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';
+ when "1100"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';
+ ```</p>
 </li>
 <li>
 <p>小车直角转弯</p>
@@ -2597,73 +2601,63 @@
 <li>
 <p>小车停止运行</p>
 <p>当小车四个光电管均位于停车处的黑框时，即tmp=0000时，小车停止运行</p>
-<div class="highlight"><pre><span></span><code><span class="k">when</span><span class="w"> </span><span class="s">&quot;0000&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;1111&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
-</code></pre></div>
+<p><code>vhdl
+ when "0000"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='0';in4&lt;='0';
+ when "1111"=&gt; in1&lt;='0';in2&lt;='1';in3&lt;='0';in4&lt;='1';</code></p>
 </li>
 </ul>
 <p>#### 全代码</p>
-<div class="highlight"><pre><span></span><code><span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_arith.</span><span class="k">all</span><span class="p">;</span>
-
-
-<span class="k">entity</span><span class="w"> </span><span class="nc">controller</span><span class="w"> </span><span class="k">is</span>
-<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span>
-<span class="w"> </span><span class="n">ledc1</span><span class="p">,</span><span class="n">ledc2</span><span class="p">,</span><span class="n">ledp1</span><span class="p">,</span><span class="n">ledp2</span><span class="p">,</span><span class="n">swt</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
-<span class="w">        </span><span class="n">ena</span><span class="p">,</span><span class="n">enb</span><span class="p">,</span><span class="n">in1</span><span class="p">,</span><span class="n">in2</span><span class="p">,</span><span class="n">in3</span><span class="p">,</span><span class="n">in4</span><span class="p">,</span><span class="n">swto</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
-<span class="k">end</span><span class="w"> </span><span class="nc">controller</span><span class="p">;</span>
-
-
-<span class="k">architecture</span><span class="w"> </span><span class="nc">runner</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">controller</span><span class="w"> </span><span class="k">is</span>
-
-<span class="k">begin</span>
-<span class="n">P1</span><span class="o">:</span><span class="k">process</span><span class="p">(</span><span class="n">ledc1</span><span class="p">,</span><span class="n">ledc2</span><span class="p">,</span><span class="n">ledp1</span><span class="p">,</span><span class="n">ledp2</span><span class="p">)</span>
-<span class="k">variable</span><span class="w"> </span><span class="n">tmp</span><span class="o">:</span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="k">begin</span>
-<span class="n">tmp</span><span class="o">:=</span><span class="n">ledp1</span><span class="o">&amp;</span><span class="n">ledc1</span><span class="o">&amp;</span><span class="n">ledc2</span><span class="o">&amp;</span><span class="n">ledp2</span><span class="p">;</span>
-<span class="k">case</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="k">is</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0000&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;1111&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
-
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0110&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0010&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0100&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0111&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0011&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0101&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;1110&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;1010&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;1100&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;1000&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;1001&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0001&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;1101&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;1011&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="k">others</span><span class="w"> </span><span class="o">=&gt;</span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;X&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;X&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;X&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;X&#39;</span><span class="p">;</span>
-
-<span class="k">end</span><span class="w"> </span><span class="k">case</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span>
-
-<span class="nc">P2</span><span class="o">:</span><span class="w"> </span><span class="k">process</span><span class="p">(</span><span class="n">swt</span><span class="p">)</span>
-<span class="k">begin</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">swt</span><span class="o">=</span><span class="sc">&#39;1&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="w"> </span><span class="n">swto</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
-<span class="w"> </span><span class="n">ena</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
-<span class="w"> </span><span class="n">enb</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
-<span class="k">else</span>
-<span class="w"> </span><span class="n">swto</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="w"> </span><span class="n">ena</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="w"> </span><span class="n">enb</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="nc">runner</span><span class="p">;</span>
-</code></pre></div>
+<p>```vhdl
+   library IEEE;
+   use IEEE.std_logic_1164.all;
+   use IEEE.std_logic_unsigned.all; 
+   use IEEE.numeric_std.all;
+   use IEEE.std_logic_arith.all;</p>
+<p>entity controller is
+       port (
+    ledc1,ledc2,ledp1,ledp2,swt: in std_logic;
+           ena,enb,in1,in2,in3,in4,swto: out std_logic);
+   end controller;</p>
+<p>architecture runner of controller is</p>
+<p>begin
+   P1:process(ledc1,ledc2,ledp1,ledp2)
+   variable tmp:std_logic_vector(3 downto 0);
+   begin
+   tmp:=ledp1&amp;ledc1&amp;ledc2&ledp2;
+   case tmp is
+   when "0000"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='0';in4&lt;='0';
+   when "1111"=&gt; in1&lt;='0';in2&lt;='1';in3&lt;='0';in4&lt;='1';</p>
+<p>when "0110"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='1';in4&lt;='0';
+   when "0010"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';
+   when "0100"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';</p>
+<p>when "0111"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='1';in4&lt;='0';
+   when "0011"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';
+   when "0101"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';</p>
+<p>when "1110"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='1';in4&lt;='0';
+   when "1010"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';
+   when "1100"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';</p>
+<p>when "1000"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';
+   when "1001"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='0';in4&lt;='0';
+   when "0001"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';
+   when "1101"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='0';in4&lt;='0';
+   when "1011"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='0';in4&lt;='0';
+   when others =&gt;in1&lt;='X';in2&lt;='X';in3&lt;='X';in4&lt;='X';</p>
+<p>end case;
+   end process;</p>
+<p>P2: process(swt)
+   begin
+   if (swt='1') then
+    swto&lt;='1';
+    ena&lt;='1';
+    enb&lt;='1';
+   else
+    swto&lt;='0';
+    ena&lt;='0';
+    enb&lt;='0';
+   end if;
+   end process;
+   end runner;
+   ```</p>
 <ol>
 <li>连接各功能芯片模块。</li>
 </ol>
@@ -2675,18 +2669,18 @@
 <ol>
 <li>连入电源，测试小车。</li>
 </ol>
-<h2 id="_6">测试结果</h2>
+<h2 id="_6">测试结果<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ol>
 <li>直角转弯时非常困难的一部分，我们发现，小车有概率地在直角转弯处停下，后观察光电管情况，发现，一些时候，tmp可能出现“0001”或者“1000”的情况，即最旁边的引脚在轨道内，而其他光电管偏离轨道。于是，对程序进行修改，</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="k">when</span><span class="w"> </span><span class="s">&quot;1000&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">when</span><span class="w"> </span><span class="s">&quot;0001&quot;</span><span class="o">=&gt;</span><span class="w"> </span><span class="n">in1</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">in2</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in3</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">in4</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-</code></pre></div>
+<p><code>vhdl
+   when "1000"=&gt; in1&lt;='0';in2&lt;='0';in3&lt;='1';in4&lt;='0';
+   when "0001"=&gt; in1&lt;='1';in2&lt;='0';in3&lt;='0';in4&lt;='0';</code></p>
 <p>修改后，小车能够顺利转弯。</p>
 <ol>
 <li>小车能依照轨道进行运动。</li>
 </ol>
-<h2 id="_7">结果分析</h2>
+<h2 id="_7">结果分析<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>即要从逻辑上分析小车运动的情况，也要根据实验中具体出现的问题进行调整。这也说明，在未来的实验中，不光光要从理论上严谨分析，也要从具体实际中实践，修改，然后完善。</p>
 
 
@@ -2853,9 +2847,9 @@
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

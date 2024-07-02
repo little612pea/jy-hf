@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -1023,7 +1025,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -1032,42 +1036,9 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#quadratic-probing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quadratic Probing
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Quadratic Probing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#theorem-if-quadratic-probing-is-used-and-the-table-size-is-prime-then-a-new-element-can-always-be-inserted-if-the-table-is-at-least-half-empty" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Theorem] If quadratic probing is used, and the table size is prime, then a new element can always be inserted if the table is at least half empty.
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#double-hashing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Double Hashing
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#85-rehashing" class="md-nav__link">
@@ -2477,68 +2448,68 @@
   
 
 
-<h1 id="week-15">WEEK 15</h1>
-<h4 id="quadratic-probing">Quadratic Probing</h4>
+<h1 id="week-15">WEEK 15<a class="headerlink" href="#week-15" title="Permanent link">&para;</a></h1>
+<h4 id="quadratic-probing">Quadratic Probing<a class="headerlink" href="#quadratic-probing" title="Permanent link">&para;</a></h4>
 <ul>
-<li>$F(i)$ is a quadratic function of $i$, such as $F(i)=i^2$.</li>
+<li><span class="arithmatex">\(F(i)\)</span> is a quadratic function of <span class="arithmatex">\(i\)</span>, such as <span class="arithmatex">\(F(i)=i^2\)</span>.</li>
 </ul>
-<h5 id="theorem-if-quadratic-probing-is-used-and-the-table-size-is-prime-then-a-new-element-can-always-be-inserted-if-the-table-is-at-least-half-empty">[Theorem] If quadratic probing is used, and the table size is <em>prime</em>, then a new element can always be inserted if the table is <em>at least half empty</em>.</h5>
+<h5 id="theorem-if-quadratic-probing-is-used-and-the-table-size-is-prime-then-a-new-element-can-always-be-inserted-if-the-table-is-at-least-half-empty">[Theorem] If quadratic probing is used, and the table size is <em>prime</em>, then a new element can always be inserted if the table is <em>at least half empty</em>.<a class="headerlink" href="#theorem-if-quadratic-probing-is-used-and-the-table-size-is-prime-then-a-new-element-can-always-be-inserted-if-the-table-is-at-least-half-empty" title="Permanent link">&para;</a></h5>
 <p><img src="picture/image-20210104154133711.png" alt="image-20210104154133711" style="zoom:75%;" /></p>
 <blockquote>
-<p>Note : If the table size is a prime of the form $4k + 3$, then the quadratic probing  $f(i) = \pm i^2$ can probe the entire table.</p>
+<p>Note : If the table size is a prime of the form <span class="arithmatex">\(4k + 3\)</span>, then the quadratic probing  <span class="arithmatex">\(f(i) = \pm i^2\)</span> can probe the entire table.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="n">HashTable</span><span class="w"> </span><span class="nf">InitializeTable</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">TableSize</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">HashTable</span><span class="w"> </span><span class="n">H</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">TableSize</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MinTableSize</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Table size too small&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="cm">/*Allocate table*/</span>
-<span class="w">    </span><span class="n">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">HashTbl</span><span class="p">));</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">H</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-<span class="w">        </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Out of space!!!&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NextPrime</span><span class="p">(</span><span class="n">TableSize</span><span class="p">);</span>
+<pre><code class="language-c">HashTable InitializeTable(int TableSize)
+{
+    HashTable H;
+    int i;
+    if(TableSize &lt; MinTableSize)
+    {
+        Error(&quot;Table size too small&quot;);
+        return NULL;
+    }
+    /*Allocate table*/
+    H = malloc(sizeof(struct HashTbl));
+    if(H == NULL)
+        Fatal Error(&quot;Out of space!!!&quot;);
+    H-&gt;TableSize = NextPrime(TableSize);
 
-<span class="w">    </span><span class="cm">/*Allocate array of Cells*/</span>
-<span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheCells</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">Cell</span><span class="p">)</span><span class="o">*</span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="p">);</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheCells</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-<span class="w">        </span><span class="n">FatalError</span><span class="p">(</span><span class="s">&quot;Out of space!!!&quot;</span><span class="p">);</span>
+    /*Allocate array of Cells*/
+    H-&gt;TheCells = malloc(sizeof(Cell)*H-&gt;TableSize);
+    if(H-&gt;TheCells == NULL)
+        FatalError(&quot;Out of space!!!&quot;);
 
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">        </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheCells</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">].</span><span class="n">Info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Empty</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">H</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">Position</span><span class="w"> </span><span class="nf">Find</span><span class="p">(</span><span class="n">ElementType</span><span class="w"> </span><span class="n">Key</span><span class="p">,</span><span class="w"> </span><span class="n">HashTable</span><span class="w"> </span><span class="n">H</span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="n">Position</span><span class="w"> </span><span class="n">CurrentPos</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">CollisionNum</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">CollisionNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">CurrentPos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Hash</span><span class="p">(</span><span class="n">Key</span><span class="p">,</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheCells</span><span class="p">[</span><span class="w"> </span><span class="n">CurrentPos</span><span class="w"> </span><span class="p">].</span><span class="n">Info</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">Empty</span><span class="w"> </span><span class="o">&amp;&amp;</span>
-<span class="w">          </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheCells</span><span class="p">[</span><span class="w"> </span><span class="n">CurrentPos</span><span class="w"> </span><span class="p">].</span><span class="n">Element</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">Key</span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span>
-<span class="w">        </span><span class="n">CurrentPos</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="o">*++</span><span class="n">CollisionNum</span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">CurrentPos</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="p">)</span><span class="w">  </span>
-<span class="w">            </span><span class="n">CurrentPos</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="p">;</span><span class="w">   </span><span class="cm">/*Faster than mod*/</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CurrentPos</span><span class="p">;</span><span class="w"> </span>
-<span class="p">}</span><span class="w"> </span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Insert</span><span class="p">(</span><span class="n">ElementType</span><span class="w"> </span><span class="n">Key</span><span class="p">,</span><span class="w"> </span><span class="n">HashTable</span><span class="w"> </span><span class="n">H</span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="n">Position</span><span class="w"> </span><span class="n">Pos</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">Pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Find</span><span class="p">(</span><span class="n">Key</span><span class="p">,</span><span class="w"> </span><span class="n">H</span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheCells</span><span class="p">[</span><span class="w"> </span><span class="n">Pos</span><span class="w"> </span><span class="p">].</span><span class="n">Info</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">Legitimate</span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="cm">/*OK to insert here*/</span><span class="w"> </span>
-<span class="w">        </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheCells</span><span class="p">[</span><span class="w"> </span><span class="n">Pos</span><span class="w"> </span><span class="p">].</span><span class="n">Info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Legitimate</span><span class="p">;</span><span class="w"> </span>
-<span class="w">        </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheCells</span><span class="p">[</span><span class="w"> </span><span class="n">Pos</span><span class="w"> </span><span class="p">].</span><span class="n">Element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Key</span><span class="p">;</span><span class="w"> </span><span class="cm">/*Probably need strcpy*/</span><span class="w"> </span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span>
-<span class="p">}</span><span class="w"> </span>
-</code></pre></div>
+    for(i = 0; i &lt; H-&gt;TableSize; i++)
+        H-&gt;TheCells[ i ].Info = Empty;
+    return H;
+}
+</code></pre>
+<pre><code class="language-c">Position Find(ElementType Key, HashTable H) 
+{   
+    Position CurrentPos; 
+    int CollisionNum; 
+    CollisionNum = 0; 
+    CurrentPos = Hash(Key, H-&gt;TableSize); 
+    while(H-&gt;TheCells[ CurrentPos ].Info != Empty &amp;&amp;
+          H-&gt;TheCells[ CurrentPos ].Element != Key) 
+    { 
+        CurrentPos += 2*++CollisionNum-1; 
+        if (CurrentPos &gt;= H-&gt;TableSize)  
+            CurrentPos -= H-&gt;TableSize;   /*Faster than mod*/
+    } 
+    return CurrentPos; 
+} 
+</code></pre>
+<pre><code class="language-c">void Insert(ElementType Key, HashTable H) 
+{ 
+    Position Pos; 
+    Pos = Find(Key, H); 
+    if (H-&gt;TheCells[ Pos ].Info != Legitimate) 
+    { /*OK to insert here*/ 
+        H-&gt;TheCells[ Pos ].Info = Legitimate; 
+        H-&gt;TheCells[ Pos ].Element = Key; /*Probably need strcpy*/ 
+    } 
+} 
+</code></pre>
 <blockquote>
 <p>Note :</p>
 <ul>
@@ -2546,12 +2517,12 @@
 <li>Although primary clustering is solved, <strong>secondary clustering</strong> occurs, that is, keys that hash to the same position will probe the same alternative cells.</li>
 </ul>
 </blockquote>
-<h4 id="double-hashing">Double Hashing</h4>
+<h4 id="double-hashing">Double Hashing<a class="headerlink" href="#double-hashing" title="Permanent link">&para;</a></h4>
 <ul>
-<li>$f(i)=i*hash_2(x)$</li>
-<li>$hash_2(x)\not\equiv 0$</li>
+<li><span class="arithmatex">\(f(i)=i*hash_2(x)\)</span></li>
+<li><span class="arithmatex">\(hash_2(x)\not\equiv 0\)</span></li>
 <li>make sure that all cells can be probed</li>
-<li>$hash_2(x)=R-(x\%R)$ with $R$ a prime smaller than TableSize, will work well.</li>
+<li><span class="arithmatex">\(hash_2(x)=R-(x\%R)\)</span> with <span class="arithmatex">\(R\)</span> a prime smaller than TableSize, will work well.</li>
 </ul>
 <blockquote>
 <p>Note :</p>
@@ -2561,7 +2532,7 @@
 </ul>
 </blockquote>
 <hr />
-<h3 id="85-rehashing">8.5 Rehashing</h3>
+<h3 id="85-rehashing">8.5 Rehashing<a class="headerlink" href="#85-rehashing" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Build another table that is about twice as big.</li>
 <li>Scan down the entire original hash table for non-deleted elements.</li>
@@ -2574,24 +2545,24 @@
 <blockquote>
 <p>Note : Usually there should have been N/2 insertions before rehash, so O(N) rehash only adds a constant cost to each insertion. However, in an interactive system, the unfortunate user whose insertion caused a rehash could see a slowdown.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="n">HashTable</span><span class="w"> </span><span class="nf">Rehash</span><span class="p">(</span><span class="n">HashTable</span><span class="w"> </span><span class="n">H</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">OldSize</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Cell</span><span class="w"> </span><span class="o">*</span><span class="n">OldCells</span><span class="p">;</span>
-<span class="w">    </span><span class="n">OldCells</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheCells</span><span class="p">;</span>
-<span class="w">    </span><span class="n">OldSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="p">;</span>
+<pre><code class="language-c">HashTable Rehash(HashTable H)
+{
+    int i, OldSize;
+    Cell *OldCells;
+    OldCells = H-&gt;TheCells;
+    OldSize = H-&gt;TableSize;
 
-<span class="w">    </span><span class="cm">/*Get a new, empty table*/</span>
-<span class="w">    </span><span class="n">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InitializeTable</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">OldSize</span><span class="p">);</span>
-<span class="w">    </span><span class="cm">/*Scan through old table, reinserting into new*/</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">OldSize</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">OldCells</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Info</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Legitimate</span><span class="p">)</span>
-<span class="w">            </span><span class="n">Insert</span><span class="p">(</span><span class="n">OldCells</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Element</span><span class="p">,</span><span class="w"> </span><span class="n">H</span><span class="p">);</span>
-<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">OldCells</span><span class="p">);</span>
+    /*Get a new, empty table*/
+    H = InitializeTable(2*OldSize);
+    /*Scan through old table, reinserting into new*/
+    for(i = 0; i &lt; OldSize; i++)
+        if(OldCells[i].Info == Legitimate)
+            Insert(OldCells[i].Element, H);
+    free(OldCells);
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">H</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+    return H;
+}
+</code></pre>
 <hr />
 
 
@@ -2758,9 +2729,9 @@
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

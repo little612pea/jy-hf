@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -2319,7 +2321,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -2328,7 +2332,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -2483,7 +2487,7 @@
   
 
 
-<h1 id="cs61a-python">CS61a PYTHON</h1>
+<h1 id="cs61a-python">CS61a PYTHON<a class="headerlink" href="#cs61a-python" title="Permanent link">&para;</a></h1>
 <p>answer = get_string()</p>
 <p>print("hello,",answer)  两个参数中间自动加括号</p>
 <p>print(f"hello,{answer}")</p>
@@ -2492,59 +2496,59 @@
 <p>删去了c中的  long double</p>
 <p>只有bool float int str</p>
 <p>加了range list tuple dict set</p>
-<div class="highlight"><pre><span></span><code><span class="n">words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span> <span class="c1">#直接将一个hash table 赋给word</span>
-<span class="c1">#dict的实现？</span>
-<span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-<span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="n">dictionary</span><span class="p">):</span>
-    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">dictionary</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-        <span class="n">word</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="c1">#</span>
-        <span class="n">words</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-    <span class="n">close</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-    <span class="k">return</span> <span class="kc">True</span>
+<pre><code class="language-py">words = set() #直接将一个hash table 赋给word
+#dict的实现？
+def check(word):
+    if word.lower() in words:
+        return True
+    else:
+        return False
+def load(dictionary):
+    file = open(dictionary, &quot;r&quot;)
+    for line in file:
+        word = line.rstrip() #
+        words.add(line)
+    close(file)
+    return True
 
-<span class="k">def</span> <span class="nf">size</span><span class="p">():</span>
-    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+def size():
+    return len(word)
 
-<span class="k">def</span> <span class="nf">unload</span><span class="p">():</span>
-    <span class="c1">#free memory</span>
-    <span class="k">return</span> <span class="kc">True</span>
-</code></pre></div>
+def unload():
+    #free memory
+    return True
+</code></pre>
 <p><img alt="image-20231022201934658" src="D:\notes\assets\image-20231022201934658.png" /></p>
 <p>所谓oop就是有内置的函数</p>
 <p>s.lower() 要非常注意python中的浅拷贝和深拷贝</p>
 <p><img alt="image-20231022204754522" src="D:\notes\assets\image-20231022204754522.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="c1">#py不需要prototype，但是需要call main</span>
+<pre><code class="language-py">#py不需要prototype，但是需要call main
 
-<span class="n">main函数写在最后</span><span class="err">，</span><span class="n">不用缩进</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">#try-except语句</span>
-<span class="c1">#抛出错误，然后</span>
-<span class="k">try</span><span class="p">:</span>
+main函数写在最后，不用缩进
+</code></pre>
+<pre><code class="language-py">#try-except语句
+#抛出错误，然后
+try:
 
-<span class="k">except</span><span class="p">:</span>
+except:
 
-<span class="k">else</span><span class="p">:</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="o">=</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
-<span class="c1">#没有分配内存，没有指针</span>
-</code></pre></div>
-<h3 id="global-frame">global frame(全局帧)</h3>
+else:
+</code></pre>
+<pre><code class="language-py">for i in range(4):
+    print(&quot;?&quot;,end=&quot;\n&quot;)-&gt;print(&quot;?&quot;,end=&quot;&quot;)
+=print(&quot;?&quot;*4)
+#没有分配内存，没有指针
+</code></pre>
+<h3 id="global-frame">global frame(全局帧)<a class="headerlink" href="#global-frame" title="Permanent link">&para;</a></h3>
 <p>全局帧是程序的顶层帧，包含了全局范围内定义的变量。这些变量被称为全局变量，因为它们可以在整个程序的任何地方访问。全局帧中的变量对整个程序都是可见的。</p>
-<h3 id="local-frame">local frame（局部帧）</h3>
+<h3 id="local-frame">local frame（局部帧）<a class="headerlink" href="#local-frame" title="Permanent link">&para;</a></h3>
 <p>每当你调用一个函数，Python会为该函数创建一个局部帧。这个局部帧包含了函数中定义的局部变量和参数。这些变量只能在函数内部访问，而在函数执行完毕后，局部帧也会被销毁。这有助于保持变量的隔离性，防止不同函数之间的变量名冲突。</p>
 <p>举例来说，如果你在Python中定义一个函数，函数内的变量会存在于该函数的局部帧中。同时，如果你在函数外定义一个变量，它会存在于全局帧中。这种分层的帧结构有助于组织和管理变量，使其具有适当的作用域。局部帧和全局帧的交互是Python中变量作用域的核心概念，它确保了变量在程序中的合理可见性和隔离性。</p>
-<h3 id="python3-i-examplepy">$python3 -i example.py</h3>
+<h3 id="python3-i-examplepy">$python3 -i example.py<a class="headerlink" href="#python3-i-examplepy" title="Permanent link">&para;</a></h3>
 <p>以交互式命令行运行python，可以通过键入变量值查看执行完成后的各个变量，无需print</p>
-<h3 id="python3-m-doctest-examplepy">$python3 -m doctest example.py</h3>
+<h3 id="python3-m-doctest-examplepy">$python3 -m doctest example.py<a class="headerlink" href="#python3-m-doctest-examplepy" title="Permanent link">&para;</a></h3>
 <p>运行docstring所指定的示例，如果没有输出则直接返回</p>
-<h3 id="python3-m-doctest-v-examplepy">$python3 -m doctest -v example.py</h3>
+<h3 id="python3-m-doctest-v-examplepy">$python3 -m doctest -v example.py<a class="headerlink" href="#python3-m-doctest-v-examplepy" title="Permanent link">&para;</a></h3>
 <p>打印输出所有的docstring测试结果，相当于自测情况</p>
 <p>def嵌套定义</p>
 <p><img alt="image-20231025192930643" src="D:\notes\assets\image-20231025192930643.png" /></p>
@@ -2556,7 +2560,7 @@
 <p><img alt="image-20231025201319301" src="D:\notes\assets\image-20231025201319301.png" /></p>
 <p>control statements</p>
 <p><img alt="image-20231025213614688" src="D:\notes\assets\image-20231025213614688.png" /></p>
-<h3 id="-n-1n-1n">验证递归的正确性/如何写递归-&gt;分解问题，就好像n-1的答案已经写好了，只需要从n-1得到n</h3>
+<h3 id="-n-1n-1n">验证递归的正确性/如何写递归-&gt;分解问题，就好像n-1的答案已经写好了，只需要从n-1得到n<a class="headerlink" href="#-n-1n-1n" title="Permanent link">&para;</a></h3>
 <p>用数归！</p>
 <p>1.base case</p>
 <p>2.假设n-1的情况正确执行，正确返回，如何利用n-1的情况得出n</p>
@@ -2565,18 +2569,18 @@
 <p>上面是循环，迭代</p>
 <p>下面是递归！</p>
 <p>迭代每次while循环内的赋值变成了递归调用时的参数</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">factorial_recursive</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial_recursive</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<pre><code class="language-py">def factorial_recursive(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial_recursive(n - 1)
 
-<span class="k">def</span> <span class="nf">factorial_iterative</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="n">result</span> <span class="o">*=</span> <span class="n">i</span>
-    <span class="k">return</span> <span class="n">result</span>
-</code></pre></div>
+def factorial_iterative(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+</code></pre>
 <p>分清楚base case和else</p>
 <p><img alt="image-20231025210814628" src="D:\notes\assets\image-20231025210814628.png" /></p>
 <p><img alt="image-20231025211259401" src="D:\notes\assets\image-20231025211259401.png" /></p>
@@ -2594,45 +2598,45 @@
 <p>instance有属性，但是class也可以有自己的属性</p>
 <p>类名.函数名</p>
 <p>Account.deposit（account_john，10）属于直接访问类的method</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Account</span><span class="p">:</span>
-    <span class="n">interest</span> <span class="o">=</span> <span class="mf">0.02</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">account_holder</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">holder</span> <span class="o">=</span> <span class="n">account_holder</span>
-    <span class="k">def</span> <span class="nf">withdraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">amount</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="o">-</span><span class="n">amount</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;Insufficient funds&#39;</span>
-        <span class="k">else</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="o">-</span><span class="n">amount</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span>
-    <span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="n">slef</span><span class="p">,</span><span class="n">amount</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="o">+</span><span class="n">amount</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span>
-    <span class="c1">#additional methods would be defined here</span>
-<span class="k">class</span> <span class="nc">CheckingAccount</span><span class="p">(</span><span class="n">Account</span><span class="p">):</span>
-    <span class="c1">#递归查看是否有对应的attribute，如果找到的attribute是一个bound method就返回函数计算后的值，如果是一个值，就返回该值</span>
-    <span class="c1">#初始化的时候</span>
-    <span class="n">withdraw_fee</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">interest</span> <span class="o">=</span> <span class="mf">0.01</span>
-    <span class="k">def</span> <span class="nf">withdraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">amount</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">Account</span><span class="o">.</span><span class="n">withdraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">amount</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">withdraw_fee</span><span class="p">)</span><span class="c1">#这里体现了继承的另一种用法</span>
-    <span class="c1">#递归查看，withdraw在子类中有同名的重构实现，所以按照子类的来，但是因为方便，可以调用父类的withdraw函数，所以使用Account.withdraw来访问父类中的withdraw，但需要提供self参数，因为并未初始化account属性下的withdraw，所以需要提供self参数</span>
-    <span class="c1">#即使已被overridden的属性也可以通过直接访问类对象访问</span>
-<span class="n">tom_account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="s2">&quot;Tom&quot;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span><span class="n">tom_account</span><span class="o">.</span><span class="n">interest</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">CheckingAccount</span><span class="p">(</span><span class="s1">&#39;Jack&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span><span class="n">a</span><span class="o">.</span><span class="n">deposit</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="mi">100</span>
-<span class="o">&gt;&gt;&gt;</span><span class="n">b</span><span class="o">.</span><span class="n">deposit</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="mi">100</span>
-<span class="o">&gt;&gt;&gt;</span><span class="n">a</span><span class="o">.</span><span class="n">withdraw</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="mi">90</span>
-<span class="o">&gt;&gt;&gt;</span><span class="n">b</span><span class="o">.</span><span class="n">withdraw</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="mi">89</span>
-    <span class="mf">0.02</span>
-    <span class="c1">#初始化的实例没有interest这个属性，但是类有，也可以访问到</span>
-</code></pre></div>
+<pre><code class="language-python">class Account:
+    interest = 0.02
+    def __init__(self,account_holder):
+        self.balance = 0
+        self.holder = account_holder
+    def withdraw(self,amount):
+        if self.balance-amount&lt;0:
+            return 'Insufficient funds'
+        else
+        self.balance = self.balance-amount
+        return self.balance
+    def deposit(slef,amount):
+        self.balance = self.balance+amount
+        return self.balance
+    #additional methods would be defined here
+class CheckingAccount(Account):
+    #递归查看是否有对应的attribute，如果找到的attribute是一个bound method就返回函数计算后的值，如果是一个值，就返回该值
+    #初始化的时候
+    withdraw_fee = 1
+    interest = 0.01
+    def withdraw(self,amount):
+        return Account.withdraw(self,amount+self.withdraw_fee)#这里体现了继承的另一种用法
+    #递归查看，withdraw在子类中有同名的重构实现，所以按照子类的来，但是因为方便，可以调用父类的withdraw函数，所以使用Account.withdraw来访问父类中的withdraw，但需要提供self参数，因为并未初始化account属性下的withdraw，所以需要提供self参数
+    #即使已被overridden的属性也可以通过直接访问类对象访问
+tom_account = Account(&quot;Tom&quot;)
+&gt;&gt;&gt;tom_account.interest
+a = Account(&quot;John&quot;)
+b = CheckingAccount('Jack')
+&gt;&gt;&gt;a.deposit(100)
+100
+&gt;&gt;&gt;b.deposit(100)
+100
+&gt;&gt;&gt;a.withdraw(100)
+90
+&gt;&gt;&gt;b.withdraw(100)
+89
+    0.02
+    #初始化的实例没有interest这个属性，但是类有，也可以访问到
+</code></pre>
 <p>面向对象编程中，所有东西是object：对象</p>
 <p>在oop python中，所有东西（object）都有属性（attributes），以键值对（name-value pairs)表示</p>
 <p>类（classes）也是object：对象，因此类有自己的属性</p>
@@ -2640,46 +2644,46 @@
 <p>类的属性：初始化的实例所属的类所具有的属性</p>
 <p>类的def方法定义的method/函数返回不返回（return有没有内容视情况需要，如果在实际实例化调用类时需要将初始化过的东西接收，例如a = open_account("john",5),则需要返回，否则不一定需要写return什么</p>
 <p>has-a和is-a关系</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Bank</span><span class="p">:</span>
-    <span class="c1">#a bank has accounts:has-a关系</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">accounts</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">def</span> <span class="nf">open_account</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">holder</span><span class="p">,</span><span class="n">amount</span><span class="p">,</span><span class="n">kind</span> <span class="o">=</span> <span class="n">Account</span><span class="p">):</span>
-        <span class="n">account</span> <span class="o">=</span> <span class="n">kind</span><span class="p">(</span><span class="n">holder</span><span class="p">)</span>
-        <span class="n">account</span><span class="o">.</span><span class="n">deposit</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">accounts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">account</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">account</span>
-    <span class="k">def</span> <span class="nf">pay_interest</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">accounts</span><span class="p">:</span>
-            <span class="n">a</span><span class="o">.</span><span class="n">deposit</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">balance</span><span class="o">*</span><span class="n">a</span><span class="o">.</span><span class="n">interest</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">too_big_to_fail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">account</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">B</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">y</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">C</span><span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">x</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">A</span><span class="p">()</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">B</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">b</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">z</span><span class="o">==</span><span class="n">C</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">z</span><span class="o">==</span><span class="n">b</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
-</code></pre></div>
+<pre><code class="language-python">class Bank:
+    #a bank has accounts:has-a关系
+    def __init__(self):
+        self.accounts = []
+    def open_account(self,holder,amount,kind = Account):
+        account = kind(holder)
+        account.deposit(amount)
+        self.accounts.append(account)
+        return account
+    def pay_interest(self):
+        for a in self.accounts:
+            a.deposit(a.balance*a.interest)
+    def too_big_to_fail(self):
+        return len(self.account)&gt;1
+</code></pre>
+<pre><code class="language-python">class A:
+    z = -1
+    def f(self,x):
+        return B(x-1)
+class B(A):
+    n = 4
+    def __init__(self,y):
+        if y:
+            self.z = self.f(y)
+        else:
+            self.z = C(y+1)
+class C(B):
+    def f(self,x):
+        return x
+a = A()
+b = B(1)
+b.n = 5
+print(C(2).n)
+print(a.z==C.z)
+print(a.z==b.z)
+print(b.z)
+print(b.z.z)
+print(b.z.z.z)
+print(b.z.z.z.z)
+</code></pre>
 
 
 
@@ -2845,9 +2849,9 @@
       
         <script src="../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

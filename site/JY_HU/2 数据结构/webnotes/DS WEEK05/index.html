@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -813,7 +815,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -822,18 +826,9 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#properties-of-binary-trees" class="md-nav__link">
-    <span class="md-ellipsis">
-      Properties of Binary Trees
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#33-binary-search-trees" class="md-nav__link">
@@ -841,39 +836,6 @@
       3.3 Binary Search Trees
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="3.3 Binary Search Trees">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition-a-binary-search-tree-is-a-binary-tree-it-may-be-empty-if-it-is-not-empty-it-satisfies-the-following-properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Definition] A binary search tree is a binary tree. It may be empty. If it is not empty, it satisfies the following properties:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adt" class="md-nav__link">
-    <span class="md-ellipsis">
-      ADT
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#implementations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2486,31 +2448,31 @@
   
 
 
-<h1 id="week-5">WEEK 5</h1>
+<h1 id="week-5">WEEK 5<a class="headerlink" href="#week-5" title="Permanent link">&para;</a></h1>
 <ul>
 <li>In a tree, the order of children does not matter. But in a binary tree, left child and right child are different.</li>
 </ul>
-<h4 id="properties-of-binary-trees">Properties of Binary Trees</h4>
+<h4 id="properties-of-binary-trees">Properties of Binary Trees<a class="headerlink" href="#properties-of-binary-trees" title="Permanent link">&para;</a></h4>
 <blockquote>
 <ul>
-<li>The maximum number of nodes on level $i$ is $2^{i-1},i\geq1$.</li>
-<li>The maximum number of nodes in a binary tree of depth $k$ is $2^k-1,k\geq1$.</li>
-<li>For any nonempty binary tree, $n_0 = n_2 + 1$ where $n_0$ is the number of leaf nodes and $n_2$ is the number of nodes of degree 2.</li>
+<li>The maximum number of nodes on level <span class="arithmatex">\(i\)</span> is <span class="arithmatex">\(2^{i-1},i\geq1\)</span>.</li>
+<li>The maximum number of nodes in a binary tree of depth <span class="arithmatex">\(k\)</span> is <span class="arithmatex">\(2^k-1,k\geq1\)</span>.</li>
+<li>For any nonempty binary tree, <span class="arithmatex">\(n_0 = n_2 + 1\)</span> where <span class="arithmatex">\(n_0\)</span> is the number of leaf nodes and <span class="arithmatex">\(n_2\)</span> is the number of nodes of degree 2.</li>
 </ul>
-<p>proof:   假设该二叉树总共有n个结点($n =n_0+n_1+n_2$)，则该二叉树总共会有n-1条边，度为2的结点会延伸出两条边，</p>
+<p>proof:   假设该二叉树总共有n个结点(<span class="arithmatex">\(n =n_0+n_1+n_2\)</span>)，则该二叉树总共会有n-1条边，度为2的结点会延伸出两条边，</p>
 <p>同理，度为1的结点会延伸出一条边，则可列公式：$n-1 = 2n_2 + n_1 $，</p>
-<p>合并两个式子可得：$2n_2 + n_1 +1 =n_0 + n_1 + n_2$ ，则计算可知 $n_0=n_2+1$</p>
+<p>合并两个式子可得：<span class="arithmatex">\(2n_2 + n_1 +1 =n_0 + n_1 + n_2\)</span> ，则计算可知 <span class="arithmatex">\(n_0=n_2+1\)</span></p>
 </blockquote>
 <hr />
-<h3 id="33-binary-search-trees">3.3 Binary Search Trees</h3>
-<h4 id="definition-a-binary-search-tree-is-a-binary-tree-it-may-be-empty-if-it-is-not-empty-it-satisfies-the-following-properties">[Definition] A binary search tree is a binary tree.  It may be empty.  If it is not empty, it satisfies the following properties:</h4>
+<h3 id="33-binary-search-trees">3.3 Binary Search Trees<a class="headerlink" href="#33-binary-search-trees" title="Permanent link">&para;</a></h3>
+<h4 id="definition-a-binary-search-tree-is-a-binary-tree-it-may-be-empty-if-it-is-not-empty-it-satisfies-the-following-properties">[Definition] A binary search tree is a binary tree.  It may be empty.  If it is not empty, it satisfies the following properties:<a class="headerlink" href="#definition-a-binary-search-tree-is-a-binary-tree-it-may-be-empty-if-it-is-not-empty-it-satisfies-the-following-properties" title="Permanent link">&para;</a></h4>
 <ul>
 <li>每个结点有一个互不不同的值</li>
 <li>若左子树非空，则左子树上所有结点的值均小于根结点的值</li>
 <li>若右子树非空，则右子树上所有结点的值均大于根结点的值</li>
 <li>左、右子树也是是一棵二叉查找树</li>
 </ul>
-<h4 id="adt">ADT</h4>
+<h4 id="adt">ADT<a class="headerlink" href="#adt" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Objects</strong> : A finite ordered list with zero or more elements.</li>
 <li><strong>Operations</strong> :</li>
@@ -2522,95 +2484,95 @@
 <li>SearchTree  Delete( ElementType X, SearchTree T )</li>
 <li>ElementType  Retrieve( Position P )</li>
 </ul>
-<h4 id="implementations">Implementations</h4>
+<h4 id="implementations">Implementations<a class="headerlink" href="#implementations" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Find</li>
 </ol>
-<div class="highlight"><pre><span></span><code>Position Find( ElementType X, SearchTree T ) 
-{ 
- if ( T == NULL ) 
-     return NULL;  /* not found in an empty tree */
-    if ( X &lt; T-&gt;Element )  /* if smaller than root */
-        return Find( X, T-&gt;Left );  /* search left subtree */
-    else 
-     if ( X &gt; T-&gt;Element )  /* if larger than root */
-         return  Find( X, T-&gt;Right );  /* search right subtree */
-        else   /* if X == root */
-         return  T;  /* found */
-} 
-</code></pre></div>
+<p><code>pseudocode
+   Position Find( ElementType X, SearchTree T ) 
+   { 
+    if ( T == NULL ) 
+        return NULL;  /* not found in an empty tree */
+       if ( X &lt; T-&gt;Element )  /* if smaller than root */
+           return Find( X, T-&gt;Left );  /* search left subtree */
+       else 
+        if ( X &gt; T-&gt;Element )  /* if larger than root */
+            return  Find( X, T-&gt;Right );  /* search right subtree */
+           else   /* if X == root */
+            return  T;  /* found */
+   }</code></p>
 <ul>
-<li>$T(N)=S(N)=O(d)$ where $d$ is the depth of X</li>
+<li><span class="arithmatex">\(T(N)=S(N)=O(d)\)</span> where <span class="arithmatex">\(d\)</span> is the depth of X</li>
 </ul>
 <p>Iterative program :</p>
-<div class="highlight"><pre><span></span><code>Position Iter_Find( ElementType X, SearchTree T ) 
-{ 
- while ( T )
- {
-     if ( X == T-&gt;Element )  
-         return T;  /* found */
-        if ( X &lt; T-&gt;Element )
-            T = T-&gt;Left; /*move down along left path */
-        else
-             T = T-&gt; Right; /* move down along right path */
-    }  /* end while-loop */
-    return NULL;   /* not found */
-} 
-</code></pre></div>
+<p><code>pseudocode
+   Position Iter_Find( ElementType X, SearchTree T ) 
+   { 
+    while ( T )
+    {
+        if ( X == T-&gt;Element )  
+            return T;  /* found */
+           if ( X &lt; T-&gt;Element )
+               T = T-&gt;Left; /*move down along left path */
+           else
+                T = T-&gt; Right; /* move down along right path */
+       }  /* end while-loop */
+       return NULL;   /* not found */
+   }</code></p>
 <ol>
 <li>FindMin</li>
 </ol>
-<div class="highlight"><pre><span></span><code>Position FindMin( SearchTree T ) 
-{ 
- if ( T == NULL )   
-     return NULL; /* not found in an empty tree */
-    else 
-        if ( T-&gt;Left == NULL ) return T;  /* found left most */
-        else return FindMin( T-&gt;Left );   /* keep moving to left */
-} 
-</code></pre></div>
+<p><code>pseudocode
+   Position FindMin( SearchTree T ) 
+   { 
+    if ( T == NULL )   
+        return NULL; /* not found in an empty tree */
+       else 
+           if ( T-&gt;Left == NULL ) return T;  /* found left most */
+           else return FindMin( T-&gt;Left );   /* keep moving to left */
+   }</code></p>
 <ol>
 <li>FindMax</li>
 </ol>
-<div class="highlight"><pre><span></span><code>Position FindMax( SearchTree T ) 
-{ 
- if ( T != NULL ) 
-     while ( T-&gt;Right != NULL )   
-         T = T-&gt;Right;   /* keep moving to find right most */
-    return T;  /* return NULL or the right most */
-} 
-</code></pre></div>
+<p><code>pseudocode
+   Position FindMax( SearchTree T ) 
+   { 
+    if ( T != NULL ) 
+        while ( T-&gt;Right != NULL )   
+            T = T-&gt;Right;   /* keep moving to find right most */
+       return T;  /* return NULL or the right most */
+   }</code></p>
 <ol>
 <li>Insert</li>
 </ol>
-<div class="highlight"><pre><span></span><code>SearchTree Insert( ElementType X, SearchTree T ) 
-{ 
-    if ( T == NULL ) /* Create and return a one-node tree */ 
-    { 
-     T = malloc( sizeof( struct TreeNode ) ); 
-     if ( T == NULL ) 
-         FatalError( &quot;Out of space!!!&quot; ); 
-     else 
-     { 
-         T-&gt;Element = X; 
-         T-&gt;Left = T-&gt;Right = NULL; 
-     } 
-    }  /* End creating a one-node tree */
-    else  /* If there is a tree */
-         if ( X &lt; T-&gt;Element ) 
-         T-&gt;Left = Insert( X, T-&gt;Left ); 
-     else 
-         if ( X &gt; T-&gt;Element ) 
-             T-&gt;Right = Insert( X, T-&gt;Right ); 
-     /* Else X is in the tree already; we&#39;ll do nothing */ 
-    return  T;   /* Do not forget this line!! */ 
-}
-</code></pre></div>
+<p><code>pseudocode
+   SearchTree Insert( ElementType X, SearchTree T ) 
+   { 
+       if ( T == NULL ) /* Create and return a one-node tree */ 
+       { 
+        T = malloc( sizeof( struct TreeNode ) ); 
+        if ( T == NULL ) 
+            FatalError( "Out of space!!!" ); 
+        else 
+        { 
+            T-&gt;Element = X; 
+            T-&gt;Left = T-&gt;Right = NULL; 
+        } 
+       }  /* End creating a one-node tree */
+       else  /* If there is a tree */
+            if ( X &lt; T-&gt;Element ) 
+            T-&gt;Left = Insert( X, T-&gt;Left ); 
+        else 
+            if ( X &gt; T-&gt;Element ) 
+                T-&gt;Right = Insert( X, T-&gt;Right ); 
+        /* Else X is in the tree already; we'll do nothing */ 
+       return  T;   /* Do not forget this line!! */ 
+   }</code></p>
 <ul>
 <li>内存越界后不会马上报错，在下一次free或malloc时会失败</li>
 <li>Handle duplicated keys</li>
 <li>
-<p>$T(N)=O(d)$</p>
+<p><span class="arithmatex">\(T(N)=O(d)\)</span></p>
 </li>
 <li>
 <p>Delete</p>
@@ -2621,34 +2583,34 @@
 <li>Delete a degree 1 node : Replace the node by its single child</li>
 <li>Delete a degree 2 node : 用左子树最大值结点或右子树最小值结点替换</li>
 </ul>
-<div class="highlight"><pre><span></span><code>SearchTree Delete( ElementType X, SearchTree T ) 
-{    
- Position TmpCell; 
-    if ( T == NULL ) Error( &quot;Element not found&quot; ); 
-    else if ( X &lt; T-&gt;Element )  /* Go left */ 
-     T-&gt;Left = Delete( X, T-&gt;Left ); 
-    else if ( X &gt; T-&gt;Element )  /* Go right */ 
-     T-&gt;Right = Delete( X, T-&gt;Right ); 
- else  /* Found element to be deleted */ 
-     if ( T-&gt;Left &amp;&amp; T-&gt;Right ) {  /* Two children */ 
-     /* Replace with smallest in right subtree */ 
-         TmpCell = FindMin( T-&gt;Right ); 
-         T-&gt;Element = TmpCell-&gt;Element; 
-         T-&gt;Right = Delete( T-&gt;Element, T-&gt;Right );  } /* End if */
-     else 
-     {  /* One or zero child */ 
-         TmpCell = T; 
-         if ( T-&gt;Left == NULL ) /* Also handles 0 child */ 
-             T = T-&gt;Right; 
-         else if ( T-&gt;Right == NULL )  
-             T = T-&gt;Left; 
-         free( TmpCell );  
-      }  /* End else 1 or 0 child */
-      return  T; 
-}
-</code></pre></div>
+<p><code>pseudocode
+   SearchTree Delete( ElementType X, SearchTree T ) 
+   {    
+    Position TmpCell; 
+       if ( T == NULL ) Error( "Element not found" ); 
+       else if ( X &lt; T-&gt;Element )  /* Go left */ 
+        T-&gt;Left = Delete( X, T-&gt;Left ); 
+       else if ( X &gt; T-&gt;Element )  /* Go right */ 
+        T-&gt;Right = Delete( X, T-&gt;Right ); 
+    else  /* Found element to be deleted */ 
+        if ( T-&gt;Left &amp;&amp; T-&gt;Right ) {  /* Two children */ 
+        /* Replace with smallest in right subtree */ 
+            TmpCell = FindMin( T-&gt;Right ); 
+            T-&gt;Element = TmpCell-&gt;Element; 
+            T-&gt;Right = Delete( T-&gt;Element, T-&gt;Right );  } /* End if */
+        else 
+        {  /* One or zero child */ 
+            TmpCell = T; 
+            if ( T-&gt;Left == NULL ) /* Also handles 0 child */ 
+                T = T-&gt;Right; 
+            else if ( T-&gt;Right == NULL )  
+                T = T-&gt;Left; 
+            free( TmpCell );  
+         }  /* End else 1 or 0 child */
+         return  T; 
+   }</code></p>
 <ul>
-<li>$T(N)=O(d)$</li>
+<li><span class="arithmatex">\(T(N)=O(d)\)</span></li>
 </ul>
 <blockquote>
 <p>Note : If there are not many deletions, then <strong>lazy deletion</strong> may be employed: add a flag field to each node, to mark if a node is active or is deleted.  Therefore we can delete a node without actually freeing the space of that node.  If a deleted key is reinserted, we won’t have to call malloc again.</p>
@@ -2658,9 +2620,9 @@
 <p>Average-Case Analysis</p>
 </li>
 <li>
-<p>The average depth over all nodes in a tree is $O(logN)$ on the assumption that all trees are equally likely.</p>
+<p>The average depth over all nodes in a tree is <span class="arithmatex">\(O(logN)\)</span> on the assumption that all trees are equally likely.</p>
 </li>
-<li>将$n$个元素存入二叉搜索树，树的高度将由插入序列决定</li>
+<li>将<span class="arithmatex">\(n\)</span>个元素存入二叉搜索树，树的高度将由插入序列决定</li>
 </ol>
 <p><img src="picture/5-1.png" alt="5-1" style="zoom:80%;" /></p>
 <p>The correct answer is A.</p>
@@ -2830,9 +2792,9 @@
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

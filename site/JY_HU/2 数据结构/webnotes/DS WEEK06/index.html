@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -834,7 +836,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -843,7 +847,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -873,57 +877,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4.2 Implementations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#array" class="md-nav__link">
-    <span class="md-ellipsis">
-      Array
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#linked-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Linked List
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ordered-array" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ordered Array
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ordered-linked-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ordered Linked List
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#binary-search-tree" class="md-nav__link">
-    <span class="md-ellipsis">
-      Binary Search Tree
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -932,48 +885,6 @@
       4.3 Binary Heap
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="4.3 Binary Heap">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#structure-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Structure Property
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#heap-order-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Heap Order Property
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#basic-heap-operations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Heap Operations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-heap-operations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Other Heap Operations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -984,36 +895,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4.4 Applications of Priority Queues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#heap-sort" class="md-nav__link">
-    <span class="md-ellipsis">
-      Heap Sort
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#k" class="md-nav__link">
-    <span class="md-ellipsis">
-      查找一个序列中第k小的元素
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
   <a href="#45-d-heaps-all-nodes-have-d-children" class="md-nav__link">
     <span class="md-ellipsis">
-      4.5 $d$-Heaps — All nodes have $d$ children
+      4.5 \(d\)-Heaps — All nodes have \(d\) children
     </span>
   </a>
   
@@ -2612,9 +2499,9 @@
   
 
 
-<h1 id="week-6">WEEK 6</h1>
-<h2 id="4-priority-queues-heaps">4 堆  Priority Queues (Heaps)</h2>
-<h3 id="41-adt-model">4.1 ADT Model</h3>
+<h1 id="week-6">WEEK 6<a class="headerlink" href="#week-6" title="Permanent link">&para;</a></h1>
+<h2 id="4-priority-queues-heaps">4 堆  Priority Queues (Heaps)<a class="headerlink" href="#4-priority-queues-heaps" title="Permanent link">&para;</a></h2>
+<h3 id="41-adt-model">4.1 ADT Model<a class="headerlink" href="#41-adt-model" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Objects</strong> :A finite ordered list with zero or more elements.</li>
 <li><strong>Operations</strong> :</li>
@@ -2624,63 +2511,63 @@
 <li>ElementType  FindMin( PriorityQueue H ); </li>
 </ul>
 <hr />
-<h3 id="42-implementations">4.2 Implementations</h3>
-<h4 id="array">Array</h4>
+<h3 id="42-implementations">4.2 Implementations<a class="headerlink" href="#42-implementations" title="Permanent link">&para;</a></h3>
+<h4 id="array">Array<a class="headerlink" href="#array" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Insertion — add one item at the end ~$\Theta(1)$</p>
+<p>Insertion — add one item at the end ~<span class="arithmatex">\(\Theta(1)\)</span></p>
 </li>
 <li>
-<p>Deletion — find the largest / smallest key ~$\Theta(n)$</p>
+<p>Deletion — find the largest / smallest key ~<span class="arithmatex">\(\Theta(n)\)</span></p>
 </li>
 </ul>
-<p>​                     remove the item and shift array ~$O(n)$</p>
-<h4 id="linked-list">Linked List</h4>
+<p>​                     remove the item and shift array ~<span class="arithmatex">\(O(n)\)</span></p>
+<h4 id="linked-list">Linked List<a class="headerlink" href="#linked-list" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Insertion — add to the front of the chain ~$\Theta(1)$</p>
+<p>Insertion — add to the front of the chain ~<span class="arithmatex">\(\Theta(1)\)</span></p>
 </li>
 <li>
-<p>Deletion — find the largest / smallest key ~$\Theta(n)$</p>
+<p>Deletion — find the largest / smallest key ~<span class="arithmatex">\(\Theta(n)\)</span></p>
 </li>
 </ul>
-<p>​                      remove the item ~$\Theta(1)$</p>
+<p>​                      remove the item ~<span class="arithmatex">\(\Theta(1)\)</span></p>
 <ul>
 <li><strong>Never more deletions than insertions</strong></li>
 </ul>
-<h4 id="ordered-array">Ordered Array</h4>
+<h4 id="ordered-array">Ordered Array<a class="headerlink" href="#ordered-array" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Insertion — find the proper position ~$O(\log n)$</li>
+<li>Insertion — find the proper position ~<span class="arithmatex">\(O(\log n)\)</span></li>
 </ul>
-<p>​                      shift array and add the item  ~$O(n)$</p>
+<p>​                      shift array and add the item  ~<span class="arithmatex">\(O(n)\)</span></p>
 <ul>
-<li>Deletion — remove the first / last item ~$\Theta(1)$</li>
+<li>Deletion — remove the first / last item ~<span class="arithmatex">\(\Theta(1)\)</span></li>
 </ul>
-<h4 id="ordered-linked-list">Ordered Linked List</h4>
+<h4 id="ordered-linked-list">Ordered Linked List<a class="headerlink" href="#ordered-linked-list" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Insertion — find the proper position ~$O(n)$</li>
+<li>Insertion — find the proper position ~<span class="arithmatex">\(O(n)\)</span></li>
 </ul>
-<p>​                      add the item  ~$\Theta(1)$</p>
+<p>​                      add the item  ~<span class="arithmatex">\(\Theta(1)\)</span></p>
 <ul>
-<li>Deletion — remove the first / last item ~$\Theta(1)$</li>
+<li>Deletion — remove the first / last item ~<span class="arithmatex">\(\Theta(1)\)</span></li>
 </ul>
-<h4 id="binary-search-tree">Binary Search Tree</h4>
+<h4 id="binary-search-tree">Binary Search Tree<a class="headerlink" href="#binary-search-tree" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Both insertion and deletion will take $O(\log N)$ only.</li>
+<li>Both insertion and deletion will take <span class="arithmatex">\(O(\log N)\)</span> only.</li>
 <li>Only delete the the minimum element, always delete from the left subtrees.</li>
 <li>Keep a balanced tree </li>
 <li>But there are many operations related to AVL tree that we don't really need for a priority queue.</li>
 </ul>
 <hr />
-<h3 id="43-binary-heap">4.3 Binary Heap</h3>
-<h4 id="structure-property">Structure Property</h4>
-<p><strong>[Definition]</strong> A binary tree with $n$ nodes and height $h$ is <strong>complete</strong>  if  its nodes correspond to the nodes numbered from $1$ to $n$ in the perfect binary tree of height $h$.</p>
+<h3 id="43-binary-heap">4.3 Binary Heap<a class="headerlink" href="#43-binary-heap" title="Permanent link">&para;</a></h3>
+<h4 id="structure-property">Structure Property<a class="headerlink" href="#structure-property" title="Permanent link">&para;</a></h4>
+<p><strong>[Definition]</strong> A binary tree with <span class="arithmatex">\(n\)</span> nodes and height <span class="arithmatex">\(h\)</span> is <strong>complete</strong>  if  its nodes correspond to the nodes numbered from <span class="arithmatex">\(1\)</span> to <span class="arithmatex">\(n\)</span> in the perfect binary tree of height <span class="arithmatex">\(h\)</span>.</p>
 <ul>
 <li>
-<p>A complete binary tree of height $h$ has between $2^h$ and $2^{h+1}-1$ nodes.</p>
+<p>A complete binary tree of height <span class="arithmatex">\(h\)</span> has between <span class="arithmatex">\(2^h\)</span> and <span class="arithmatex">\(2^{h+1}-1\)</span> nodes.</p>
 </li>
 <li>
-<p>$h=\lfloor\log N\rfloor$</p>
+<p><span class="arithmatex">\(h=\lfloor\log N\rfloor\)</span></p>
 </li>
 <li>
 <p>Array Representation : BT[n + 1]  ( BT[0] is not used)</p>
@@ -2689,98 +2576,98 @@
 <p><img alt="6-1" src="../picture/6-1.png" /></p>
 <p><strong>[Lemma]</strong> </p>
 <ol>
-<li>$index\,of\,parent(i)=\left{
+<li><span class="arithmatex">\(index\,of\,parent(i)=\left\{
    \begin{array}{rcl}
-   \lfloor i/2\rfloor &amp;&amp; {i\neq1}\
-   None &amp;&amp; {i=1}\
-   \end{array} \right.$</li>
-<li>$index\,of\,left_child(i)=\left{
+   \lfloor i/2\rfloor &amp;&amp; {i\neq1}\\
+   None &amp;&amp; {i=1}\\
+   \end{array} \right.\)</span></li>
+<li><span class="arithmatex">\(index\,of\,left\_child(i)=\left\{
    \begin{array}{rcl}
-   2i &amp;&amp; {2i\leq n}\
-   None &amp;&amp; {2i&gt;n}\
-   \end{array} \right.$</li>
-<li>$index\,of\,right_child(i)=\left{
+   2i &amp;&amp; {2i\leq n}\\
+   None &amp;&amp; {2i&gt;n}\\
+   \end{array} \right.\)</span></li>
+<li><span class="arithmatex">\(index\,of\,right\_child(i)=\left\{
    \begin{array}{rcl}
-   2i+1 &amp;&amp; {2i+1\leq n}\
-   None &amp;&amp; {2i+1&gt;n}\
-   \end{array} \right.$</li>
+   2i+1 &amp;&amp; {2i+1\leq n}\\
+   None &amp;&amp; {2i+1&gt;n}\\
+   \end{array} \right.\)</span></li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="n">PriorityQueue</span><span class="w"> </span><span class="nf">Initialize</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MaxElements</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="n">PriorityQueue</span><span class="w"> </span><span class="n">H</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">MaxElements</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MinPQSize</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Priority queue size is too small&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="n">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">HeapStruct</span><span class="w"> </span><span class="p">));</span><span class="w"> </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="cm">/* Allocate the array plus one extra for sentinel */</span><span class="w"> </span>
-<span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">((</span><span class="w"> </span><span class="n">MaxElements</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="p">));</span><span class="w"> </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Capacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MaxElements</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MinData</span><span class="p">;</span><span class="w">  </span><span class="cm">/* set the sentinel */</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">H</span><span class="p">;</span><span class="w"> </span>
-<span class="p">}</span>
-</code></pre></div>
-<h4 id="heap-order-property">Heap Order Property</h4>
+<pre><code class="language-c">PriorityQueue Initialize( int MaxElements ) 
+{ 
+    PriorityQueue H; 
+    if ( MaxElements &lt; MinPQSize ) 
+        return Error( &quot;Priority queue size is too small&quot; ); 
+    H = malloc(sizeof( struct HeapStruct )); 
+    if ( H == NULL ) 
+        return FatalError( &quot;Out of space!!!&quot; ); 
+    /* Allocate the array plus one extra for sentinel */ 
+    H-&gt;Elements = malloc(( MaxElements + 1 ) * sizeof( ElementType )); 
+    if ( H-&gt;Elements == NULL ) 
+        return FatalError( &quot;Out of space!!!&quot; ); 
+    H-&gt;Capacity = MaxElements; 
+    H-&gt;Size = 0; 
+    H-&gt;Elements[0] = MinData;  /* set the sentinel */
+    return H; 
+}
+</code></pre>
+<h4 id="heap-order-property">Heap Order Property<a class="headerlink" href="#heap-order-property" title="Permanent link">&para;</a></h4>
 <p><strong>[Definition]</strong> A <strong>min tree</strong> is a tree in which the key value in each node is no larger than the key values in its children (if any).  A <strong>min heap</strong> is a <strong>complete</strong> binary tree that is also a min tree.</p>
 <ul>
 <li>We can declare a <strong>max</strong> heap by changing the heap order property.</li>
 </ul>
-<h4 id="basic-heap-operations">Basic Heap Operations</h4>
+<h4 id="basic-heap-operations">Basic Heap Operations<a class="headerlink" href="#basic-heap-operations" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Insertion</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="cm">/*H-&gt;Element[ 0 ] is a sentinel that is no larger than the minimum element in the heap.*/</span><span class="w"> </span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">PriorityQueue</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span><span class="w"> </span>
-<span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">IsFull</span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">))</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span>
-<span class="w">     </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Priority queue is full&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">     </span><span class="k">return</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="p">;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">     </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">];</span><span class="w"> </span><span class="cm">/*Percolate up, faster than swap*/</span>
-<span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span>
-<span class="p">}</span>
-</code></pre></div>
+<p><code>c
+   /*H-&gt;Element[ 0 ] is a sentinel that is no larger than the minimum element in the heap.*/ 
+   void Insert( ElementType X, PriorityQueue H ) 
+   { 
+    int i; 
+       if ( IsFull( H )) 
+       { 
+        Error( "Priority queue is full" ); 
+        return; 
+       } 
+       for ( i = ++H-&gt;Size; H-&gt;Elements[ i/2 ] &gt; X; i /= 2 ) 
+        H-&gt;Elements[ i ] = H-&gt;Elements[ i/2 ]; /*Percolate up, faster than swap*/
+       H-&gt;Elements[ i ] = X; 
+   }</code></p>
 <p>$$
    T(N)=O(\log N)
    $$</p>
 <ol>
 <li>DeleteMin</li>
 </ol>
-<p><div class="highlight"><pre><span></span><code><span class="n">ElementType</span><span class="w"> </span><span class="nf">DeleteMin</span><span class="p">(</span><span class="w"> </span><span class="n">PriorityQueue</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">Child</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">MinElement</span><span class="p">,</span><span class="w"> </span><span class="n">LastElement</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">IsEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span>
-<span class="w">        </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Priority queue is empty&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">];</span><span class="w">   </span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span>
-<span class="w">    </span><span class="n">MinElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">];</span><span class="w">  </span><span class="cm">/*Save the min element*/</span>
-<span class="w">    </span><span class="n">LastElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="o">--</span><span class="w"> </span><span class="p">];</span><span class="w">  </span><span class="cm">/*Take last and reset size*/</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Child</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="cm">/*Find smaller child*/</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Child</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">Child</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">Child</span><span class="p">])</span><span class="w"> </span>
-<span class="w">             </span><span class="n">Child</span><span class="o">++</span><span class="p">;</span><span class="w">     </span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">LastElement</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">Child</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="cm">/*Percolate one level*/</span><span class="w"> </span>
-<span class="w">             </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">Child</span><span class="w"> </span><span class="p">];</span><span class="w"> </span>
-<span class="w">        </span><span class="k">else</span><span class="w">     </span>
-<span class="w">         </span><span class="k">break</span><span class="p">;</span><span class="w">   </span><span class="cm">/*Find the proper position*/</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span>
-<span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LastElement</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MinElement</span><span class="p">;</span><span class="w"> </span>
-<span class="p">}</span>
-</code></pre></div>
+<p><code>c
+   ElementType DeleteMin( PriorityQueue H ) 
+   { 
+       int i, Child; 
+       ElementType MinElement, LastElement; 
+       if ( IsEmpty( H ) ) 
+       { 
+           Error( "Priority queue is empty" ); 
+           return H-&gt;Elements[ 0 ];   
+       } 
+       MinElement = H-&gt;Elements[ 1 ];  /*Save the min element*/
+       LastElement = H-&gt;Elements[ H-&gt;Size-- ];  /*Take last and reset size*/
+       for ( i = 1; i * 2 &lt;= H-&gt;Size; i = Child )  /*Find smaller child*/ 
+       {
+           Child = i * 2; 
+           if (Child != H-&gt;Size &amp;&amp; H-&gt;Elements[Child+1] &lt; H-&gt;Elements[Child]) 
+                Child++;     
+           if ( LastElement &gt; H-&gt;Elements[ Child ] )   /*Percolate one level*/ 
+                H-&gt;Elements[ i ] = H-&gt;Elements[ Child ]; 
+           else     
+            break;   /*Find the proper position*/
+       } 
+       H-&gt;Elements[ i ] = LastElement; 
+       return MinElement; 
+   }</code>
 $$
 T(N)=O(\log N)
 $$</p>
-<h4 id="other-heap-operations">Other Heap Operations</h4>
+<h4 id="other-heap-operations">Other Heap Operations<a class="headerlink" href="#other-heap-operations" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p>查找除最小值之外的值需要对整个堆进行线性扫描</p>
@@ -2799,51 +2686,51 @@ $$</p>
 </li>
 </ul>
 <p>将N 个关键字以任意顺序放入树中，保持结构特性，再执行下滤</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">N</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
-<span class="w"> </span><span class="n">PercolateDown</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-</code></pre></div>
+<p><code>c
+   for (i = N/2; i &gt; 0; i--)
+    PercolateDown(i);</code></p>
 <p>$$
    T(N)=O(N)
    $$</p>
-<p><strong>[Theorem]</strong> For the perfect binary tree of height $h$ containing $2^{h+1}-1$ nodes, the sum of the heights of the nodes is $2^{h+1}-1-(h+1)$.</p>
+<p><strong>[Theorem]</strong> For the perfect binary tree of height <span class="arithmatex">\(h\)</span> containing <span class="arithmatex">\(2^{h+1}-1\)</span> nodes, the sum of the heights of the nodes is <span class="arithmatex">\(2^{h+1}-1-(h+1)\)</span>.</p>
 <p><img alt="image-20210125151728720" src="../picture/image-20210125151728720.png" /></p>
 <hr />
-<h3 id="44-applications-of-priority-queues">4.4 Applications of Priority Queues</h3>
-<h4 id="heap-sort">Heap Sort</h4>
-<h4 id="k">查找一个序列中第k小的元素</h4>
+<h3 id="44-applications-of-priority-queues">4.4 Applications of Priority Queues<a class="headerlink" href="#44-applications-of-priority-queues" title="Permanent link">&para;</a></h3>
+<h4 id="heap-sort">Heap Sort<a class="headerlink" href="#heap-sort" title="Permanent link">&para;</a></h4>
+<h4 id="k">查找一个序列中第k小的元素<a class="headerlink" href="#k" title="Permanent link">&para;</a></h4>
 <p>The function is to find the <code>K</code>-th smallest element in a list <code>A</code> of <code>N</code> elements.  The function <code>BuildMaxHeap(H, K)</code> is to arrange elements <code>H[1]</code> ... <code>H[K]</code> into a max-heap.  </p>
-<div class="highlight"><pre><span></span><code><span class="n">ElementType</span><span class="w"> </span><span class="nf">FindKthSmallest</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">A</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span><span class="cm">/* it is assumed that K&lt;=N */</span>
-<span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="o">*</span><span class="n">H</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">next</span><span class="p">,</span><span class="w"> </span><span class="n">child</span><span class="p">;</span>
+<pre><code class="language-c">ElementType FindKthSmallest ( int A[], int N, int K )
+{   /* it is assumed that K&lt;=N */
+    ElementType *H;
+    int i, next, child;
 
-<span class="w">    </span><span class="n">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ElementType</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">((</span><span class="n">K</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="n">ElementType</span><span class="p">));</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">K</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">];</span>
-<span class="w">    </span><span class="n">BuildMaxHeap</span><span class="p">(</span><span class="n">H</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="p">);</span>
+    H = (ElementType*)malloc((K+1)*sizeof(ElementType));
+    for ( i = 1; i &lt;= K; i++ ) H[i] = A[i-1];
+    BuildMaxHeap(H, K);
 
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">K</span><span class="p">;</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">next</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">H</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="n">next</span><span class="p">];</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="mi">2</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">K</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span>
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="n">child</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="n">child</span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">child</span><span class="o">++</span><span class="p">;</span>
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="n">child</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
-<span class="w">                    </span><span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="n">child</span><span class="p">];</span>
-<span class="w">                </span><span class="k">else</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">            </span><span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-<span class="p">}</span>
-</code></pre></div>
+    for ( next = K; next &lt; N; next++ ) {
+        H[0] = A[next];
+        if ( H[0] &lt; H[1] ) {
+            for ( i = 1; i*2 &lt;= K; i = child ) {
+                child = i*2;
+                if ( child != K &amp;&amp; H[child+1] &gt; H[child] ) child++;
+                if ( H[0] &lt; H[child] )
+                    H[i] = H[child];
+                else break;
+            }
+            H[i] = H[0];
+        }
+    }
+    return H[1];
+}
+</code></pre>
 <hr />
-<h3 id="45-d-heaps-all-nodes-have-d-children">4.5 $d$-Heaps — All nodes have $d$ children</h3>
+<h3 id="45-d-heaps-all-nodes-have-d-children">4.5 <span class="arithmatex">\(d\)</span>-Heaps — All nodes have <span class="arithmatex">\(d\)</span> children<a class="headerlink" href="#45-d-heaps-all-nodes-have-d-children" title="Permanent link">&para;</a></h3>
 <p><strong>Note</strong> :</p>
 <blockquote>
 <ul>
-<li>DeleteMin will take $d-1$ comparisons to find the smallest child. Hence the total time complexity would be $O(d \log_d N)$.</li>
-<li><em>2 or /2 is merely </em><em>a bit shift</em><em>, but </em>d or /d is not.</li>
+<li>DeleteMin will take <span class="arithmatex">\(d-1\)</span> comparisons to find the smallest child. Hence the total time complexity would be <span class="arithmatex">\(O(d \log_d N)\)</span>.</li>
+<li><em>2 or /2 is merely *</em>a bit shift**, but *d or /d is not.</li>
 <li>When the priority queue is too large to fit entirely in main memory, a d-heap will become interesting.</li>
 </ul>
 </blockquote>
@@ -3016,9 +2903,9 @@ $$</p>
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

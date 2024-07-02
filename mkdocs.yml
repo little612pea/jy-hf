@@ -129,30 +129,34 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
+
+
+
+extra_javascript:
+  - javascripts/katex.js 
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+  - stylesheets/extra.css
+
 markdown_extensions:
+  - abbr
   - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
   - pymdownx.details
   - pymdownx.keys
   - pymdownx.superfences
   - pymdownx.tasklist 
   - markdown.extensions.extra
-
-markdown_extensions:
-  - pymdownx.arithmatex:
-      generic: true
-
-extra_javascript:
-  - javascripts/katex.js 
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
-
-extra_css:
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
-
-extra_css:
-  - stylesheets/extra.css
-
-markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -160,14 +164,12 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-
-markdown_extensions:
-  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.emoji
+
+  
+
 
 extra:
   social:
@@ -183,3 +185,4 @@ plugins:
       enable_creation_date: true
       type: timeago
       enabled: true
+      

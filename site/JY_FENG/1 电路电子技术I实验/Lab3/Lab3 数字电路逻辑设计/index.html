@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -1657,7 +1659,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -1666,7 +1670,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1723,39 +1727,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. 利用QUARTUS INTEL FPGA软件自带的Multisim软件先进行模拟">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#task1vhd" class="md-nav__link">
-    <span class="md-ellipsis">
-      逻辑设计输入 task1.vhd
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test_tbvhd" class="md-nav__link">
-    <span class="md-ellipsis">
-      逻辑设计仿真 test_tb.vhd
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      仿真结果
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1807,39 +1778,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. 仿真模拟">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#task2vhd" class="md-nav__link">
-    <span class="md-ellipsis">
-      逻辑设计输入 task2.vhd
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test_tbvhd_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      逻辑设计仿真 test_tb.vhd
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      仿真结果
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1890,39 +1828,6 @@
       2. 仿真模拟
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="2. 仿真模拟">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#task3vhd" class="md-nav__link">
-    <span class="md-ellipsis">
-      设计元件 task3.vhd
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#task3_tbvhd" class="md-nav__link">
-    <span class="md-ellipsis">
-      仿真task3_tb.vhd
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      仿真结果
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2712,16 +2617,16 @@
   
 
 
-<h1 id="_1">数字电路逻辑设计</h1>
+<h1 id="_1">数字电路逻辑设计<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>实验日期：2023/10/9</p>
 <p>地点：东3-406</p>
-<h2 id="_2">实验目的</h2>
+<h2 id="_2">实验目的<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
 <li>了解数字电路基础知识</li>
 <li>掌握简单数字逻辑电路的设计</li>
 <li>学习FPGA开发工具</li>
 </ol>
-<h2 id="_3">实验内容</h2>
+<h2 id="_3">实验内容<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>用QUARTUS软件和DE10开发板设计并实现如下逻辑功能</p>
 <ol>
 <li>
@@ -2735,14 +2640,14 @@
 </li>
 </ol>
 <p>灯A的亮灭，并在DE10开发板上模拟此逻辑电路的功能。</p>
-<h2 id="_4">实验器材</h2>
+<h2 id="_4">实验器材<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ol>
 <li>QUARTUS软件</li>
 <li>DE10开发板</li>
 <li>电脑</li>
 </ol>
-<h2 id="23">实验一：判断2或3的倍数</h2>
-<h3 id="1">1. 分析真值表</h3>
+<h2 id="23">实验一：判断2或3的倍数<a class="headerlink" href="#23" title="Permanent link">&para;</a></h2>
+<h3 id="1">1. 分析真值表<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2813,95 +2718,95 @@
 </tbody>
 </table>
 <p>由于总情况较少，所以选择打表的方式列写代码。</p>
-<h3 id="2-quartus-intel-fpgamultisim">2. 利用QUARTUS INTEL FPGA软件自带的Multisim软件先进行模拟</h3>
-<h4 id="task1vhd">逻辑设计输入 task1.vhd</h4>
-<div class="highlight"><pre><span></span><code><span class="c1">---------库说明与库引用------------</span>
-<span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_arith.</span><span class="k">all</span><span class="p">;</span>
-<span class="c1">---------------------------------</span>
+<h3 id="2-quartus-intel-fpgamultisim">2. 利用QUARTUS INTEL FPGA软件自带的Multisim软件先进行模拟<a class="headerlink" href="#2-quartus-intel-fpgamultisim" title="Permanent link">&para;</a></h3>
+<h4 id="task1vhd">逻辑设计输入 task1.vhd<a class="headerlink" href="#task1vhd" title="Permanent link">&para;</a></h4>
+<pre><code class="language-vhdl">---------库说明与库引用------------
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all; 
+use IEEE.numeric_std.all;
+use IEEE.std_logic_arith.all;
+---------------------------------
 
 
-<span class="c1">---------实体定义Task1------------</span>
-<span class="k">entity</span><span class="w"> </span><span class="nc">Task1</span><span class="w"> </span><span class="k">is</span>
-<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
-<span class="w">            </span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
-<span class="k">end</span><span class="w"> </span><span class="nc">Task1</span><span class="p">;</span>
-<span class="c1">---------------------------------</span>
+---------实体定义Task1------------
+entity Task1 is
+    port (  A,B,C: in std_logic;
+            Z: out std_logic);
+end Task1;
+---------------------------------
 
 
-<span class="c1">----------结构体定义 BEHAV---------    </span>
-<span class="k">architecture</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">Task1</span><span class="w"> </span><span class="k">is</span>
+----------结构体定义 BEHAV---------    
+architecture BEHAV of Task1 is
 
-<span class="k">begin</span>
-<span class="c1">----------进程语句 P1---------------</span>
-<span class="n">P1</span><span class="o">:</span><span class="k">process</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
-<span class="k">variable</span><span class="w"> </span><span class="n">tmp</span><span class="o">:</span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">-- 定义变量tmp（std_logic_vector）记录ABC的输入 </span>
-<span class="k">begin</span>
-<span class="w">    </span><span class="n">tmp</span><span class="o">:=</span><span class="n">A</span><span class="o">&amp;</span><span class="n">B</span><span class="o">&amp;</span><span class="n">C</span><span class="p">;</span><span class="c1">-- 将ABC的输入值连接</span>
-<span class="w">    </span><span class="c1">--case语句 根据不同情况输出不同的Z值</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="k">is</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;000&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;001&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;010&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;011&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;100&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;101&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;110&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;111&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="k">others</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">case</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span><span class="w">        </span>
-<span class="c1">---------------------------------</span>
+begin
+----------进程语句 P1---------------
+P1:process(A,B,C)
+variable tmp:std_logic_vector(2 downto 0); -- 定义变量tmp（std_logic_vector）记录ABC的输入 
+begin
+    tmp:=A&amp;B&amp;C;-- 将ABC的输入值连接
+    --case语句 根据不同情况输出不同的Z值
+    case tmp is
+    when &quot;000&quot; =&gt; Z&lt;='1';
+    when &quot;001&quot; =&gt; Z&lt;='0';
+    when &quot;010&quot; =&gt; Z&lt;='1';
+    when &quot;011&quot; =&gt; Z&lt;='1';
+    when &quot;100&quot; =&gt; Z&lt;='1';
+    when &quot;101&quot; =&gt; Z&lt;='0';
+    when &quot;110&quot; =&gt; Z&lt;='1';
+    when &quot;111&quot; =&gt; Z&lt;='0';
+    when others =&gt; Z&lt;='0';
+    end case;
+end process;        
+---------------------------------
 
-<span class="k">end</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="p">;</span>
-<span class="c1">---------------------------------</span>
-</code></pre></div>
-<h4 id="test_tbvhd">逻辑设计仿真 test_tb.vhd</h4>
-<div class="highlight"><pre><span></span><code><span class="c1">---------库说明与库引用------------</span>
-<span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_arith.</span><span class="k">all</span><span class="p">;</span>
-<span class="c1">---------------------------------</span>
+end BEHAV ;
+---------------------------------
+</code></pre>
+<h4 id="test_tbvhd">逻辑设计仿真 test_tb.vhd<a class="headerlink" href="#test_tbvhd" title="Permanent link">&para;</a></h4>
+<pre><code class="language-vhdl">---------库说明与库引用------------
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all; 
+use IEEE.numeric_std.all;
+use IEEE.std_logic_arith.all;
+---------------------------------
 
-<span class="c1">------实体定义TEST_tb仿真元件--------</span>
-<span class="k">entity</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="w"> </span><span class="k">is</span>
-<span class="k">end</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="p">;</span>
-<span class="c1">---------------------------------</span>
+------实体定义TEST_tb仿真元件--------
+entity TEST_tb is
+end TEST_tb;
+---------------------------------
 
-<span class="c1">----------结构体定义 BEHAV---------  </span>
-<span class="k">architecture</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="w"> </span><span class="k">is</span>
+----------结构体定义 BEHAV---------  
+architecture BEHAV of TEST_tb is
 
-<span class="c1">----------引用元件Task1---------</span>
-<span class="k">component</span><span class="w"> </span><span class="nc">Task1</span><span class="w"> </span><span class="k">is</span>
-<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
-<span class="w">            </span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
-<span class="k">end</span><span class="w"> </span><span class="k">component</span><span class="p">;</span>
-<span class="k">signal</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span><span class="c1">--定义实参，方便后续控制输入输出</span>
+----------引用元件Task1---------
+component Task1 is
+    port (  A,B,C: in std_logic;
+            Z: out std_logic);
+end component;
+signal A,B,C,Z: std_logic;--定义实参，方便后续控制输入输出
 
-<span class="k">begin</span>
-<span class="n">U1</span><span class="o">:</span><span class="w"> </span><span class="n">Task1</span><span class="w"> </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="o">=&gt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">=&gt;</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">=&gt;</span><span class="n">C</span><span class="p">,</span><span class="n">Z</span><span class="o">=&gt;</span><span class="n">Z</span><span class="p">);</span><span class="c1">--端口映射，将ABC的值输入到元件Task1中</span>
-<span class="nc">P1</span><span class="o">:</span><span class="w"> </span><span class="k">process</span>
-<span class="k">begin</span><span class="w"> </span><span class="c1">-- 仿真</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="nc">BEHAV</span><span class="p">;</span>
-</code></pre></div>
-<h4 id="_5">仿真结果</h4>
+begin
+U1: Task1 port map (A=&gt;A,B=&gt;B,C=&gt;C,Z=&gt;Z);--端口映射，将ABC的值输入到元件Task1中
+P1: process
+begin -- 仿真
+    A&lt;='0';B&lt;='0';C&lt;='0';wait for 10ns;
+    A&lt;='0';B&lt;='0';C&lt;='1';wait for 10ns;
+    A&lt;='0';B&lt;='1';C&lt;='0';wait for 10ns;
+    A&lt;='0';B&lt;='1';C&lt;='1';wait for 10ns;
+    A&lt;='1';B&lt;='0';C&lt;='0';wait for 10ns;
+    A&lt;='1';B&lt;='0';C&lt;='1';wait for 10ns;
+    A&lt;='1';B&lt;='1';C&lt;='0';wait for 10ns;
+    A&lt;='1';B&lt;='1';C&lt;='1';wait for 10ns;
+end process;
+end BEHAV;
+</code></pre>
+<h4 id="_5">仿真结果<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p><img alt="" src="../assets/result.png" /></p>
 <p>根据波形图结果，可知，该元件的代码编写正确，可以进行下一操作。</p>
-<h3 id="3">3. 生成编程文件</h3>
+<h3 id="3">3. 生成编程文件<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
 <ol>
 <li>新建project</li>
 </ol>
@@ -2928,85 +2833,85 @@
 </li>
 </ul>
 <p><img alt="" src="../assets/6.png" /></p>
-<h3 id="_6">实验成果</h3>
+<h3 id="_6">实验成果<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../assets/task1.png" /></p>
-<h2 id="_7">实验二：二进制全加器</h2>
-<h3 id="1_1">1. 分析真值表</h3>
+<h2 id="_7">实验二：二进制全加器<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="1_1">1. 分析真值表<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
 <p><img alt="image-20231016132054066" src="../assets/image-20231016132054066.png" /></p>
-<h3 id="2">2. 仿真模拟</h3>
-<h4 id="task2vhd">逻辑设计输入 task2.vhd</h4>
-<div class="highlight"><pre><span></span><code><span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_arith.</span><span class="k">all</span><span class="p">;</span>
-<span class="c1">---------定义实体--------------------</span>
-<span class="k">entity</span><span class="w"> </span><span class="nc">Task2</span><span class="w"> </span><span class="k">is</span>
-<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C0</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
-<span class="w">            </span><span class="n">C</span><span class="p">,</span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
-<span class="k">end</span><span class="w"> </span><span class="nc">Task2</span><span class="p">;</span>
+<h3 id="2">2. 仿真模拟<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h4 id="task2vhd">逻辑设计输入 task2.vhd<a class="headerlink" href="#task2vhd" title="Permanent link">&para;</a></h4>
+<pre><code class="language-vhdl">library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all; 
+use IEEE.numeric_std.all;
+use IEEE.std_logic_arith.all;
+---------定义实体--------------------
+entity Task2 is
+    port (  A,B,C0: in std_logic;
+            C,Z: out std_logic);
+end Task2;
 
-<span class="c1">---------定义结构体--------------------</span>
-<span class="k">architecture</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">Task2</span><span class="w"> </span><span class="k">is</span>
-<span class="k">begin</span>
-<span class="n">P1</span><span class="o">:</span><span class="k">process</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C0</span><span class="p">)</span>
-<span class="k">variable</span><span class="w"> </span><span class="n">tmp</span><span class="o">:</span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="c1">--变量tmp记录ABC0的输入值</span>
-<span class="k">begin</span>
-<span class="w">    </span><span class="n">tmp</span><span class="o">:=</span><span class="n">A</span><span class="o">&amp;</span><span class="n">B</span><span class="o">&amp;</span><span class="n">C0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="c1">-- case语句根据ABC0不同的值输出不同的C与Z</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;000&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;001&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;010&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;011&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;100&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;101&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;110&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;111&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="k">others</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">case</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="p">;</span>
-</code></pre></div>
-<h4 id="test_tbvhd_1">逻辑设计仿真 test_tb.vhd</h4>
-<div class="highlight"><pre><span></span><code><span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_arith.</span><span class="k">all</span><span class="p">;</span>
+---------定义结构体--------------------
+architecture BEHAV of Task2 is
+begin
+P1:process(A,B,C0)
+variable tmp:std_logic_vector(2 downto 0);--变量tmp记录ABC0的输入值
+begin
+    tmp:=A&amp;B&amp;C0;
+    case tmp is -- case语句根据ABC0不同的值输出不同的C与Z
+    when &quot;000&quot; =&gt; C&lt;='0';Z&lt;='0';
+    when &quot;001&quot; =&gt; C&lt;='0';Z&lt;='1';
+    when &quot;010&quot; =&gt; C&lt;='0';Z&lt;='1';
+    when &quot;011&quot; =&gt; C&lt;='1';Z&lt;='0';
+    when &quot;100&quot; =&gt; C&lt;='0';Z&lt;='1';
+    when &quot;101&quot; =&gt; C&lt;='1';Z&lt;='0';
+    when &quot;110&quot; =&gt; C&lt;='1';Z&lt;='0';
+    when &quot;111&quot; =&gt; C&lt;='1';Z&lt;='1';
+    when others =&gt; C&lt;='0';Z&lt;='0';
+    end case;
+end process;
+end BEHAV ;
+</code></pre>
+<h4 id="test_tbvhd_1">逻辑设计仿真 test_tb.vhd<a class="headerlink" href="#test_tbvhd_1" title="Permanent link">&para;</a></h4>
+<pre><code class="language-vhdl">library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all; 
+use IEEE.numeric_std.all;
+use IEEE.std_logic_arith.all;
 
-<span class="k">entity</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="w"> </span><span class="k">is</span>
-<span class="k">end</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="p">;</span>
+entity TEST_tb is
+end TEST_tb;
 
 
-<span class="k">architecture</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="w"> </span><span class="k">is</span>
+architecture BEHAV of TEST_tb is
 
-<span class="k">component</span><span class="w"> </span><span class="nc">Task2</span><span class="w"> </span><span class="k">is</span>
-<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C0</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
-<span class="w">            </span><span class="n">C</span><span class="p">,</span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
-<span class="k">end</span><span class="w"> </span><span class="k">component</span><span class="p">;</span>
+component Task2 is
+    port (  A,B,C0: in std_logic;
+            C,Z: out std_logic);
+end component;
 
-<span class="k">signal</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C0</span><span class="p">,</span><span class="n">Z</span><span class="p">,</span><span class="n">C</span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+signal A,B,C0,Z,C: std_logic;
 
-<span class="k">begin</span>
-<span class="n">U1</span><span class="o">:</span><span class="w"> </span><span class="n">Task2</span><span class="w"> </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="o">=&gt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">=&gt;</span><span class="n">B</span><span class="p">,</span><span class="n">C0</span><span class="o">=&gt;</span><span class="n">C0</span><span class="p">,</span><span class="n">Z</span><span class="o">=&gt;</span><span class="n">Z</span><span class="p">,</span><span class="n">C</span><span class="o">=&gt;</span><span class="n">C</span><span class="p">);</span>
-<span class="nc">P1</span><span class="o">:</span><span class="w"> </span><span class="k">process</span>
-<span class="c1">-----------主要的仿真部分-------------------------------------------------</span>
-<span class="k">begin</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="nc">BEHAV</span><span class="p">;</span>
-</code></pre></div>
-<h4 id="_8">仿真结果</h4>
+begin
+U1: Task2 port map (A=&gt;A,B=&gt;B,C0=&gt;C0,Z=&gt;Z,C=&gt;C);
+P1: process
+-----------主要的仿真部分-------------------------------------------------
+begin
+    A&lt;='0';B&lt;='0';C0&lt;='0';wait for 10ns;
+    A&lt;='0';B&lt;='0';C0&lt;='1';wait for 10ns;
+    A&lt;='0';B&lt;='1';C0&lt;='0';wait for 10ns;
+    A&lt;='0';B&lt;='1';C0&lt;='1';wait for 10ns;
+    A&lt;='1';B&lt;='0';C0&lt;='0';wait for 10ns;
+    A&lt;='1';B&lt;='0';C0&lt;='1';wait for 10ns;
+    A&lt;='1';B&lt;='1';C0&lt;='0';wait for 10ns;
+    A&lt;='1';B&lt;='1';C0&lt;='1';wait for 10ns;
+end process;
+end BEHAV;
+</code></pre>
+<h4 id="_8">仿真结果<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p><img alt="" src="../assets/2-7433947.png" /></p>
 <p>与预期一致，所以可以进行下一步操作</p>
-<h3 id="3_1">3. 生成编程文件</h3>
+<h3 id="3_1">3. 生成编程文件<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>编译输出，得到以下逻辑图<img alt="" src="../assets/4-7434005.png" /></p>
@@ -3020,7 +2925,7 @@
 <li>A, B, C0对应三个开关</li>
 <li>C与Z对应两盏LED灯</li>
 </ul>
-<h3 id="_9">实验成果</h3>
+<h3 id="_9">实验成果<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p><img src="./assets/IMG_9547.jpeg" style="zoom:10%;" /></p>
 <p>上图对应A=0, B=0, C0=0的情况，输出C=0，Z=0的情况。</p>
 <p><img src="./assets/IMG_9548.jpeg" alt="IMG_9548" style="zoom:10%;" /></p>
@@ -3029,88 +2934,88 @@
 <p>上图对应A=1, B=1, C0=0的情况，输出C=1，Z=0的情况。</p>
 <p><img src="./assets/IMG_9550.jpeg" alt="IMG_9550" style="zoom:10%;" /></p>
 <p>上图对应A=1, B=1, C0=1的情况，输出C=1，Z=1的情况。</p>
-<h2 id="_10">实验三：开灯关灯的探究性实验<font color="red">  !注意：这个部分我写的些许有点错误，直接单数开关开则打开的思路即可</font></h2>
-<h3 id="1_2">1. 分析电路逻辑</h3>
+<h2 id="_10">实验三：开灯关灯的探究性实验<font color="red">  !注意：这个部分我写的些许有点错误，直接单数开关开则打开的思路即可</font><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h3 id="1_2">1. 分析电路逻辑<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h3>
 <p>ABCD作为四个开关，任意的改变状态都将改变电灯的状态，不同于上面的电路，该电路没有真值表。</p>
-<h3 id="2_1">2. 仿真模拟</h3>
-<h4 id="task3vhd">设计元件 task3.vhd</h4>
-<div class="highlight"><pre><span></span><code><span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_arith.</span><span class="k">all</span><span class="p">;</span>
-<span class="c1">------------定义实体Task3-----------------------------------</span>
-<span class="k">entity</span><span class="w"> </span><span class="nc">Task3</span><span class="w"> </span><span class="k">is</span>
-<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
-<span class="w">            </span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
-<span class="k">end</span><span class="w"> </span><span class="nc">Task3</span><span class="p">;</span>
+<h3 id="2_1">2. 仿真模拟<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<h4 id="task3vhd">设计元件 task3.vhd<a class="headerlink" href="#task3vhd" title="Permanent link">&para;</a></h4>
+<pre><code class="language-vhdl">library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all; 
+use IEEE.numeric_std.all;
+use IEEE.std_logic_arith.all;
+------------定义实体Task3-----------------------------------
+entity Task3 is
+    port (  A,B,C,D: in std_logic;
+            Z: out std_logic);
+end Task3;
 
-<span class="k">architecture</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">Task3</span><span class="w"> </span><span class="k">is</span>
+architecture BEHAV of Task3 is
 
-<span class="k">begin</span>
-<span class="c1">---------关键部分：process-----------------------------------</span>
-<span class="n">P1</span><span class="o">:</span><span class="k">process</span>
-<span class="c1">---------定义变量 记录开关A，B，C，D，Z先前的状态----------------</span>
-<span class="k">variable</span><span class="w"> </span><span class="n">mA</span><span class="o">:</span><span class="kt">std_logic</span><span class="o">:=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">variable</span><span class="w"> </span><span class="n">mB</span><span class="o">:</span><span class="kt">std_logic</span><span class="o">:=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">variable</span><span class="w"> </span><span class="n">mC</span><span class="o">:</span><span class="kt">std_logic</span><span class="o">:=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">variable</span><span class="w"> </span><span class="n">mD</span><span class="o">:</span><span class="kt">std_logic</span><span class="o">:=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">variable</span><span class="w"> </span><span class="n">mZ</span><span class="o">:</span><span class="kt">std_logic</span><span class="o">:=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="k">variable</span><span class="w"> </span><span class="n">tmp</span><span class="o">:</span><span class="kt">std_logic</span><span class="o">:=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+begin
+---------关键部分：process-----------------------------------
+P1:process
+---------定义变量 记录开关A，B，C，D，Z先前的状态----------------
+variable mA:std_logic:='0';
+variable mB:std_logic:='0';
+variable mC:std_logic:='0';
+variable mD:std_logic:='0';
+variable mZ:std_logic:='0';
+variable tmp:std_logic:='0';
 
-<span class="k">begin</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mA</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">A</span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w">  </span><span class="c1">--如果A开关状态发生改变，下方各个结构同理</span>
-<span class="n">mA</span><span class="o">:=</span><span class="n">A</span><span class="p">;</span><span class="w"> </span><span class="n">mZ</span><span class="o">:=</span><span class="k">not</span><span class="w"> </span><span class="n">mZ</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="n">mZ</span><span class="p">;</span><span class="w"> </span><span class="c1">--改变mA的值，并且输出与Z的记录值相反的值</span>
-<span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mB</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">B</span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>
-<span class="n">mB</span><span class="o">:=</span><span class="n">B</span><span class="p">;</span><span class="w"> </span><span class="n">mZ</span><span class="o">:=</span><span class="k">not</span><span class="w"> </span><span class="n">mZ</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="n">mZ</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mC</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">C</span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>
-<span class="n">mC</span><span class="o">:=</span><span class="n">C</span><span class="p">;</span><span class="w"> </span><span class="n">mZ</span><span class="o">:=</span><span class="k">not</span><span class="w"> </span><span class="n">mZ</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="n">mZ</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mD</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">D</span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>
-<span class="n">mD</span><span class="o">:=</span><span class="n">D</span><span class="p">;</span><span class="w"> </span><span class="n">mZ</span><span class="o">:=</span><span class="k">not</span><span class="w"> </span><span class="n">mZ</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="n">mZ</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
+begin
+if (mA /= A) then  --如果A开关状态发生改变，下方各个结构同理
+mA:=A; mZ:=not mZ;Z&lt;=mZ; --改变mA的值，并且输出与Z的记录值相反的值
+end if;
+if (mB /= B) then 
+mB:=B; mZ:=not mZ;Z&lt;=mZ;
+end if;
+if (mC /= C) then 
+mC:=C; mZ:=not mZ;Z&lt;=mZ;
+end if;
+if (mD /= D) then 
+mD:=D; mZ:=not mZ;Z&lt;=mZ;
+end if;
 
-<span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span>
+end process;
 
-<span class="k">end</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="p">;</span>
-</code></pre></div>
-<h4 id="task3_tbvhd">仿真task3_tb.vhd</h4>
-<div class="highlight"><pre><span></span><code><span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
-<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_arith.</span><span class="k">all</span><span class="p">;</span>
+end BEHAV ;
+</code></pre>
+<h4 id="task3_tbvhd">仿真task3_tb.vhd<a class="headerlink" href="#task3_tbvhd" title="Permanent link">&para;</a></h4>
+<pre><code class="language-vhdl">library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all; 
+use IEEE.numeric_std.all;
+use IEEE.std_logic_arith.all;
 
-<span class="k">entity</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="w"> </span><span class="k">is</span>
-<span class="k">end</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="p">;</span>
+entity TEST_tb is
+end TEST_tb;
 
-<span class="k">architecture</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="w"> </span><span class="k">is</span>
+architecture BEHAV of TEST_tb is
 
-<span class="k">component</span><span class="w"> </span><span class="nc">Task3</span><span class="w"> </span><span class="k">is</span>
-<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
-<span class="w">            </span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
-<span class="k">end</span><span class="w"> </span><span class="k">component</span><span class="p">;</span>
+component Task3 is
+    port (  A,B,C,D: in std_logic;
+            Z: out std_logic);
+end component;
 
-<span class="k">signal</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+signal A,B,C,D,Z: std_logic;
 
-<span class="k">begin</span>
-<span class="n">U1</span><span class="o">:</span><span class="w"> </span><span class="n">Task3</span><span class="w"> </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="o">=&gt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">=&gt;</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">=&gt;</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="o">=&gt;</span><span class="n">D</span><span class="p">,</span><span class="n">Z</span><span class="o">=&gt;</span><span class="n">Z</span><span class="p">);</span>
-<span class="c1">------------仿真过程-------------------------------------------</span>
-<span class="nc">P1</span><span class="o">:</span><span class="w"> </span><span class="k">process</span>
-<span class="k">begin</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">D</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">D</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">D</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">D</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span>
-<span class="k">end</span><span class="w"> </span><span class="nc">BEHAV</span><span class="p">;</span>
-</code></pre></div>
-<h4 id="_11">仿真结果</h4>
+begin
+U1: Task3 port map (A=&gt;A,B=&gt;B,C=&gt;C,D=&gt;D,Z=&gt;Z);
+------------仿真过程-------------------------------------------
+P1: process
+begin
+    A&lt;='0';B&lt;='0';C&lt;='0';D&lt;='0';wait for 10ns;
+    A&lt;='0';B&lt;='0';C&lt;='0';D&lt;='1';wait for 10ns;
+    A&lt;='1';B&lt;='0';C&lt;='0';D&lt;='1';wait for 10ns;
+    A&lt;='0';B&lt;='0';C&lt;='0';D&lt;='1';wait for 10ns;
+end process;
+end BEHAV;
+</code></pre>
+<h4 id="_11">仿真结果<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p><img alt="" src="../assets/11.png" /></p>
 <p>任意改变ABCD四个开关中任意状态，Z就会输出与原来相反的结果，仿真结果正确。</p>
-<h3 id="3_2">3. 生成编程文件</h3>
+<h3 id="3_2">3. 生成编程文件<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h3>
 <ol>
 <li>编译输出</li>
 </ol>
@@ -3124,7 +3029,7 @@
 </li>
 <li>Z对应一个LED灯</li>
 </ol>
-<h3 id="_12">实验成果</h3>
+<h3 id="_12">实验成果<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <video src="./assets/111.mp4"></video>
 
 <p><a href="../assets/111.mp4">实验结果视频</a></p>
@@ -3294,9 +3199,9 @@
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

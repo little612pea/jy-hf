@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -939,7 +941,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -948,7 +952,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -958,63 +962,6 @@
       6.7 Applications of Depth-First Search
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="6.7 Applications of Depth-First Search">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#undirected-graphs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Undirected Graphs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#biconnectivity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Biconnectivity
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#euler-circuits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Euler Circuits
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Euler Circuits">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proposition-an-euler-circuit-is-possible-only-if-the-graph-is-connected-and-each-vertex-has-an-even-degree" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Proposition] An Euler circuit is possible only if the graph is connected and each vertex has an even degree.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#proposition-an-euler-tour-is-possible-if-there-are-exactly-two-vertices-having-odd-degree-one-must-start-at-one-of-the-odd-degree-vertices" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Proposition] An Euler tour is possible if there are exactly two vertices having odd degree. One must start at one of the odd-degree vertices.
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1052,39 +999,6 @@
       7.3 A Lower Bound for Simple Sorting Algorithms
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="7.3 A Lower Bound for Simple Sorting Algorithms">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition-an-inversion-in-an-array-of-numbers-is-any-ordered-pairij-having-the-property-that-iaj" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Definition] An inversion in an array of numbers is any ordered pair$(i,j)$ having the property that $iA[j]$
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#theorem-the-average-number-of-inversions-in-an-array-of-n-distinct-numbers-is-nn-14" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Theorem] The average number of inversions in an array of $N$ distinct numbers is $N(N-1)/4$
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#theorem-any-algorithm-that-sorts-by-exchanging-adjacent-elements-requires-omegan2-time-on-average" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Theorem] Any algorithm that sorts by exchanging adjacent elements requires $\Omega(N^2)$ time on average
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2576,65 +2490,65 @@
   
 
 
-<h1 id="week-11">WEEK 11</h1>
-<h3 id="67-applications-of-depth-first-search">6.7 Applications of Depth-First Search</h3>
-<div class="highlight"><pre><span></span><code><span class="cm">/*a generalization of preorder traversal*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">DFS</span><span class="p">(</span><span class="n">Vertex</span><span class="w"> </span><span class="n">V</span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="n">visited</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">  </span><span class="cm">/*mark this vertex to avoid cycles*/</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">DFS</span><span class="p">(</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="cm">/*T = O(|E|+|V|) as long as adjacency lists are used*/</span>
-</code></pre></div>
-<h4 id="undirected-graphs">Undirected Graphs</h4>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">ListComponents</span><span class="p">(</span><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">DFS</span><span class="p">(</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">);</span>
-<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h4 id="biconnectivity">Biconnectivity</h4>
+<h1 id="week-11">WEEK 11<a class="headerlink" href="#week-11" title="Permanent link">&para;</a></h1>
+<h3 id="67-applications-of-depth-first-search">6.7 Applications of Depth-First Search<a class="headerlink" href="#67-applications-of-depth-first-search" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c">/*a generalization of preorder traversal*/
+void DFS(Vertex V)
+{   
+    visited[ V ] = true;  /*mark this vertex to avoid cycles*/
+    for ( each W adjacent to V )
+        if ( !visited[ W ] ) DFS( W );
+} /*T = O(|E|+|V|) as long as adjacency lists are used*/
+</code></pre>
+<h4 id="undirected-graphs">Undirected Graphs<a class="headerlink" href="#undirected-graphs" title="Permanent link">&para;</a></h4>
+<pre><code class="language-c">void ListComponents(Graph G)
+{   
+    for ( each V in G ) 
+        if ( !visited[ V ] ) 
+        {
+            DFS( V );
+            printf(&quot;\n&quot;);
+        }
+}
+</code></pre>
+<h4 id="biconnectivity">Biconnectivity<a class="headerlink" href="#biconnectivity" title="Permanent link">&para;</a></h4>
 <ul>
-<li>$v$ is an <strong>articulation point</strong> if $G'=DeleteVertex(G, v)$ has <strong>at least 2</strong> connected components.</li>
-<li>$G$ is a <strong>biconnected graph</strong> if $G$ is connected and has no articulation points.</li>
+<li><span class="arithmatex">\(v\)</span> is an <strong>articulation point</strong> if <span class="arithmatex">\(G'=DeleteVertex(G, v)\)</span> has <strong>at least 2</strong> connected components.</li>
+<li><span class="arithmatex">\(G\)</span> is a <strong>biconnected graph</strong> if <span class="arithmatex">\(G\)</span> is connected and has no articulation points.</li>
 <li>A <strong>biconnected component</strong> is a maximal biconnected subgraph.</li>
 </ul>
 <p><img alt="image-20201207194401819" src="../picture/image-20201207194401819.png" /></p>
 <p><img alt="image-20201207194413257" src="../picture/image-20201207194413257.png" /></p>
 <blockquote>
-<p>Note : No edges can be shared by two or more biconnected components.  Hence $E(G)$ is partitioned by the biconnected components of $G$.</p>
+<p>Note : No edges can be shared by two or more biconnected components.  Hence <span class="arithmatex">\(E(G)\)</span> is partitioned by the biconnected components of <span class="arithmatex">\(G\)</span>.</p>
 </blockquote>
-<p>Finding the <strong>biconnected components</strong> of a connected undirected $G$ :</p>
+<p>Finding the <strong>biconnected components</strong> of a connected undirected <span class="arithmatex">\(G\)</span> :</p>
 <blockquote>
 <ul>
-<li>Use <strong>depth first search</strong> to obtain a spanning tree of $G$</li>
+<li>Use <strong>depth first search</strong> to obtain a spanning tree of <span class="arithmatex">\(G\)</span></li>
 </ul>
 <p><img alt="image-20201208110403641" src="../picture/image-20201208110403641.png" /></p>
 <p><img alt="image-20201208110506092" src="../picture/image-20201208110506092.png" /></p>
 <ul>
-<li>Depth first number($Num$) 先序编号</li>
-<li>Back edges(背向边) = $(u,v)\notin$ tree and $u$ is an ancestor of $v$.</li>
+<li>Depth first number(<span class="arithmatex">\(Num\)</span>) 先序编号</li>
+<li>Back edges(背向边) = <span class="arithmatex">\((u,v)\notin\)</span> tree and <span class="arithmatex">\(u\)</span> is an ancestor of <span class="arithmatex">\(v\)</span>.</li>
 </ul>
 <blockquote>
-<p>Note : If $u$ is an ancestor of $v$, then $Num(u)&lt;Num(v)$.</p>
+<p>Note : If <span class="arithmatex">\(u\)</span> is an ancestor of <span class="arithmatex">\(v\)</span>, then <span class="arithmatex">\(Num(u)&lt;Num(v)\)</span>.</p>
 </blockquote>
 <ul>
-<li>Find the articulation points in $G$</li>
+<li>Find the articulation points in <span class="arithmatex">\(G\)</span></li>
 <li>The root is an articulation point if it has at least 2 children.</li>
-<li>Any other vertex $u$ is an articulation point if $u$ has at least 1 child, and it is impossible to move down at least 1 step and then jump up to $u$‘s ancestor</li>
+<li>Any other vertex <span class="arithmatex">\(u\)</span> is an articulation point if <span class="arithmatex">\(u\)</span> has at least 1 child, and it is impossible to move down at least 1 step and then jump up to <span class="arithmatex">\(u\)</span>‘s ancestor</li>
 </ul>
 </blockquote>
 <ul>
-<li>对于深度优先搜索生成树上的每一个顶点$u$，计算编号最低的顶点，称之为$Low(u)$
+<li>对于深度优先搜索生成树上的每一个顶点<span class="arithmatex">\(u\)</span>，计算编号最低的顶点，称之为<span class="arithmatex">\(Low(u)\)</span>
   $$
   Low(u)=\min{Num(u),\min{Low(w)|w\,is\,a\,child\,of\,u},\min{Num(w)|(u,w)\,is\,a\,back\,edge}}
   $$</li>
 </ul>
-<div class="highlight"><pre><span></span><code>/*Assign Num and compute Parents*/
+<pre><code class="language-pseudocode">/*Assign Num and compute Parents*/
 void AssignNum(Vertex V)
 {
     Vertex W;
@@ -2647,8 +2561,8 @@ void AssignNum(Vertex V)
             AssignNum(W);
         }
 }
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>/*Assign Low; also check for articulation points*/
+</code></pre>
+<pre><code class="language-pseudocode">/*Assign Low; also check for articulation points*/
 void AssignLow(Vertex V)
 {
     Vertex W;
@@ -2667,8 +2581,8 @@ void AssignLow(Vertex V)
                 Low[V] ＝ Min(Low[V], Num[W]); /*Rule 2*/
     }
 }
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>void FindArt(Vertex V)
+</code></pre>
+<pre><code class="language-pseudocode">void FindArt(Vertex V)
 {
     Vertex W;
     Visited[V] = True;
@@ -2688,23 +2602,23 @@ void AssignLow(Vertex V)
                 Low[V] = Min(Low[V], Num[W]); /*Rule 2*/
     }
 }
-</code></pre></div>
-<h4 id="euler-circuits">Euler Circuits</h4>
-<h5 id="proposition-an-euler-circuit-is-possible-only-if-the-graph-is-connected-and-each-vertex-has-an-even-degree">[Proposition] An Euler circuit is possible only if the graph is connected and each vertex has an <em>even</em> degree.</h5>
-<h5 id="proposition-an-euler-tour-is-possible-if-there-are-exactly-two-vertices-having-odd-degree-one-must-start-at-one-of-the-odd-degree-vertices">[Proposition] An Euler tour is possible if there are exactly <em>two</em> vertices having odd degree.  One must start at one of the odd-degree vertices.</h5>
+</code></pre>
+<h4 id="euler-circuits">Euler Circuits<a class="headerlink" href="#euler-circuits" title="Permanent link">&para;</a></h4>
+<h5 id="proposition-an-euler-circuit-is-possible-only-if-the-graph-is-connected-and-each-vertex-has-an-even-degree">[Proposition] An Euler circuit is possible only if the graph is connected and each vertex has an <em>even</em> degree.<a class="headerlink" href="#proposition-an-euler-circuit-is-possible-only-if-the-graph-is-connected-and-each-vertex-has-an-even-degree" title="Permanent link">&para;</a></h5>
+<h5 id="proposition-an-euler-tour-is-possible-if-there-are-exactly-two-vertices-having-odd-degree-one-must-start-at-one-of-the-odd-degree-vertices">[Proposition] An Euler tour is possible if there are exactly <em>two</em> vertices having odd degree.  One must start at one of the odd-degree vertices.<a class="headerlink" href="#proposition-an-euler-tour-is-possible-if-there-are-exactly-two-vertices-having-odd-degree-one-must-start-at-one-of-the-odd-degree-vertices" title="Permanent link">&para;</a></h5>
 <blockquote>
 <p>Note:</p>
 <ul>
 <li>The path should be maintained as a linked list.</li>
 <li>For each adjacency list, maintain a pointer to the last edge scanned.</li>
-<li>$T=O(|E|+|V|)$</li>
+<li><span class="arithmatex">\(T=O(|E|+|V|)\)</span></li>
 </ul>
 </blockquote>
 <hr />
-<h2 id="7-sorting">7 Sorting</h2>
-<h3 id="71-preliminaries">7.1 Preliminaries</h3>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">X_Sort</span><span class="w"> </span><span class="p">(</span><span class="n">ElementType</span><span class="w"> </span><span class="n">A</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span>
-</code></pre></div>
+<h2 id="7-sorting">7 Sorting<a class="headerlink" href="#7-sorting" title="Permanent link">&para;</a></h2>
+<h3 id="71-preliminaries">7.1 Preliminaries<a class="headerlink" href="#71-preliminaries" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c">void X_Sort (ElementType A[], int N)
+</code></pre>
 <ul>
 <li>N must be a legal integer.</li>
 <li>Assume integer array for the sake of simplicity.</li>
@@ -2712,22 +2626,22 @@ void AssignLow(Vertex V)
 <li>Consider internal sorting only. The entire sort can be done in main memory.</li>
 </ul>
 <hr />
-<h3 id="72-insertion-sort">7.2 Insertion Sort</h3>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Insertion</span><span class="p">(</span><span class="n">ElementType</span><span class="w"> </span><span class="n">A</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span>
-<span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">Tmp</span><span class="p">;</span><span class="w"> </span>
+<h3 id="72-insertion-sort">7.2 Insertion Sort<a class="headerlink" href="#72-insertion-sort" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c">void Insertion(ElementType A[], int N)
+{ 
+    int j, P; 
+    ElementType Tmp; 
 
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">P</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span>
-<span class="w">        </span><span class="n">Tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="p">];</span><span class="w">  </span><span class="cm">/*the next coming card*/</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Tmp</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">--</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">            </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">];</span><span class="w"> </span>
-<span class="w">            </span><span class="cm">/*shift sorted cards to provide a position for the new coming card*/</span>
-<span class="w">        </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Tmp</span><span class="p">;</span><span class="w">  </span><span class="cm">/*place the new card at the proper position*/</span>
-<span class="w">    </span><span class="p">}</span><span class="cm">/*end for-P-loop*/</span>
-<span class="p">}</span>
-</code></pre></div>
+    for ( P = 1; P &lt; N; P++ ) 
+    { 
+        Tmp = A[ P ];  /*the next coming card*/
+        for ( j = P; j &gt; 0 &amp;&amp; A[ j - 1 ] &gt; Tmp; j-- ) 
+            A[ j ] = A[ j - 1 ]; 
+            /*shift sorted cards to provide a position for the new coming card*/
+        A[ j ] = Tmp;  /*place the new card at the proper position*/
+    }/*end for-P-loop*/
+}
+</code></pre>
 <ul>
 <li>
 <p>The worst case : Input A[ ] is in reverse order
@@ -2743,18 +2657,18 @@ void AssignLow(Vertex V)
 </li>
 </ul>
 <hr />
-<h3 id="73-a-lower-bound-for-simple-sorting-algorithms">7.3 A Lower Bound for Simple Sorting Algorithms</h3>
-<h4 id="definition-an-inversion-in-an-array-of-numbers-is-any-ordered-pairij-having-the-property-that-iaj">[Definition] An <em>inversion</em> in an array of numbers is any ordered pair$(i,j)$ having the property that $i<j$ but $A[i]>A[j]$</h4>
+<h3 id="73-a-lower-bound-for-simple-sorting-algorithms">7.3 A Lower Bound for Simple Sorting Algorithms<a class="headerlink" href="#73-a-lower-bound-for-simple-sorting-algorithms" title="Permanent link">&para;</a></h3>
+<h4 id="definition-an-inversion-in-an-array-of-numbers-is-any-ordered-pairij-having-the-property-that-ij-but-aiaj">[Definition] An <em>inversion</em> in an array of numbers is any ordered pair<span class="arithmatex">\((i,j)\)</span> having the property that <span class="arithmatex">\(i&lt;j\)</span> but <span class="arithmatex">\(A[i]&gt;A[j]\)</span><a class="headerlink" href="#definition-an-inversion-in-an-array-of-numbers-is-any-ordered-pairij-having-the-property-that-ij-but-aiaj" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p>Swapping two adjacent elements that are out of place removes <strong>exactly one</strong> inversion.</p>
 </li>
 <li>
-<p>$T(N,I)=O(I+N)$ where $I$ is the number of inversions in the original array.</p>
+<p><span class="arithmatex">\(T(N,I)=O(I+N)\)</span> where <span class="arithmatex">\(I\)</span> is the number of inversions in the original array.</p>
 </li>
 </ul>
-<h4 id="theorem-the-average-number-of-inversions-in-an-array-of-n-distinct-numbers-is-nn-14">[Theorem] The average number of inversions in an array of $N$ distinct numbers is $N(N-1)/4$</h4>
-<h4 id="theorem-any-algorithm-that-sorts-by-exchanging-adjacent-elements-requires-omegan2-time-on-average">[Theorem] Any algorithm that sorts by exchanging adjacent elements requires $\Omega(N^2)$ time on average</h4>
+<h4 id="theorem-the-average-number-of-inversions-in-an-array-of-n-distinct-numbers-is-nn-14">[Theorem] The average number of inversions in an array of <span class="arithmatex">\(N\)</span> distinct numbers is <span class="arithmatex">\(N(N-1)/4\)</span><a class="headerlink" href="#theorem-the-average-number-of-inversions-in-an-array-of-n-distinct-numbers-is-nn-14" title="Permanent link">&para;</a></h4>
+<h4 id="theorem-any-algorithm-that-sorts-by-exchanging-adjacent-elements-requires-omegan2-time-on-average">[Theorem] Any algorithm that sorts by exchanging adjacent elements requires <span class="arithmatex">\(\Omega(N^2)\)</span> time on average<a class="headerlink" href="#theorem-any-algorithm-that-sorts-by-exchanging-adjacent-elements-requires-omegan2-time-on-average" title="Permanent link">&para;</a></h4>
 <hr />
 
 
@@ -2921,9 +2835,9 @@ void AssignLow(Vertex V)
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

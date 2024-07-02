@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -729,7 +731,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -738,7 +742,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -753,131 +757,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#definition-an-algorithm-is-a-finite-set-of-instructions-that-if-followed-accomplishes-a-particular-task-in-addition-all-algorithms-must-satisfy-the-following-criteria" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Definition] An algorithm is a finite set of instructions that, if followed, accomplishes a particular task. In addition, all algorithms must satisfy the following criteria.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-selection-sort-sort-a-set-of-ngeq1-integers-in-increasing-order" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Example] Selection Sort : Sort a set of $n\geq1$ integers in increasing order
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#11-what-to-analyze" class="md-nav__link">
     <span class="md-ellipsis">
       1.1 What to Analyze
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.1 What to Analyze">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-matrix-addition" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Example] Matrix addition
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-iterative-function-for-summing-a-list-of-numbers" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Example] Iterative function for summing a list of numbers
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-recursive-function-for-summing-a-list-of-numbers" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Example] Recursive function for summing a list of numbers
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
   <a href="#12-asymptotic-notationoomegathetao" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2 Asymptotic Notation($O,\Omega,\Theta,o$)
+      1.2 Asymptotic Notation(\(O,\Omega,\Theta,o\))
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="1.2 Asymptotic Notation($O,\Omega,\Theta,o$)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition-tnofn-if-there-are-positive-constants-c-and-n_0-such-that-tnleq-ccdot-fn-for-all-ngeq-n_0upper-bound" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Definition] $T(N)=O(f(N))$ if there are positive constants $c$ and $n_0$ such that $T(N)\leq c\cdot f(N)$ for all $N\geq n_0$.(upper bound)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#definition-tnomegagn-if-there-are-positive-constants-c-and-n_0-such-that-tngeq-ccdot-fn-for-all-ngeq-n_0lower-bound" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Definition] $T(N)=\Omega(g(N))$ if there are positive constants $c$ and $n_0$ such that $T(N)\geq c\cdot f(N)$ for all $N\geq n_0$.(lower bound)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#definition-tnthetahn-if-and-only-if-tnohn-and-tnomegahn" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Definition] $T(N)=\Theta(h(N))$ if and only if $T(N)=O(h(N))$ and $T(N)=\Omega(h(N))$.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#definition-tnopn-if-tnopn-and-tnneqthetapn" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Definition] $T(N)=o(p(N))$ if $T(n)=O(p(N))$ and $T(N)\neq\Theta(p(N))$.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-matrix-addition_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Example] Matrix addition
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#general-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      General Rules
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2579,9 +2472,9 @@
   
 
 
-<h1 id="week-1">WEEK 1</h1>
-<h2 id="1-algorithm-analysis">1 Algorithm Analysis</h2>
-<h4 id="definition-an-algorithm-is-a-finite-set-of-instructions-that-if-followed-accomplishes-a-particular-task-in-addition-all-algorithms-must-satisfy-the-following-criteria">[Definition] An <em>algorithm</em> is a finite set of instructions that, if followed, accomplishes a particular task. In addition, all algorithms must satisfy the following criteria.</h4>
+<h1 id="week-1">WEEK 1<a class="headerlink" href="#week-1" title="Permanent link">&para;</a></h1>
+<h2 id="1-algorithm-analysis">1 Algorithm Analysis<a class="headerlink" href="#1-algorithm-analysis" title="Permanent link">&para;</a></h2>
+<h4 id="definition-an-algorithm-is-a-finite-set-of-instructions-that-if-followed-accomplishes-a-particular-task-in-addition-all-algorithms-must-satisfy-the-following-criteria">[Definition] An <em>algorithm</em> is a finite set of instructions that, if followed, accomplishes a particular task. In addition, all algorithms must satisfy the following criteria.<a class="headerlink" href="#definition-an-algorithm-is-a-finite-set-of-instructions-that-if-followed-accomplishes-a-particular-task-in-addition-all-algorithms-must-satisfy-the-following-criteria" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p><strong>Input</strong> : There are zero or more quantities that are externally supplied.</p>
@@ -2605,14 +2498,14 @@
 <p>An algorithm can be described by human languages, flow charts, some programming languages, or pseudocode.</p>
 </li>
 </ol>
-<h4 id="example-selection-sort-sort-a-set-of-ngeq1-integers-in-increasing-order">[Example] Selection Sort : Sort a set of $n\geq1$ integers in increasing order</h4>
-<div class="highlight"><pre><span></span><code>for (i = 0; i &lt; n; i++){
+<h4 id="example-selection-sort-sort-a-set-of-ngeq1-integers-in-increasing-order">[Example] Selection Sort : Sort a set of <span class="arithmatex">\(n\geq1\)</span> integers in increasing order<a class="headerlink" href="#example-selection-sort-sort-a-set-of-ngeq1-integers-in-increasing-order" title="Permanent link">&para;</a></h4>
+<pre><code class="language-pseudocode">for (i = 0; i &lt; n; i++){
     Examine list[i] to list[n-1] and suppose that the smallest integer is at list[min];
     Interchange list[i] and list[min];
 }
-</code></pre></div>
+</code></pre>
 <hr />
-<h3 id="11-what-to-analyze">1.1 What to Analyze</h3>
+<h3 id="11-what-to-analyze">1.1 What to Analyze<a class="headerlink" href="#11-what-to-analyze" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Machine and compiler-dependent run times.</p>
@@ -2636,69 +2529,69 @@
 </ol>
 </blockquote>
 <ul>
-<li>$T_{avg}(N)\, and\, T_{worst}(N)$ : the average and worst case time complexities as functions of input size $N$</li>
+<li><span class="arithmatex">\(T_{avg}(N)\, and\, T_{worst}(N)\)</span> : the average and worst case time complexities as functions of input size <span class="arithmatex">\(N\)</span></li>
 </ul>
-<h4 id="example-matrix-addition">[Example] Matrix addition</h4>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[][</span><span class="n">MAX_SIZE</span><span class="p">],</span>
-<span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">[][</span><span class="n">MAX_SIZE</span><span class="p">],</span>
-<span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">[][</span><span class="n">MAX_SIZE</span><span class="p">],</span>
-<span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">rows</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cols</span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">rows</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="cm">/*rows+1*/</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">cols</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="cm">/*rows(cols+1)*/</span>
-<span class="w">            </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span><span class="cm">/*rows*cols*/</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>$$
+<h4 id="example-matrix-addition">[Example] Matrix addition<a class="headerlink" href="#example-matrix-addition" title="Permanent link">&para;</a></h4>
+<pre><code class="language-c">void add(int a[][MAX_SIZE],
+         int b[][MAX_SIZE],
+         int c[][MAX_SIZE],
+         int rows, int cols) 
+{
+    int i, j;
+    for (i=0; i&lt;rows; i++)/*rows+1*/
+        for (j=0;j&lt;cols;j++)/*rows(cols+1)*/
+            c[i][j] = a[i][j]+b[i][j];/*rows*cols*/
+}
+</code></pre>
+<div class="arithmatex">\[
 T(rows, cols) = 2rows\times cols + 2rows+1
-$$</p>
+\]</div>
 <ul>
 <li>非对称</li>
 </ul>
-<h4 id="example-iterative-function-for-summing-a-list-of-numbers">[Example] Iterative function for summing a list of numbers</h4>
-<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="nf">sum</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">list</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
-<span class="p">{</span><span class="w">  </span><span class="cm">/*add a list of numbers*/</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">tempsum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="cm">/*count = 1*/</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">        </span><span class="cm">/*count++*/</span>
-<span class="w">        </span><span class="n">tempsum</span><span class="w">  </span><span class="o">+=</span><span class="w"> </span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="cm">/*count++*/</span>
-<span class="w">    </span><span class="cm">/*count++ for last excutaion of for*/</span>
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">tempsum</span><span class="p">;</span><span class="w"> </span><span class="cm">/*count++*/</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>$$
+<h4 id="example-iterative-function-for-summing-a-list-of-numbers">[Example] Iterative function for summing a list of numbers<a class="headerlink" href="#example-iterative-function-for-summing-a-list-of-numbers" title="Permanent link">&para;</a></h4>
+<pre><code class="language-c">float sum (float list[], int n)
+{  /*add a list of numbers*/
+    float tempsum = 0; /*count = 1*/
+    int i;
+    for (i=0; i&lt;n; i++)
+        /*count++*/
+        tempsum  += list[i]; /*count++*/
+    /*count++ for last excutaion of for*/
+   return tempsum; /*count++*/
+}
+</code></pre>
+<div class="arithmatex">\[
 T_{sum}(n)=2n+3
-$$</p>
-<h4 id="example-recursive-function-for-summing-a-list-of-numbers">[Example] Recursive function for summing a list of numbers</h4>
-<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="nf">rsum</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">list</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
-<span class="p">{</span><span class="cm">/*add a list of numbers*/</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="cm">/*count++*/</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">rsum</span><span class="p">(</span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">list</span><span class="p">[</span><span class="n">n</span><span class="mi">-1</span><span class="p">];</span>
-<span class="w">        </span><span class="cm">/*count++*/</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="cm">/*count++*/</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>$$
+\]</div>
+<h4 id="example-recursive-function-for-summing-a-list-of-numbers">[Example] Recursive function for summing a list of numbers<a class="headerlink" href="#example-recursive-function-for-summing-a-list-of-numbers" title="Permanent link">&para;</a></h4>
+<pre><code class="language-c">float rsum (float list[], int n)
+{/*add a list of numbers*/
+    if (n) /*count++*/
+        return rsum(list, n-1) + list[n-1];
+        /*count++*/
+    return 0; /*count++*/
+}
+</code></pre>
+<div class="arithmatex">\[
 T_{rsum}(n)=2n+2
-$$</p>
+\]</div>
 <p>But it takes more time to compute each step.</p>
 <hr />
-<h3 id="12-asymptotic-notationoomegathetao">1.2 Asymptotic Notation($O,\Omega,\Theta,o$)</h3>
+<h3 id="12-asymptotic-notationoomegathetao">1.2 Asymptotic Notation(<span class="arithmatex">\(O,\Omega,\Theta,o\)</span>)<a class="headerlink" href="#12-asymptotic-notationoomegathetao" title="Permanent link">&para;</a></h3>
 <ul>
 <li>predict the growth ; compare the time complexities of two programs ; asymptotic(渐进的) behavior</li>
 </ul>
-<h4 id="definition-tnofn-if-there-are-positive-constants-c-and-n_0-such-that-tnleq-ccdot-fn-for-all-ngeq-n_0upper-bound">[Definition] $T(N)=O(f(N))$ if there are positive constants $c$ and $n_0$ such that $T(N)\leq c\cdot f(N)$ for all $N\geq n_0$.(<em>upper bound</em>)</h4>
-<h4 id="definition-tnomegagn-if-there-are-positive-constants-c-and-n_0-such-that-tngeq-ccdot-fn-for-all-ngeq-n_0lower-bound">[Definition] $T(N)=\Omega(g(N))$ if there are positive constants $c$ and $n_0$ such that $T(N)\geq c\cdot f(N)$ for all $N\geq n_0$.(<em>lower bound</em>)</h4>
-<h4 id="definition-tnthetahn-if-and-only-if-tnohn-and-tnomegahn">[Definition] $T(N)=\Theta(h(N))$ if and only if $T(N)=O(h(N))$ and $T(N)=\Omega(h(N))$.</h4>
-<h4 id="definition-tnopn-if-tnopn-and-tnneqthetapn">[Definition] $T(N)=o(p(N))$ if $T(n)=O(p(N))$ and $T(N)\neq\Theta(p(N))$.</h4>
+<h4 id="definition-tnofn-if-there-are-positive-constants-c-and-n_0-such-that-tnleq-ccdot-fn-for-all-ngeq-n_0upper-bound">[Definition] <span class="arithmatex">\(T(N)=O(f(N))\)</span> if there are positive constants <span class="arithmatex">\(c\)</span> and <span class="arithmatex">\(n_0\)</span> such that <span class="arithmatex">\(T(N)\leq c\cdot f(N)\)</span> for all <span class="arithmatex">\(N\geq n_0\)</span>.(<em>upper bound</em>)<a class="headerlink" href="#definition-tnofn-if-there-are-positive-constants-c-and-n_0-such-that-tnleq-ccdot-fn-for-all-ngeq-n_0upper-bound" title="Permanent link">&para;</a></h4>
+<h4 id="definition-tnomegagn-if-there-are-positive-constants-c-and-n_0-such-that-tngeq-ccdot-fn-for-all-ngeq-n_0lower-bound">[Definition] <span class="arithmatex">\(T(N)=\Omega(g(N))\)</span> if there are positive constants <span class="arithmatex">\(c\)</span> and <span class="arithmatex">\(n_0\)</span> such that <span class="arithmatex">\(T(N)\geq c\cdot f(N)\)</span> for all <span class="arithmatex">\(N\geq n_0\)</span>.(<em>lower bound</em>)<a class="headerlink" href="#definition-tnomegagn-if-there-are-positive-constants-c-and-n_0-such-that-tngeq-ccdot-fn-for-all-ngeq-n_0lower-bound" title="Permanent link">&para;</a></h4>
+<h4 id="definition-tnthetahn-if-and-only-if-tnohn-and-tnomegahn">[Definition] <span class="arithmatex">\(T(N)=\Theta(h(N))\)</span> if and only if <span class="arithmatex">\(T(N)=O(h(N))\)</span> and <span class="arithmatex">\(T(N)=\Omega(h(N))\)</span>.<a class="headerlink" href="#definition-tnthetahn-if-and-only-if-tnohn-and-tnomegahn" title="Permanent link">&para;</a></h4>
+<h4 id="definition-tnopn-if-tnopn-and-tnneqthetapn">[Definition] <span class="arithmatex">\(T(N)=o(p(N))\)</span> if <span class="arithmatex">\(T(n)=O(p(N))\)</span> and <span class="arithmatex">\(T(N)\neq\Theta(p(N))\)</span>.<a class="headerlink" href="#definition-tnopn-if-tnopn-and-tnneqthetapn" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>$2N+3=O(N)=O(N^{k\geq1})=O(2^N)=\ldots$ take the <strong>smallest</strong> $f(N)$</p>
+<p><span class="arithmatex">\(2N+3=O(N)=O(N^{k\geq1})=O(2^N)=\ldots\)</span> take the <strong>smallest</strong> <span class="arithmatex">\(f(N)\)</span></p>
 </li>
 <li>
-<p>$2^N+N^2=\Omega(2^N)=\Omega(N^2)=\Omega(N)=\Omega(1)=\ldots$ take the <strong>largest</strong> $g(N)$</p>
+<p><span class="arithmatex">\(2^N+N^2=\Omega(2^N)=\Omega(N^2)=\Omega(N)=\Omega(1)=\ldots\)</span> take the <strong>largest</strong> <span class="arithmatex">\(g(N)\)</span></p>
 </li>
 <li>
 <p>Rules of Asymptotic Notation</p>
@@ -2706,37 +2599,37 @@ $$</p>
 </ul>
 <blockquote>
 <ol>
-<li>If $T_1(N)=O(f(N))$ and $T_2=O(g(N))$, then</li>
+<li>If <span class="arithmatex">\(T_1(N)=O(f(N))\)</span> and <span class="arithmatex">\(T_2=O(g(N))\)</span>, then</li>
 </ol>
-<p>(1) $T_1(N)+T_2(N)=max(O(f(N)),O(g(N)))$</p>
-<p>(2) $T_1(N)<em>T_2(N)=O(f(N)</em>g(N))$</p>
+<p>(1) <span class="arithmatex">\(T_1(N)+T_2(N)=max(O(f(N)),O(g(N)))\)</span></p>
+<p>(2) <span class="arithmatex">\(T_1(N)*T_2(N)=O(f(N)*g(N))\)</span></p>
 <ol>
 <li>
-<p>若$T(N)$是一个$k$次多项式，则$T(N)=\Theta(N^k)$</p>
+<p>若<span class="arithmatex">\(T(N)\)</span>是一个<span class="arithmatex">\(k\)</span>次多项式，则<span class="arithmatex">\(T(N)=\Theta(N^k)\)</span></p>
 </li>
 <li>
-<p>$log_kN=O(N)$ for any constant $k$ (<strong>logarithms grow very slowly</strong>)</p>
+<p><span class="arithmatex">\(log_kN=O(N)\)</span> for any constant <span class="arithmatex">\(k\)</span> (<strong>logarithms grow very slowly</strong>)</p>
 </li>
 </ol>
 </blockquote>
 <p><img src="picture/1-1.png" alt="1-1" style="zoom: 45%;" /></p>
 <p><img src="picture/1-2.png" alt="1-2" style="zoom:43%;" /></p>
-<h4 id="example-matrix-addition_1">[Example] Matrix addition</h4>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[][</span><span class="n">MAX_SIZE</span><span class="p">],</span>
-<span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">[][</span><span class="n">MAX_SIZE</span><span class="p">],</span>
-<span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">[][</span><span class="n">MAX_SIZE</span><span class="p">],</span>
-<span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">rows</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cols</span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">rows</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">cols</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-<span class="w">            </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>$$
+<h4 id="example-matrix-addition_1">[Example] Matrix addition<a class="headerlink" href="#example-matrix-addition_1" title="Permanent link">&para;</a></h4>
+<pre><code class="language-C">void add(int a[][MAX_SIZE],
+         int b[][MAX_SIZE],
+         int c[][MAX_SIZE],
+         int rows, int cols) 
+{
+    int i, j;
+    for (i=0; i&lt;rows; i++)
+        for (j=0;j&lt;cols;j++)
+            c[i][j] = a[i][j]+b[i][j];
+}
+</code></pre>
+<div class="arithmatex">\[
 T(rows,cols)=\Theta(rows\cdot cols)
-$$</p>
-<h4 id="general-rules">General Rules</h4>
+\]</div>
+<h4 id="general-rules">General Rules<a class="headerlink" href="#general-rules" title="Permanent link">&para;</a></h4>
 <blockquote>
 <ul>
 <li>
@@ -2763,24 +2656,24 @@ $$</p>
   $$
   Fib(0)=Fib(1)=1, Fib(n)=Fib(n-1)+Fib(n-2)
   $$</p>
-<div class="highlight"><pre><span></span><code><span class="n">lont</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Fib</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="cm">/*T(N)*/</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">N</span><span class="o">&lt;=</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="cm">/*O(1)*/</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="cm">/*O(1)*/</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Fib</span><span class="p">(</span><span class="n">N</span><span class="mi">-1</span><span class="p">)</span><span class="o">+</span><span class="n">Fib</span><span class="p">(</span><span class="n">N</span><span class="mi">-2</span><span class="p">);</span>
-<span class="p">}</span><span class="w">      </span><span class="cm">/*O(1)*//*T(N-1)*//*T(N-2)*/</span>
-</code></pre></div>
+<p><code>c
+  lont int Fib (int N) /*T(N)*/
+  {
+      if (N&lt;=1) /*O(1)*/
+          return 1; /*O(1)*/
+      else
+          return Fib(N-1)+Fib(N-2);
+  }      /*O(1)*//*T(N-1)*//*T(N-2)*/</code></p>
 <p>$$
   T(N)=T(N-1)+T(N-2)+2\geq Fib(N)\
   \left(\frac{3}{2} \right)^n\leq Fib(N)\leq\left(\frac{5}{3}\right)^n
   $$</p>
-<p>时间复杂度：$O(2^N)$      $T(N)$ grows <strong>exponentially</strong></p>
-<p>空间复杂度：$O(N)$</p>
-<p>$O(N)$</p>
+<p>时间复杂度：<span class="arithmatex">\(O(2^N)\)</span>      <span class="arithmatex">\(T(N)\)</span> grows <strong>exponentially</strong></p>
+<p>空间复杂度：<span class="arithmatex">\(O(N)\)</span></p>
+<p><span class="arithmatex">\(O(N)\)</span></p>
 </blockquote>
-<p>$O(N)$</p>
-<p>$$T(N)$$</p>
+<p><span class="arithmatex">\(O(N)\)</span></p>
+<div class="arithmatex">\[T(N)\]</div>
 
 
 
@@ -2946,9 +2839,9 @@ $$</p>
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

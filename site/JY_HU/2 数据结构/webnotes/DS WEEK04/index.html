@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -792,7 +794,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -801,7 +805,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -822,48 +826,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3.1 Preliminaries">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition-a-tree-is-a-collection-of-nodes-the-collection-can-be-empty-otherwise-a-tree-consists-of-1-a-distinguished-node-r-called-the-root-2-and-zero-or-more-nonempty-subtrees-each-of-whose-roots-are-connected-by-a-directed-edge-from-r" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Definition] A tree is a collection of nodes. The collection can be empty; otherwise, a tree consists of (1) a distinguished node r, called the root; (2) and zero or more nonempty (sub)trees, each of whose roots are connected by a directed edge from r.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#terminologies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Terminologies
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list-representation" class="md-nav__link">
-    <span class="md-ellipsis">
-      List Representation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#firstchild-nextsibling-representation" class="md-nav__link">
-    <span class="md-ellipsis">
-      FirstChild-NextSibling Representation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -872,39 +834,6 @@
       3.2 Binary Trees
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="3.2 Binary Trees">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition-a-binary-tree-is-a-tree-in-which-no-node-can-have-more-than-two-children" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Definition] A binary tree is a tree in which no node can have more than two children.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tree-traversals-visit-each-node-exactly-once" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tree Traversals (visit each node exactly once)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threaded-binary-trees" class="md-nav__link">
-    <span class="md-ellipsis">
-      Threaded Binary Trees
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2543,15 +2472,15 @@
   
 
 
-<h1 id="week-4">WEEK 4</h1>
-<h2 id="3-trees">3 Trees</h2>
+<h1 id="week-4">WEEK 4<a class="headerlink" href="#week-4" title="Permanent link">&para;</a></h1>
+<h2 id="3-trees">3 Trees<a class="headerlink" href="#3-trees" title="Permanent link">&para;</a></h2>
 <p>大纲：</p>
 <p>树的定义是递归的，有根节点和从其出发的有向边，连向所有的子树</p>
 <p>树的性质，n个节点n-1条边有根节点</p>
 <p>二叉树：</p>
 <p>树的遍历 四种遍历顺序，层序遍历</p>
-<h3 id="31-preliminaries">3.1 Preliminaries</h3>
-<h4 id="definition-a-tree-is-a-collection-of-nodes-the-collection-can-be-empty-otherwise-a-tree-consists-of-1-a-distinguished-node-r-called-the-root-2-and-zero-or-more-nonempty-subtrees-each-of-whose-roots-are-connected-by-a-directed-edge-from-r">[Definition] A tree is a  collection of nodes. The collection can be empty; otherwise, a tree consists of (1)  a distinguished node r, called the root; (2) and zero or more nonempty (sub)trees, each of whose roots are connected by a directed edge from r.</h4>
+<h3 id="31-preliminaries">3.1 Preliminaries<a class="headerlink" href="#31-preliminaries" title="Permanent link">&para;</a></h3>
+<h4 id="definition-a-tree-is-a-collection-of-nodes-the-collection-can-be-empty-otherwise-a-tree-consists-of-1-a-distinguished-node-r-called-the-root-2-and-zero-or-more-nonempty-subtrees-each-of-whose-roots-are-connected-by-a-directed-edge-from-r">[Definition] A tree is a  collection of nodes. The collection can be empty; otherwise, a tree consists of (1)  a distinguished node r, called the root; (2) and zero or more nonempty (sub)trees, each of whose roots are connected by a directed edge from r.<a class="headerlink" href="#definition-a-tree-is-a-collection-of-nodes-the-collection-can-be-empty-otherwise-a-tree-consists-of-1-a-distinguished-node-r-called-the-root-2-and-zero-or-more-nonempty-subtrees-each-of-whose-roots-are-connected-by-a-directed-edge-from-r" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p>Subtrees must not connect together.  Therefore every node in the tree is the root of some subtree.</p>
@@ -2560,7 +2489,7 @@
 <p>There are N-1 edges in a tree with N nodes</p>
 </li>
 </ul>
-<h4 id="terminologies">Terminologies</h4>
+<h4 id="terminologies">Terminologies<a class="headerlink" href="#terminologies" title="Permanent link">&para;</a></h4>
 <blockquote>
 <ul>
 <li>degree of a node : 结点的子树个数</li>
@@ -2569,108 +2498,108 @@
 <li>children : the roots of the subtrees of a parent</li>
 <li>siblings : children of the same parent</li>
 <li>leaf(terminal node) : a node with degree 0(no children)</li>
-<li>path from $n_1$ to $n_k$ : a <strong>unique</strong> sequence of nodes $n_1,n_2,\cdots,n_k$ such that $n_i$ is the parent of $n_{i+1}$ for $1\leq i&lt;k$ </li>
+<li>path from <span class="arithmatex">\(n_1\)</span> to <span class="arithmatex">\(n_k\)</span> : a <strong>unique</strong> sequence of nodes <span class="arithmatex">\(n_1,n_2,\cdots,n_k\)</span> such that <span class="arithmatex">\(n_i\)</span> is the parent of <span class="arithmatex">\(n_{i+1}\)</span> for <span class="arithmatex">\(1\leq i&lt;k\)</span> </li>
 <li>length of path : 路径上边的条数</li>
-<li>depth of $n_i$ : 从根结点到$n_i$结点的路径的长度($Depth(root)=0$)</li>
-<li>height of $n_i$ : 从$n_i$结点到叶结点的最长路径的长度($Height(leaf)=0$)</li>
+<li>depth of <span class="arithmatex">\(n_i\)</span> : 从根结点到<span class="arithmatex">\(n_i\)</span>结点的路径的长度(<span class="arithmatex">\(Depth(root)=0\)</span>)</li>
+<li>height of <span class="arithmatex">\(n_i\)</span> : 从<span class="arithmatex">\(n_i\)</span>结点到叶结点的最长路径的长度(<span class="arithmatex">\(Height(leaf)=0\)</span>)</li>
 <li>height/depth of a tree : 根结点的高度/最深的叶结点的深度</li>
 <li>ancestors of a node : 从此结点到根结点的路径上的所有结点</li>
 <li>descendants of a node : 此结点的子树中的所有结点</li>
 </ul>
 </blockquote>
-<h4 id="list-representation">List Representation</h4>
+<h4 id="list-representation">List Representation<a class="headerlink" href="#list-representation" title="Permanent link">&para;</a></h4>
 <ul>
 <li>The size of each node depends on the number of branches.</li>
 </ul>
 <p><img src="picture/4-2.png" alt="4-2" style="zoom: 120%;" /></p>
 <p>The correct answer is T.</p>
-<h4 id="firstchild-nextsibling-representation">FirstChild-NextSibling Representation</h4>
+<h4 id="firstchild-nextsibling-representation">FirstChild-NextSibling Representation<a class="headerlink" href="#firstchild-nextsibling-representation" title="Permanent link">&para;</a></h4>
 <p><img src="picture/4-1.png" alt="4-1" style="zoom:80%;" /></p>
 <ul>
 <li>The representation is <strong>not unique</strong> since the children in a tree can be of any order.</li>
 </ul>
 <hr />
-<h3 id="32-binary-trees">3.2 Binary Trees</h3>
-<h4 id="definition-a-binary-tree-is-a-tree-in-which-no-node-can-have-more-than-two-children">[Definition] A binary tree is a tree in which no node can have more than two children.</h4>
-<h4 id="tree-traversals-visit-each-node-exactly-once">Tree Traversals (visit each node exactly once)</h4>
-<p>线性复杂度$O(n)$，因为每个节点只访问一次</p>
+<h3 id="32-binary-trees">3.2 Binary Trees<a class="headerlink" href="#32-binary-trees" title="Permanent link">&para;</a></h3>
+<h4 id="definition-a-binary-tree-is-a-tree-in-which-no-node-can-have-more-than-two-children">[Definition] A binary tree is a tree in which no node can have more than two children.<a class="headerlink" href="#definition-a-binary-tree-is-a-tree-in-which-no-node-can-have-more-than-two-children" title="Permanent link">&para;</a></h4>
+<h4 id="tree-traversals-visit-each-node-exactly-once">Tree Traversals (visit each node exactly once)<a class="headerlink" href="#tree-traversals-visit-each-node-exactly-once" title="Permanent link">&para;</a></h4>
+<p>线性复杂度<span class="arithmatex">\(O(n)\)</span>，因为每个节点只访问一次</p>
 <p>遍历不改变操作数的顺序</p>
 <p>visit（可以是print）</p>
 <ol>
 <li>Preorder Traversal 先处理根节点，再处理左右节点，因此preorder中第一个遍历到的为根节点</li>
 </ol>
-<div class="highlight"><pre><span></span><code>void preorder( tree_ptr tree )
-{ 
-    if( tree )   
-    {
-        visit ( tree );
-        for (each child C of tree )
-            preorder ( C );
-    }
-}
-</code></pre></div>
+<p><code>pseudocode
+   void preorder( tree_ptr tree )
+   { 
+       if( tree )   
+       {
+           visit ( tree );
+           for (each child C of tree )
+               preorder ( C );
+       }
+   }</code></p>
 <ol>
 <li>Postorder Traversal先处理左右子树，根节点最后返回，因此postorder中根节点最后返回</li>
 </ol>
-<div class="highlight"><pre><span></span><code>void postorder( tree_ptr tree )
-{  
- if( tree )   
- {
-        for (each child C of tree )
-         postorder ( C );
-        visit ( tree );
-    }
-}
-</code></pre></div>
+<p><code>pseudocode
+   void postorder( tree_ptr tree )
+   {  
+    if( tree )   
+    {
+           for (each child C of tree )
+            postorder ( C );
+           visit ( tree );
+       }
+   }</code></p>
 <ol>
 <li>Levelorder Traversal 层序遍历，使用一个queue</li>
 </ol>
-<div class="highlight"><pre><span></span><code>void levelorder( tree_ptr tree )
-{   
- enqueue ( tree );
-    while (queue is not empty) 
-    {
-        visit ( T = dequeue ( ) );
-        for (each child C of T )
-            enqueue ( C );
-    }
-}
-</code></pre></div>
+<p><code>pseudocode
+   void levelorder( tree_ptr tree )
+   {   
+    enqueue ( tree );
+       while (queue is not empty) 
+       {
+           visit ( T = dequeue ( ) );
+           for (each child C of T )
+               enqueue ( C );
+       }
+   }</code></p>
 <ol>
 <li>Inorder Traversal 返回顺序为左、根、右，中序遍历最为关键</li>
 </ol>
-<div class="highlight"><pre><span></span><code>void inorder( tree_ptr  tree )
-{  
-     if( tree )   
- {
-     inorder ( tree-&gt;Left );
-         visit ( tree-&gt;Element );
-         inorder ( tree-&gt;Right );
-   }
-}
-</code></pre></div>
+<p><code>pseudocode
+   void inorder( tree_ptr  tree )
+   {  
+        if( tree )   
+    {
+        inorder ( tree-&gt;Left );
+            visit ( tree-&gt;Element );
+            inorder ( tree-&gt;Right );
+      }
+   }</code></p>
 <p>Iterative Program : 使用自己定义的栈替换系统的栈，实现中序遍历</p>
 <p>leftmost 的左节点和rightmost的右节点都是NULL</p>
-<div class="highlight"><pre><span></span><code>void iter_inorder( tree_ptr tree )
-{ 
- Stack  S = CreateStack( MAX_SIZE );
- for ( ; ; )  
- {
-     for ( ; tree; tree = tree-&gt;Left )
-         Push ( tree, S );
-         tree = Top ( S );  
-         Pop( S );
-         if ( !tree ) break;
-         visit ( tree-&gt;Element );
-         tree = tree-&gt;Right; 
-    }
-}
-</code></pre></div>
+<p><code>pseudocode
+   void iter_inorder( tree_ptr tree )
+   { 
+    Stack  S = CreateStack( MAX_SIZE );
+    for ( ; ; )  
+    {
+        for ( ; tree; tree = tree-&gt;Left )
+            Push ( tree, S );
+            tree = Top ( S );  
+            Pop( S );
+            if ( !tree ) break;
+            visit ( tree-&gt;Element );
+            tree = tree-&gt;Right; 
+       }
+   }</code></p>
 <p><img alt="4-3" src="../picture/4-3.png" /></p>
-<h4 id="threaded-binary-trees">Threaded Binary Trees</h4>
+<h4 id="threaded-binary-trees">Threaded Binary Trees<a class="headerlink" href="#threaded-binary-trees" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>A full binary tree with $n$ nodes has $2n$ links, and $n+1$ of them are NULL.</p>
+<p>A full binary tree with <span class="arithmatex">\(n\)</span> nodes has <span class="arithmatex">\(2n\)</span> links, and <span class="arithmatex">\(n+1\)</span> of them are NULL.</p>
 </li>
 <li>
 <p>Replace the NULL links by “threads” which will make traversals easier.</p>
@@ -2686,17 +2615,17 @@
 <li>There must not be any loose threads.  Therefore a threaded binary tree must have a <strong>head node</strong> of which the left child points to the first node.（右节点指针指向自身）</li>
 </ul>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ThreadedTreeNode</span><span class="w"> </span><span class="o">*</span><span class="n">PtrToThreadedNode</span><span class="p">;</span>
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">PtrToThreadedNode</span><span class="w"> </span><span class="n">ThreadedTree</span><span class="p">;</span>
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ThreadedTreeNode</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">LeftThread</span><span class="p">;</span><span class="w">        </span><span class="cm">/* if it is TRUE, then Left */</span>
-<span class="w">    </span><span class="n">ThreadedTree</span><span class="w"> </span><span class="n">Left</span><span class="p">;</span><span class="w">     </span><span class="cm">/* is a thread, not a child ptr.*/</span>
-<span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">Element</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">RightThread</span><span class="p">;</span><span class="w">       </span><span class="cm">/* if it is TRUE, then Right */</span>
-<span class="w">    </span><span class="n">ThreadedTree</span><span class="w"> </span><span class="n">Right</span><span class="p">;</span><span class="w">    </span><span class="cm">/* is a thread, not a child ptr.*/</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">typedef struct ThreadedTreeNode *PtrToThreadedNode;
+typedef struct PtrToThreadedNode ThreadedTree;
+typedef struct ThreadedTreeNode 
+{
+    int LeftThread;        /* if it is TRUE, then Left */
+    ThreadedTree Left;     /* is a thread, not a child ptr.*/
+    ElementType Element;
+    int RightThread;       /* if it is TRUE, then Right */
+    ThreadedTree Right;    /* is a thread, not a child ptr.*/
+}
+</code></pre>
 <ul>
 <li>线索化的实质就是将二叉链表中的空指针改为指向前驱或后继的线索。由于前驱和后继信息只有在遍历该二叉树时才能得到，所以，线索化的过程就是在遍历的过程中修改空指针的过程。</li>
 </ul>
@@ -2866,9 +2795,9 @@
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

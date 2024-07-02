@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -1699,7 +1701,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -1708,7 +1712,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1761,48 +1765,6 @@
       测试过程与结果
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="测试过程与结果">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#12" class="md-nav__link">
-    <span class="md-ellipsis">
-      【1.2 不同表面，光电管反射电压测量】
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13" class="md-nav__link">
-    <span class="md-ellipsis">
-      【1.3 区分黑白地面的比较电压值】
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1426cm" class="md-nav__link">
-    <span class="md-ellipsis">
-      【1.4不同高度（2至6CM)，光电管反射电压测量比较】
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15" class="md-nav__link">
-    <span class="md-ellipsis">
-      【1.5 观察环境光亮对光电检测电路的影响】
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2631,17 +2593,17 @@
   
 
 
-<h1 id="_1">小车检测电路和电机驱动电路测试</h1>
+<h1 id="_1">小车检测电路和电机驱动电路测试<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>实验日期：2023/10/23</p>
 <p>地点：东3-406</p>
-<h2 id="_2">实验目的</h2>
+<h2 id="_2">实验目的<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
 <li>了解智能小车结构和工作原理。</li>
 <li>掌握光电检测的原理和测量方法。</li>
 <li>了解直流电机驱动电路工作原理和测试方法。</li>
 <li>学会参照原理图测量和调试PCB板。</li>
 </ol>
-<h3 id="_3">实验器材</h3>
+<h3 id="_3">实验器材<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>万用表（HY63）</p>
@@ -2650,8 +2612,8 @@
 <p>实验室配备小车</p>
 </li>
 </ol>
-<h2 id="_4">实验一：红外光电检测电路测试</h2>
-<h3 id="_5">测试方案</h3>
+<h2 id="_4">实验一：红外光电检测电路测试<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">测试方案<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ol>
 <li>分析红外光电检测电路参数设计。</li>
 <li>缺省高度（2CM），白底/黑底/其它表面下，光电管反射电压测量比较（至少测试2组光电管）。</li>
@@ -2659,7 +2621,7 @@
 <li>不同高度（2至6CM），光电管反射电压测量比较，总结光电检测轨道对安装高度的要求。</li>
 <li>观察环境光亮对光电检测电路的影响。</li>
 </ol>
-<h3 id="_6">测试过程与结果</h3>
+<h3 id="_6">测试过程与结果<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ol>
 <li>分析电路</li>
 </ol>
@@ -2806,15 +2768,15 @@
 </tbody>
 </table>
 <p>测量LED06阻值两端的电压与LED05所得结果基本相似。</p>
-<h5 id="12">【1.2 不同表面，光电管反射电压测量】</h5>
-<h5 id="13">【1.3 区分黑白地面的比较电压值】</h5>
+<h5 id="12">【1.2 不同表面，光电管反射电压测量】<a class="headerlink" href="#12" title="Permanent link">&para;</a></h5>
+<h5 id="13">【1.3 区分黑白地面的比较电压值】<a class="headerlink" href="#13" title="Permanent link">&para;</a></h5>
 <p><img src="./assets/截屏2023-10-29 13.51.21.png" alt="截屏2023-10-29 13.51.21" style="zoom:50%;" /></p>
 <p>根据实验结果，可以得到以下结论：反射表面对红外线吸收能力越强，光电管反射电压越高。</p>
 <p>随着反射表面对红外线能力的吸收增强，光电管两端电压增加，当超过另外一只引脚的输入电压后，比较器输出相反的性质。</p>
 <ol>
 <li>将红外探测仪置于白色表面不同高度处（通过小车下面垫置书本实现），测量光电管反射电压。</li>
 </ol>
-<h5 id="1426cm">【1.4不同高度（2至6CM)，光电管反射电压测量比较】</h5>
+<h5 id="1426cm">【1.4不同高度（2至6CM)，光电管反射电压测量比较】<a class="headerlink" href="#1426cm" title="Permanent link">&para;</a></h5>
 <p><img src="./assets/截屏2023-10-29 13.52.21.png" alt="截屏2023-10-29 13.52.21" style="zoom:20%;" /></p>
 <p><img src="./assets/截屏2023-10-29 13.25.50.png" alt="截屏2023-10-29 13.25.50" style="zoom:20%;" /></p>
 <ul>
@@ -2822,17 +2784,17 @@
 <li>当光电管高度大约为3.5～3.7cm左右时，光电管两端电压逐渐靠近1.992V（另一只脚的电压），此时从比较器从输出低电压转变为高电压，在这个电压值以下，指示LED灯发光，以上则熄灭。</li>
 <li>在实际使用中，为了避免高度对测量结果的影响，当一只脚的引脚为2V左右，应该将光电管置于&lt;2.5cm的位置。当然，也要根据具体的另一只脚的电位，具体调整光电管离地高度。</li>
 </ul>
-<h5 id="15">【1.5 观察环境光亮对光电检测电路的影响】</h5>
+<h5 id="15">【1.5 观察环境光亮对光电检测电路的影响】<a class="headerlink" href="#15" title="Permanent link">&para;</a></h5>
 <p><img src="./assets/截屏2023-10-29 13.34.58.png" alt="截屏2023-10-29 13.34.58" style="zoom:30%;" /></p>
 <ul>
 <li>可见，环境对实验有一定的影响，当其影响在1%左右，所以可以忽略不计。</li>
 <li>在昏暗环境下，去除了日光中的红外线对光电管的影响，从而使得其引脚11两端电压略微升高</li>
 <li>在明亮的条件下，新增加的光源中的红外线对光电管造成一定影响，使得引脚11两端电压略微下降（0.001V的偏差可视为车辆上的不精确，可以忽略）。</li>
 </ul>
-<h2 id="va">实验二：测量直流电机正转和反转时的VA特性</h2>
-<h3 id="_7">测试方案</h3>
+<h2 id="va">实验二：测量直流电机正转和反转时的VA特性<a class="headerlink" href="#va" title="Permanent link">&para;</a></h2>
+<h3 id="_7">测试方案<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>测量不同输入直流电压时，经过小车上的电机的电流。</p>
-<h3 id="_8">测试过程与结果</h3>
+<h3 id="_8">测试过程与结果<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <ol>
 <li>拆下小车电源线，将其与直流输入电压源、万用表60mA电流档串联，60mA的电流档内阻约为10Ω左右，对曲线的影响较小</li>
 <li>调节直流稳压源的电压，记录万用表读数</li>
@@ -2844,10 +2806,10 @@
 <li>直流电压源从高到低变化时，电流逐渐较小，同时也可以观察到，电动机的转速慢慢减小。</li>
 <li>当电压源电压过小时，电动机停转，同时电流急剧上升，此时不再对外输出机械能，而是等效为一个电阻，只输出热能。</li>
 </ul>
-<h2 id="_9">实验三：电机驱动模块功能验证</h2>
-<h3 id="_10">测试方案</h3>
+<h2 id="_9">实验三：电机驱动模块功能验证<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="_10">测试方案<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p>对集成H桥各端口输入不同情况下的电压，检验芯片各端口的输出特性，验证电机的转动情况。</p>
-<h3 id="_11">测试过程与结果</h3>
+<h3 id="_11">测试过程与结果<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <ol>
 <li>分析PCB板上的电路图。</li>
 </ol>
@@ -2882,10 +2844,10 @@
 <li>当输出端OUT1、OUT2对应的电压有一定的电压差时，电机转动。</li>
 <li>ENA类似于总开关，当输入为高电压时，芯片正常工作；输入为低电压的时候，芯片不工作，两输出脚输出较低电压，但并没有非常低（1.3V左右，相比于0.17/0.71的低电压）。</li>
 </ul>
-<h2 id="_12">实验四：电机开环控制时小车运行状态观测</h2>
-<h3 id="_13">测试方案</h3>
+<h2 id="_12">实验四：电机开环控制时小车运行状态观测<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<h3 id="_13">测试方案<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <p>观察电机正转/反转时，小车的运动情况。</p>
-<h3 id="_14">测试过程与结果</h3>
+<h3 id="_14">测试过程与结果<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <ol>
 <li>ENA输入高电压。调节IN1、IN2、IN3、IN4的输入逻辑以控制电机正反转。</li>
 <li>观察小车的运转情况。</li>
@@ -3061,9 +3023,9 @@
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

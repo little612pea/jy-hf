@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -557,17 +559,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    实验过程
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -577,34 +568,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#mkdocshtmlmd" class="md-nav__link">
-    <span class="md-ellipsis">
-      发现mkdocs在渲染导出HTML时是会将除了md格式的所有东西都拷贝一份到自己的目录下面的
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -2442,7 +2405,7 @@
   
 
 
-<h1 id="_1">数逻实验过程笔记</h1>
+<h1 id="_1">数逻实验过程笔记<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p><img alt="image-20231120201822638" src="../assets/image-20231120201822638.png" /></p>
 <p>发现只要是在这个文件结构下的图片都会正常显示</p>
 <p>因为实际上typora编辑器的设置中拷贝图片时会将assets会单独复制一份</p>
@@ -2450,7 +2413,7 @@
 <p>然而，拷贝后进行缩放，就是改为了html格式，就不能够正常渲染？</p>
 <p><img src="./assets/image-20231120201906942.png" alt="image-20231120201906942" style="zoom:33%;" /></p>
 <p><img alt="image-20231120202158410" src="../assets/image-20231120202158410.png" /></p>
-<h4 id="mkdocshtmlmd">发现mkdocs在渲染导出HTML时是会将除了md格式的所有东西都拷贝一份到自己的目录下面的</h4>
+<h4 id="mkdocshtmlmd">发现mkdocs在渲染导出HTML时是会将除了md格式的所有东西都拷贝一份到自己的目录下面的<a class="headerlink" href="#mkdocshtmlmd" title="Permanent link">&para;</a></h4>
 
 
 
@@ -2616,9 +2579,9 @@
       
         <script src="../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

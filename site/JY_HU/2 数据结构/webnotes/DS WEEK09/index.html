@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -897,7 +899,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -906,7 +910,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -916,153 +920,6 @@
       6.4 Shortest Path Algorithms
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="6.4 Shortest Path Algorithms">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#single-source-shortest-path-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      Single-Source Shortest-Path Problem
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Single-Source Shortest-Path Problem">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#unweighted-shortest-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unweighted Shortest Path
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#weighted-shorted-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Weighted Shorted Path
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Weighted Shorted Path">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dijkstras-algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dijkstra’s Algorithm
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#implementation-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementation 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#implementation-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementation 2
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#improvements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Improvements
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#graphs-with-negative-edge-costs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Graphs with Negative Edge Costs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#acyclic-graphs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Acyclic Graphs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Acyclic Graphs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#aoeactivity-on-edge-networks" class="md-nav__link">
-    <span class="md-ellipsis">
-      AOE(Activity on Edge) Networks
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#all-pairs-shortest-path-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      All-Pairs Shortest Path Problem
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="All-Pairs Shortest Path Problem">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#method-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method 2
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2591,228 +2448,228 @@
   
 
 
-<h1 id="week-9">WEEK 9</h1>
-<h3 id="64-shortest-path-algorithms">6.4 Shortest Path Algorithms</h3>
-<p>Given a digraph $G = ( V, E )$, and a cost function $c( e )$ for $e \in E( G )$. </p>
-<p>The <strong>length</strong> of a path $P$ from <strong>source</strong> to <strong>destination</strong> is $\sum_{e_i\subset P} c(e_i)$(also called <strong>weighted path length</strong>).</p>
-<h4 id="single-source-shortest-path-problem">Single-Source Shortest-Path Problem</h4>
-<p>Given as input a weighted graph, $G = ( V, E )$, and a distinguished vertex $s$, find the shortest weighted path from $s$ to every other vertex in $G$.</p>
+<h1 id="week-9">WEEK 9<a class="headerlink" href="#week-9" title="Permanent link">&para;</a></h1>
+<h3 id="64-shortest-path-algorithms">6.4 Shortest Path Algorithms<a class="headerlink" href="#64-shortest-path-algorithms" title="Permanent link">&para;</a></h3>
+<p>Given a digraph <span class="arithmatex">\(G = ( V, E )\)</span>, and a cost function <span class="arithmatex">\(c( e )\)</span> for <span class="arithmatex">\(e \in E( G )\)</span>. </p>
+<p>The <strong>length</strong> of a path <span class="arithmatex">\(P\)</span> from <strong>source</strong> to <strong>destination</strong> is <span class="arithmatex">\(\sum_{e_i\subset P} c(e_i)\)</span>(also called <strong>weighted path length</strong>).</p>
+<h4 id="single-source-shortest-path-problem">Single-Source Shortest-Path Problem<a class="headerlink" href="#single-source-shortest-path-problem" title="Permanent link">&para;</a></h4>
+<p>Given as input a weighted graph, <span class="arithmatex">\(G = ( V, E )\)</span>, and a distinguished vertex <span class="arithmatex">\(s\)</span>, find the shortest weighted path from <span class="arithmatex">\(s\)</span> to every other vertex in <span class="arithmatex">\(G\)</span>.</p>
 <blockquote>
-<p>Note: If there is no negative-cost cycle, the shortest path from $s$ to $s$ is defined to be zero.</p>
+<p>Note: If there is no negative-cost cycle, the shortest path from <span class="arithmatex">\(s\)</span> to <span class="arithmatex">\(s\)</span> is defined to be zero.</p>
 </blockquote>
-<h5 id="unweighted-shortest-path">Unweighted Shortest Path</h5>
+<h5 id="unweighted-shortest-path">Unweighted Shortest Path<a class="headerlink" href="#unweighted-shortest-path" title="Permanent link">&para;</a></h5>
 <ul>
 <li>Breadth-first search 广度优先遍历</li>
 </ul>
 <p>Implementation : </p>
 <ul>
-<li>Table[ i ].Dist ::= distance from $s$ to $v_i$  /<em> initialized to be $\infin$ except for $s$ </em>/</li>
-<li>Table[ i ].Known ::= 1 if $v_i$ is checked; or 0 if not</li>
-<li>Table[ i ].Path ::= for tracking the path   /<em> initialized to be 0 </em>/</li>
+<li>Table[ i ].Dist ::= distance from <span class="arithmatex">\(s\)</span> to <span class="arithmatex">\(v_i\)</span>  /* initialized to be <span class="arithmatex">\(\infin\)</span> except for <span class="arithmatex">\(s\)</span> */</li>
+<li>Table[ i ].Known ::= 1 if <span class="arithmatex">\(v_i\)</span> is checked; or 0 if not</li>
+<li>Table[ i ].Path ::= for tracking the path   /* initialized to be 0 */</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Unweighted</span><span class="p">(</span><span class="w"> </span><span class="n">Table</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">CurrDist</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">CurrDist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">CurrDist</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NumVertex</span><span class="p">;</span><span class="w"> </span><span class="n">CurrDist</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">vertex</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Known</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CurrDist</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Known</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Infinity</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">                    </span><span class="p">{</span>
-<span class="w">                        </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CurrDist</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">                        </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">].</span><span class="n">Path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V</span><span class="p">;</span>
-<span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="cm">/* end-if Dist == Infinity */</span>
-<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="cm">/* end-if !Known &amp;&amp; Dist == CurrDist */</span>
-<span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="cm">/* end-for CurrDist */</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">void Unweighted( Table T )
+{   
+    int CurrDist;
+    Vertex V, W;
+    for ( CurrDist = 0; CurrDist &lt; NumVertex; CurrDist++ ) 
+    {
+        for ( each vertex V )
+            if ( !T[ V ].Known &amp;&amp; T[ V ].Dist == CurrDist ) 
+            {
+                T[ V ].Known = true;
+                for ( each W adjacent to V )
+                    if ( T[ W ].Dist == Infinity ) 
+                    {
+                        T[ W ].Dist = CurrDist + 1;
+                        T[ W ].Path = V;
+                    } /* end-if Dist == Infinity */
+            } /* end-if !Known &amp;&amp; Dist == CurrDist */
+    }  /* end-for CurrDist */
+}
+</code></pre>
 <p>The worst case : </p>
 <p><img src="picture/9-1.png" alt="9-1" style="zoom: 50%;" />
 $$
 T(N)=O(|V|^2)
 $$
 Improvement :</p>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Unweighted</span><span class="p">(</span><span class="w"> </span><span class="n">Table</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="cm">/* T is initialized with the source vertex S given */</span>
-<span class="w">    </span><span class="n">Queue</span><span class="w"> </span><span class="n">Q</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateQueue</span><span class="p">(</span><span class="w"> </span><span class="n">NumVertex</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="n">MakeEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="n">Enqueue</span><span class="p">(</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="cm">/* Enqueue the source vertex */</span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">IsEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dequeue</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">        </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Known</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"> </span><span class="cm">/* not really necessary */</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Infinity</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">                </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">].</span><span class="n">Path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V</span><span class="p">;</span>
-<span class="w">                </span><span class="n">Enqueue</span><span class="p">(</span><span class="w"> </span><span class="n">W</span><span class="p">,</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="cm">/* end-if Dist == Infinity */</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="cm">/* end-while */</span>
-<span class="w">    </span><span class="n">DisposeQueue</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="cm">/* free memory */</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>$$
+<pre><code class="language-c">void Unweighted( Table T )
+{   
+    /* T is initialized with the source vertex S given */
+    Queue Q;
+    Vertex V, W;
+    Q = CreateQueue( NumVertex );
+    MakeEmpty( Q );
+    Enqueue( S, Q ); /* Enqueue the source vertex */
+    while ( !IsEmpty( Q ) ) 
+    {
+        V = Dequeue( Q );
+        T[ V ].Known = true; /* not really necessary */
+        for ( each W adjacent to V )
+            if ( T[ W ].Dist == Infinity ) 
+            {
+                T[ W ].Dist = T[ V ].Dist + 1;
+                T[ W ].Path = V;
+                Enqueue( W, Q );
+            } /* end-if Dist == Infinity */
+    } /* end-while */
+    DisposeQueue( Q ); /* free memory */
+}
+</code></pre>
+<div class="arithmatex">\[
 T=O(|V|+|E|)
-$$</p>
-<h5 id="weighted-shorted-path">Weighted Shorted Path</h5>
-<h6 id="dijkstras-algorithm">Dijkstra’s Algorithm</h6>
+\]</div>
+<h5 id="weighted-shorted-path">Weighted Shorted Path<a class="headerlink" href="#weighted-shorted-path" title="Permanent link">&para;</a></h5>
+<h6 id="dijkstras-algorithm">Dijkstra’s Algorithm<a class="headerlink" href="#dijkstras-algorithm" title="Permanent link">&para;</a></h6>
 <ul>
-<li>Let S = { $s$ and $v_i$’s whose shortest paths have been found }</li>
-<li>For any $u\notin S$,  define distance [ u ] = minimal length of path { $s\rightarrow(v_i\in S)\rightarrow u$ }.  If the paths are generated in non-decreasing order, then :</li>
-<li>the shortest path must go through <strong>only</strong> $v_i\in S$</li>
-<li><strong>Greedy Method</strong> : $u$ is chosen so that distance[ u ] = min{ $w \notin S$ | distance[ w ] }  (If $u$ is not unique, then we may select any of them)</li>
-<li>if distance[$u_1$] &lt; distance[$u_2$] and add $u_1$ into $S$, then distance [ $u_2$ ] may change.  If so, a shorter path from $s$ to $u_2$ must go through $u_1$ and distance [ $u_2$ ] = distance [ $u_1$ ] + length(&lt; $u_1$, $u_2$&gt;).</li>
+<li>Let S = { <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(v_i\)</span>’s whose shortest paths have been found }</li>
+<li>For any <span class="arithmatex">\(u\notin S\)</span>,  define distance [ u ] = minimal length of path { <span class="arithmatex">\(s\rightarrow(v_i\in S)\rightarrow u\)</span> }.  If the paths are generated in non-decreasing order, then :</li>
+<li>the shortest path must go through <strong>only</strong> <span class="arithmatex">\(v_i\in S\)</span></li>
+<li><strong>Greedy Method</strong> : <span class="arithmatex">\(u\)</span> is chosen so that distance[ u ] = min{ <span class="arithmatex">\(w \notin S\)</span> | distance[ w ] }  (If <span class="arithmatex">\(u\)</span> is not unique, then we may select any of them)</li>
+<li>if distance[<span class="arithmatex">\(u_1\)</span>] &lt; distance[<span class="arithmatex">\(u_2\)</span>] and add <span class="arithmatex">\(u_1\)</span> into <span class="arithmatex">\(S\)</span>, then distance [ <span class="arithmatex">\(u_2\)</span> ] may change.  If so, a shorter path from <span class="arithmatex">\(s\)</span> to <span class="arithmatex">\(u_2\)</span> must go through <span class="arithmatex">\(u_1\)</span> and distance [ <span class="arithmatex">\(u_2\)</span> ] = distance [ <span class="arithmatex">\(u_1\)</span> ] + length(&lt; <span class="arithmatex">\(u_1\)</span>, <span class="arithmatex">\(u_2\)</span>&gt;).</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Vertex</span><span class="p">;</span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">TableEntry</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">List</span><span class="w"> </span><span class="n">Header</span><span class="p">;</span><span class="w"> </span><span class="cm">/*Adjacency list*/</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Known</span><span class="p">;</span>
-<span class="w">    </span><span class="n">DistType</span><span class="w"> </span><span class="n">Dist</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">Path</span><span class="p">;</span>
-<span class="p">};</span>
-<span class="cm">/*Vertices are numbered from 0*/</span>
-<span class="cp">#define NotAVertex (-1)</span>
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">TableEntry</span><span class="w"> </span><span class="n">Table</span><span class="p">[</span><span class="w"> </span><span class="n">NumVertex</span><span class="w"> </span><span class="p">];</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">InitTable</span><span class="p">(</span><span class="n">Vertex</span><span class="w"> </span><span class="n">Start</span><span class="p">,</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">Table</span><span class="w"> </span><span class="n">T</span><span class="p">)</span>
-<span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
-<span class="w">    </span><span class="n">ReadGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">);</span><span class="w"> </span><span class="cm">/* Read graph somehow */</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NumVertex</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">].</span><span class="n">Known</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">False</span><span class="p">;</span>
-<span class="w">        </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Infinity</span><span class="p">;</span>
-<span class="w">        </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">].</span><span class="n">Path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NotAVertex</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">Start</span><span class="w"> </span><span class="p">].</span><span class="n">dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">O</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="cm">/*Print shortest path to V after Dijkstra has run*/</span>
-<span class="cm">/*Assume that the path exists*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">PrintPath</span><span class="p">(</span><span class="n">Vertex</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">Table</span><span class="w"> </span><span class="n">T</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Path</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">NotAVertex</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">PrintPath</span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Path</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">);</span>
-<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot; to&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%v&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">V</span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="cm">/* %v is pseudocode * /</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Dijkstra</span><span class="p">(</span><span class="w"> </span><span class="n">Table</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">smallest</span><span class="w"> </span><span class="n">unknown</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="n">vertex</span><span class="p">;</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">NotAVertex</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"> </span>
-<span class="w">        </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Known</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">].</span><span class="n">Known</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Cvw</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="n">Decrease</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Cvw</span><span class="w"> </span><span class="p">);</span>
-<span class="w">                    </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">].</span><span class="n">Path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V</span><span class="p">;</span>
-<span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="cm">/* end-if update W */</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="cm">/* end-for( ; ; ) */</span>
-<span class="p">}</span>
-</code></pre></div>
-<h6 id="implementation-1">Implementation 1</h6>
+<pre><code class="language-c">typedef int Vertex;
+struct TableEntry
+{
+    List Header; /*Adjacency list*/
+    int Known;
+    DistType Dist;
+    Vertex Path;
+};
+/*Vertices are numbered from 0*/
+#define NotAVertex (-1)
+typedef struct TableEntry Table[ NumVertex ];
+</code></pre>
+<pre><code class="language-c">void InitTable(Vertex Start, Graph G, Table T)
+{ 
+    int i;
+    ReadGraph(G, T); /* Read graph somehow */
+    for(i = 0; i &lt; NumVertex; i++)
+    {
+        T[ i ].Known = False;
+        T[ i ].Dist = Infinity;
+        T[ i ].Path = NotAVertex;
+    }
+    T[ Start ].dist = O;
+}
+</code></pre>
+<pre><code class="language-c">/*Print shortest path to V after Dijkstra has run*/
+/*Assume that the path exists*/
+void PrintPath(Vertex V, Table T)
+{
+    if (T[ V ].Path != NotAVertex)
+    {
+        PrintPath(T[ V ].Path, T);
+        printf(&quot; to&quot;) ;
+    }
+    printf(&quot;%v&quot;, V) ; /* %v is pseudocode * /
+</code></pre>
+<pre><code class="language-c">void Dijkstra( Table T )
+{ 
+    Vertex V, W;
+    for ( ; ; ) 
+    {
+        V = smallest unknown distance vertex;
+        if ( V == NotAVertex ) break; 
+        T[ V ].Known = true;
+        for ( each W adjacent to V )
+            if ( !T[ W ].Known ) 
+                if ( T[ V ].Dist + Cvw &lt; T[ W ].Dist ) 
+                {
+                    Decrease( T[ W ].Dist to T[ V ].Dist + Cvw );
+                    T[ W ].Path = V;
+                } /* end-if update W */
+    } /* end-for( ; ; ) */
+}
+</code></pre>
+<h6 id="implementation-1">Implementation 1<a class="headerlink" href="#implementation-1" title="Permanent link">&para;</a></h6>
 <ul>
-<li>Simply scan the table to find the smallest unknown distance vertex.——$O(|V|)$</li>
+<li>Simply scan the table to find the smallest unknown distance vertex.——<span class="arithmatex">\(O(|V|)\)</span></li>
 <li>Good if the graph is dense</li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
 T=O(|V|^2+|E|)
-$$</p>
-<h6 id="implementation-2">Implementation 2</h6>
+\]</div>
+<h6 id="implementation-2">Implementation 2<a class="headerlink" href="#implementation-2" title="Permanent link">&para;</a></h6>
 <ul>
 <li>
 <p>堆优化</p>
 </li>
 <li>
-<p>Keep distances in a priority queue and call <code>DeleteMin</code> to find the smallest unknown distance vertex.——$O(\log|V|)$</p>
+<p>Keep distances in a priority queue and call <code>DeleteMin</code> to find the smallest unknown distance vertex.——<span class="arithmatex">\(O(\log|V|)\)</span></p>
 </li>
 <li>
 <p>更新的处理方法</p>
 </li>
 <li>
-<p><strong>Method 1</strong> : <code>DecreaseKey</code>——$O(\log|V|)$</p>
-<p>$T=O(|V|\log|V|+|E|\log|V|)=O(|E|\log|V|)$</p>
+<p><strong>Method 1</strong> : <code>DecreaseKey</code>——<span class="arithmatex">\(O(\log|V|)\)</span></p>
+<p><span class="arithmatex">\(T=O(|V|\log|V|+|E|\log|V|)=O(|E|\log|V|)\)</span></p>
 </li>
 <li>
 <p><strong>Method 2</strong> : insert W with updated Dist into the priority queue</p>
 <p>Must keep doing <code>DeleteMin</code> until an unknown vertex emerges</p>
-<p>$T=O(|E|\log|V|)$ but requires $|E|$ <code>DeleteMin</code> with <code>|E|</code> space</p>
+<p><span class="arithmatex">\(T=O(|E|\log|V|)\)</span> but requires <span class="arithmatex">\(|E|\)</span> <code>DeleteMin</code> with <code>|E|</code> space</p>
 </li>
 <li>
 <p>Good if the graph is sparse</p>
 </li>
 </ul>
-<h6 id="improvements">Improvements</h6>
+<h6 id="improvements">Improvements<a class="headerlink" href="#improvements" title="Permanent link">&para;</a></h6>
 <ul>
 <li>Pairing heap</li>
 <li>Fibonacci heap</li>
 </ul>
-<h5 id="graphs-with-negative-edge-costs">Graphs with Negative Edge Costs</h5>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">WeightedNegative</span><span class="p">(</span><span class="w"> </span><span class="n">Table</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">Queue</span><span class="w"> </span><span class="n">Q</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateQueue</span><span class="w"> </span><span class="p">(</span><span class="n">NumVertex</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-<span class="w">    </span><span class="n">MakeEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="n">Enqueue</span><span class="p">(</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="cm">/*Enqueue the source vertex*/</span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">IsEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dequeue</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Cvw</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Dist</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Cvw</span><span class="p">;</span>
-<span class="w">            </span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">].</span><span class="n">Path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V</span><span class="p">;</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">)</span>
-<span class="w">                </span><span class="n">Enqueue</span><span class="p">(</span><span class="w"> </span><span class="n">W</span><span class="p">,</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="cm">/*end-if update*/</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="cm">/*end-while */</span>
-<span class="w">    </span><span class="n">DisposeQueue</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="cm">/*free memory*/</span>
-<span class="p">}</span>
-</code></pre></div>
+<h5 id="graphs-with-negative-edge-costs">Graphs with Negative Edge Costs<a class="headerlink" href="#graphs-with-negative-edge-costs" title="Permanent link">&para;</a></h5>
+<pre><code class="language-c">void WeightedNegative( Table T )
+{
+    Queue Q;
+    Vertex V, W;
+    Q = CreateQueue (NumVertex );  
+    MakeEmpty( Q );
+    Enqueue( S, Q ); /*Enqueue the source vertex*/
+    while ( !IsEmpty( Q ) ) 
+    {
+        V = Dequeue( Q );
+        for ( each W adjacent to V )
+        if ( T[ V ].Dist + Cvw &lt; T[ W ].Dist ) 
+        {
+            T[ W ].Dist = T[ V ].Dist + Cvw;
+            T[ W ].Path = V;
+            if ( W is not already in Q )
+                Enqueue( W, Q );
+        } /*end-if update*/
+    } /*end-while */
+    DisposeQueue( Q ); /*free memory*/
+}
+</code></pre>
 <blockquote>
 <p>Note : Negative-cost cycle will cause indefinite loop</p>
 </blockquote>
-<p>$$
+<div class="arithmatex">\[
 T=O(|V|\times|E|)
-$$</p>
-<h5 id="acyclic-graphs">Acyclic Graphs</h5>
+\]</div>
+<h5 id="acyclic-graphs">Acyclic Graphs<a class="headerlink" href="#acyclic-graphs" title="Permanent link">&para;</a></h5>
 <ul>
 <li>If the graph is acyclic, vertices may be selected in <strong>topological order</strong> since when a vertex is selected, its distance can no longer be lowered without any incoming edges from unknown nodes.</li>
-<li>$T=O(|E|+|V|)$ and no priority queue is needed.</li>
+<li><span class="arithmatex">\(T=O(|E|+|V|)\)</span> and no priority queue is needed.</li>
 </ul>
-<h6 id="aoeactivity-on-edge-networks">AOE(Activity on Edge) Networks</h6>
+<h6 id="aoeactivity-on-edge-networks">AOE(Activity on Edge) Networks<a class="headerlink" href="#aoeactivity-on-edge-networks" title="Permanent link">&para;</a></h6>
 <p><img alt="image-20210124185420522" src="../picture/image-20210124185420522.png" /></p>
 <p><img alt="image-20210124185541801" src="../picture/image-20210124185541801.png" /></p>
 <p><img alt="image-20210124185508683" src="../picture/image-20210124185508683.png" /></p>
-<h4 id="all-pairs-shortest-path-problem">All-Pairs Shortest Path Problem</h4>
+<h4 id="all-pairs-shortest-path-problem">All-Pairs Shortest Path Problem<a class="headerlink" href="#all-pairs-shortest-path-problem" title="Permanent link">&para;</a></h4>
 <ul>
-<li>For all pairs of $v_i$ and $v_j$ ( $i\neq j$ ), find the shortest path between.</li>
+<li>For all pairs of <span class="arithmatex">\(v_i\)</span> and <span class="arithmatex">\(v_j\)</span> ( <span class="arithmatex">\(i\neq j\)</span> ), find the shortest path between.</li>
 </ul>
-<h5 id="method-1">Method 1</h5>
+<h5 id="method-1">Method 1<a class="headerlink" href="#method-1" title="Permanent link">&para;</a></h5>
 <ul>
-<li>Use <strong>single-source algorithm</strong> for $|V|$ times.</li>
-<li>$T=O(|V|^3)$, works fast on sparse graph.</li>
+<li>Use <strong>single-source algorithm</strong> for <span class="arithmatex">\(|V|\)</span> times.</li>
+<li><span class="arithmatex">\(T=O(|V|^3)\)</span>, works fast on sparse graph.</li>
 </ul>
-<h5 id="method-2">Method 2</h5>
+<h5 id="method-2">Method 2<a class="headerlink" href="#method-2" title="Permanent link">&para;</a></h5>
 <ul>
 <li>动态规划</li>
-<li>$O(|V|^3)$ algorithm given in Chapter 10, works faster on dense graphs.</li>
+<li><span class="arithmatex">\(O(|V|^3)\)</span> algorithm given in Chapter 10, works faster on dense graphs.</li>
 </ul>
 <hr />
 
@@ -2980,9 +2837,9 @@ $$</p>
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

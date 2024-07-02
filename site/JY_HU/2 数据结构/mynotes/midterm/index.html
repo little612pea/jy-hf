@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -1113,7 +1115,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -1122,7 +1126,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1204,21 +1208,6 @@
       zigzagging on a tree
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="zigzagging on a tree">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hw3-m1n" class="md-nav__link">
-    <span class="md-ellipsis">
-      HW3: 栈最多容纳M个数，数字1~N依次入栈，而出栈顺序任意，验证给定的序列是否为出栈序列
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2553,9 +2542,9 @@
   
 
 
-<h1 id="midterm">midterm</h1>
+<h1 id="midterm">midterm<a class="headerlink" href="#midterm" title="Permanent link">&para;</a></h1>
 <p>易错复杂度分析</p>
-<p>建堆（不是一个个插入）的算法：$O(N)$,对i=n/2到1的所有节点都pecolate down</p>
+<p>建堆（不是一个个插入）的算法：<span class="arithmatex">\(O(N)\)</span>,对i=n/2到1的所有节点都pecolate down</p>
 <p>指针比较多，注意调试不要打印或者访问NULL的某个属性，避免越界等段错误</p>
 <p>因此所有的find percolate insert都先判断是否为NULL节点，再访问节点的left/right</p>
 <p><strong>从二叉树中删除节点：</strong></p>
@@ -2567,398 +2556,399 @@
 <div class="admonition percolate">
 <p class="admonition-title">Percolate</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">PercolateUp</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">PriorityQueue</span><span class="w"> </span><span class="n">H</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">;){</span>
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span>
-<span class="w">             </span><span class="n">ElementType</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">];</span>
-<span class="w">             </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-<span class="w">             </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
-<span class="w">              </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">PercolateDown</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">PriorityQueue</span><span class="w"> </span><span class="n">H</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">Child</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Child</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Child</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">Child</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">Child</span><span class="p">])</span>
-<span class="w">            </span><span class="n">Child</span><span class="o">++</span><span class="p">;</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">Child</span><span class="p">]){</span>
-<span class="w">             </span><span class="n">ElementType</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">Child</span><span class="p">];</span>
-<span class="w">             </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">Child</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-<span class="w">             </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">void PercolateUp(int p, PriorityQueue H)
+{
+    int i;
+    for (i = p; i &gt; 1;){
+        if( H-&gt;Elements[i / 2] &gt; H-&gt;Elements[i]){
+             ElementType temp = H-&gt;Elements[i/2];
+             H-&gt;Elements[i/2] = H-&gt;Elements[i];
+             H-&gt;Elements[i] = temp;
+              i = i/2;
+        }
+        else break;
+    }
+}
+void PercolateDown(int p, PriorityQueue H)
+{
+    int i, Child;
+    for (i = p; i * 2 &lt;= H-&gt;Size; i = Child)
+    {
+        Child = i * 2;
+        if (Child != H-&gt;Size &amp;&amp; H-&gt;Elements[Child + 1] &lt; H-&gt;Elements[Child])
+            Child++;
+        if (H-&gt;Elements[i] &gt; H-&gt;Elements[Child]){
+             ElementType temp = H-&gt;Elements[Child];
+             H-&gt;Elements[Child] = H-&gt;Elements[i];
+             H-&gt;Elements[i] = temp;
+        }
+    }
+}
+</code></pre>
 <p><strong>弹出最小值（DeleteMin）并维护堆的性质：</strong></p>
 <p>用最后一个元素替换堆顶元素，并进行minHeapify</p>
 <p><strong>minHeapify</strong>过程，就是percolate down的过程</p>
 <p>递归传递的参数为堆指针和当前节点的下标i，首先计算出左右节点下标（2i，2i+1），比较左右节点选出较小值与根节点交换，递归持续进行到越界或最小值就是i结束。</p>
-<h3 id="1">1.堆：</h3>
-<h3 id="2">2.栈、队列</h3>
-<h3 id="3">3.并查集：</h3>
-<h3 id="naive-implementaion">naive implementaion:</h3>
-<div class="highlight"><pre><span></span><code><span class="k">union</span><span class="p">(</span><span class="n">r1</span><span class="p">,</span><span class="n">r2</span><span class="p">)</span><span class="o">:</span>
-<span class="w">    </span><span class="n">S</span><span class="p">[</span><span class="n">r2</span><span class="p">]</span><span class="o">=</span><span class="n">r1</span><span class="w">  </span><span class="c1">//将r2指向r1</span>
-<span class="c1">//问题：r1,r2必须都是root,因此在执行上面之前要先find</span>
-<span class="o">=&gt;</span><span class="w"> </span><span class="k">union</span><span class="p">(</span><span class="n">find</span><span class="p">(</span><span class="n">node1</span><span class="p">),</span><span class="n">find</span><span class="p">(</span><span class="n">node2</span><span class="p">))</span>
-</code></pre></div>
-<p>最坏情况复杂度达到$O(N^2)$!!!!</p>
-<h3 id="union-by-size">union-by-size:总是使较小的树成为较大的树的子树</h3>
+<h3 id="1">1.堆：<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<h3 id="2">2.栈、队列<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h3 id="3">3.并查集：<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<h3 id="naive-implementaion">naive implementaion:<a class="headerlink" href="#naive-implementaion" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c">union(r1,r2):
+    S[r2]=r1  //将r2指向r1
+//问题：r1,r2必须都是root,因此在执行上面之前要先find
+=&gt; union(find(node1),find(node2))
+</code></pre>
+<p>最坏情况复杂度达到<span class="arithmatex">\(O(N^2)\)</span>!!!!</p>
+<h3 id="union-by-size">union-by-size:总是使较小的树成为较大的树的子树<a class="headerlink" href="#union-by-size" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>[Lemma]</strong> Let T be a tree created by union-by-size with N nodes, then $height(T)\leq\lfloor\log_2N\rfloor+1$.</li>
+<li><strong>[Lemma]</strong> Let T be a tree created by union-by-size with N nodes, then <span class="arithmatex">\(height(T)\leq\lfloor\log_2N\rfloor+1\)</span>.</li>
 </ul>
-<p>Proved by induction. Each element can have its set name changed at most $\log_2N$ times.</p>
+<p>Proved by induction. Each element can have its set name changed at most <span class="arithmatex">\(\log_2N\)</span> times.</p>
 <ul>
 <li>
-<p><strong>Time complexity</strong> of $N$ Union and $M$ Find operations is now $O(N+M\log_2N)$.</p>
+<p><strong>Time complexity</strong> of <span class="arithmatex">\(N\)</span> Union and <span class="arithmatex">\(M\)</span> Find operations is now <span class="arithmatex">\(O(N+M\log_2N)\)</span>.</p>
 </li>
 <li>
 <p><strong>原因</strong>：被链接的树的大小至少翻倍</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="cm">/* Assumes Rootl and Root2 are roots*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">SetUnion</span><span class="p">(</span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Root1</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Root2</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">])</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">];</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Root1</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">];</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Root2</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="union-by-height">union-by-height：只有当两颗相同深度的树合并时才要求增加树的深度?</h3>
+<pre><code class="language-c">/* Assumes Rootl and Root2 are roots*/
+void SetUnion(DisjSet S, SetType Root1, SetType Root2)
+{
+    if (S[Root1] &lt;= S[Root2])
+    {
+        S[Root1] += S[Root2];
+        S[Root2] = Root1;
+    }
+    else
+    {
+        S[Root2] += S[Root1];
+        S[Root1] = Root2;
+    }
+}
+</code></pre>
+<h3 id="union-by-height">union-by-height：只有当两颗相同深度的树合并时才要求增加树的深度?<a class="headerlink" href="#union-by-height" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Always change the shallow tree</li>
-<li>保证所有的树的深度最多是$O(logN)$</li>
+<li>保证所有的树的深度最多是<span class="arithmatex">\(O(logN)\)</span></li>
 </ul>
 <p>使用S[root]保存树的深度的相反数，都是负数，绝对值越大越深</p>
-<div class="highlight"><pre><span></span><code><span class="cm">/* Assumes Rootl and Root2 are roots*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">SetUnion</span><span class="p">(</span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Root1</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Root2</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">])</span><span class="w">  </span><span class="cm">/*Root2 is deeper set*/</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Root2</span><span class="p">;</span><span class="w">      </span><span class="cm">/*Make Root2 new root*/</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">])</span><span class="w">  </span><span class="cm">/*Same height*/</span>
-<span class="w">            </span><span class="n">S</span><span class="p">[</span><span class="n">Root1</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="n">Root2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Root1</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="path-compression-akaman-algorithm">path-compression akaman-algorithm</h3>
-<div class="highlight"><pre><span></span><code><span class="n">SetType</span><span class="w"> </span><span class="nf">Find</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">trail</span><span class="p">,</span><span class="w"> </span><span class="n">lead</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/* find the root */</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">root</span><span class="p">;</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lead</span><span class="w"> </span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">lead</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="p">];</span><span class="w">   </span>
-<span class="w">        </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="p">;</span><span class="w">   </span>
-<span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="cm">/* collapsing */</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">root</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">/* Assumes Rootl and Root2 are roots*/
+void SetUnion(DisjSet S, SetType Root1, SetType Root2)
+{
+    if ( S[Root2] &lt; S[Root1])  /*Root2 is deeper set*/
+        S[Root1] = Root2;      /*Make Root2 new root*/
+    else
+    {
+        if (S[Root1] == S[Root2])  /*Same height*/
+            S[Root1]--;
+        S[Root2] = Root1;
+    }
+}
+</code></pre>
+<h3 id="path-compression-akaman-algorithm">path-compression akaman-algorithm<a class="headerlink" href="#path-compression-akaman-algorithm" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c">SetType Find( ElementType X, DisjSet S )
+{   
+    ElementType root, trail, lead;
+    for ( root = X; S[ root ] &gt; 0; root = S[ root ] );  /* find the root */
+    for ( trail = X; trail != root; trail = lead )
+    {
+        lead = S[ trail ];   
+        S[ trail ] = root;   
+    }  /* collapsing */
+    return root;
+}
+</code></pre>
 <p>和普通的find相比：<strong>find/recursive find</strong>,尾递归情形</p>
-<div class="highlight"><pre><span></span><code><span class="n">SetType</span><span class="w"> </span><span class="nf">Find</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w">    </span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">X</span><span class="p">;</span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Find</span><span class="p">(</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="4">4.树：二叉树，搜索树</h3>
-<h3 id="zigzagging-on-a-tree">zigzagging on a tree</h3>
+<pre><code class="language-c">SetType Find( ElementType X, DisjSet S )
+{
+    if ( S[ X ] &lt;= 0 )    
+        return X;
+    else 
+        return S[ X ] = Find( S[ X ], S );
+}
+</code></pre>
+<h3 id="4">4.树：二叉树，搜索树<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<h3 id="zigzagging-on-a-tree">zigzagging on a tree<a class="headerlink" href="#zigzagging-on-a-tree" title="Permanent link">&para;</a></h3>
 <p><img alt="zigzag.jpg" src="../assets/337cbfb0-a7b2-4500-9664-318e9ffc870e.jpg" /></p>
-<div class="highlight"><pre><span></span><code><span class="n">sample</span><span class="w"> </span><span class="n">input</span><span class="o">:</span>
-<span class="mi">8</span>
-<span class="mi">12</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">17</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">5</span><span class="w">  </span><span class="n">左中右</span><span class="w"> </span><span class="n">中序</span><span class="w">  </span>
-<span class="mi">12</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">17</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="n">左右中</span><span class="w"> </span><span class="n">后序</span><span class="w">  </span><span class="n">后序的最后一个节点为根节点</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">sample</span><span class="w"> </span><span class="n">output</span><span class="o">:</span>
-<span class="mi">1</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">17</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">15</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
-<span class="cp">#define MAX_NODE_NUM 60</span>
+<pre><code class="language-c">sample input:
+8
+12 11 20 17 1 15 8 5  左中右 中序  
+12 20 17 11 15 8 5 1  左右中 后序  后序的最后一个节点为根节点
+</code></pre>
+<pre><code class="language-c">sample output:
+1 11 5 8 17 12 20 15
+</code></pre>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+#define MAX_NODE_NUM 60
 
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">tree_node</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
-<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">tree_node</span><span class="w"> </span><span class="o">*</span><span class="n">left</span><span class="p">;</span>
-<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">tree_node</span><span class="w"> </span><span class="o">*</span><span class="n">right</span><span class="p">;</span>
-<span class="p">}</span><span class="w"> </span><span class="n">tree_node</span><span class="p">;</span>
-<span class="k">typedef</span><span class="w"> </span><span class="n">tree_node</span><span class="w"> </span><span class="o">*</span><span class="n">tree_ptr</span><span class="p">;</span>
+typedef struct tree_node
+{
+    int data;
+    struct tree_node *left;
+    struct tree_node *right;
+} tree_node;
+typedef tree_node *tree_ptr;
 
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">front</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">rear</span><span class="p">;</span>
-<span class="w">    </span><span class="n">tree_ptr</span><span class="w"> </span><span class="n">list</span><span class="p">[</span><span class="n">MAX_NODE_NUM</span><span class="p">];</span>
-<span class="p">}</span><span class="w"> </span><span class="n">tree_queue</span><span class="p">;</span>
-<span class="k">typedef</span><span class="w"> </span><span class="n">tree_queue</span><span class="w"> </span><span class="o">*</span><span class="n">queue_ptr</span><span class="p">;</span>
+typedef struct
+{
+    int front;
+    int rear;
+    tree_ptr list[MAX_NODE_NUM];
+} tree_queue;
+typedef tree_queue *queue_ptr;
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">enqueue</span><span class="p">(</span><span class="n">tree_ptr</span><span class="w"> </span><span class="n">tree</span><span class="p">,</span><span class="w"> </span><span class="n">queue_ptr</span><span class="w"> </span><span class="n">queue</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tree</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="c1">// 空树不入队</span>
-<span class="w">    </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">rear</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tree</span><span class="p">;</span>
-<span class="p">}</span>
+void enqueue(tree_ptr tree, queue_ptr queue)
+{
+    if (tree == NULL)
+        return; // 空树不入队
+    queue-&gt;list[queue-&gt;rear++] = tree;
+}
 
-<span class="n">tree_ptr</span><span class="w"> </span><span class="nf">dequeue</span><span class="p">(</span><span class="n">queue_ptr</span><span class="w"> </span><span class="n">queue</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">rear</span><span class="p">)</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"> </span><span class="c1">// 队列为空时返回NULL</span>
-<span class="w">    </span><span class="n">tree_ptr</span><span class="w"> </span><span class="n">tree_node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="o">++</span><span class="p">];</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">tree_node</span><span class="p">;</span>
-<span class="p">}</span>
+tree_ptr dequeue(queue_ptr queue)
+{
+    if (queue-&gt;front == queue-&gt;rear)
+        return NULL; // 队列为空时返回NULL
+    tree_ptr tree_node = queue-&gt;list[queue-&gt;front++];
+    return tree_node;
+}
 
-<span class="n">tree_ptr</span><span class="w"> </span><span class="nf">build_tree</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">in_order</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">post_order</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">in_order</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">post_order</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">MAX_NODE_NUM</span><span class="p">)</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
-<span class="w">    </span><span class="n">tree_ptr</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">tree_ptr</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">tree_node</span><span class="p">));</span>
-<span class="w">    </span><span class="n">root</span><span class="o">-&gt;</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">post_order</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">in_order</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">post_order</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
-<span class="w">            </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="c1">// 把中序序列分成两部分，左边的是左子树，右边的是右子树</span>
-<span class="w">    </span><span class="c1">// 此处 in_order + index + 1 忘记+1，导致只有左枝的左子树建成了右子树</span>
-<span class="w">    </span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">build_tree</span><span class="p">(</span><span class="n">in_order</span><span class="p">,</span><span class="w"> </span><span class="n">post_order</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">);</span>
-<span class="w">    </span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">build_tree</span><span class="p">(</span><span class="n">in_order</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">post_order</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">root</span><span class="p">;</span><span class="w">    </span><span class="c1">//build_tree的最后一个参数是子树的节点数，左子树是0~index-1共index个节点，右子树是n-index-1个节点，从index开始到n-1共(n-1)-index+1-1(除去根节点)=n-index-1个节点</span>
+tree_ptr build_tree(int *in_order, int *post_order, int n)
+{
+    if (n &lt;= 0 || in_order == NULL || post_order == NULL || n &gt; MAX_NODE_NUM)
+        return NULL;
+    tree_ptr root = (tree_ptr)malloc(sizeof(tree_node));
+    root-&gt;data = post_order[n - 1];
+    int index = 0;
+    for (int i = 0; i &lt; n; i++)
+    {
+        if (in_order[i] == post_order[n - 1])
+            index = i;
+    }
+    // 把中序序列分成两部分，左边的是左子树，右边的是右子树
+    // 此处 in_order + index + 1 忘记+1，导致只有左枝的左子树建成了右子树
+    root-&gt;left = build_tree(in_order, post_order, index);
+    root-&gt;right = build_tree(in_order + index + 1, post_order + index, n - index - 1);
+    return root;    //build_tree的最后一个参数是子树的节点数，左子树是0~index-1共index个节点，右子树是n-index-1个节点，从index开始到n-1共(n-1)-index+1-1(除去根节点)=n-index-1个节点
 
-<span class="w">    </span><span class="n">中序</span><span class="w"> </span><span class="err">（</span><span class="n">左子树</span><span class="err">：</span><span class="mi">12</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">17</span><span class="w"> </span><span class="err">）【</span><span class="mi">1</span><span class="err">】</span><span class="w"> </span><span class="err">（</span><span class="n">右子树</span><span class="err">：</span><span class="mi">15</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">5</span><span class="err">）</span>
-<span class="w">    </span><span class="n">后序</span><span class="w"> </span><span class="err">（</span><span class="mi">12</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">17</span><span class="w"> </span><span class="mi">11</span><span class="err">）（</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="mi">5</span><span class="err">）【</span><span class="mi">1</span><span class="err">】</span>
-<span class="w">        </span><span class="n">i</span><span class="o">+</span><span class="mi">5</span><span class="err">，</span><span class="n">post_order</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="n">index</span><span class="mi">-1</span>
-<span class="p">}</span>
+    中序 （左子树：12 11 20 17 ）【1】 （右子树：15 8 5）
+    后序 （12 20 17 11）（ 15 8 5）【1】
+        i+5，post_order+4,n-index-1
+}
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">is_empty</span><span class="p">(</span><span class="n">queue_ptr</span><span class="w"> </span><span class="n">queue</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">rear</span><span class="p">)</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="cm">/*</span>
-<span class="cm">void print_tree(tree_ptr tree){</span>
-<span class="cm">    //打印顺序为根左右</span>
-<span class="cm">    if(tree == NULL)return;</span>
-<span class="cm">    printf(&quot;%d &quot;, tree-&gt;data);</span>
-<span class="cm">    if(tree-&gt;left != NULL)print_tree(tree-&gt;left);</span>
-<span class="cm">    if(tree-&gt;right != NULL)print_tree(tree-&gt;right);  </span>
-<span class="cm">}</span>
-<span class="cm">*/</span>
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">MAX_NODE_NUM</span><span class="p">];</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">pointer</span><span class="p">;</span>
-<span class="p">}</span><span class="w"> </span><span class="n">sequence</span><span class="p">;</span>
-<span class="k">typedef</span><span class="w"> </span><span class="n">sequence</span><span class="w"> </span><span class="o">*</span><span class="n">sequence_ptr</span><span class="p">;</span>
+int is_empty(queue_ptr queue)
+{
+    if (queue-&gt;front == queue-&gt;rear)
+        return 1;
+    else
+        return 0;
+}
+/*
+void print_tree(tree_ptr tree){
+    //打印顺序为根左右
+    if(tree == NULL)return;
+    printf(&quot;%d &quot;, tree-&gt;data);
+    if(tree-&gt;left != NULL)print_tree(tree-&gt;left);
+    if(tree-&gt;right != NULL)print_tree(tree-&gt;right);  
+}
+*/
+typedef struct
+{
+    int data[MAX_NODE_NUM];
+    int pointer;
+} sequence;
+typedef sequence *sequence_ptr;
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">zigzag_levelorder</span><span class="p">(</span><span class="n">tree_ptr</span><span class="w"> </span><span class="n">tree</span><span class="p">,</span><span class="w"> </span><span class="n">queue_ptr</span><span class="w"> </span><span class="n">queue</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="c1">// zigzag的层序遍历</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="n">enqueue</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span><span class="w"> </span><span class="n">queue</span><span class="p">);</span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">is_empty</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">rear</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="p">;</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">level</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">len</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot; %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="k">else</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">level</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">                    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
-<span class="w">                </span><span class="k">else</span>
-<span class="w">                    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot; %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">len</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">left</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-<span class="w">                </span><span class="n">enqueue</span><span class="p">(</span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="n">queue</span><span class="p">);</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">right</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-<span class="w">                </span><span class="n">enqueue</span><span class="p">(</span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span><span class="w"> </span><span class="n">queue</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">len</span><span class="p">;</span>
-<span class="w">        </span><span class="n">level</span><span class="o">++</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+int zigzag_levelorder(tree_ptr tree, queue_ptr queue)
+{
+    // zigzag的层序遍历
+    int level = 0;
+    enqueue(tree, queue);
+    while (is_empty(queue) == 0)
+    {
+        int len = queue-&gt;rear - queue-&gt;front;
+        if (level % 2)
+        {
+            for (int i = queue-&gt;front; i &lt; queue-&gt;front + len; i++)
+            {
+                printf(&quot; %d&quot;, queue-&gt;list[i]-&gt;data);
+            }
+        }
+        else
+        {
+            for (int i = queue-&gt;front + len - 1; i &gt;= queue-&gt;front; i--)
+            {
+                if (level == 0)
+                    printf(&quot;%d&quot;, queue-&gt;list[i]-&gt;data);
+                else
+                    printf(&quot; %d&quot;, queue-&gt;list[i]-&gt;data);
+            }
+        }
+        for (int i = queue-&gt;front; i &lt; queue-&gt;front + len; i++)
+        {
+            if (queue-&gt;list[i]-&gt;left != NULL)
+                enqueue(queue-&gt;list[i]-&gt;left, queue);
+            if (queue-&gt;list[i]-&gt;right != NULL)
+                enqueue(queue-&gt;list[i]-&gt;right, queue);
+        }
+        queue-&gt;front = queue-&gt;front + len;
+        level++;
+    }
+}
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="c1">// zigzag 层序遍历，在每一行输出时打印出逆序的</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-<span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
-<span class="w">    </span><span class="c1">// The second line gives the inorder sequence</span>
-<span class="w">    </span><span class="c1">// and the third line gives the postorder sequence</span>
-<span class="w">    </span><span class="cm">/*  1. 根据后序序列的最后一个元素建立根结点；</span>
-<span class="cm">        2. 在中序序列中找到该元素，确定根结点的左右子树的中序序列；</span>
-<span class="cm">        3. 在后序序列中确定左右子树的后序序列；</span>
-<span class="cm">        4. 由左子树的后序序列和中序序列建立左子树；</span>
-<span class="cm">        5. 由右子树的后序序列和中序序列建立右子树。*/</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">in_order</span><span class="p">[</span><span class="n">MAX_NODE_NUM</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">post_order</span><span class="p">[</span><span class="n">MAX_NODE_NUM</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">        </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">in_order</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">        </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">post_order</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+int main()
+{
+    // zigzag 层序遍历，在每一行输出时打印出逆序的
+    int n;
+    scanf(&quot;%d&quot;, &amp;n);
+    // The second line gives the inorder sequence
+    // and the third line gives the postorder sequence
+    /*  1. 根据后序序列的最后一个元素建立根结点；
+        2. 在中序序列中找到该元素，确定根结点的左右子树的中序序列；
+        3. 在后序序列中确定左右子树的后序序列；
+        4. 由左子树的后序序列和中序序列建立左子树；
+        5. 由右子树的后序序列和中序序列建立右子树。*/
+    int in_order[MAX_NODE_NUM] = {0};
+    int post_order[MAX_NODE_NUM] = {0};
+    for (int i = 0; i &lt; n; i++)
+        scanf(&quot;%d&quot;, &amp;in_order[i]);
+    for (int i = 0; i &lt; n; i++)
+        scanf(&quot;%d&quot;, &amp;post_order[i]);
 
-<span class="w">    </span><span class="n">tree_ptr</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">build_tree</span><span class="p">(</span><span class="n">in_order</span><span class="p">,</span><span class="w"> </span><span class="n">post_order</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
-<span class="w">    </span><span class="c1">// 把树打印出来看看</span>
-<span class="w">    </span><span class="c1">// print_tree(tree);</span>
+    tree_ptr tree = build_tree(in_order, post_order, n);
+    // 把树打印出来看看
+    // print_tree(tree);
 
-<span class="w">    </span><span class="n">queue_ptr</span><span class="w"> </span><span class="n">queue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">queue_ptr</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">tree_queue</span><span class="p">));</span>
-<span class="w">    </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">rear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="n">zigzag_levelorder</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span><span class="w"> </span><span class="n">queue</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">Isomorphic</span><span class="p">(</span><span class="w"> </span><span class="n">Tree</span><span class="w"> </span><span class="n">T1</span><span class="p">,</span><span class="w"> </span><span class="n">Tree</span><span class="w"> </span><span class="n">T2</span><span class="w"> </span><span class="p">){</span>
-<span class="w">    </span><span class="c1">//左右子树互换，每层的东西应该是相同的</span>
-<span class="w">    </span><span class="c1">//层序遍历？只要递归实现一下即可</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">T1</span><span class="o">&amp;&amp;!</span><span class="n">T2</span><span class="p">)</span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">T1</span><span class="o">&amp;&amp;</span><span class="n">T2</span><span class="o">||!</span><span class="n">T2</span><span class="o">&amp;&amp;</span><span class="n">T1</span><span class="p">)</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">T1</span><span class="o">-&gt;</span><span class="n">Element</span><span class="o">!=</span><span class="n">T2</span><span class="o">-&gt;</span><span class="n">Element</span><span class="p">)</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ans1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Isomorphic</span><span class="p">(</span><span class="n">T1</span><span class="o">-&gt;</span><span class="n">Left</span><span class="p">,</span><span class="n">T2</span><span class="o">-&gt;</span><span class="n">Left</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ans2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Isomorphic</span><span class="p">(</span><span class="n">T1</span><span class="o">-&gt;</span><span class="n">Right</span><span class="p">,</span><span class="n">T2</span><span class="o">-&gt;</span><span class="n">Left</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ans3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Isomorphic</span><span class="p">(</span><span class="n">T1</span><span class="o">-&gt;</span><span class="n">Left</span><span class="p">,</span><span class="n">T2</span><span class="o">-&gt;</span><span class="n">Right</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ans4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Isomorphic</span><span class="p">(</span><span class="n">T1</span><span class="o">-&gt;</span><span class="n">Right</span><span class="p">,</span><span class="n">T2</span><span class="o">-&gt;</span><span class="n">Right</span><span class="p">);</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ans1</span><span class="o">&amp;&amp;</span><span class="n">ans4</span><span class="o">||</span><span class="n">ans2</span><span class="o">&amp;&amp;</span><span class="n">ans3</span><span class="p">;</span>
+    queue_ptr queue = (queue_ptr)malloc(sizeof(tree_queue));
+    queue-&gt;front = 0;
+    queue-&gt;rear = 0;
+    zigzag_levelorder(tree, queue);
+}
+</code></pre>
+<pre><code class="language-c">int Isomorphic( Tree T1, Tree T2 ){
+    //左右子树互换，每层的东西应该是相同的
+    //层序遍历？只要递归实现一下即可
+    if(!T1&amp;&amp;!T2)return 1;
+    else if(!T1&amp;&amp;T2||!T2&amp;&amp;T1)return 0;
+    if(T1-&gt;Element!=T2-&gt;Element)return 0;
+    int ans1 = Isomorphic(T1-&gt;Left,T2-&gt;Left);
+    int ans2 = Isomorphic(T1-&gt;Right,T2-&gt;Left);
+    int ans3 = Isomorphic(T1-&gt;Left,T2-&gt;Right);
+    int ans4 = Isomorphic(T1-&gt;Right,T2-&gt;Right);
+    return ans1&amp;&amp;ans4||ans2&amp;&amp;ans3;
 
 
-<span class="p">}</span>
-</code></pre></div>
+}
+</code></pre>
 <p>insertion sequence序列不同，构建出的二叉树形状可能有多种</p>
 <p><img alt="2023-11-23 (9)" src="../assets/2023-11-23%20%289%29.png" /></p>
 <p>建立二叉搜索树的顺序</p>
 <p>先判断当前节点是否为NULL，若是，则建立新节点（data = x，left=right=NULL）</p>
 <p>若不是，则递归向下，若大于当前，则Insert(x,tree-&gt;left),小于前，则Insert(x,tree-&gt;right)</p>
-<div class="highlight"><pre><span></span><code><span class="n">SearchTree</span><span class="w"> </span><span class="nf">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">SearchTree</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="cm">/* Create and return a one-node tree */</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span>
-<span class="w">        </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">TreeNode</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">            </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span>
-<span class="w">        </span><span class="p">{</span><span class="w"> </span>
-<span class="w">            </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span>
-<span class="w">            </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"> </span>
-<span class="w">        </span><span class="p">}</span><span class="w"> </span>
-<span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="cm">/* End creating a one-node tree */</span>
-<span class="w">    </span><span class="k">else</span><span class="w">  </span><span class="cm">/* If there is a tree */</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">            </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">                </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<span class="w">        </span><span class="cm">/* Else X is in the tree already; we&#39;ll do nothing */</span><span class="w"> </span>
-<span class="w">    </span><span class="k">return</span><span class="w">  </span><span class="n">T</span><span class="p">;</span><span class="w">   </span><span class="cm">/* Do not forget this line!! */</span><span class="w"> </span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-c">SearchTree Insert( ElementType X, SearchTree T ) 
+{ 
+    if ( T == NULL ) /* Create and return a one-node tree */ 
+    { 
+        T = malloc( sizeof( struct TreeNode ) ); 
+        if ( T == NULL ) 
+            FatalError( &quot;Out of space!!!&quot; ); 
+        else 
+        { 
+            T-&gt;Element = X; 
+            T-&gt;Left = T-&gt;Right = NULL; 
+        } 
+    }  /* End creating a one-node tree */
+    else  /* If there is a tree */
+        if ( X &lt; T-&gt;Element ) 
+            T-&gt;Left = Insert( X, T-&gt;Left ); 
+        else 
+            if ( X &gt; T-&gt;Element ) 
+                T-&gt;Right = Insert( X, T-&gt;Right ); 
+        /* Else X is in the tree already; we'll do nothing */ 
+    return  T;   /* Do not forget this line!! */ 
+}
+</code></pre>
 <p>作业错题</p>
 <p><img alt="2023-11-23 (3)" src="../assets/2023-11-23%20%283%29.png" /></p>
 <p><img alt="2023-11-23 (4)" src="../assets/2023-11-23%20%284%29-1700729444540-3.png" /></p>
 <p>环形队列 数组实现</p>
 <p>Suppose that an array of size <code>m</code> is used to store a circular queue. If the front position is <code>front</code> and the current size is <code>size</code>, then the rear element must be at:</p>
-<div class="highlight"><pre><span></span><code>A.front+size
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>B.(front+size)%m
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>C.(front+size-1)%m  this one
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>D.front+size-1
-</code></pre></div>
+<pre><code>A.front+size
+</code></pre>
+<pre><code>B.(front+size)%m
+</code></pre>
+<pre><code>C.(front+size-1)%m  this one
+</code></pre>
+<pre><code>D.front+size-1
+</code></pre>
 <p><img alt="2023-11-23 (5)" src="../assets/2023-11-23%20%285%29.png" /></p>
 <p><img alt="image-20231123171418423" src="../assets/image-20231123171418423.png" /></p>
 <p>disjoint sets</p>
 <p><img alt="2023-11-23 (7)" src="../assets/2023-11-23%20%287%29.png" /></p>
-<h5 id="hw3-m1n">HW3: 栈最多容纳M个数，数字1~N依次入栈，而出栈顺序任意，验证给定的序列是否为出栈序列</h5>
+<h5 id="hw3-m1n">HW3: 栈最多容纳M个数，数字1~N依次入栈，而出栈顺序任意，验证给定的序列是否为出栈序列<a class="headerlink" href="#hw3-m1n" title="Permanent link">&para;</a></h5>
 <p>对于某个序列，如3，2，1，7，5，6，4，栈的大小为5</p>
 <p>预设flag=1，假设是合法出栈序列 </p>
 <p>初始化栈顶指针为-1，先将1入栈，因为1一定是第一个入栈，使用i记录下一个将要入栈的元素</p>
-<p>栈顶不能超过M，且还未遍历完（使用$num[j]$保存如果是合法出栈序列即将出栈的元素）</p>
-<p>若$栈顶元素==num[j]$则弹出，$j$向后遍历</p>
+<p>栈顶不能超过M，且还未遍历完（使用<span class="arithmatex">\(num[j]\)</span>保存如果是合法出栈序列即将出栈的元素）</p>
+<p>若<span class="arithmatex">\(栈顶元素==num[j]\)</span>则弹出，<span class="arithmatex">\(j\)</span>向后遍历</p>
 <p>若到最后栈不为空则error</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span>
-<span class="cp">#define MAXSIZE 1000</span>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+#define MAXSIZE 1000
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="p">;</span>
-<span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d %d %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">K</span><span class="p">);</span>
-<span class="w">    </span><span class="c1">// M为栈的最大容量，N为入栈的数字个数，K为需要判断的出栈序列的个数</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">[</span><span class="n">MAXSIZE</span><span class="p">];</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">flag</span><span class="p">,</span><span class="w"> </span><span class="n">current</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">// 枚举出栈顺序，然后模拟出栈过程，如果出现不合法的情况，就直接跳出循环，输出NO</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">K</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">num</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">);</span><span class="w"> </span><span class="c1">// 传入出栈序列，栈的最大容量，入栈数字的个数</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">flag</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;NO</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="k">else</span>
-<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;YES</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+int main()
+{
+    int M, N, K;
+    scanf(&quot;%d %d %d&quot;, &amp;M, &amp;N, &amp;K);
+    // M为栈的最大容量，N为入栈的数字个数，K为需要判断的出栈序列的个数
+    int i, j, k;
+    int num[MAXSIZE];
+    int flag, current;
+    // 枚举出栈顺序，然后模拟出栈过程，如果出现不合法的情况，就直接跳出循环，输出NO
+    for (i = 0; i &lt; K; i++)
+    {
+        for (j = 0; j &lt; N; j++)
+        {
+            scanf(&quot;%d&quot;, &amp;num[j]);
+        }
+        flag = test(num, M, N); // 传入出栈序列，栈的最大容量，入栈数字的个数
+        if (flag == 0)
+            printf(&quot;NO\n&quot;);
+        else
+            printf(&quot;YES\n&quot;);
+    }
+}
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">stack</span><span class="p">[</span><span class="n">MAXSIZE</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">top</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// i为入栈序列，j为出栈序列的下标</span>
-<span class="w">    </span><span class="n">stack</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="c1">// 先将1入栈</span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">top</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">)</span>
-<span class="w">    </span><span class="c1">// 栈不满且出栈序列还未遍历完</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">top</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">stack</span><span class="p">[</span><span class="n">top</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">num</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
-<span class="w">        </span><span class="c1">// 栈不为空且栈顶元素等于出栈序列的当前元素，则出栈，且j向后遍历</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">top</span><span class="o">--</span><span class="p">;</span>
-<span class="w">            </span><span class="n">j</span><span class="o">++</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="k">else</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">stack</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">top</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span>
-<span class="w">        </span><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 栈不为空，说明出栈序列不合法</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">flag</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+int test(int *num, int M, int N)
+{
+    int stack[MAXSIZE] = {0};
+    int flag = 1;
+    int top = -1;
+    int i = 0, j = 0;   // i为入栈序列，j为出栈序列的下标
+    stack[++top] = ++i; // 先将1入栈
+    while (top &lt; M &amp;&amp; j &lt; N)
+    // 栈不满且出栈序列还未遍历完
+    {
+        if (top != -1 &amp;&amp; stack[top] == num[j])
+        // 栈不为空且栈顶元素等于出栈序列的当前元素，则出栈，且j向后遍历
+        {
+            top--;
+            j++;
+        }
+        else
+        {
+            stack[++top] = ++i;
+        }
+    }
+    if (top != -1)
+        flag = 0; // 栈不为空，说明出栈序列不合法
+    return flag;
+}
+
+</code></pre>
 <p>polish</p>
 <p>infix操作</p>
 <p><img alt="2023-11-26" src="../assets/2023-11-26.png" /></p>
@@ -2974,7 +2964,7 @@
 <p><img alt="img" src="../assets/v2-abeac41c041deb327ed4dd41a0747ad2_r.jpg" /></p>
 <p>倒序输出为ABC+*DEF+/-</p>
 <p>操作数顺序不会变化，一定是叶子节点</p>
-<h2 id="1-1">二分查找+1-1问题处理</h2>
+<h2 id="1-1">二分查找+1-1问题处理<a class="headerlink" href="#1-1" title="Permanent link">&para;</a></h2>
 <p><img alt="img" src="../assets/v2-3554e8997059b1b41ae95a3e47ffd8b5_r.jpg" /></p>
 <ul>
 <li>左、中、右索引的分配。</li>
@@ -2984,7 +2974,7 @@
 <p>模板1相当于 左闭右闭区间 left=0，right=length-1，</p>
 <p>模板2相当于 左闭右开区间 left=0，right=length，</p>
 <p>模板3相当于 左开右开区间 left=-1，right=length/ left=0，right=length-1，</p>
-<p>2和3找的是$&gt;=$target的第一个数</p>
+<p>2和3找的是<span class="arithmatex">\(&gt;=\)</span>target的第一个数</p>
 <p><strong>模板 #1</strong> <code>(left &lt;= right)：</code></p>
 <ul>
 <li>二分查找的最基础和最基本的形式。</li>
@@ -3007,50 +2997,50 @@
 <li>保证查找空间在每个步骤中至少有 3 个元素。</li>
 <li>需要进行后处理。 当剩下 2 个元素时，循环 / 递归结束。 需要评估其余元素是否符合条件。</li>
 </ul>
-<h3 id="k-th-largest-num">K-th largest Num</h3>
+<h3 id="k-th-largest-num">K-th largest Num<a class="headerlink" href="#k-th-largest-num" title="Permanent link">&para;</a></h3>
 <p>在N个元素的数组中找第K大的数：</p>
 <p>N个元素的前K个先做minHeapify，后面的元素依次插入堆的对应位置：</p>
 <p>方法：insert，如果比H[1]（堆顶元素，下标从1开始）小，则不插入堆中，因为堆顶就是第K个大的数</p>
 <p>若比H[1]大，则percolate down，沿途子节点向上替换父节点，也就是H[1]被替换</p>
 <p>将余下的K+1~N个元素全部判断并插入后，最终堆顶元素就是N个数中第K大的数</p>
-<h1 id="_1">期中考试刷题</h1>
-<h1 id="15-16">15-16</h1>
+<h1 id="_1">期中考试刷题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="15-16">15-16<a class="headerlink" href="#15-16" title="Permanent link">&para;</a></h1>
 <p>No Greater Than X in BST</p>
 <p>(20分)</p>
 <p>You are supposed to output, in decreasing order, all the elements no greater than <code>X</code> in a binary search tree <code>T</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">TreeNode</span><span class="w"> </span><span class="o">*</span><span class="n">Tree</span><span class="p">;</span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">TreeNode</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Element</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Tree</span><span class="w">  </span><span class="n">Left</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Tree</span><span class="w">  </span><span class="n">Right</span><span class="p">;</span>
-<span class="p">};</span>
+typedef struct TreeNode *Tree;
+struct TreeNode {
+    int Element;
+    Tree  Left;
+    Tree  Right;
+};
 
-<span class="n">Tree</span><span class="w"> </span><span class="nf">BuildTree</span><span class="p">();</span><span class="w"> </span><span class="cm">/* details omitted */</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">Output</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="cm">/* details omitted */</span>
+Tree BuildTree(); /* details omitted */
+void Output( int X ); /* details omitted */
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">Print_NGT</span><span class="p">(</span><span class="w"> </span><span class="n">Tree</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">);</span>
+void Print_NGT( Tree T,  int X );
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">Tree</span><span class="w"> </span><span class="n">T</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">X</span><span class="p">;</span>
+int main()
+{
+    Tree T;
+    int X;
 
-<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BuildTree</span><span class="p">();</span>
-<span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">X</span><span class="p">);</span>
-<span class="w">    </span><span class="n">Print_NGT</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;End</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    T = BuildTree();
+    scanf(&quot;%d&quot;, &amp;X);
+    Print_NGT( T, X );
+    printf(&quot;End\n&quot;);
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+    return 0;
+}
 
-<span class="cm">/* Your function will be put here */</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">Print_NGT</span><span class="p">(</span><span class="w"> </span><span class="n">Tree</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">){</span>
+/* Your function will be put here */
+void Print_NGT( Tree T,  int X ){
 
-<span class="p">}</span>
-</code></pre></div>
+}
+</code></pre>
 
 
 
@@ -3216,9 +3206,9 @@
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

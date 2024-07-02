@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -876,7 +878,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -885,7 +889,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -906,165 +910,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6.1 Definitions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#undirected-graph" class="md-nav__link">
-    <span class="md-ellipsis">
-      Undirected graph
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#directed-graphdiagraph" class="md-nav__link">
-    <span class="md-ellipsis">
-      Directed graph(diagraph)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#restrictions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restrictions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#complete-graph" class="md-nav__link">
-    <span class="md-ellipsis">
-      Complete graph
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adjacent" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adjacent
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subgraph" class="md-nav__link">
-    <span class="md-ellipsis">
-      Subgraph
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Path
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#length-of-a-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Length of a path
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simple-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simple path
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cycle" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cycle
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#connected" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connected
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#connected-component-of-an-undirected-g" class="md-nav__link">
-    <span class="md-ellipsis">
-      (Connected) Component of an undirected G
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tree" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tree
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dag" class="md-nav__link">
-    <span class="md-ellipsis">
-      DAG
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strongly-connected-directed-graph-g" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strongly connected directed graph G
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strongly-connected-component" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strongly connected component
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#degree" class="md-nav__link">
-    <span class="md-ellipsis">
-      Degree
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1074,48 +919,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6.2 Representation of Graphs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adjacency-matrix" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adjacency Matrix
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adjacency-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adjacency Lists
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adjacency-multilists" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adjacency Multilists
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#weighted-edges" class="md-nav__link">
-    <span class="md-ellipsis">
-      Weighted Edges
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1124,39 +927,6 @@
       6.3 Topological Sort 拓扑排序 不是一种严格意义的排序算法
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="6.3 Topological Sort 拓扑排序 不是一种严格意义的排序算法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#aov-activity-on-vertices-network" class="md-nav__link">
-    <span class="md-ellipsis">
-      AOV activity on vertices Network 有向无环图
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#partial-order" class="md-nav__link">
-    <span class="md-ellipsis">
-      Partial order
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#definition-a-topological-order-is-a-linear-ordering-of-the-vertices-of-a-graph-such-that-for-any-two-vertices-i-j-if-i-is-a-predecessor-of-j-in-the-network-then-i-precedes-j-in-the-linear-ordering" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Definition] A topological order is a linear ordering of the vertices of a graph such that, for any two vertices, $i$, $j$, if $i$ is a predecessor of $j$ in the network then $i$ precedes $j$ in the linear ordering.
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2711,78 +2481,78 @@
   
 
 
-<h1 id="week-8">WEEK 8</h1>
-<h2 id="6-graph-algorithms">6 Graph Algorithms</h2>
-<h3 id="61-definitions">6.1 Definitions</h3>
+<h1 id="week-8">WEEK 8<a class="headerlink" href="#week-8" title="Permanent link">&para;</a></h1>
+<h2 id="6-graph-algorithms">6 Graph Algorithms<a class="headerlink" href="#6-graph-algorithms" title="Permanent link">&para;</a></h2>
+<h3 id="61-definitions">6.1 Definitions<a class="headerlink" href="#61-definitions" title="Permanent link">&para;</a></h3>
 <ul>
-<li>$G( V, E )$ where $G$ = graph, $V = V( G )$ = finite nonempty set of vertices, and $E = E( G )$ = finite set of edges.</li>
+<li><span class="arithmatex">\(G( V, E )\)</span> where <span class="arithmatex">\(G\)</span> = graph, <span class="arithmatex">\(V = V( G )\)</span> = finite nonempty set of vertices, and <span class="arithmatex">\(E = E( G )\)</span> = finite set of edges.</li>
 </ul>
-<h4 id="undirected-graph">Undirected graph</h4>
+<h4 id="undirected-graph">Undirected graph<a class="headerlink" href="#undirected-graph" title="Permanent link">&para;</a></h4>
 <ul>
-<li>$( v_i , v_j ) = ( v_j , v_i )$ = the same edge.</li>
+<li><span class="arithmatex">\(( v_i , v_j ) = ( v_j , v_i )\)</span> = the same edge.</li>
 </ul>
-<h4 id="directed-graphdiagraph">Directed graph(diagraph)</h4>
+<h4 id="directed-graphdiagraph">Directed graph(diagraph)<a class="headerlink" href="#directed-graphdiagraph" title="Permanent link">&para;</a></h4>
 <p><img src="picture/8-1.png" alt="8-1" style="zoom:120%;" /></p>
-<h4 id="restrictions">Restrictions</h4>
+<h4 id="restrictions">Restrictions<a class="headerlink" href="#restrictions" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Self loop</strong> is illegal.</li>
 <li><strong>Multigraph</strong> is not considered.</li>
 </ul>
-<h4 id="complete-graph">Complete graph</h4>
+<h4 id="complete-graph">Complete graph<a class="headerlink" href="#complete-graph" title="Permanent link">&para;</a></h4>
 <ul>
 <li>A graph that has the maximum number of edges.</li>
 </ul>
 <p><img alt="image-20210124163038265" src="../picture/image-20210124163038265.png" /></p>
-<h4 id="adjacent">Adjacent</h4>
+<h4 id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">&para;</a></h4>
 <p><img src="picture/image-20210124163324744.png" alt="image-20210124163324744" style="zoom:120%;" /></p>
 <p><img src="picture/image-20210124163301833.png" alt="image-20210124163301833" style="zoom:120%;" /></p>
-<h4 id="subgraph">Subgraph</h4>
-<p>$$
+<h4 id="subgraph">Subgraph<a class="headerlink" href="#subgraph" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
 G'\subset G=V(G')\subseteq V(G) \&amp;\&amp; E(G')\subseteq E(G)
-$$</p>
-<h4 id="path">Path</h4>
+\]</div>
+<h4 id="path">Path<a class="headerlink" href="#path" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Path($\subset G$) from $v_p$ to $v_q$ = ${v_p,v_{i1},v_{i2},\cdots,v_{in},v_q}$ such that $(v_p,v_{i1}),(v_{i1},v_{i2}),\cdots,(v_{in},v_q)$ belong to $E(G)$</li>
+<li>Path(<span class="arithmatex">\(\subset G\)</span>) from <span class="arithmatex">\(v_p\)</span> to <span class="arithmatex">\(v_q\)</span> = <span class="arithmatex">\(\{v_p,v_{i1},v_{i2},\cdots,v_{in},v_q\}\)</span> such that <span class="arithmatex">\((v_p,v_{i1}),(v_{i1},v_{i2}),\cdots,(v_{in},v_q)\)</span> belong to <span class="arithmatex">\(E(G)\)</span></li>
 </ul>
-<h4 id="length-of-a-path">Length of a path</h4>
+<h4 id="length-of-a-path">Length of a path<a class="headerlink" href="#length-of-a-path" title="Permanent link">&para;</a></h4>
 <ul>
 <li>number of edges on the path</li>
 </ul>
-<h4 id="simple-path">Simple path</h4>
+<h4 id="simple-path">Simple path<a class="headerlink" href="#simple-path" title="Permanent link">&para;</a></h4>
 <ul>
-<li>$v_{i1},v_{i2},\cdots,v_{in}$ are distinct.</li>
+<li><span class="arithmatex">\(v_{i1},v_{i2},\cdots,v_{in}\)</span> are distinct.</li>
 </ul>
-<h4 id="cycle">Cycle</h4>
+<h4 id="cycle">Cycle<a class="headerlink" href="#cycle" title="Permanent link">&para;</a></h4>
 <ul>
-<li>simple path with $v_p=v_q$</li>
+<li>simple path with <span class="arithmatex">\(v_p=v_q\)</span></li>
 </ul>
-<h4 id="connected">Connected</h4>
+<h4 id="connected">Connected<a class="headerlink" href="#connected" title="Permanent link">&para;</a></h4>
 <ul>
-<li>$v_i$ and $v_j$ in an undirected $G$ are connected if there is a path from $v_i$ to $v_j$ (and hence there is also a path from $v_j$ to $v_i$)</li>
-<li>An undirected graph $G$ is connected if every pair of distinct $v_i$ and $v_j$ are connected</li>
+<li><span class="arithmatex">\(v_i\)</span> and <span class="arithmatex">\(v_j\)</span> in an undirected <span class="arithmatex">\(G\)</span> are connected if there is a path from <span class="arithmatex">\(v_i\)</span> to <span class="arithmatex">\(v_j\)</span> (and hence there is also a path from <span class="arithmatex">\(v_j\)</span> to <span class="arithmatex">\(v_i\)</span>)</li>
+<li>An undirected graph <span class="arithmatex">\(G\)</span> is connected if every pair of distinct <span class="arithmatex">\(v_i\)</span> and <span class="arithmatex">\(v_j\)</span> are connected</li>
 </ul>
-<h4 id="connected-component-of-an-undirected-g">(Connected) Component of an undirected G</h4>
+<h4 id="connected-component-of-an-undirected-g">(Connected) Component of an undirected G<a class="headerlink" href="#connected-component-of-an-undirected-g" title="Permanent link">&para;</a></h4>
 <ul>
 <li>the maximal connected subgraph</li>
 </ul>
-<h4 id="tree">Tree</h4>
+<h4 id="tree">Tree<a class="headerlink" href="#tree" title="Permanent link">&para;</a></h4>
 <ul>
 <li>a graph that is connected and acyclic(非循环的)</li>
 </ul>
-<h4 id="dag">DAG</h4>
+<h4 id="dag">DAG<a class="headerlink" href="#dag" title="Permanent link">&para;</a></h4>
 <ul>
 <li>a directed acyclic graph</li>
 </ul>
-<h4 id="strongly-connected-directed-graph-g">Strongly connected directed graph G</h4>
+<h4 id="strongly-connected-directed-graph-g">Strongly connected directed graph G<a class="headerlink" href="#strongly-connected-directed-graph-g" title="Permanent link">&para;</a></h4>
 <ul>
-<li>For every pair of $v_i$ and $v_j$ in $V( G )$, there exist directed paths from $v_i$ to $v_j$ and from $v_j$ to $v_i$.  </li>
+<li>For every pair of <span class="arithmatex">\(v_i\)</span> and <span class="arithmatex">\(v_j\)</span> in <span class="arithmatex">\(V( G )\)</span>, there exist directed paths from <span class="arithmatex">\(v_i\)</span> to <span class="arithmatex">\(v_j\)</span> and from <span class="arithmatex">\(v_j\)</span> to <span class="arithmatex">\(v_i\)</span>.  </li>
 <li>If the graph is connected without direction to the edges, then it is said to be weakly connected</li>
 </ul>
-<h4 id="strongly-connected-component">Strongly connected component</h4>
+<h4 id="strongly-connected-component">Strongly connected component<a class="headerlink" href="#strongly-connected-component" title="Permanent link">&para;</a></h4>
 <ul>
 <li>the maximal subgraph that is strongly connected</li>
 </ul>
-<h4 id="degree">Degree</h4>
+<h4 id="degree">Degree<a class="headerlink" href="#degree" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p>number of edges incident to v</p>
@@ -2791,15 +2561,15 @@ $$</p>
 <p>For a directed G, we have <strong>in-degree</strong> and <strong>out-degree</strong>.</p>
 </li>
 <li>
-<p>Given G with $n$ vertices and $e$ edges, then
+<p>Given G with <span class="arithmatex">\(n\)</span> vertices and <span class="arithmatex">\(e\)</span> edges, then
   $$
   e=(\sum_{i=0}^{n-1}d_i)/2\quad where\quad d_i=degree(v_i)
   $$</p>
 </li>
 </ul>
 <hr />
-<h3 id="62-representation-of-graphs">6.2 Representation of Graphs</h3>
-<h4 id="adjacency-matrix">Adjacency Matrix</h4>
+<h3 id="62-representation-of-graphs">6.2 Representation of Graphs<a class="headerlink" href="#62-representation-of-graphs" title="Permanent link">&para;</a></h3>
+<h4 id="adjacency-matrix">Adjacency Matrix<a class="headerlink" href="#adjacency-matrix" title="Permanent link">&para;</a></h4>
 <p><img alt="image-20210124163641976" src="../picture/image-20210124163641976.png" /></p>
 <blockquote>
 <p>Note : If G is undirected, then adj_mat[][] is symmetric. Thus we can save space by storing only half of the matrix.</p>
@@ -2810,10 +2580,10 @@ $$</p>
 <p>This representation wastes space if the graph has a lot of vertices but very few edges.</p>
 </li>
 <li>
-<p>To find out whether or not $G$ is connected, we’ll have to examine all edges. In this case $T$ and $S$ are both $O( n^2 )$.</p>
+<p>To find out whether or not <span class="arithmatex">\(G\)</span> is connected, we’ll have to examine all edges. In this case <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(S\)</span> are both <span class="arithmatex">\(O( n^2 )\)</span>.</p>
 </li>
 </ul>
-<h4 id="adjacency-lists">Adjacency Lists</h4>
+<h4 id="adjacency-lists">Adjacency Lists<a class="headerlink" href="#adjacency-lists" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Replace each row by a linked list</li>
 </ul>
@@ -2822,90 +2592,90 @@ $$</p>
 <p>Note : The order of nodes in each list does not matter.</p>
 </blockquote>
 <ul>
-<li>For undirected $G$, $S$ = $n$ heads + $2e$ nodes  = $(n+2e)$ ptrs + $2e$ ints</li>
-<li>Degree(i) = number of nodes in graph[i](if $G$ is undirected)</li>
-<li>$T$ of examine $E(G)$ = $O(n+e)$</li>
+<li>For undirected <span class="arithmatex">\(G\)</span>, <span class="arithmatex">\(S\)</span> = <span class="arithmatex">\(n\)</span> heads + <span class="arithmatex">\(2e\)</span> nodes  = <span class="arithmatex">\((n+2e)\)</span> ptrs + <span class="arithmatex">\(2e\)</span> ints</li>
+<li>Degree(i) = number of nodes in graph[i](if <span class="arithmatex">\(G\)</span> is undirected)</li>
+<li><span class="arithmatex">\(T\)</span> of examine <span class="arithmatex">\(E(G)\)</span> = <span class="arithmatex">\(O(n+e)\)</span></li>
 </ul>
 <p><img alt="image-20210124165346405" src="../picture/image-20210124165346405.png" /></p>
-<h4 id="adjacency-multilists">Adjacency Multilists</h4>
+<h4 id="adjacency-multilists">Adjacency Multilists<a class="headerlink" href="#adjacency-multilists" title="Permanent link">&para;</a></h4>
 <p><img alt="image-20210124164607434" src="../picture/image-20210124164607434.png" /></p>
 <ul>
 <li>Sometimes we need to mark the edge after examine it, and then find the next edge.</li>
 </ul>
-<h4 id="weighted-edges">Weighted Edges</h4>
+<h4 id="weighted-edges">Weighted Edges<a class="headerlink" href="#weighted-edges" title="Permanent link">&para;</a></h4>
 <ul>
 <li>adj_mat [ i ] [ j ] = weight</li>
 <li>adjacency lists / multilists :  add a weight field to the node</li>
 </ul>
 <hr />
-<h3 id="63-topological-sort">6.3 Topological Sort 拓扑排序 不是一种严格意义的排序算法</h3>
-<h4 id="aov-activity-on-vertices-network">AOV  activity on vertices  Network 有向无环图</h4>
+<h3 id="63-topological-sort">6.3 Topological Sort 拓扑排序 不是一种严格意义的排序算法<a class="headerlink" href="#63-topological-sort" title="Permanent link">&para;</a></h3>
+<h4 id="aov-activity-on-vertices-network">AOV  activity on vertices  Network 有向无环图<a class="headerlink" href="#aov-activity-on-vertices-network" title="Permanent link">&para;</a></h4>
 <ul>
-<li>digraph $G$ in which $V( G )$ represents activities and $E( G )$ represents precedence relations </li>
+<li>digraph <span class="arithmatex">\(G\)</span> in which <span class="arithmatex">\(V( G )\)</span> represents activities and <span class="arithmatex">\(E( G )\)</span> represents precedence relations </li>
 <li>Feasible AOV network must be a directed acyclic graph（<strong>DAG</strong>）.</li>
-<li>$i$  is a <strong>predecessor</strong> of $j$ = there is a path from $i$  to $j$</li>
-<li>$i$  is an <strong>immediate predecessor</strong> of  $j$ = $&lt; i,  j &gt; \in E( G )$. Then $j$ is called a <strong>successor</strong>(<strong>immediate successor</strong>) of $i$</li>
+<li><span class="arithmatex">\(i\)</span>  is a <strong>predecessor</strong> of <span class="arithmatex">\(j\)</span> = there is a path from <span class="arithmatex">\(i\)</span>  to <span class="arithmatex">\(j\)</span></li>
+<li><span class="arithmatex">\(i\)</span>  is an <strong>immediate predecessor</strong> of  <span class="arithmatex">\(j\)</span> = <span class="arithmatex">\(&lt; i,  j &gt; \in E( G )\)</span>. Then <span class="arithmatex">\(j\)</span> is called a <strong>successor</strong>(<strong>immediate successor</strong>) of <span class="arithmatex">\(i\)</span></li>
 </ul>
-<h4 id="partial-order">Partial order</h4>
+<h4 id="partial-order">Partial order<a class="headerlink" href="#partial-order" title="Permanent link">&para;</a></h4>
 <ul>
 <li>a precedence relation which is both <strong>transitive</strong> and <strong>irreflexive</strong> </li>
 </ul>
 <blockquote>
-<p>Note : If the precedence relation is reflexive, then there must be an $i$ such that $i$ is a predecessor of $i$.  That is, $i$ must be done before $i$ is started. Therefore if a project is <strong>feasible</strong>, it must be <strong>irreflexive</strong>.</p>
+<p>Note : If the precedence relation is reflexive, then there must be an <span class="arithmatex">\(i\)</span> such that <span class="arithmatex">\(i\)</span> is a predecessor of <span class="arithmatex">\(i\)</span>.  That is, <span class="arithmatex">\(i\)</span> must be done before <span class="arithmatex">\(i\)</span> is started. Therefore if a project is <strong>feasible</strong>, it must be <strong>irreflexive</strong>.</p>
 </blockquote>
-<h4 id="definition-a-topological-order-is-a-linear-ordering-of-the-vertices-of-a-graph-such-that-for-any-two-vertices-i-j-if-i-is-a-predecessor-of-j-in-the-network-then-i-precedes-j-in-the-linear-ordering">[Definition] A <em>topological order</em> is a linear ordering  of the vertices of a graph such that, for any two vertices, $i$, $j$, if $i$ is a predecessor of $j$ in the network then $i$ precedes $j$ in the linear ordering.</h4>
+<h4 id="definition-a-topological-order-is-a-linear-ordering-of-the-vertices-of-a-graph-such-that-for-any-two-vertices-i-j-if-i-is-a-predecessor-of-j-in-the-network-then-i-precedes-j-in-the-linear-ordering">[Definition] A <em>topological order</em> is a linear ordering  of the vertices of a graph such that, for any two vertices, <span class="arithmatex">\(i\)</span>, <span class="arithmatex">\(j\)</span>, if <span class="arithmatex">\(i\)</span> is a predecessor of <span class="arithmatex">\(j\)</span> in the network then <span class="arithmatex">\(i\)</span> precedes <span class="arithmatex">\(j\)</span> in the linear ordering.<a class="headerlink" href="#definition-a-topological-order-is-a-linear-ordering-of-the-vertices-of-a-graph-such-that-for-any-two-vertices-i-j-if-i-is-a-predecessor-of-j-in-the-network-then-i-precedes-j-in-the-linear-ordering" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p>Note : The topological orders may <strong>not be unique</strong> for a network.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="cm">/*Test an AOV for feasibility, and generate a topological order if possible*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">Topsort</span><span class="p">(</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Counter</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">Counter</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NumVertex</span><span class="p">;</span><span class="w"> </span><span class="n">Counter</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FindNewVertexOfDegreeZero</span><span class="p">(</span><span class="w"> </span><span class="p">);</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">NotAVertex</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="c1">//确认图中无环？</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">Error</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="err">“</span><span class="n">Graph</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">cycle</span><span class="err">”</span><span class="w"> </span><span class="p">);</span><span class="w">   </span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w">  </span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">TopNum</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Counter</span><span class="p">;</span><span class="w"> </span><span class="cm">/* or output V */</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">            </span><span class="n">Indegree</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">]</span><span class="err">––</span><span class="p">;</span><span class="w"> </span><span class="c1">//对所有前置选课要求有V的课程，在修之前必须修完的课少了一门</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>$$
+<pre><code class="language-c">/*Test an AOV for feasibility, and generate a topological order if possible*/
+void Topsort( Graph G )
+{   
+    int Counter;
+    Vertex V, W;
+    for ( Counter = 0; Counter &lt; NumVertex; Counter++ ) 
+    {
+        V = FindNewVertexOfDegreeZero( );
+        if ( V == NotAVertex ) //确认图中无环？
+        {
+            Error ( “Graph has a cycle” );   
+            break;  
+        }
+        TopNum[ V ] = Counter; /* or output V */
+        for ( each W adjacent to V )
+            Indegree[ W ]––; //对所有前置选课要求有V的课程，在修之前必须修完的课少了一门
+    }
+}
+</code></pre>
+<div class="arithmatex">\[
 T=O(|V|^2+|E|) = O(|V|^2)
-$$</p>
-<div class="highlight"><pre><span></span><code><span class="cm">/*Improvment:Keep all the unassigned vertices of degree 0 in a special box (queue or stack)*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">Topsort</span><span class="p">(</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span><span class="w">   </span>
-<span class="w">    </span><span class="n">Queue</span><span class="w"> </span><span class="n">Q</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Vertex</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateQueue</span><span class="p">(</span><span class="w"> </span><span class="n">NumVertex</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-<span class="w">    </span><span class="n">MakeEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">vertex</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Indegree</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">Enqueue</span><span class="p">(</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">IsEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dequeue</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">        </span><span class="n">TopNum</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">Counter</span><span class="p">;</span><span class="w"> </span><span class="cm">/* assign next */</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">)</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="err">––</span><span class="n">Indegree</span><span class="p">[</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">Enqueue</span><span class="p">(</span><span class="w"> </span><span class="n">W</span><span class="p">,</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="cm">/* end-while */</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Counter</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">NumVertex</span><span class="w"> </span><span class="p">)</span>
-<span class="w">    </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="err">“</span><span class="n">Graph</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">cycle</span><span class="err">”</span><span class="w"> </span><span class="p">);</span>
-<span class="w">    </span><span class="n">DisposeQueue</span><span class="p">(</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="cm">/* free memory */</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>$$
+\]</div>
+<pre><code class="language-c">/*Improvment:Keep all the unassigned vertices of degree 0 in a special box (queue or stack)*/
+void Topsort( Graph G )
+{   
+    Queue Q;
+    int Counter = 0;
+    Vertex V, W;
+    Q = CreateQueue( NumVertex );  
+    MakeEmpty( Q );
+    for ( each vertex V )
+        if ( Indegree[ V ] == 0 ) Enqueue( V, Q );
+    while ( !IsEmpty( Q ) ) 
+    {
+        V = Dequeue( Q );
+        TopNum[ V ] = ++Counter; /* assign next */
+        for ( each W adjacent to V )
+            if (––Indegree[ W ] == 0 ) Enqueue( W, Q );
+    }  /* end-while */
+    if ( Counter != NumVertex )
+    Error( “Graph has a cycle” );
+    DisposeQueue( Q ); /* free memory */
+}
+</code></pre>
+<div class="arithmatex">\[
 T=O(|V|+|E|)
-$$</p>
+\]</div>
 <hr />
-<p>$注意E的范围 最小 V 最大 |V|^2$</p>
+<p><span class="arithmatex">\(注意E的范围 最小 V 最大 |V|^2\)</span></p>
 
 
 
@@ -3071,9 +2841,9 @@ $$</p>
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>

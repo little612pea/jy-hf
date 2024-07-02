@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -1676,14 +1678,16 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1739,93 +1743,6 @@
       实验过程与结果
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="实验过程与结果">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      一、判别三极管类型
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#va" class="md-nav__link">
-    <span class="md-ellipsis">
-      二、采用逐点法测量三极管输入VA特性
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="二、采用逐点法测量三极管输入VA特性">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1vceibvbe" class="md-nav__link">
-    <span class="md-ellipsis">
-      （1）固定V~CE~下，I~B~与V~BE~的关系
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="（1）固定V~CE~下，I~B~与V~BE~的关系">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      实验结果与分析
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2ib-icvce" class="md-nav__link">
-    <span class="md-ellipsis">
-      （2）固定I~B~ 下，I~C~与V~CE~的关系
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="（2）固定I~B~ 下，I~C~与V~CE~的关系">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      实验结果与分析
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      一些特殊点的分析
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1934,30 +1851,6 @@
       测试方案与结果
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="测试方案与结果">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      （1）逐点输入直流电压，测量其传输特性。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#205v" class="md-nav__link">
-    <span class="md-ellipsis">
-      （2）输入0至5V变化的电压，利用扫描法测量传输特性
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2803,30 +2696,30 @@
 
   <h1>Lab 4</h1>
 
-<h2 id="_1">三极管和门电路特性测试</h2>
+<h2 id="_1">三极管和门电路特性测试<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>实验日期：2023/10/9</p>
 <p>地点：东3-406</p>
-<h2 id="_2">实验目的</h2>
+<h2 id="_2">实验目的<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
 <li>掌握半导体三极管特性测试。</li>
 <li>掌握门电路电气特性测试。</li>
 <li>学习MULTISIM电路仿真软件的使用。</li>
 </ol>
-<h2 id="_3">实验一：万用表测量三极管</h2>
-<h3 id="_4">实验器材</h3>
+<h2 id="_3">实验一：万用表测量三极管<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">实验器材<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ol>
 <li>万用表（HY63）</li>
 <li>三极管</li>
 <li>连接线</li>
 </ol>
-<h3 id="_5">实验方案</h3>
+<h3 id="_5">实验方案<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ol>
 <li>判别三极管类型，E\B\C三极，测量放大倍数。</li>
 <li>测量VCE=0 ; 1V ; 5V条件下的输入特性。</li>
 <li>测量IB =2.5uA ; 5uA ; 7.5uA;10uA条件下输出特性。</li>
 </ol>
-<h3 id="_6">实验过程与结果</h3>
-<h4 id="_7">一、判别三极管类型</h4>
+<h3 id="_6">实验过程与结果<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h4 id="_7">一、判别三极管类型<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <ul>
 <li>将三极管从右到左三只脚命名为a,b,c，利用万用表二极管测试级，测量三极管三只脚的极性。</li>
 </ul>
@@ -2839,8 +2732,8 @@
 <p><img src="./assets/IMG_9690.jpeg" style="zoom:10%;" /><img src="./assets/IMG_9691.jpeg" alt="IMG_9691" style="zoom:10%;" /></p>
 <p>将万用表切换到HFE档，通过对三极管的放大倍数的测量，判断三极管的e和c极。已知正常的ß应该在100～300之间。</p>
 <p>将三极管中间的极脚插入b口，两端分别插入e和c。可见当示数显示为249时，e,b,c脚插入正确，放大倍数ß=249。从而可判断三极管的三只脚的极性：当平面对向自己时，从左到右三只脚分别为e,b,c。</p>
-<h4 id="va">二、采用逐点法测量三极管输入VA特性</h4>
-<h5 id="1vceibvbe">（1）固定V~CE~下，I~B~与V~BE~的关系</h5>
+<h4 id="va">二、采用逐点法测量三极管输入VA特性<a class="headerlink" href="#va" title="Permanent link">&para;</a></h4>
+<h5 id="1vceibvbe">（1）固定V~CE~下，I~B~与V~BE~的关系<a class="headerlink" href="#1vceibvbe" title="Permanent link">&para;</a></h5>
 <ol>
 <li>将电路连接为下图</li>
 </ol>
@@ -2854,40 +2747,36 @@
 <p>利用Matlab绘制伏安特性曲线。</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="c">% 使用xlsread函数从Excel文件中读取数据</span>
-<span class="n">data1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readtable</span><span class="p">(</span><span class="s">&#39;./1016all.xlsx&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Sheet&#39;</span><span class="p">,</span><span class="s">&#39;0V&#39;</span><span class="p">,</span><span class="s">&#39;Range&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;C2:D17&#39;</span><span class="p">);</span>
-<span class="n">data2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readtable</span><span class="p">(</span><span class="s">&#39;./1016all.xlsx&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Sheet&#39;</span><span class="p">,</span><span class="s">&#39;15V&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Range&#39;</span><span class="p">,</span><span class="s">&#39;C2:D19&#39;</span><span class="p">);</span>
-
-<span class="c">% 提取电压和电流数据</span>
-<span class="n">vbe1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data1</span><span class="p">{:,</span><span class="w"> </span><span class="mi">1</span><span class="p">};</span>
-<span class="n">ib1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data1</span><span class="p">{:,</span><span class="w"> </span><span class="mi">2</span><span class="p">};</span>
-<span class="n">vbe2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data2</span><span class="p">{:,</span><span class="mi">1</span><span class="p">};</span>
-<span class="n">ib2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data2</span><span class="p">{:,</span><span class="mi">2</span><span class="p">};</span>
-
-<span class="c">% 绘制伏安特性曲线</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">vbe1</span><span class="p">,</span><span class="w"> </span><span class="n">ib1</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 绘制数据点和连接线</span>
-<span class="nb">title</span><span class="p">(</span><span class="s">&#39;固定VCE下三极管输出VA曲线&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 添加标题</span>
-<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;V_{BE}(V)&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 添加x轴标签</span>
-<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;I_B(uA)&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 添加y轴标签</span>
-<span class="nb">grid</span><span class="w"> </span><span class="n">on</span><span class="p">;</span><span class="w"> </span><span class="c">% 添加网格线</span>
-
-<span class="c">% 对曲线进行平滑处理</span>
-<span class="n">smoothed_ib1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">smooth</span><span class="p">(</span><span class="n">ib1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;loess&#39;</span><span class="p">);</span><span class="w"> </span>
-<span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"> </span><span class="c">% 在同一图中叠加平滑曲线</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">vbe1</span><span class="p">,</span><span class="w"> </span><span class="n">smoothed_ib1</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% 绘制平滑曲线</span>
-
-<span class="c">%绘制曲线2</span>
-<span class="nb">hold</span><span class="w"> </span><span class="n">on</span><span class="p">;</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">vbe2</span><span class="p">,</span><span class="w"> </span><span class="n">ib2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 绘制数据点和连接线</span>
-<span class="nb">grid</span><span class="w"> </span><span class="n">on</span><span class="p">;</span><span class="w"> </span><span class="c">% 添加网格线</span>
-
-<span class="c">% 对曲线进行平滑处理</span>
-<span class="n">smoothed_ib2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">smooth</span><span class="p">(</span><span class="n">ib2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;loess&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 使用rloess平滑算法</span>
-<span class="nb">hold</span><span class="w"> </span><span class="n">on</span><span class="p">;</span><span class="w"> </span><span class="c">% 在同一图中叠加平滑曲线</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">vbe2</span><span class="p">,</span><span class="w"> </span><span class="n">smoothed_ib2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;r-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% 绘制平滑曲线</span>
-<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;原始数据(0V)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;曲线（0V下）&#39;</span><span class="p">,</span><span class="s">&#39;原始数据(15V)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;曲线（15V下）&#39;</span><span class="p">);</span>
-</code></pre></div>
-<h6 id="_8">实验结果与分析</h6>
+<p>```matlab
+   % 使用xlsread函数从Excel文件中读取数据
+   data1 = readtable('./1016all.xlsx', 'Sheet','0V','Range', 'C2:D17');
+   data2 = readtable('./1016all.xlsx', 'Sheet','15V', 'Range','C2:D19');</p>
+<p>% 提取电压和电流数据
+   vbe1 = data1{:, 1};
+   ib1 = data1{:, 2};
+   vbe2 = data2{:,1};
+   ib2 = data2{:,2};</p>
+<p>% 绘制伏安特性曲线
+   plot(vbe1, ib1, 'o'); % 绘制数据点和连接线
+   title('固定VCE下三极管输出VA曲线'); % 添加标题
+   xlabel('V_{BE}(V)'); % 添加x轴标签
+   ylabel('I_B(uA)'); % 添加y轴标签
+   grid on; % 添加网格线</p>
+<p>% 对曲线进行平滑处理
+   smoothed_ib1 = smooth(ib1, 5, 'loess'); 
+   hold on; % 在同一图中叠加平滑曲线
+   plot(vbe1, smoothed_ib1, 'b-', 'LineWidth', 1); % 绘制平滑曲线</p>
+<p>%绘制曲线2
+   hold on;
+   plot(vbe2, ib2, 'o'); % 绘制数据点和连接线
+   grid on; % 添加网格线</p>
+<p>% 对曲线进行平滑处理
+   smoothed_ib2 = smooth(ib2, 5, 'loess'); % 使用rloess平滑算法
+   hold on; % 在同一图中叠加平滑曲线
+   plot(vbe2, smoothed_ib2, 'r-', 'LineWidth', 1); % 绘制平滑曲线
+   legend('原始数据(0V)', '曲线（0V下）','原始数据(15V)', '曲线（15V下）');
+   ```</p>
+<h6 id="_8">实验结果与分析<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h6>
 <p>实验数据如下：</p>
 <p><center>VCE=0V</center></p>
 <p><img src="./assets/截屏2023-10-22 16.51.12.png" alt="截屏2023-10-22 16.51.12" style="zoom:50%;" /></p>
@@ -2895,7 +2784,7 @@
 <p><img src="./assets/截屏2023-10-22 16.49.53.png" alt="截屏2023-10-22 16.49.53" style="zoom:43%;" /></p>
 <p><img src="./assets/figure1.bmp" style="zoom:50%;" /></p>
 <p><center>fig2 三极管VA特性曲线</center></p>
-<h5 id="2ib-icvce">（2）固定I~B~ 下，I~C~与V~CE~的关系</h5>
+<h5 id="2ib-icvce">（2）固定I~B~ 下，I~C~与V~CE~的关系<a class="headerlink" href="#2ib-icvce" title="Permanent link">&para;</a></h5>
 <ol>
 <li>将电路图连接为下图</li>
 </ol>
@@ -2906,7 +2795,7 @@
 <li>调节V2，测量R2两端电压，通过计算得出V~CE~和Ic的大小。</li>
 <li>绘制伏安特性曲线。</li>
 </ol>
-<h6 id="_9">实验结果与分析</h6>
+<h6 id="_9">实验结果与分析<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h6>
 <p><center>Ib=2.5uA</center></p>
 <p><img src="./assets/截屏2023-10-22 17.06.55.png" style="zoom:40%;" /></p>
 <p><center>Ib=5uA</center></p>
@@ -2917,15 +2806,15 @@
 <p><img src="./assets/截屏2023-10-22 17.07.20.png" alt="截屏2023-10-22 17.07.20" style="zoom:40%;" /></p>
 <p><img src="./assets/figure2.bmp" style="zoom:50%;" /></p>
 <p><center>fig4 绘制VA特性曲线</center></p>
-<h6 id="_10">一些特殊点的分析</h6>
+<h6 id="_10">一些特殊点的分析<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h6>
 <p><img src="./assets/figure25.bmp" style="zoom:50%;" /></p>
 <p><center>fig5 I_b=2.5uA下的VA曲线</center></p>
 <p>我们发现，当I~b~=2.5uA时ce的压降使得Ic到达饱和区时，放大电流随着压降增大而减小。</p>
 <p><img src="./assets/figure10.bmp" style="zoom:50%;" /></p>
 <p><center>fig6 I=10uA下的VA曲线</center></p>
 <p>而当I~b~=10uA时，放大电流随着V~CE~增加增大。这种现象，可能也恰好反映了基极电流会随着CE两端电压的大小变化而发生变化，但是所造成的变化并不明显，所以上述实验可以通过保持V1不变控制I~b~不变。</p>
-<h2 id="multisimva">实验二：采用MULTISIM逐点仿真三极管输入VA特性</h2>
-<h3 id="_11">仿真过程</h3>
+<h2 id="multisimva">实验二：采用MULTISIM逐点仿真三极管输入VA特性<a class="headerlink" href="#multisimva" title="Permanent link">&para;</a></h2>
+<h3 id="_11">仿真过程<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <ol>
 <li>利用MULTISIM软件搭建以下电路：</li>
 </ol>
@@ -2942,40 +2831,39 @@
 <li>利用matlab进行数据处理，获得最终值。</li>
 </ol>
 <p>固定Vce</p>
-<div class="highlight"><pre><span></span><code><span class="n">data1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readmatrix</span><span class="p">(</span><span class="s">&#39;./1016/1_0V.csv&#39;</span><span class="p">,</span><span class="s">&#39;NumHeaderLines&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
-<span class="c">% 提取电压和电流数据</span>
-<span class="n">vbe1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data1</span><span class="p">(:,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
-<span class="n">ib1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data1</span><span class="p">(:,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-
-<span class="c">% 对曲线进行平滑处理</span>
-<span class="n">smoothed_ib1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">smooth</span><span class="p">(</span><span class="n">ib1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;loess&#39;</span><span class="p">);</span><span class="w"> </span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">vbe1</span><span class="p">,</span><span class="w"> </span><span class="n">smoothed_ib1</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% 绘制平滑曲线</span>
-<span class="nb">title</span><span class="p">(</span><span class="s">&#39;固定VCE下三极管输出VA曲线&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 添加标题</span>
-<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;V_{BE}(V)&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 添加x轴标签</span>
-<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;I_B(uA)&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 添加y轴标签</span>
-<span class="nb">grid</span><span class="w"> </span><span class="n">on</span><span class="p">;</span><span class="w"> </span><span class="c">% 添加网格线</span>
-
-<span class="n">data2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readmatrix</span><span class="p">(</span><span class="s">&#39;./1016/2_15V.csv&#39;</span><span class="p">,</span><span class="s">&#39;NumHeaderLines&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
-<span class="c">% 提取电压和电流数据</span>
-<span class="n">vbe2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data2</span><span class="p">(:,</span><span class="mi">5</span><span class="p">);</span>
-<span class="n">ib2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data2</span><span class="p">(:,</span><span class="mi">2</span><span class="p">);</span>
-<span class="c">% 对曲线进行平滑处理</span>
-<span class="n">smoothed_ib2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">smooth</span><span class="p">(</span><span class="n">ib2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;loess&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 使用rloess平滑算法</span>
-<span class="nb">hold</span><span class="w"> </span><span class="n">on</span><span class="p">;</span><span class="w"> </span><span class="c">% 在同一图中叠加平滑曲线</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">vbe2</span><span class="p">,</span><span class="w"> </span><span class="n">smoothed_ib2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;r-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% 绘制平滑曲线</span>
-<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;V_{CE}=0V&#39;</span><span class="p">,</span><span class="s">&#39;V_{CE}=15V&#39;</span><span class="p">);</span>
-</code></pre></div>
-<h3 id="_12">实验结果</h3>
+<p>```matlab
+   data1 = readmatrix('./1016/1_0V.csv','NumHeaderLines',1);
+   % 提取电压和电流数据
+   vbe1 = data1(:, 5);
+   ib1 = data1(:, 2);</p>
+<p>% 对曲线进行平滑处理
+   smoothed_ib1 = smooth(ib1, 5, 'loess'); 
+   plot(vbe1, smoothed_ib1, 'b-', 'LineWidth', 1); % 绘制平滑曲线
+   title('固定VCE下三极管输出VA曲线'); % 添加标题
+   xlabel('V_{BE}(V)'); % 添加x轴标签
+   ylabel('I_B(uA)'); % 添加y轴标签
+   grid on; % 添加网格线</p>
+<p>data2 = readmatrix('./1016/2_15V.csv','NumHeaderLines',1);
+   % 提取电压和电流数据
+   vbe2 = data2(:,5);
+   ib2 = data2(:,2);
+   % 对曲线进行平滑处理
+   smoothed_ib2 = smooth(ib2, 5, 'loess'); % 使用rloess平滑算法
+   hold on; % 在同一图中叠加平滑曲线
+   plot(vbe2, smoothed_ib2, 'r-', 'LineWidth', 1); % 绘制平滑曲线
+   legend('V_{CE}=0V','V_{CE}=15V');
+   ```</p>
+<h3 id="_12">实验结果<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <p><img src="./assets/MVCE.bmp" style="zoom:40%;" /></p>
 <p><img src="./assets/ib.bmp" style="zoom:50%;" /></p>
-<h2 id="_13">实验三：测试与非门逻辑功能</h2>
-<h3 id="_14">实验器材</h3>
+<h2 id="_13">实验三：测试与非门逻辑功能<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<h3 id="_14">实验器材<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <ol>
 <li>万用表（HY63）</li>
 <li>74LS00与非门</li>
 <li>连接线</li>
 </ol>
-<h3 id="_15">测试过程与结果</h3>
+<h3 id="_15">测试过程与结果<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <ol>
 <li>连接电路为下图，注意7脚接地和14脚接高电平</li>
 </ol>
@@ -2985,10 +2873,10 @@
 <li>点按按钮，改变输入两端电压。</li>
 <li>利用万用表测量引脚电压。</li>
 </ol>
-<h3 id="_16">实验结果</h3>
+<h3 id="_16">实验结果<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <p><img src="./assets/截屏2023-10-22 20.21.21.png" style="zoom:50%;" /></p>
-<h2 id="_17">实验四：与非门传输特性测量</h2>
-<h3 id="_18">实验器材</h3>
+<h2 id="_17">实验四：与非门传输特性测量<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<h3 id="_18">实验器材<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
 <ol>
 <li>示波器（1000 X-Series）</li>
 <li>信号源（ SDG2000X）</li>
@@ -2996,8 +2884,8 @@
 <li>连接线</li>
 <li>万用表（HY63）</li>
 </ol>
-<h3 id="_19">测试方案与结果</h3>
-<h4 id="1">（1）逐点输入直流电压，测量其传输特性。</h4>
+<h3 id="_19">测试方案与结果<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<h4 id="1">（1）逐点输入直流电压，测量其传输特性。<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
 <ol>
 <li>连接电路</li>
 </ol>
@@ -3013,7 +2901,7 @@
 </ol>
 <p><img alt="截屏2023-10-22 20.57.37" src="../assets/%E6%88%AA%E5%B1%8F2023-10-22%2020.57.37.png" /></p>
 <p><img src="./assets/untitledp20.bmp" style="zoom:50%;" /></p>
-<h4 id="205v">（2）输入0至5V变化的电压，利用扫描法测量传输特性</h4>
+<h4 id="205v">（2）输入0至5V变化的电压，利用扫描法测量传输特性<a class="headerlink" href="#205v" title="Permanent link">&para;</a></h4>
 <ol>
 <li>连接电路。</li>
 </ol>
@@ -3032,7 +2920,7 @@
 <li>切换观察选项为XY显示。</li>
 </ol>
 <p><img src="./assets/bcope_9.bmp" style="zoom:75%;" /></p>
-<h3 id="_20">结果分析</h3>
+<h3 id="_20">结果分析<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>根据XY显示，实际上，从高电位变到低点位，临界值偏大；而当低点位变到高电位过程中，临界值偏小。所以，在进行万用表测量时，正反两次调节电压所获数据不同属于是正常现象。</p>
@@ -3041,14 +2929,14 @@
 <p>根据示波器读数，当电位在2.3V到3.5V之间时，输入并不是准确的高电位抑或低电位，此处的引脚输出也并不是准确的高电位/低点位。因此在实际使用过程中，应该避免引脚输入处于这个值之间。</p>
 </li>
 </ul>
-<h2 id="_21">实验五：与非门输入电流测量</h2>
-<h3 id="_22">实验器材</h3>
+<h2 id="_21">实验五：与非门输入电流测量<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<h3 id="_22">实验器材<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
 <ol>
 <li>74LS00与非门</li>
 <li>连接线</li>
 <li>万用表（HY63）</li>
 </ol>
-<h3 id="_23">测试过程与结果</h3>
+<h3 id="_23">测试过程与结果<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
 <ol>
 <li>连接电路</li>
 </ol>
@@ -3057,19 +2945,19 @@
 <li>利用万用表测量电压，并记录数据</li>
 </ol>
 <p><img alt="" src="../assets/%E6%88%AA%E5%B1%8F2023-10-22%2021.25.32.png" /></p>
-<h3 id="_24">结果分析</h3>
+<h3 id="_24">结果分析<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
 <ul>
 <li>当2脚接低点位时，与非门内部的电压高于外界电压，导致有电流通过。</li>
 <li>当2脚接高电位时，与非门也相当于一个内阻，并不能完全反映高电位电压，而是进行一定的分压。不过，由于电流非常小（在1e-5A的数量级），往往可以将与非门当作无穷大内阻；但是如果外接电阻非常大（1e5Ω数量级）的时候，需要考虑在内。</li>
 </ul>
-<h2 id="_25">实验六：</h2>
-<h3 id="_26">实验器材</h3>
+<h2 id="_25">实验六：<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h2>
+<h3 id="_26">实验器材<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
 <ol>
 <li>74LS00与非门</li>
 <li>连接线</li>
 <li>万用表（HY63）</li>
 </ol>
-<h3 id="_27">测试过程与结果</h3>
+<h3 id="_27">测试过程与结果<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
 <ol>
 <li>连接电路</li>
 </ol>
@@ -3087,7 +2975,7 @@
 <p><em>注意：每次测量电阻</em>R<em>L的值时须断电，并将R~L~两端中的任意一端从电路中断开，以免连接的电路影响电阻的测量值。</em></p>
 </li>
 </ol>
-<h3 id="_28">实验结果与分析</h3>
+<h3 id="_28">实验结果与分析<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../assets/%E6%88%AA%E5%B1%8F2023-10-22%2021.56.17.png" /></p>
 <p><img src="./assets/image-20231022220805720.png" alt="image-20231022220805720" style="zoom:50%;" /></p>
 <p>可以看到与非门输出在外端串联电阻时，尤其是小电阻，输出并不是标准的高电平或者低电平。与非门内部呈现一定的定值电阻特性（由两段曲线呈现直线可以看出）。经过一定的计算，可以得出与非门内部的电阻可以近似估计为0.02Ω。</p>
@@ -3257,9 +3145,9 @@
       
         <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>
