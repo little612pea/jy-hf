@@ -275,7 +275,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../preview/" class="md-tabs__link">
+        <a href="../../../JY-Feng/" class="md-tabs__link">
           
   
   Jy Feng EE
@@ -1521,6 +1521,73 @@
                 
   
   
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Preview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Preview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JY-Feng/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1536,10 +1603,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1550,8 +1617,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             1 电路电子技术I实验（爱迪生班）
           </label>
@@ -2216,10 +2283,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
         
           
-          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2230,8 +2297,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             2 电路电子技术II实验（爱迪生班）
           </label>
@@ -2817,89 +2884,167 @@
 <p>由于总情况较少，所以选择打表的方式列写代码。</p>
 <h3 id="2-quartus-intel-fpgamultisim">2. 利用QUARTUS INTEL FPGA软件自带的Multisim软件先进行模拟</h3>
 <h4 id="task1vhd">逻辑设计输入 task1.vhd</h4>
-<pre><code class="language-vhdl">---------库说明与库引用------------
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all; 
-use IEEE.numeric_std.all;
-use IEEE.std_logic_arith.all;
----------------------------------
-
-
----------实体定义Task1------------
-entity Task1 is
-    port (  A,B,C: in std_logic;
-            Z: out std_logic);
-end Task1;
----------------------------------
-
-
-----------结构体定义 BEHAV---------    
-architecture BEHAV of Task1 is
-
-begin
-----------进程语句 P1---------------
-P1:process(A,B,C)
-variable tmp:std_logic_vector(2 downto 0); -- 定义变量tmp（std_logic_vector）记录ABC的输入 
-begin
-    tmp:=A&amp;B&amp;C;-- 将ABC的输入值连接
-    --case语句 根据不同情况输出不同的Z值
-    case tmp is
-    when &quot;000&quot; =&gt; Z&lt;='1';
-    when &quot;001&quot; =&gt; Z&lt;='0';
-    when &quot;010&quot; =&gt; Z&lt;='1';
-    when &quot;011&quot; =&gt; Z&lt;='1';
-    when &quot;100&quot; =&gt; Z&lt;='1';
-    when &quot;101&quot; =&gt; Z&lt;='0';
-    when &quot;110&quot; =&gt; Z&lt;='1';
-    when &quot;111&quot; =&gt; Z&lt;='0';
-    when others =&gt; Z&lt;='0';
-    end case;
-end process;        
----------------------------------
-
-end BEHAV ;
----------------------------------
-</code></pre>
+<div class="language-vhdl highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Vhdl</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span>
+<span class="normal"><a href="#__codelineno-0-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">---------库说明与库引用------------</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_arith.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">---------------------------------</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1">---------实体定义Task1------------</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="k">entity</span><span class="w"> </span><span class="nc">Task1</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">            </span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="k">end</span><span class="w"> </span><span class="nc">Task1</span><span class="p">;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="c1">---------------------------------</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="c1">----------结构体定义 BEHAV---------    </span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="k">architecture</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">Task1</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="k">begin</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="c1">----------进程语句 P1---------------</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="n">P1</span><span class="o">:</span><span class="k">process</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="k">variable</span><span class="w"> </span><span class="n">tmp</span><span class="o">:</span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">-- 定义变量tmp（std_logic_vector）记录ABC的输入 </span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="k">begin</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="n">tmp</span><span class="o">:=</span><span class="n">A</span><span class="o">&amp;</span><span class="n">B</span><span class="o">&amp;</span><span class="n">C</span><span class="p">;</span><span class="c1">-- 将ABC的输入值连接</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="c1">--case语句 根据不同情况输出不同的Z值</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;000&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;001&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;010&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;011&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;100&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;101&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;110&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;111&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="k">others</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">case</span><span class="p">;</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span><span class="w">        </span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="c1">---------------------------------</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41"></a>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="k">end</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="c1">---------------------------------</span>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="test_tbvhd">逻辑设计仿真 test_tb.vhd</h4>
-<pre><code class="language-vhdl">---------库说明与库引用------------
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all; 
-use IEEE.numeric_std.all;
-use IEEE.std_logic_arith.all;
----------------------------------
-
-------实体定义TEST_tb仿真元件--------
-entity TEST_tb is
-end TEST_tb;
----------------------------------
-
-----------结构体定义 BEHAV---------  
-architecture BEHAV of TEST_tb is
-
-----------引用元件Task1---------
-component Task1 is
-    port (  A,B,C: in std_logic;
-            Z: out std_logic);
-end component;
-signal A,B,C,Z: std_logic;--定义实参，方便后续控制输入输出
-
-begin
-U1: Task1 port map (A=&gt;A,B=&gt;B,C=&gt;C,Z=&gt;Z);--端口映射，将ABC的值输入到元件Task1中
-P1: process
-begin -- 仿真
-    A&lt;='0';B&lt;='0';C&lt;='0';wait for 10ns;
-    A&lt;='0';B&lt;='0';C&lt;='1';wait for 10ns;
-    A&lt;='0';B&lt;='1';C&lt;='0';wait for 10ns;
-    A&lt;='0';B&lt;='1';C&lt;='1';wait for 10ns;
-    A&lt;='1';B&lt;='0';C&lt;='0';wait for 10ns;
-    A&lt;='1';B&lt;='0';C&lt;='1';wait for 10ns;
-    A&lt;='1';B&lt;='1';C&lt;='0';wait for 10ns;
-    A&lt;='1';B&lt;='1';C&lt;='1';wait for 10ns;
-end process;
-end BEHAV;
-</code></pre>
+<div class="language-vhdl highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Vhdl</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span>
+<span class="normal"><a href="#__codelineno-1-34">34</a></span>
+<span class="normal"><a href="#__codelineno-1-35">35</a></span>
+<span class="normal"><a href="#__codelineno-1-36">36</a></span>
+<span class="normal"><a href="#__codelineno-1-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">---------库说明与库引用------------</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_arith.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1">---------------------------------</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="c1">------实体定义TEST_tb仿真元件--------</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="k">entity</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="k">end</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="p">;</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="c1">---------------------------------</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="c1">----------结构体定义 BEHAV---------  </span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="k">architecture</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="c1">----------引用元件Task1---------</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="k">component</span><span class="w"> </span><span class="nc">Task1</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">            </span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="k">end</span><span class="w"> </span><span class="k">component</span><span class="p">;</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="k">signal</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span><span class="c1">--定义实参，方便后续控制输入输出</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="k">begin</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="n">U1</span><span class="o">:</span><span class="w"> </span><span class="n">Task1</span><span class="w"> </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="o">=&gt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">=&gt;</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">=&gt;</span><span class="n">C</span><span class="p">,</span><span class="n">Z</span><span class="o">=&gt;</span><span class="n">Z</span><span class="p">);</span><span class="c1">--端口映射，将ABC的值输入到元件Task1中</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="nc">P1</span><span class="o">:</span><span class="w"> </span><span class="k">process</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="k">begin</span><span class="w"> </span><span class="c1">-- 仿真</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="k">end</span><span class="w"> </span><span class="nc">BEHAV</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="_5">仿真结果</h4>
 <p><img alt="" src="../assets/result.png" /></p>
 <p>根据波形图结果，可知，该元件的代码编写正确，可以进行下一操作。</p>
@@ -2937,74 +3082,137 @@ end BEHAV;
 <p><img alt="image-20231016132054066" src="../assets/image-20231016132054066.png" /></p>
 <h3 id="2">2. 仿真模拟</h3>
 <h4 id="task2vhd">逻辑设计输入 task2.vhd</h4>
-<pre><code class="language-vhdl">library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all; 
-use IEEE.numeric_std.all;
-use IEEE.std_logic_arith.all;
----------定义实体--------------------
-entity Task2 is
-    port (  A,B,C0: in std_logic;
-            C,Z: out std_logic);
-end Task2;
-
----------定义结构体--------------------
-architecture BEHAV of Task2 is
-begin
-P1:process(A,B,C0)
-variable tmp:std_logic_vector(2 downto 0);--变量tmp记录ABC0的输入值
-begin
-    tmp:=A&amp;B&amp;C0;
-    case tmp is -- case语句根据ABC0不同的值输出不同的C与Z
-    when &quot;000&quot; =&gt; C&lt;='0';Z&lt;='0';
-    when &quot;001&quot; =&gt; C&lt;='0';Z&lt;='1';
-    when &quot;010&quot; =&gt; C&lt;='0';Z&lt;='1';
-    when &quot;011&quot; =&gt; C&lt;='1';Z&lt;='0';
-    when &quot;100&quot; =&gt; C&lt;='0';Z&lt;='1';
-    when &quot;101&quot; =&gt; C&lt;='1';Z&lt;='0';
-    when &quot;110&quot; =&gt; C&lt;='1';Z&lt;='0';
-    when &quot;111&quot; =&gt; C&lt;='1';Z&lt;='1';
-    when others =&gt; C&lt;='0';Z&lt;='0';
-    end case;
-end process;
-end BEHAV ;
-</code></pre>
+<div class="language-vhdl highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Vhdl</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span>
+<span class="normal"><a href="#__codelineno-2-28">28</a></span>
+<span class="normal"><a href="#__codelineno-2-29">29</a></span>
+<span class="normal"><a href="#__codelineno-2-30">30</a></span>
+<span class="normal"><a href="#__codelineno-2-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_arith.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="c1">---------定义实体--------------------</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="k">entity</span><span class="w"> </span><span class="nc">Task2</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C0</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">            </span><span class="n">C</span><span class="p">,</span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="k">end</span><span class="w"> </span><span class="nc">Task2</span><span class="p">;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="c1">---------定义结构体--------------------</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="k">architecture</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">Task2</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="k">begin</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="n">P1</span><span class="o">:</span><span class="k">process</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C0</span><span class="p">)</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="k">variable</span><span class="w"> </span><span class="n">tmp</span><span class="o">:</span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="c1">--变量tmp记录ABC0的输入值</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="k">begin</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">    </span><span class="n">tmp</span><span class="o">:=</span><span class="n">A</span><span class="o">&amp;</span><span class="n">B</span><span class="o">&amp;</span><span class="n">C0</span><span class="p">;</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="c1">-- case语句根据ABC0不同的值输出不同的C与Z</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;000&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;001&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;010&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;011&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;100&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;101&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;110&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;111&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">    </span><span class="k">when</span><span class="w"> </span><span class="k">others</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">case</span><span class="p">;</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="k">end</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="test_tbvhd_1">逻辑设计仿真 test_tb.vhd</h4>
-<pre><code class="language-vhdl">library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all; 
-use IEEE.numeric_std.all;
-use IEEE.std_logic_arith.all;
-
-entity TEST_tb is
-end TEST_tb;
-
-
-architecture BEHAV of TEST_tb is
-
-component Task2 is
-    port (  A,B,C0: in std_logic;
-            C,Z: out std_logic);
-end component;
-
-signal A,B,C0,Z,C: std_logic;
-
-begin
-U1: Task2 port map (A=&gt;A,B=&gt;B,C0=&gt;C0,Z=&gt;Z,C=&gt;C);
-P1: process
------------主要的仿真部分-------------------------------------------------
-begin
-    A&lt;='0';B&lt;='0';C0&lt;='0';wait for 10ns;
-    A&lt;='0';B&lt;='0';C0&lt;='1';wait for 10ns;
-    A&lt;='0';B&lt;='1';C0&lt;='0';wait for 10ns;
-    A&lt;='0';B&lt;='1';C0&lt;='1';wait for 10ns;
-    A&lt;='1';B&lt;='0';C0&lt;='0';wait for 10ns;
-    A&lt;='1';B&lt;='0';C0&lt;='1';wait for 10ns;
-    A&lt;='1';B&lt;='1';C0&lt;='0';wait for 10ns;
-    A&lt;='1';B&lt;='1';C0&lt;='1';wait for 10ns;
-end process;
-end BEHAV;
-</code></pre>
+<div class="language-vhdl highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Vhdl</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span>
+<span class="normal"><a href="#__codelineno-3-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_arith.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="k">entity</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="k">end</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="p">;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="k">architecture</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="k">component</span><span class="w"> </span><span class="nc">Task2</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C0</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">            </span><span class="n">C</span><span class="p">,</span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="k">end</span><span class="w"> </span><span class="k">component</span><span class="p">;</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="k">signal</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C0</span><span class="p">,</span><span class="n">Z</span><span class="p">,</span><span class="n">C</span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="k">begin</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="n">U1</span><span class="o">:</span><span class="w"> </span><span class="n">Task2</span><span class="w"> </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="o">=&gt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">=&gt;</span><span class="n">B</span><span class="p">,</span><span class="n">C0</span><span class="o">=&gt;</span><span class="n">C0</span><span class="p">,</span><span class="n">Z</span><span class="o">=&gt;</span><span class="n">Z</span><span class="p">,</span><span class="n">C</span><span class="o">=&gt;</span><span class="n">C</span><span class="p">);</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="nc">P1</span><span class="o">:</span><span class="w"> </span><span class="k">process</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="c1">-----------主要的仿真部分-------------------------------------------------</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="k">begin</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">C0</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="k">end</span><span class="w"> </span><span class="nc">BEHAV</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="_8">仿真结果</h4>
 <p><img alt="" src="../assets/2-7433947.png" /></p>
 <p>与预期一致，所以可以进行下一步操作</p>
@@ -3036,79 +3244,147 @@ end BEHAV;
 <p>ABCD作为四个开关，任意的改变状态都将改变电灯的状态，不同于上面的电路，该电路没有真值表。</p>
 <h3 id="2_1">2. 仿真模拟</h3>
 <h4 id="task3vhd">设计元件 task3.vhd</h4>
-<pre><code class="language-vhdl">library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all; 
-use IEEE.numeric_std.all;
-use IEEE.std_logic_arith.all;
-------------定义实体Task3-----------------------------------
-entity Task3 is
-    port (  A,B,C,D: in std_logic;
-            Z: out std_logic);
-end Task3;
-
-architecture BEHAV of Task3 is
-
-begin
----------关键部分：process-----------------------------------
-P1:process
----------定义变量 记录开关A，B，C，D，Z先前的状态----------------
-variable mA:std_logic:='0';
-variable mB:std_logic:='0';
-variable mC:std_logic:='0';
-variable mD:std_logic:='0';
-variable mZ:std_logic:='0';
-variable tmp:std_logic:='0';
-
-begin
-if (mA /= A) then  --如果A开关状态发生改变，下方各个结构同理
-mA:=A; mZ:=not mZ;Z&lt;=mZ; --改变mA的值，并且输出与Z的记录值相反的值
-end if;
-if (mB /= B) then 
-mB:=B; mZ:=not mZ;Z&lt;=mZ;
-end if;
-if (mC /= C) then 
-mC:=C; mZ:=not mZ;Z&lt;=mZ;
-end if;
-if (mD /= D) then 
-mD:=D; mZ:=not mZ;Z&lt;=mZ;
-end if;
-
-end process;
-
-end BEHAV ;
-</code></pre>
+<div class="language-vhdl highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Vhdl</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span>
+<span class="normal"><a href="#__codelineno-4-29">29</a></span>
+<span class="normal"><a href="#__codelineno-4-30">30</a></span>
+<span class="normal"><a href="#__codelineno-4-31">31</a></span>
+<span class="normal"><a href="#__codelineno-4-32">32</a></span>
+<span class="normal"><a href="#__codelineno-4-33">33</a></span>
+<span class="normal"><a href="#__codelineno-4-34">34</a></span>
+<span class="normal"><a href="#__codelineno-4-35">35</a></span>
+<span class="normal"><a href="#__codelineno-4-36">36</a></span>
+<span class="normal"><a href="#__codelineno-4-37">37</a></span>
+<span class="normal"><a href="#__codelineno-4-38">38</a></span>
+<span class="normal"><a href="#__codelineno-4-39">39</a></span>
+<span class="normal"><a href="#__codelineno-4-40">40</a></span>
+<span class="normal"><a href="#__codelineno-4-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_arith.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1">------------定义实体Task3-----------------------------------</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="k">entity</span><span class="w"> </span><span class="nc">Task3</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">            </span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="k">end</span><span class="w"> </span><span class="nc">Task3</span><span class="p">;</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="k">architecture</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">Task3</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="k">begin</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="c1">---------关键部分：process-----------------------------------</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="n">P1</span><span class="o">:</span><span class="k">process</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="c1">---------定义变量 记录开关A，B，C，D，Z先前的状态----------------</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="k">variable</span><span class="w"> </span><span class="n">mA</span><span class="o">:</span><span class="kt">std_logic</span><span class="o">:=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="k">variable</span><span class="w"> </span><span class="n">mB</span><span class="o">:</span><span class="kt">std_logic</span><span class="o">:=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="k">variable</span><span class="w"> </span><span class="n">mC</span><span class="o">:</span><span class="kt">std_logic</span><span class="o">:=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="k">variable</span><span class="w"> </span><span class="n">mD</span><span class="o">:</span><span class="kt">std_logic</span><span class="o">:=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="k">variable</span><span class="w"> </span><span class="n">mZ</span><span class="o">:</span><span class="kt">std_logic</span><span class="o">:=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="k">variable</span><span class="w"> </span><span class="n">tmp</span><span class="o">:</span><span class="kt">std_logic</span><span class="o">:=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24"></a>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="k">begin</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mA</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">A</span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w">  </span><span class="c1">--如果A开关状态发生改变，下方各个结构同理</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="n">mA</span><span class="o">:=</span><span class="n">A</span><span class="p">;</span><span class="w"> </span><span class="n">mZ</span><span class="o">:=</span><span class="k">not</span><span class="w"> </span><span class="n">mZ</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="n">mZ</span><span class="p">;</span><span class="w"> </span><span class="c1">--改变mA的值，并且输出与Z的记录值相反的值</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mB</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">B</span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="n">mB</span><span class="o">:=</span><span class="n">B</span><span class="p">;</span><span class="w"> </span><span class="n">mZ</span><span class="o">:=</span><span class="k">not</span><span class="w"> </span><span class="n">mZ</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="n">mZ</span><span class="p">;</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mC</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">C</span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="n">mC</span><span class="o">:=</span><span class="n">C</span><span class="p">;</span><span class="w"> </span><span class="n">mZ</span><span class="o">:=</span><span class="k">not</span><span class="w"> </span><span class="n">mZ</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="n">mZ</span><span class="p">;</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mD</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">D</span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="n">mD</span><span class="o">:=</span><span class="n">D</span><span class="p">;</span><span class="w"> </span><span class="n">mZ</span><span class="o">:=</span><span class="k">not</span><span class="w"> </span><span class="n">mZ</span><span class="p">;</span><span class="n">Z</span><span class="o">&lt;=</span><span class="n">mZ</span><span class="p">;</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="p">;</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38"></a>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40"></a>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="k">end</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="task3_tbvhd">仿真task3_tb.vhd</h4>
-<pre><code class="language-vhdl">library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all; 
-use IEEE.numeric_std.all;
-use IEEE.std_logic_arith.all;
-
-entity TEST_tb is
-end TEST_tb;
-
-architecture BEHAV of TEST_tb is
-
-component Task3 is
-    port (  A,B,C,D: in std_logic;
-            Z: out std_logic);
-end component;
-
-signal A,B,C,D,Z: std_logic;
-
-begin
-U1: Task3 port map (A=&gt;A,B=&gt;B,C=&gt;C,D=&gt;D,Z=&gt;Z);
-------------仿真过程-------------------------------------------
-P1: process
-begin
-    A&lt;='0';B&lt;='0';C&lt;='0';D&lt;='0';wait for 10ns;
-    A&lt;='0';B&lt;='0';C&lt;='0';D&lt;='1';wait for 10ns;
-    A&lt;='1';B&lt;='0';C&lt;='0';D&lt;='1';wait for 10ns;
-    A&lt;='0';B&lt;='0';C&lt;='0';D&lt;='1';wait for 10ns;
-end process;
-end BEHAV;
-</code></pre>
+<div class="language-vhdl highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Vhdl</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span>
+<span class="normal"><a href="#__codelineno-5-28">28</a></span>
+<span class="normal"><a href="#__codelineno-5-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_unsigned.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_arith.</span><span class="k">all</span><span class="p">;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="k">entity</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="k">end</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="p">;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="k">architecture</span><span class="w"> </span><span class="nc">BEHAV</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">TEST_tb</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11"></a>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="k">component</span><span class="w"> </span><span class="nc">Task3</span><span class="w"> </span><span class="k">is</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">            </span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="k">end</span><span class="w"> </span><span class="k">component</span><span class="p">;</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16"></a>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="k">signal</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">Z</span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18"></a>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="k">begin</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="n">U1</span><span class="o">:</span><span class="w"> </span><span class="n">Task3</span><span class="w"> </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="o">=&gt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">=&gt;</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">=&gt;</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="o">=&gt;</span><span class="n">D</span><span class="p">,</span><span class="n">Z</span><span class="o">=&gt;</span><span class="n">Z</span><span class="p">);</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="c1">------------仿真过程-------------------------------------------</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="nc">P1</span><span class="o">:</span><span class="w"> </span><span class="k">process</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="k">begin</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">D</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">D</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">D</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="w">    </span><span class="n">A</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">B</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">C</span><span class="o">&lt;=</span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="n">D</span><span class="o">&lt;=</span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="k">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mi">10</span><span class="n">ns</span><span class="p">;</span>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="k">end</span><span class="w"> </span><span class="k">process</span><span class="p">;</span>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="k">end</span><span class="w"> </span><span class="nc">BEHAV</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="_11">仿真结果</h4>
 <p><img alt="" src="../assets/11.png" /></p>
 <p>任意改变ABCD四个开关中任意状态，Z就会输出与原来相反的结果，仿真结果正确。</p>
@@ -3129,7 +3405,7 @@ end BEHAV;
 <h3 id="_12">实验成果</h3>
 <video src="../assets/111.mp4"></video>
 
-<p><a href="..\assets\111.mp4">实验结果视频</a></p>
+<p><a href="../assets/111.mp4">实验结果视频</a></p>
 <p>结果分析，由于这个代码的问题，也就是在芯片最开始执行结构体部分的代码时，由于mA与A并不一定相匹配，所以刚刚开始，Z的灯可能混乱闪烁。但是一段时间后，也就是当所有mA，mB，mC，mD都已经与现实情况相匹配以后，就能够正常显示。</p>
 
 
@@ -3153,7 +3429,7 @@ end BEHAV;
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-02T14:37:28+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-02</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-02T16:28:44+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-02</span>
   </span>
 
     
@@ -3285,7 +3561,7 @@ end BEHAV;
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.instant", "navigation.tracking", "content.code.annotate", "toc.integrate", "toc.follow", "navigation.path", "navigation.top", "navigation.tabs", "navigation.footer", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.instant", "navigation.tracking", "content.code.annotate", "toc.integrate", "toc.follow", "navigation.path", "navigation.top", "navigation.tabs", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

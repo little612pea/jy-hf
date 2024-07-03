@@ -275,7 +275,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../preview/" class="md-tabs__link">
+        <a href="../../../JY-Feng/" class="md-tabs__link">
           
   
   Jy Feng EE
@@ -1521,6 +1521,73 @@
                 
   
   
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Preview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Preview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JY-Feng/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1536,10 +1603,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1550,8 +1617,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             1 电路电子技术I实验（爱迪生班）
           </label>
@@ -2305,10 +2372,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
         
           
-          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2319,8 +2386,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             2 电路电子技术II实验（爱迪生班）
           </label>
@@ -2856,35 +2923,70 @@
 <p>利用Matlab绘制伏安特性曲线。</p>
 </li>
 </ol>
-<p>```matlab
-   % 使用xlsread函数从Excel文件中读取数据
-   data1 = readtable('./1016all.xlsx', 'Sheet','0V','Range', 'C2:D17');
-   data2 = readtable('./1016all.xlsx', 'Sheet','15V', 'Range','C2:D19');</p>
-<p>% 提取电压和电流数据
-   vbe1 = data1{:, 1};
-   ib1 = data1{:, 2};
-   vbe2 = data2{:,1};
-   ib2 = data2{:,2};</p>
-<p>% 绘制伏安特性曲线
-   plot(vbe1, ib1, 'o'); % 绘制数据点和连接线
-   title('固定VCE下三极管输出VA曲线'); % 添加标题
-   xlabel('V_{BE}(V)'); % 添加x轴标签
-   ylabel('I_B(uA)'); % 添加y轴标签
-   grid on; % 添加网格线</p>
-<p>% 对曲线进行平滑处理
-   smoothed_ib1 = smooth(ib1, 5, 'loess'); 
-   hold on; % 在同一图中叠加平滑曲线
-   plot(vbe1, smoothed_ib1, 'b-', 'LineWidth', 1); % 绘制平滑曲线</p>
-<p>%绘制曲线2
-   hold on;
-   plot(vbe2, ib2, 'o'); % 绘制数据点和连接线
-   grid on; % 添加网格线</p>
-<p>% 对曲线进行平滑处理
-   smoothed_ib2 = smooth(ib2, 5, 'loess'); % 使用rloess平滑算法
-   hold on; % 在同一图中叠加平滑曲线
-   plot(vbe2, smoothed_ib2, 'r-', 'LineWidth', 1); % 绘制平滑曲线
-   legend('原始数据(0V)', '曲线（0V下）','原始数据(15V)', '曲线（15V下）');
-   ```</p>
+<div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c">% 使用xlsread函数从Excel文件中读取数据</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">data1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readtable</span><span class="p">(</span><span class="s">&#39;./1016all.xlsx&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Sheet&#39;</span><span class="p">,</span><span class="s">&#39;0V&#39;</span><span class="p">,</span><span class="s">&#39;Range&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;C2:D17&#39;</span><span class="p">);</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">data2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readtable</span><span class="p">(</span><span class="s">&#39;./1016all.xlsx&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Sheet&#39;</span><span class="p">,</span><span class="s">&#39;15V&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Range&#39;</span><span class="p">,</span><span class="s">&#39;C2:D19&#39;</span><span class="p">);</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c">% 提取电压和电流数据</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">vbe1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data1</span><span class="p">{:,</span><span class="w"> </span><span class="mi">1</span><span class="p">};</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">ib1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data1</span><span class="p">{:,</span><span class="w"> </span><span class="mi">2</span><span class="p">};</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">vbe2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data2</span><span class="p">{:,</span><span class="mi">1</span><span class="p">};</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">ib2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data2</span><span class="p">{:,</span><span class="mi">2</span><span class="p">};</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c">% 绘制伏安特性曲线</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="nb">plot</span><span class="p">(</span><span class="n">vbe1</span><span class="p">,</span><span class="w"> </span><span class="n">ib1</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 绘制数据点和连接线</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="nb">title</span><span class="p">(</span><span class="s">&#39;固定VCE下三极管输出VA曲线&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 添加标题</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;V_{BE}(V)&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 添加x轴标签</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;I_B(uA)&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 添加y轴标签</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="nb">grid</span><span class="w"> </span><span class="n">on</span><span class="p">;</span><span class="w"> </span><span class="c">% 添加网格线</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="c">% 对曲线进行平滑处理</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="n">smoothed_ib1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">smooth</span><span class="p">(</span><span class="n">ib1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;loess&#39;</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"> </span><span class="c">% 在同一图中叠加平滑曲线</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="nb">plot</span><span class="p">(</span><span class="n">vbe1</span><span class="p">,</span><span class="w"> </span><span class="n">smoothed_ib1</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% 绘制平滑曲线</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="c">%绘制曲线2</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="nb">hold</span><span class="w"> </span><span class="n">on</span><span class="p">;</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="nb">plot</span><span class="p">(</span><span class="n">vbe2</span><span class="p">,</span><span class="w"> </span><span class="n">ib2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 绘制数据点和连接线</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="nb">grid</span><span class="w"> </span><span class="n">on</span><span class="p">;</span><span class="w"> </span><span class="c">% 添加网格线</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="c">% 对曲线进行平滑处理</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="n">smoothed_ib2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">smooth</span><span class="p">(</span><span class="n">ib2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;loess&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 使用rloess平滑算法</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="nb">hold</span><span class="w"> </span><span class="n">on</span><span class="p">;</span><span class="w"> </span><span class="c">% 在同一图中叠加平滑曲线</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="nb">plot</span><span class="p">(</span><span class="n">vbe2</span><span class="p">,</span><span class="w"> </span><span class="n">smoothed_ib2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;r-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% 绘制平滑曲线</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="nb">legend</span><span class="p">(</span><span class="s">&#39;原始数据(0V)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;曲线（0V下）&#39;</span><span class="p">,</span><span class="s">&#39;原始数据(15V)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;曲线（15V下）&#39;</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
 <h6 id="_8">实验结果与分析</h6>
 <p>实验数据如下：</p>
 <p><center>VCE=0V</center></p>
@@ -2940,29 +3042,50 @@
 <li>利用matlab进行数据处理，获得最终值。</li>
 </ol>
 <p>固定Vce</p>
-<pre><code class="language-matlab">data1 = readmatrix('./1016/1_0V.csv','NumHeaderLines',1);
-% 提取电压和电流数据
-vbe1 = data1(:, 5);
-ib1 = data1(:, 2);
-
-% 对曲线进行平滑处理
-smoothed_ib1 = smooth(ib1, 5, 'loess'); 
-plot(vbe1, smoothed_ib1, 'b-', 'LineWidth', 1); % 绘制平滑曲线
-title('固定VCE下三极管输出VA曲线'); % 添加标题
-xlabel('V_{BE}(V)'); % 添加x轴标签
-ylabel('I_B(uA)'); % 添加y轴标签
-grid on; % 添加网格线
-
-data2 = readmatrix('./1016/2_15V.csv','NumHeaderLines',1);
-% 提取电压和电流数据
-vbe2 = data2(:,5);
-ib2 = data2(:,2);
-% 对曲线进行平滑处理
-smoothed_ib2 = smooth(ib2, 5, 'loess'); % 使用rloess平滑算法
-hold on; % 在同一图中叠加平滑曲线
-plot(vbe2, smoothed_ib2, 'r-', 'LineWidth', 1); % 绘制平滑曲线
-legend('V_{CE}=0V','V_{CE}=15V');
-</code></pre>
+<div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">data1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readmatrix</span><span class="p">(</span><span class="s">&#39;./1016/1_0V.csv&#39;</span><span class="p">,</span><span class="s">&#39;NumHeaderLines&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c">% 提取电压和电流数据</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">vbe1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data1</span><span class="p">(:,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">ib1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data1</span><span class="p">(:,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c">% 对曲线进行平滑处理</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">smoothed_ib1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">smooth</span><span class="p">(</span><span class="n">ib1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;loess&#39;</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="nb">plot</span><span class="p">(</span><span class="n">vbe1</span><span class="p">,</span><span class="w"> </span><span class="n">smoothed_ib1</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% 绘制平滑曲线</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="nb">title</span><span class="p">(</span><span class="s">&#39;固定VCE下三极管输出VA曲线&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 添加标题</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;V_{BE}(V)&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 添加x轴标签</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;I_B(uA)&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 添加y轴标签</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="nb">grid</span><span class="w"> </span><span class="n">on</span><span class="p">;</span><span class="w"> </span><span class="c">% 添加网格线</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="n">data2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readmatrix</span><span class="p">(</span><span class="s">&#39;./1016/2_15V.csv&#39;</span><span class="p">,</span><span class="s">&#39;NumHeaderLines&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="c">% 提取电压和电流数据</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="n">vbe2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data2</span><span class="p">(:,</span><span class="mi">5</span><span class="p">);</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="n">ib2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data2</span><span class="p">(:,</span><span class="mi">2</span><span class="p">);</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="c">% 对曲线进行平滑处理</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="n">smoothed_ib2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">smooth</span><span class="p">(</span><span class="n">ib2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;loess&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 使用rloess平滑算法</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="nb">hold</span><span class="w"> </span><span class="n">on</span><span class="p">;</span><span class="w"> </span><span class="c">% 在同一图中叠加平滑曲线</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="nb">plot</span><span class="p">(</span><span class="n">vbe2</span><span class="p">,</span><span class="w"> </span><span class="n">smoothed_ib2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;r-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% 绘制平滑曲线</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="nb">legend</span><span class="p">(</span><span class="s">&#39;V_{CE}=0V&#39;</span><span class="p">,</span><span class="s">&#39;V_{CE}=15V&#39;</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="_12">实验结果</h3>
 <p><img src="../assets/MVCE.bmp" style="zoom:40%;" /></p>
 <p><img src="../assets/ib.bmp" style="zoom:50%;" /></p>
@@ -3009,7 +3132,7 @@ legend('V_{CE}=0V','V_{CE}=15V');
 <p>记录数据，并根据数据绘制图线。</p>
 </li>
 </ol>
-<p><img alt="截屏2023-10-22 20.57.37" src="../assets/截屏2023-10-22 20.57.37.png" /></p>
+<p><img alt="截屏2023-10-22 20.57.37" src="../assets/%E6%88%AA%E5%B1%8F2023-10-22%2020.57.37.png" /></p>
 <p><img src="../assets/untitledp20.bmp" style="zoom:50%;" /></p>
 <h4 id="205v">（2）输入0至5V变化的电压，利用扫描法测量传输特性</h4>
 <ol>
@@ -3054,7 +3177,7 @@ legend('V_{CE}=0V','V_{CE}=15V');
 <ol>
 <li>利用万用表测量电压，并记录数据</li>
 </ol>
-<p><img alt="" src="../assets/截屏2023-10-22 21.25.32.png" /></p>
+<p><img alt="" src="../assets/%E6%88%AA%E5%B1%8F2023-10-22%2021.25.32.png" /></p>
 <h3 id="_24">结果分析</h3>
 <ul>
 <li>当2脚接低点位时，与非门内部的电压高于外界电压，导致有电流通过。</li>
@@ -3086,10 +3209,10 @@ legend('V_{CE}=0V','V_{CE}=15V');
 </li>
 </ol>
 <h3 id="_28">实验结果与分析</h3>
-<p><img alt="" src="../assets/截屏2023-10-22 21.56.17.png" /></p>
+<p><img alt="" src="../assets/%E6%88%AA%E5%B1%8F2023-10-22%2021.56.17.png" /></p>
 <p><img src="../assets/image-20231022220805720.png" alt="image-20231022220805720" style="zoom:50%;" /></p>
 <p>可以看到与非门输出在外端串联电阻时，尤其是小电阻，输出并不是标准的高电平或者低电平。与非门内部呈现一定的定值电阻特性（由两段曲线呈现直线可以看出）。经过一定的计算，可以得出与非门内部的电阻可以近似估计为0.02Ω。</p>
-<p><img alt="" src="../assets/截屏2023-10-22 22.10.24.png" /></p>
+<p><img alt="" src="../assets/%E6%88%AA%E5%B1%8F2023-10-22%2022.10.24.png" /></p>
 
 
 
@@ -3112,7 +3235,7 @@ legend('V_{CE}=0V','V_{CE}=15V');
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-02T14:37:28+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-02</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-02T15:19:12+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-02</span>
   </span>
 
     
@@ -3244,7 +3367,7 @@ legend('V_{CE}=0V','V_{CE}=15V');
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.instant", "navigation.tracking", "content.code.annotate", "toc.integrate", "toc.follow", "navigation.path", "navigation.top", "navigation.tabs", "navigation.footer", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.instant", "navigation.tracking", "content.code.annotate", "toc.integrate", "toc.follow", "navigation.path", "navigation.top", "navigation.tabs", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

@@ -275,7 +275,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../preview/" class="md-tabs__link">
+        <a href="../../../JY-Feng/" class="md-tabs__link">
           
   
   Jy Feng EE
@@ -1521,6 +1521,73 @@
                 
   
   
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Preview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Preview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JY-Feng/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1536,10 +1603,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1550,8 +1617,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             1 电路电子技术I实验（爱迪生班）
           </label>
@@ -2261,10 +2328,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
         
           
-          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2275,8 +2342,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             2 电路电子技术II实验（爱迪生班）
           </label>
@@ -3044,26 +3111,44 @@
 </li>
 </ol>
 <p>Matlab代码如下：</p>
-<pre><code class="language-matlab">% 读取数据
-data = readmatrix('./Lab2/数据/111.csv');
-
-% 获取vd和id列
-v1 = data(:, 2);
-v2= data(:, 3);
-vd=v1-v2;
-id=v2/51*1000;
-plot(vd, id);
-
-%生成平滑曲线
-smoothed_vd = smooth(vd, 0.1, 'loess'); 
-smoothed_id = smooth(id, 0.1, 'loess');
-hold on;
-plot(smoothed_vd, smoothed_id, 'b-', 'LineWidth', 0.2);
-legend('原始数据', '光滑曲线');
-xlabel('电压（V）');
-ylabel('电流（mA）');
-legend('实验数据','VA特性曲线');
-</code></pre>
+<div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c">% 读取数据</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readmatrix</span><span class="p">(</span><span class="s">&#39;./Lab2/数据/111.csv&#39;</span><span class="p">);</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c">% 获取vd和id列</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">v1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data</span><span class="p">(:,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">v2</span><span class="p">=</span><span class="w"> </span><span class="n">data</span><span class="p">(:,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">vd</span><span class="p">=</span><span class="n">v1</span><span class="o">-</span><span class="n">v2</span><span class="p">;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">id</span><span class="p">=</span><span class="n">v2</span><span class="o">/</span><span class="mi">51</span><span class="o">*</span><span class="mi">1000</span><span class="p">;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="nb">plot</span><span class="p">(</span><span class="n">vd</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c">%生成平滑曲线</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">smoothed_vd</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">smooth</span><span class="p">(</span><span class="n">vd</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;loess&#39;</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="n">smoothed_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">smooth</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;loess&#39;</span><span class="p">);</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="nb">plot</span><span class="p">(</span><span class="n">smoothed_vd</span><span class="p">,</span><span class="w"> </span><span class="n">smoothed_id</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="nb">legend</span><span class="p">(</span><span class="s">&#39;原始数据&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;光滑曲线&#39;</span><span class="p">);</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;电压（V）&#39;</span><span class="p">);</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;电流（mA）&#39;</span><span class="p">);</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="nb">legend</span><span class="p">(</span><span class="s">&#39;实验数据&#39;</span><span class="p">,</span><span class="s">&#39;VA特性曲线&#39;</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
 <ol>
 <li>将二极管更换为稳压二极管，重复上述步骤。</li>
 </ol>
@@ -3099,39 +3184,67 @@ legend('实验数据','VA特性曲线');
 </ol>
 <p>根据不同曲线的特点，采用了以下两种方式进行数据拟合：</p>
 <h4 id="1v">1V，没有为负数的点，因而采用了指数的拟合方式</h4>
-<pre><code class="language-matlab">data = readmatrix('./Lab2/数据/1V.csv');
-vd = data(:, 1);
-vr = data(:, 2);
-id = vr * 0.1;
-
-% 使用fit函数进行数据拟合
-fitType = fittype('a * exp(b * x)'); % 选择适当的拟合函数
-fitOptions = fitoptions('Method', 'NonlinearLeastSquares'); % 选择拟合方法
-fitOptions.StartPoint = [1, -0.1]; % 初始拟合参数猜测
-
-% 进行数据拟合
-fitResult = fit(vd, id, fitType, fitOptions);
-
-% 绘制拟合曲线
-plot(fitResult,vd, id);
-xlabel('电压（V）');
-ylabel('电流（mA）');
-legend('VA特性曲线');
-</code></pre>
+<div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readmatrix</span><span class="p">(</span><span class="s">&#39;./Lab2/数据/1V.csv&#39;</span><span class="p">);</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">vd</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data</span><span class="p">(:,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">vr</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data</span><span class="p">(:,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">vr</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c">% 使用fit函数进行数据拟合</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">fitType</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fittype</span><span class="p">(</span><span class="s">&#39;a * exp(b * x)&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 选择适当的拟合函数</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">fitOptions</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fitoptions</span><span class="p">(</span><span class="s">&#39;Method&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;NonlinearLeastSquares&#39;</span><span class="p">);</span><span class="w"> </span><span class="c">% 选择拟合方法</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="n">fitOptions</span><span class="p">.</span><span class="n">StartPoint</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.1</span><span class="p">];</span><span class="w"> </span><span class="c">% 初始拟合参数猜测</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="c">% 进行数据拟合</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="n">fitResult</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fit</span><span class="p">(</span><span class="n">vd</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">fitType</span><span class="p">,</span><span class="w"> </span><span class="n">fitOptions</span><span class="p">);</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="c">% 绘制拟合曲线</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="nb">plot</span><span class="p">(</span><span class="n">fitResult</span><span class="p">,</span><span class="n">vd</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;电压（V）&#39;</span><span class="p">);</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;电流（mA）&#39;</span><span class="p">);</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="nb">legend</span><span class="p">(</span><span class="s">&#39;VA特性曲线&#39;</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="700v">700V，由于数据点非常多，直接输出即位较光滑的曲线</h4>
-<pre><code class="language-Matlab">% 读取数据
-data = readmatrix('./Lab2/数据/700V_2.csv');
-
-% 获取vd和id列
-v1 = data(:, 1);
-v2= data(:, 2);
-vd=v1;
-id=v2*0.1;
-plot(vd, id);
-xlabel('电压（V）');
-ylabel('电流（mA）');
-legend('实验数据','VA特性曲线');
-</code></pre>
+<div class="language-Matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c">% 读取数据</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">readmatrix</span><span class="p">(</span><span class="s">&#39;./Lab2/数据/700V_2.csv&#39;</span><span class="p">);</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c">% 获取vd和id列</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">v1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">data</span><span class="p">(:,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">v2</span><span class="p">=</span><span class="w"> </span><span class="n">data</span><span class="p">(:,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">vd</span><span class="p">=</span><span class="n">v1</span><span class="p">;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">id</span><span class="p">=</span><span class="n">v2</span><span class="o">*</span><span class="mf">0.1</span><span class="p">;</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nb">plot</span><span class="p">(</span><span class="n">vd</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;电压（V）&#39;</span><span class="p">);</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;电流（mA）&#39;</span><span class="p">);</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="nb">legend</span><span class="p">(</span><span class="s">&#39;实验数据&#39;</span><span class="p">,</span><span class="s">&#39;VA特性曲线&#39;</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="_19">结果分析</h3>
 <h4 id="1v_1">1V，主要分析二极管由导通到截止这一段的特点</h4>
 <p><img src="../assets/111aaa.jpg" style="zoom:30%;" /></p>
@@ -3322,7 +3435,7 @@ R_S=\dfrac{V_{p1}-V_{p2}}{I_R}=5.27V÷0.102A=51.7Ω
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.instant", "navigation.tracking", "content.code.annotate", "toc.integrate", "toc.follow", "navigation.path", "navigation.top", "navigation.tabs", "navigation.footer", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.instant", "navigation.tracking", "content.code.annotate", "toc.integrate", "toc.follow", "navigation.path", "navigation.top", "navigation.tabs", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>

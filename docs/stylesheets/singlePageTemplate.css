@@ -1,0 +1,37 @@
+/* Hero Section */
+.hero {
+    background-color: #CBE3F7;
+    padding-top: 150px;
+    padding-bottom: 150px;
+	text-align: center;
+}
+
+.pink {
+    color: #3693CD;
+}
+
+.light {
+    font-weight: bold;
+    color: #0B3ADC;
+}
+
+.tagline {
+    color: #16273d;
+    margin-top: 4px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: solid black; /* Cursor effect */
+    animation: blink-caret 0.75s step-end infinite;
+    word-wrap: break-word; /* Ensure words break and wrap correctly */
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
