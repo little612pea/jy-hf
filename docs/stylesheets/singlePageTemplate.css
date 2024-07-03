@@ -1,14 +1,29 @@
 /* Hero Section */
 .hero {
+    font-family: "Source Sans Pro", sans-serif;
     background-color: #CBE3F7;
     padding-top: 150px;
     padding-bottom: 150px;
-	text-align: center;
-    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    width: 100%;
 }
 
-.pink {
-    color: #3693CD;
+.hero_header {
+    text-align: center;
+    color: #6A33E6;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+    /* Default font size */
+}
+
+.blue {
+    color: #0B7AEF;
 }
 
 .light {
@@ -21,17 +36,61 @@
     font-weight: lighter;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-size: 1.3rem;
+    /* Default font size */
 }
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .hero_header {
+        font-size: 1.8rem;
+    }
+
+    .tagline {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero_header {
+        font-size: 1.55rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero_header {
+        font-size: 1.3rem;
+        /* Adjust width for smaller screens */
+    }
+
+    .tagline {
+        font-size: 0.675rem;
+    }
+}
+
 
 .typewriter {
     display: inline-block;
     overflow: hidden;
-    border-right: solid black; /* Cursor effect */
+    border-right: solid black;
+    /* Cursor effect */
     animation: blink-caret 0.75s step-end infinite;
-    word-wrap: break-word; /* Ensure words break and wrap correctly */
+    word-wrap: break-word;
+    /* Ensure words break and wrap correctly */
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: black; }
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
 }
