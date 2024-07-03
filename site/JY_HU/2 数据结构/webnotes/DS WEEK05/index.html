@@ -2555,7 +2555,7 @@
   
 
 
-<h1 id="week-5">WEEK 5</h1>
+<div><h1 id="week-5">WEEK 5</h1>
 <ul>
 <li>In a tree, the order of children does not matter. But in a binary tree, left child and right child are different.</li>
 </ul>
@@ -2570,7 +2570,7 @@
 <p>同理，度为1的结点会延伸出一条边，则可列公式：$n-1 = 2n_2 + n_1 $，</p>
 <p>合并两个式子可得：<span class="arithmatex">\(2n_2 + n_1 +1 =n_0 + n_1 + n_2\)</span> ，则计算可知 <span class="arithmatex">\(n_0=n_2+1\)</span></p>
 </blockquote>
-<hr />
+<hr>
 <h3 id="33-binary-search-trees">3.3 Binary Search Trees</h3>
 <h4 id="definition-a-binary-search-tree-is-a-binary-tree-it-may-be-empty-if-it-is-not-empty-it-satisfies-the-following-properties">[Definition] A binary search tree is a binary tree.  It may be empty.  If it is not empty, it satisfies the following properties:</h4>
 <ul>
@@ -2715,7 +2715,7 @@
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>    { 
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>     T = malloc( sizeof( struct TreeNode ) ); 
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>     if ( T == NULL ) 
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>         FatalError( &quot;Out of space!!!&quot; ); 
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>         FatalError( "Out of space!!!" ); 
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>     else 
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a>     { 
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a>         T-&gt;Element = X; 
@@ -2728,7 +2728,7 @@
 </span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a>     else 
 </span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a>         if ( X &gt; T-&gt;Element ) 
 </span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a>             T-&gt;Right = Insert( X, T-&gt;Right ); 
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20"></a>     /* Else X is in the tree already; we&#39;ll do nothing */ 
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20"></a>     /* Else X is in the tree already; we'll do nothing */ 
 </span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21"></a>    return  T;   /* Do not forget this line!! */ 
 </span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22"></a>}
 </span></code></pre></div></td></tr></table></div>
@@ -2774,7 +2774,7 @@
 <span class="normal"><a href="#__codelineno-5-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>SearchTree Delete( ElementType X, SearchTree T ) 
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>{    
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a> Position TmpCell; 
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>    if ( T == NULL ) Error( &quot;Element not found&quot; ); 
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>    if ( T == NULL ) Error( "Element not found" ); 
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>    else if ( X &lt; T-&gt;Element )  /* Go left */ 
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>     T-&gt;Left = Delete( X, T-&gt;Left ); 
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>    else if ( X &gt; T-&gt;Element )  /* Go right */ 
@@ -2812,9 +2812,9 @@
 </li>
 <li>将<span class="arithmatex">\(n\)</span>个元素存入二叉搜索树，树的高度将由插入序列决定</li>
 </ol>
-<p><img src="picture/5-1.png" alt="5-1" style="zoom:80%;" /></p>
+<p><img src="picture/5-1.png" alt="5-1" style="zoom:80%;"></p>
 <p>The correct answer is A.</p>
-<hr />
+<hr></div>
 
 
 

@@ -2702,7 +2702,7 @@
   
 
 
-<h1 id="week-7">WEEK 7</h1>
+<div><h1 id="week-7">WEEK 7</h1>
 <h2 id="5-the-disjoint-set">5 The Disjoint Set</h2>
 <h3 id="51-equivalence-relations">5.1 Equivalence Relations</h3>
 <h4 id="definition-a-relation-r-is-defined-on-a-set-s-if-for-every-pair-of-elements-a-b-a-b-in-s-a-r-b-is-either-true-or-false-if-a-r-b-is-true-then-we-say-that-a-is-related-to-b">[Definition] A <em>relation R</em> is defined on a set <em>S</em> if for every pair of elements <em>(a, b)</em>, <em>a, b <span class="arithmatex">\(\in\)</span> S</em>, <em>a R b</em> is either true or false.  If <em>a R b</em> is true, then we say that <em>a</em> is related to <em>b</em>.</h4>
@@ -2718,8 +2718,8 @@
 <p>非对称关系（asymmetric）
 集合A上的二元关系R，对任何a，b∈A，当aRb时有bR a</p>
 <p>反对称关系（antisymmetric）</p>
-<p><img alt="img" src="D:\数据结构与算法分析\Notes-for-Data-Structure-master\assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JheW5vckZURA==,size_16,color_FFFFFF,t_70.png" /></p>
-<hr />
+<p><img alt="img" src="D:\%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90\Notes-for-Data-Structure-master\assets\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JheW5vckZURA==,size_16,color_FFFFFF,t_70.png"></p>
+<hr>
 <h3 id="52-the-dynamic-equivalence-problem">5.2 The Dynamic Equivalence Problem</h3>
 <ul>
 <li>Given an equivalence relation ~, decide for any <em>a</em> and <em>b</em> if <em>a ~ b</em></li>
@@ -2767,7 +2767,7 @@
 </li>
 <li>Find( <span class="arithmatex">\(i\)</span> ) = Find the set <span class="arithmatex">\(S_k\)</span> which contains the element <span class="arithmatex">\(i\)</span></li>
 </ul>
-<hr />
+<hr>
 <h3 id="53-basic-data-structure">5.3 Basic Data Structure</h3>
 <h4 id="union-i-j">Union( <span class="arithmatex">\(i, j\)</span> )</h4>
 <ul>
@@ -2778,7 +2778,7 @@
 <p><strong>Implementation 1</strong> :</p>
 </li>
 </ul>
-<p><img src="picture/7-1.png" alt="7-1" style="zoom:80%;" /></p>
+<p><img src="picture/7-1.png" alt="7-1" style="zoom:80%;"></p>
 <ul>
 <li>
 <p><strong>Implementation 2</strong> :</p>
@@ -2806,7 +2806,7 @@
 <ul>
 <li><strong>Implementation 1</strong> :</li>
 </ul>
-<p><img alt="7-2" src="../picture/7-2.png" /></p>
+<p><img alt="7-2" src="../picture/7-2.png"></p>
 <ul>
 <li><strong>Implementation 2</strong> :</li>
 </ul>
@@ -2824,7 +2824,7 @@
 <ul>
 <li>Union and find are always paired. Thus we consider the performance of a sequence of <strong>union-find operations</strong>.</li>
 </ul>
-<p><img src="picture/7-3.png" alt="7-3" style="zoom:80%;" /></p>
+<p><img src="picture/7-3.png" alt="7-3" style="zoom:80%;"></p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -2846,7 +2846,7 @@
 <ul>
 <li>Worst case : <span class="arithmatex">\(T(N)=\Theta(N^2)\)</span></li>
 </ul>
-<hr />
+<hr>
 <h3 id="54-smart-union-algorithms">5.4 Smart Union Algorithms</h3>
 <h4 id="union-by-size">Union-by-Size</h4>
 <ul>
@@ -2921,7 +2921,7 @@
 </span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<hr />
+<hr>
 <h3 id="55-path-compression">5.5 Path Compression</h3>
 <ul>
 <li>从X到Root的路径上的每一个结点都使它的父结点变成Root</li>
@@ -2965,7 +2965,7 @@
 <ul>
 <li>Note : Not compatible with union-by-height since it changes the heights.  Just take “height” as an estimated <strong>rank</strong>.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="56-worst-case-for-union-by-rank-and-path-compression">5.6 Worst Case for Union-by-Rank and Path Compression</h3>
 <h4 id="lemma-let-tmn-be-the-maximum-time-required-to-process-an-intermixed-sequence-of-mgeq-n-finds-and-n-1-unions-then-k_1malphamnleq-tmnleq-k_2malphamn-for-some-positive-constants-k_1-and-k_2">[Lemma] Let <span class="arithmatex">\(T(M,N)\)</span> be the maximum time required to process an intermixed sequence of <span class="arithmatex">\(M\geq N\)</span> finds and <span class="arithmatex">\(N-1\)</span> unions, then <span class="arithmatex">\(k_1M\alpha(M,N)\leq T(M,N)\leq k_2M\alpha(M,N)\)</span> for some positive constants <span class="arithmatex">\(k_1\)</span> and <span class="arithmatex">\(k_2\)</span>.</h4>
 <ul>
@@ -2986,7 +2986,7 @@
 <li><span class="arithmatex">\(\alpha(M,N)=min\{i\geq1|A(i,\lfloor M/N\rfloor)&gt;\log N\}\leq O(\log^*N)\leq4\)</span></li>
 </ul>
 <p><span class="arithmatex">\(\log^*N\)</span> (inverse Ackermann function) = number of times the logarithm is applied to <span class="arithmatex">\(N\)</span> until the result <span class="arithmatex">\(\leq1\)</span>.</p>
-<hr />
+<hr>
 <h2 id="_1"><strong>要求时间复杂度证明</strong></h2>
 <h3 id="57-conclusion">5.7 Conclusion</h3>
 <p>一共有五种算法，注意看清题设</p>
@@ -3007,7 +3007,7 @@
 <p>Union-by-height + Path Compression</p>
 </li>
 </ul>
-<hr />
+<hr></div>
 
 
 

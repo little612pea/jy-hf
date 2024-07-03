@@ -2516,7 +2516,7 @@
   
 
 
-<h1 id="linux">linux</h1>
+<div><h1 id="linux">linux</h1>
 <ol>
 <li><strong>云计算和虚拟化：</strong></li>
 <li>学习如何配置和管理云服务器，理解云计算概念和服务模型。</li>
@@ -2601,7 +2601,7 @@
 /usr/bin/nginx
 /usr/local/nginx
 [root@iZ2ze72tpnr9ta1r8uvbujZ /]#
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+</p><div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
@@ -2652,7 +2652,7 @@
 </span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24"></a>nginx     269835  www    9u  IPv4 679139      0t0  TCP *:http (LISTEN)
 </span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25"></a>nginx     269836  www    9u  IPv4 679139      0t0  TCP *:http (LISTEN)
 </span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26"></a>[root@iZ2ze72tpnr9ta1r8uvbujZ /]#
-</span></code></pre></div></td></tr></table></div></p>
+</span></code></pre></div></td></tr></table></div>
 <h2 id="grep">grep</h2>
 <p><code>grep</code>是一个在文本中搜索模式的强大命令行工具。它的名字来源于全局正则表达式打印（Global Regular Expression Print）。</p>
 <p>下面是<code>grep</code>命令的基本用法和一些常见选项：</p>
@@ -2681,35 +2681,35 @@
 </ol>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>bashCopy code
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>grep &quot;keyword&quot; filename
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>grep "keyword" filename
 </span></code></pre></div></td></tr></table></div>
 <ol>
 <li>递归搜索目录下所有文件中包含关键字的行：</li>
 </ol>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>bashCopy code
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>grep -r &quot;keyword&quot; directory
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>grep -r "keyword" directory
 </span></code></pre></div></td></tr></table></div>
 <ol>
 <li>忽略大小写：</li>
 </ol>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>bashCopy code
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a>grep -i &quot;keyword&quot; filename
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a>grep -i "keyword" filename
 </span></code></pre></div></td></tr></table></div>
 <ol>
 <li>显示匹配行的行号：</li>
 </ol>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>bashCopy code
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a>grep -n &quot;keyword&quot; filename
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a>grep -n "keyword" filename
 </span></code></pre></div></td></tr></table></div>
 <ol>
 <li>反向选择，显示不匹配的行：</li>
 </ol>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
 <span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>bashCopy code
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a>grep -v &quot;keyword&quot; filename
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a>grep -v "keyword" filename
 </span></code></pre></div></td></tr></table></div>
 <p>这只是一些<code>grep</code>命令的基本用法和选项，<code>grep</code>有很多其他选项和功能，你可以通过<code>man grep</code>查看<code>grep</code>的手册页以获取更多详细信息。\</p>
 <p>竟然没有apt-get？？</p>
@@ -2798,12 +2798,12 @@
 <li><strong>VuePress 和 Nuxt.js：</strong> 如果你熟悉 Vue.js，VuePress 适用于文档和博客。而 Nuxt.js 则是一个用于构建Vue.js应用程序的框架，也可以用于服务器渲染和静态站点生成。</li>
 </ol>
 <p>选择哪个工具取决于你的具体需求和技术偏好。对于初学者，使用WordPress、Wix或Squarespace可能是更容易上手的选择。对于有一些编程经验的人来说，静态网站生成器如Jekyll、Hugo或VuePress可能是一个不错的选择。</p>
-<p><img alt="image-20231118203501265" src="D:\notes\assets\image-20231118203501265.png" /></p>
+<p><img alt="image-20231118203501265" src="D:\notes\assets\image-20231118203501265.png"></p>
 <p>2023_DD是guahao老师在github上的仓库的全部内容，其中并未包括node_modules,src/assets/javascripts文件的内容，请问</p>
 <p>github.io建站过程</p>
 <p>使用</p>
-<p><img alt="image-20231119000619441" src="D:\notes\assets\image-20231119000619441.png" /></p>
-<p><img alt="image-20231119000627543" src="D:\notes\assets\image-20231119000627543.png" /></p>
+<p><img alt="image-20231119000619441" src="D:\notes\assets\image-20231119000619441.png"></p>
+<p><img alt="image-20231119000627543" src="D:\notes\assets\image-20231119000627543.png"></p></div>
 
 
 

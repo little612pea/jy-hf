@@ -4553,11 +4553,11 @@
   
 
 
-<h1 id="foundation-of-data-structure">Foundation of Data Structure</h1>
+<div><h1 id="foundation-of-data-structure">Foundation of Data Structure</h1>
 <blockquote>
 <p>by OE.Heart</p>
 </blockquote>
-<hr />
+<hr>
 <h2 id="1-algorithm-analysis">1 Algorithm Analysis</h2>
 <h4 id="definition-an-algorithm-is-a-finite-set-of-instructions-that-if-followed-accomplishes-a-particular-task-in-addition-all-algorithms-must-satisfy-the-following-criteria">[Definition] An <em>algorithm</em> is a finite set of instructions that, if followed, accomplishes a particular task. In addition, all algorithms must satisfy the following criteria.</h4>
 <ol>
@@ -4592,7 +4592,7 @@
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>    Interchange list[i] and list[min];
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>}
 </span></code></pre></div></td></tr></table></div>
-<hr />
+<hr>
 <h3 id="11-what-to-analyze">1.1 What to Analyze</h3>
 <ul>
 <li>
@@ -4689,7 +4689,7 @@ T_{sum}(n)=2n+3
 T_{rsum}(n)=2n+2
 \]</div>
 <p>But it takes more time to compute each step.</p>
-<hr />
+<hr>
 <h3 id="12-asymptotic-notationoomegathetao">1.2 Asymptotic Notation(<span class="arithmatex">\(O,\Omega,\Theta,o\)</span>)</h3>
 <ul>
 <li>predict the growth ; compare the time complexities of two programs ; asymptotic(渐进的) behavior</li>
@@ -4724,8 +4724,8 @@ T_{rsum}(n)=2n+2
 </li>
 </ol>
 </blockquote>
-<p><img src="picture/1-1.png" alt="1-1" style="zoom: 45%;" /></p>
-<p><img src="picture/1-2.png" alt="1-2" style="zoom:43%;" /></p>
+<p><img src="picture/1-1.png" alt="1-1" style="zoom: 45%;"></p>
+<p><img src="picture/1-2.png" alt="1-2" style="zoom:43%;"></p>
 <h4 id="example-matrix-addition_1">[Example] Matrix addition</h4>
 <div class="language-C highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
@@ -4769,7 +4769,7 @@ T(rows,cols)=\Theta(rows\cdot cols)
 </li>
 </ul>
 <p>The running time is never more than the running time of the test plus the larger of the running time of S1 and S2.</p>
-<p><img src="picture/1-3.png" alt="1-3" style="zoom:120%;" /></p>
+<p><img src="picture/1-3.png" alt="1-3" style="zoom:120%;"></p>
 <ul>
 <li><strong>Recursions</strong> : </li>
 </ul>
@@ -4798,7 +4798,7 @@ T(rows,cols)=\Theta(rows\cdot cols)
 <p>时间复杂度：<span class="arithmatex">\(O(2^N)\)</span>      <span class="arithmatex">\(T(N)\)</span> grows <strong>exponentially</strong></p>
 <p>空间复杂度：<span class="arithmatex">\(O(N)\)</span></p>
 </blockquote>
-<hr />
+<hr>
 <h3 id="13-compare-the-algorithms">1.3 Compare the Algorithms</h3>
 <h4 id="example">[Example] 最大子序列和</h4>
 <p><strong>Algorithm 1</strong></p>
@@ -4991,7 +4991,7 @@ T(N)=O(N)
 <li>A[ ] is scanned <strong>once</strong> only. 扫描一次，无需存储（处理streaming data）</li>
 <li>在任意时刻，算法都能对它已经读入的数据给出子序列问题的正确答案(其他算法不具有这个特性)</li>
 </ul>
-<hr />
+<hr>
 <h3 id="14-logrithms-in-the-running-time">1.4 Logrithms in the Running Time</h3>
 <ul>
 <li>如果一个算法用常数时间将问题的大小削减为其一部分(通常是1/2)，那么该算法就是<span class="arithmatex">\(O(logN)\)</span>的</li>
@@ -5072,7 +5072,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">Pow</span><span class="p">(</span><span class="n">X</span><span class="o">*</span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="cm">/*return Pow(X, N-1)*X is the same*/</span>
 </span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<hr />
+<hr>
 <h3 id="15-checking-your-analysis">1.5 Checking Your Analysis</h3>
 <h4 id="method-1">Method 1</h4>
 <p>When <span class="arithmatex">\(T(N)=O(N)\)</span>, check if <span class="arithmatex">\(T(2N)/T(N)\approx2\)</span></p>
@@ -5080,12 +5080,12 @@ T_{worst}(N)=O(\log N)
 <p>When <span class="arithmatex">\(T(N)=O(N^3)\)</span>, check if <span class="arithmatex">\(T(2N)/T(N)\approx8\)</span></p>
 <h4 id="method-2">Method 2</h4>
 <p>When <span class="arithmatex">\(T(N)=O(f(N))\)</span>, check if $\lim\limits_{N\rightarrow\infty}\frac{T(N)}{f(N)}\approx C $</p>
-<hr />
+<hr>
 <h2 id="2-list-stacks-and-queues">2 LIst, Stacks and Queues</h2>
 <h3 id="21-abstract-data-typeadt">2.1 Abstract Data Type(ADT)  抽象数据类型</h3>
 <h4 id="definition-data-type-objects-and-operations">[Definition] Data Type = {Objects} and {Operations}</h4>
 <h4 id="definition-an-abstract-data-typeadt-is-a-data-type-that-is-organized-in-such-a-way-that-the-specification-on-the-objects-and-specification-of-the-operations-on-the-objects-are-separated-from-the-representation-of-the-objects-and-the-implementation-on-the-operations">[Definition] An Abstract Data Type(ADT) is a data type that is organized in such a way that the <em>specification</em> on the objects and <em>specification</em> of the operations on the objects are <em>separated from</em> the <em>representation</em> of the objects and the <em>implementation</em> on the operations.</h4>
-<hr />
+<hr>
 <h3 id="22-the-list-adt">2.2 The List ADT</h3>
 <ul>
 <li><strong>Objects</strong> : N items</li>
@@ -5114,7 +5114,7 @@ T_{worst}(N)=O(\log N)
 <p>Insertion and Deletion not only take <span class="arithmatex">\(O(N)\)</span> times, but also involve a lot of data movements which takes time.</p>
 </li>
 </ul>
-<p><img alt="2-3" src="../picture/2-3.png" /></p>
+<p><img alt="2-3" src="../picture/2-3.png"></p>
 <p>Query 查询</p>
 <h4 id="linked-lists">Linked Lists</h4>
 <ul>
@@ -5249,7 +5249,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="w">  </span><span class="n">Position</span><span class="w"> </span><span class="n">TmpCell</span><span class="p">;</span>
 </span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7"></a>
 </span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="w">  </span><span class="n">TmpCell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="p">));</span>
-</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">TmpCell</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="s">&quot;Out of space!&quot;</span><span class="p">)</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">TmpCell</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="s">"Out of space!"</span><span class="p">)</span>
 </span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10"></a>
 </span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11"></a><span class="w">  </span><span class="n">TmpCell</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span>
 </span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="w">  </span><span class="n">TmpeCell</span><span class="o">-&gt;</span><span class="n">Next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="o">-&gt;</span><span class="n">Next</span><span class="p">;</span>
@@ -5286,7 +5286,7 @@ T_{worst}(N)=O(\log N)
 <ul>
 <li>Finding take <span class="arithmatex">\(O(\frac N 2)\)</span> times.</li>
 </ul>
-<p><img src="picture/2-1.png" alt="2-1" style="zoom:80%;" /></p>
+<p><img src="picture/2-1.png" alt="2-1" style="zoom:80%;"></p>
 <p>The correct answer is D.</p>
 <h4 id="two-applications">Two Applications</h4>
 <ol>
@@ -5381,7 +5381,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">  </span><span class="n">PolyProd</span><span class="o">-&gt;</span><span class="n">HighPower</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Poly1</span><span class="o">-&gt;</span><span class="n">HighPower</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Poly2</span><span class="o">-&gt;</span><span class="n">HighPower</span><span class="p">;</span>
 </span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7"></a>
 </span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">PolyProd</span><span class="o">-&gt;</span><span class="n">HighPower</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">MaxDegree</span><span class="p">)</span>
-</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">      </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Exceeded array size&quot;</span><span class="p">);</span>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">      </span><span class="n">Error</span><span class="p">(</span><span class="s">"Exceeded array size"</span><span class="p">);</span>
 </span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="w">  </span><span class="k">else</span>
 </span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="w">      </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">O</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">Poly1</span><span class="o">-&gt;</span><span class="n">HighPower</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 </span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="w">          </span><span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">O</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">Poly2</span><span class="o">-&gt;</span><span class="n">HighPower</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
@@ -5414,8 +5414,8 @@ T_{worst}(N)=O(\log N)
 </li>
 </ul>
 <h4 id="cursor-implementation-of-linked-listsno-pointer">Cursor Implementation of Linked Lists(no pointer)</h4>
-<p><img src="picture/2-2.png" alt="2-2" style="zoom:80%;" /></p>
-<hr />
+<p><img src="picture/2-2.png" alt="2-2" style="zoom:80%;"></p>
+<hr>
 <h3 id="23-the-stack-adt">2.3 The Stack ADT</h3>
 <ul>
 <li>Last-In-First-Out (LIFO)</li>
@@ -5432,7 +5432,7 @@ T_{worst}(N)=O(\log N)
 <li>Push on a full stack is an implementation error but not an ADT error.</li>
 </ul>
 <h4 id="linked-list-implementation-with-a-header-node">Linked List Implementation (with a header node)</h4>
-<p><img alt="3-1" src="../picture/3-1.png" /></p>
+<p><img alt="3-1" src="../picture/3-1.png"></p>
 <ul>
 <li>The calls to malloc and free are expensive. Simply keep another stack as a recycle bin.</li>
 </ul>
@@ -5466,7 +5466,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="w">  </span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">;</span>
 </span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="w">  </span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="p">));</span>
 </span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">S</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6"></a><span class="w">      </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Out of space!&quot;</span><span class="p">);</span>
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6"></a><span class="w">      </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">"Out of space!"</span><span class="p">);</span>
 </span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7"></a><span class="w">  </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Next</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 </span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8"></a><span class="w">  </span><span class="n">MakeEmpty</span><span class="p">(</span><span class="n">S</span><span class="p">);</span>
 </span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="p">;</span>
@@ -5475,7 +5475,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-26-12"><a id="__codelineno-26-12" name="__codelineno-26-12"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MakeEmpty</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
 </span><span id="__span-26-13"><a id="__codelineno-26-13" name="__codelineno-26-13"></a><span class="p">{</span>
 </span><span id="__span-26-14"><a id="__codelineno-26-14" name="__codelineno-26-14"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">S</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-</span><span id="__span-26-15"><a id="__codelineno-26-15" name="__codelineno-26-15"></a><span class="w">      </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Must use CreateStack first&quot;</span><span class="p">);</span>
+</span><span id="__span-26-15"><a id="__codelineno-26-15" name="__codelineno-26-15"></a><span class="w">      </span><span class="n">Error</span><span class="p">(</span><span class="s">"Must use CreateStack first"</span><span class="p">);</span>
 </span><span id="__span-26-16"><a id="__codelineno-26-16" name="__codelineno-26-16"></a><span class="w">  </span><span class="k">else</span>
 </span><span id="__span-26-17"><a id="__codelineno-26-17" name="__codelineno-26-17"></a><span class="w">      </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">IsEmpty</span><span class="p">(</span><span class="n">S</span><span class="p">))</span><span class="w"> </span><span class="n">Pop</span><span class="p">(</span><span class="n">S</span><span class="p">);</span>
 </span><span id="__span-26-18"><a id="__codelineno-26-18" name="__codelineno-26-18"></a><span class="p">}</span>
@@ -5497,7 +5497,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="w">  </span><span class="n">PtrToNode</span><span class="w"> </span><span class="n">TmpCell</span><span class="p">;</span>
 </span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="w">  </span><span class="n">TmpCell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="p">));</span>
 </span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">TmpCell</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="w">      </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Out of space!&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="w">      </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">"Out of space!"</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7"></a><span class="w">  </span><span class="k">else</span>
 </span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8"></a><span class="w">  </span><span class="p">{</span>
 </span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9"></a><span class="w">      </span><span class="n">TmpCell</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span>
@@ -5516,7 +5516,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="p">{</span>
 </span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">IsEmpty</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
 </span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Next</span><span class="o">-&gt;</span><span class="n">Element</span><span class="p">;</span>
-</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="w">  </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Empty stack&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="w">  </span><span class="n">Error</span><span class="p">(</span><span class="s">"Empty stack"</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">O</span><span class="p">;</span><span class="w"> </span><span class="cm">/* Return value used to avoid warning*/</span>
 </span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
@@ -5535,7 +5535,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="p">{</span>
 </span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="w">  </span><span class="n">PtrToNode</span><span class="w"> </span><span class="n">FirstCell</span><span class="p">;</span>
 </span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">IsEmpty</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
-</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5"></a><span class="w">      </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Empty stack&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5"></a><span class="w">      </span><span class="n">Error</span><span class="p">(</span><span class="s">"Empty stack"</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6"></a><span class="w">  </span><span class="k">else</span>
 </span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7"></a><span class="w">  </span><span class="p">{</span>
 </span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8"></a><span class="w">      </span><span class="n">FirstCe11</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Next</span><span class="p">;</span>
@@ -5584,14 +5584,14 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="p">{</span>
 </span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="w">  </span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">;</span>
 </span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">MaxElements</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MinStackSize</span><span class="p">)</span>
-</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="w">  </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Stack size is too small&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="w">  </span><span class="n">Error</span><span class="p">(</span><span class="s">"Stack size is too small"</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6"></a><span class="w">  </span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">StackRecord</span><span class="p">));</span>
 </span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">S</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8"></a><span class="w">      </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Out of space!!!&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8"></a><span class="w">      </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">"Out of space!!!"</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9"></a>
 </span><span id="__span-31-10"><a id="__codelineno-31-10" name="__codelineno-31-10"></a><span class="w">  </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">ElementType</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">MaxElements</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </span><span id="__span-31-11"><a id="__codelineno-31-11" name="__codelineno-31-11"></a><span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-</span><span id="__span-31-12"><a id="__codelineno-31-12" name="__codelineno-31-12"></a><span class="w">      </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Out of space!!!&quot;</span><span class="p">);</span>
+</span><span id="__span-31-12"><a id="__codelineno-31-12" name="__codelineno-31-12"></a><span class="w">      </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">"Out of space!!!"</span><span class="p">);</span>
 </span><span id="__span-31-13"><a id="__codelineno-31-13" name="__codelineno-31-13"></a><span class="w">  </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Capacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MaxElements</span><span class="p">;</span>
 </span><span id="__span-31-14"><a id="__codelineno-31-14" name="__codelineno-31-14"></a><span class="w">  </span><span class="n">MakeEmpty</span><span class="p">(</span><span class="n">S</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </span><span id="__span-31-15"><a id="__codelineno-31-15" name="__codelineno-31-15"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="p">;</span>
@@ -5638,7 +5638,7 @@ T_{worst}(N)=O(\log N)
 <span class="normal"><a href="#__codelineno-35-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Push</span><span class="p">(</span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
 </span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="p">{</span>
 </span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">IsFull</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
-</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4"></a><span class="w">      </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Full stack&quot;</span><span class="p">);</span>
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4"></a><span class="w">      </span><span class="n">Error</span><span class="p">(</span><span class="s">"Full stack"</span><span class="p">);</span>
 </span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5"></a><span class="w">  </span><span class="k">else</span>
 </span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6"></a><span class="w">      </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Array</span><span class="p">[</span><span class="w"> </span><span class="o">++</span><span class="n">S</span><span class="o">-&gt;</span><span class="n">TopOfStack</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span>
 </span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7"></a><span class="p">}</span>
@@ -5653,7 +5653,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="p">{</span>
 </span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="w"> </span><span class="n">IsEmpty</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
 </span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Array</span><span class="p">[</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">TopOfStack</span><span class="w"> </span><span class="p">];</span>
-</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5"></a><span class="w">  </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Empty stack&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5"></a><span class="w">  </span><span class="n">Error</span><span class="p">(</span><span class="s">"Empty stack"</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">O</span><span class="p">;</span><span class="w"> </span><span class="cm">/* Return value used to avoid warning*/</span>
 </span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
@@ -5666,7 +5666,7 @@ T_{worst}(N)=O(\log N)
 <span class="normal"><a href="#__codelineno-37-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Pop</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
 </span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="p">{</span>
 </span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3"></a><span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">IsEmpty</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
-</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4"></a><span class="w">      </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Empty stack&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4"></a><span class="w">      </span><span class="n">Error</span><span class="p">(</span><span class="s">"Empty stack"</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5"></a><span class="w">  </span><span class="k">else</span>
 </span><span id="__span-37-6"><a id="__codelineno-37-6" name="__codelineno-37-6"></a><span class="w">      </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">TopOfStack</span><span class="o">--</span><span class="p">;</span>
 </span><span id="__span-37-7"><a id="__codelineno-37-7" name="__codelineno-37-7"></a><span class="p">}</span>
@@ -5681,7 +5681,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="p">{</span>
 </span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3"></a><span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">Is</span><span class="w"> </span><span class="n">Empty</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
 </span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">Array</span><span class="p">[</span><span class="w"> </span><span class="n">S</span><span class="o">-&gt;</span><span class="n">TopOfStack</span><span class="o">--</span><span class="w"> </span><span class="p">];</span>
-</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5"></a><span class="w">  </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Empty stack&quot;</span><span class="p">);</span>
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5"></a><span class="w">  </span><span class="n">Error</span><span class="p">(</span><span class="s">"Empty stack"</span><span class="p">);</span>
 </span><span id="__span-38-6"><a id="__codelineno-38-6" name="__codelineno-38-6"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">O</span><span class="p">;</span><span class="w"> </span><span class="cm">/* Return value used to avoid warnin */</span>
 </span><span id="__span-38-7"><a id="__codelineno-38-7" name="__codelineno-38-7"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
@@ -5742,11 +5742,11 @@ T_{worst}(N)=O(\log N)
 <p>Function Calls (System Stack)</p>
 </li>
 </ol>
-<p><img src="picture/3-2.png" alt="3-2" style="zoom:80%;" /></p>
+<p><img src="picture/3-2.png" alt="3-2" style="zoom:80%;"></p>
 <blockquote>
 <p>Note : Recursion can always be <strong>completely removed</strong>. Non recursive programs are generally <strong>faster</strong> than equivalent recursive programs. However, recursive programs are in general much <strong>simpler and easier to understand</strong>.</p>
 </blockquote>
-<hr />
+<hr>
 <h3 id="24-the-queue-adt">2.4 The Queue ADT</h3>
 <ul>
 <li>First-In-First-Out (FIFO)</li>
@@ -5776,14 +5776,14 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-40-7"><a id="__codelineno-40-7" name="__codelineno-40-7"></a><span class="w"> </span><span class="p">};</span><span class="w"> </span>
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Circular Queue</strong> :</p>
-<p><img src="picture/3-3.png" alt="3-3" style="zoom: 64%;" /><img src="picture/3-4.png" alt="3-4" style="zoom: 64%;" /></p>
+<p><img src="picture/3-3.png" alt="3-3" style="zoom: 64%;"><img src="picture/3-4.png" alt="3-4" style="zoom: 64%;"></p>
 <ul>
 <li>The maximum capacity of this queue is 5.</li>
 </ul>
 <blockquote>
 <p>Note : Adding a <strong>Size</strong> field can avoid wasting one empty space to distinguish “full” from “empty”.  </p>
 </blockquote>
-<hr />
+<hr>
 <h2 id="3-trees">3 Trees</h2>
 <h3 id="31-preliminaries">3.1 Preliminaries</h3>
 <h4 id="definition-a-tree-is-a-collection-of-nodes-the-collection-can-be-empty-otherwise-a-tree-consists-of-1-a-distinguished-node-r-called-the-root-2-and-zero-or-more-nonempty-subtrees-each-of-whose-roots-are-connected-by-a-directed-edge-from-r">[Definition] A tree is a  collection of nodes. The collection can be empty; otherwise, a tree consists of (1)  a distinguished node r, called the root; (2) and zero or more nonempty (sub)trees, each of whose roots are connected by a directed edge from r.</h4>
@@ -5817,14 +5817,14 @@ T_{worst}(N)=O(\log N)
 <ul>
 <li>The size of each node depends on the number of branches.</li>
 </ul>
-<p><img src="picture/4-2.png" alt="4-2" style="zoom: 120%;" /></p>
+<p><img src="picture/4-2.png" alt="4-2" style="zoom: 120%;"></p>
 <p>The correct answer is T.</p>
 <h4 id="firstchild-nextsibling-representation">FirstChild-NextSibling Representation</h4>
-<p><img src="picture/4-1.png" alt="4-1" style="zoom:80%;" /></p>
+<p><img src="picture/4-1.png" alt="4-1" style="zoom:80%;"></p>
 <ul>
 <li>The representation is <strong>not unique</strong> since the children in a tree can be of any order.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="32-binary-trees">3.2 Binary Trees</h3>
 <h4 id="definition-a-binary-tree-is-a-tree-in-which-no-node-can-have-more-than-two-children">[Definition] A binary tree is a tree in which no node can have more than two children.</h4>
 <h4 id="tree-traversals-visit-each-node-exactly-once">Tree Traversals (visit each node exactly once)</h4>
@@ -5943,7 +5943,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-45-13"><a id="__codelineno-45-13" name="__codelineno-45-13"></a>    }
 </span><span id="__span-45-14"><a id="__codelineno-45-14" name="__codelineno-45-14"></a>}
 </span></code></pre></div></td></tr></table></div>
-<p><img alt="4-3" src="../picture/4-3.png" /></p>
+<p><img alt="4-3" src="../picture/4-3.png"></p>
 <h4 id="threaded-binary-trees">Threaded Binary Trees</h4>
 <ul>
 <li>
@@ -5984,7 +5984,7 @@ T_{worst}(N)=O(\log N)
 <ul>
 <li>线索化的实质就是将二叉链表中的空指针改为指向前驱或后继的线索。由于前驱和后继信息只有在遍历该二叉树时才能得到，所以，线索化的过程就是在遍历的过程中修改空指针的过程。</li>
 </ul>
-<p><img src="picture/4-4.png" alt="4-4" style="zoom:80%;" /></p>
+<p><img src="picture/4-4.png" alt="4-4" style="zoom:80%;"></p>
 <ul>
 <li>In a tree, the order of children does not matter. But in a binary tree, left child and right child are different.</li>
 </ul>
@@ -5996,7 +5996,7 @@ T_{worst}(N)=O(\log N)
 <li>For any nonempty binary tree, <span class="arithmatex">\(n_0 = n_2 + 1\)</span> where <span class="arithmatex">\(n_0\)</span> is the number of leaf nodes and <span class="arithmatex">\(n_2\)</span> is the number of nodes of degree 2.</li>
 </ul>
 </blockquote>
-<hr />
+<hr>
 <h3 id="33-binary-search-trees">3.3 Binary Search Trees</h3>
 <h4 id="definition-a-binary-search-tree-is-a-binary-tree-it-may-be-empty-if-it-is-not-empty-it-satisfies-the-following-properties">[Definition] A binary search tree is a binary tree.  It may be empty.  If it is not empty, it satisfies the following properties:</h4>
 <ul>
@@ -6141,7 +6141,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-51-4"><a id="__codelineno-51-4" name="__codelineno-51-4"></a>    { 
 </span><span id="__span-51-5"><a id="__codelineno-51-5" name="__codelineno-51-5"></a>     T = malloc( sizeof( struct TreeNode ) ); 
 </span><span id="__span-51-6"><a id="__codelineno-51-6" name="__codelineno-51-6"></a>     if ( T == NULL ) 
-</span><span id="__span-51-7"><a id="__codelineno-51-7" name="__codelineno-51-7"></a>         FatalError( &quot;Out of space!!!&quot; ); 
+</span><span id="__span-51-7"><a id="__codelineno-51-7" name="__codelineno-51-7"></a>         FatalError( "Out of space!!!" ); 
 </span><span id="__span-51-8"><a id="__codelineno-51-8" name="__codelineno-51-8"></a>     else 
 </span><span id="__span-51-9"><a id="__codelineno-51-9" name="__codelineno-51-9"></a>     { 
 </span><span id="__span-51-10"><a id="__codelineno-51-10" name="__codelineno-51-10"></a>         T-&gt;Element = X; 
@@ -6154,7 +6154,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-51-17"><a id="__codelineno-51-17" name="__codelineno-51-17"></a>     else 
 </span><span id="__span-51-18"><a id="__codelineno-51-18" name="__codelineno-51-18"></a>         if ( X &gt; T-&gt;Element ) 
 </span><span id="__span-51-19"><a id="__codelineno-51-19" name="__codelineno-51-19"></a>             T-&gt;Right = Insert( X, T-&gt;Right ); 
-</span><span id="__span-51-20"><a id="__codelineno-51-20" name="__codelineno-51-20"></a>     /* Else X is in the tree already; we&#39;ll do nothing */ 
+</span><span id="__span-51-20"><a id="__codelineno-51-20" name="__codelineno-51-20"></a>     /* Else X is in the tree already; we'll do nothing */ 
 </span><span id="__span-51-21"><a id="__codelineno-51-21" name="__codelineno-51-21"></a>    return  T;   /* Do not forget this line!! */ 
 </span><span id="__span-51-22"><a id="__codelineno-51-22" name="__codelineno-51-22"></a>}
 </span></code></pre></div></td></tr></table></div>
@@ -6200,7 +6200,7 @@ T_{worst}(N)=O(\log N)
 <span class="normal"><a href="#__codelineno-52-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1"></a>SearchTree Delete( ElementType X, SearchTree T ) 
 </span><span id="__span-52-2"><a id="__codelineno-52-2" name="__codelineno-52-2"></a>{    
 </span><span id="__span-52-3"><a id="__codelineno-52-3" name="__codelineno-52-3"></a> Position TmpCell; 
-</span><span id="__span-52-4"><a id="__codelineno-52-4" name="__codelineno-52-4"></a>    if ( T == NULL ) Error( &quot;Element not found&quot; ); 
+</span><span id="__span-52-4"><a id="__codelineno-52-4" name="__codelineno-52-4"></a>    if ( T == NULL ) Error( "Element not found" ); 
 </span><span id="__span-52-5"><a id="__codelineno-52-5" name="__codelineno-52-5"></a>    else if ( X &lt; T-&gt;Element )  /* Go left */ 
 </span><span id="__span-52-6"><a id="__codelineno-52-6" name="__codelineno-52-6"></a>     T-&gt;Left = Delete( X, T-&gt;Left ); 
 </span><span id="__span-52-7"><a id="__codelineno-52-7" name="__codelineno-52-7"></a>    else if ( X &gt; T-&gt;Element )  /* Go right */ 
@@ -6238,9 +6238,9 @@ T_{worst}(N)=O(\log N)
 </li>
 <li>将<span class="arithmatex">\(n\)</span>个元素存入二叉搜索树，树的高度将由插入序列决定</li>
 </ol>
-<p><img src="picture/5-1.png" alt="5-1" style="zoom:80%;" /></p>
+<p><img src="picture/5-1.png" alt="5-1" style="zoom:80%;"></p>
 <p>The correct answer is A.</p>
-<hr />
+<hr>
 <h2 id="4-priority-queues-heaps">4 Priority Queues (Heaps)</h2>
 <h3 id="41-adt-model">4.1 ADT Model</h3>
 <ul>
@@ -6251,7 +6251,7 @@ T_{worst}(N)=O(\log N)
 <li>ElementType  DeleteMin( PriorityQueue H ); </li>
 <li>ElementType  FindMin( PriorityQueue H ); </li>
 </ul>
-<hr />
+<hr>
 <h3 id="42-implementations">4.2 Implementations</h3>
 <h4 id="array">Array</h4>
 <ul>
@@ -6299,7 +6299,7 @@ T_{worst}(N)=O(\log N)
 <li>Keep a balanced tree </li>
 <li>But there are many operations related to AVL tree that we don't really need for a priority queue.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="43-binary-heap">4.3 Binary Heap</h3>
 <h4 id="structure-property">Structure Property</h4>
 <p><strong>[Definition]</strong> A binary tree with <span class="arithmatex">\(n\)</span> nodes and height <span class="arithmatex">\(h\)</span> is <strong>complete</strong>  if  its nodes correspond to the nodes numbered from <span class="arithmatex">\(1\)</span> to <span class="arithmatex">\(n\)</span> in the perfect binary tree of height <span class="arithmatex">\(h\)</span>.</p>
@@ -6314,7 +6314,7 @@ T_{worst}(N)=O(\log N)
 <p>Array Representation : BT[n + 1]  ( BT[0] is not used)</p>
 </li>
 </ul>
-<p><img alt="6-1" src="../picture/6-1.png" /></p>
+<p><img alt="6-1" src="../picture/6-1.png"></p>
 <p><strong>[Lemma]</strong> </p>
 <ol>
 <li><span class="arithmatex">\(index\,of\,parent(i)=\left\{
@@ -6353,14 +6353,14 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-53-2"><a id="__codelineno-53-2" name="__codelineno-53-2"></a><span class="p">{</span><span class="w"> </span>
 </span><span id="__span-53-3"><a id="__codelineno-53-3" name="__codelineno-53-3"></a><span class="w">    </span><span class="n">PriorityQueue</span><span class="w"> </span><span class="n">H</span><span class="p">;</span><span class="w"> </span>
 </span><span id="__span-53-4"><a id="__codelineno-53-4" name="__codelineno-53-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">MaxElements</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MinPQSize</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-</span><span id="__span-53-5"><a id="__codelineno-53-5" name="__codelineno-53-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Priority queue size is too small&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-53-5"><a id="__codelineno-53-5" name="__codelineno-53-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">"Priority queue size is too small"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-53-6"><a id="__codelineno-53-6" name="__codelineno-53-6"></a><span class="w">    </span><span class="n">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">HeapStruct</span><span class="w"> </span><span class="p">));</span><span class="w"> </span>
 </span><span id="__span-53-7"><a id="__codelineno-53-7" name="__codelineno-53-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-</span><span id="__span-53-8"><a id="__codelineno-53-8" name="__codelineno-53-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-53-8"><a id="__codelineno-53-8" name="__codelineno-53-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">"Out of space!!!"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-53-9"><a id="__codelineno-53-9" name="__codelineno-53-9"></a><span class="w">    </span><span class="cm">/* Allocate the array plus one extra for sentinel */</span><span class="w"> </span>
 </span><span id="__span-53-10"><a id="__codelineno-53-10" name="__codelineno-53-10"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">((</span><span class="w"> </span><span class="n">MaxElements</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="p">));</span><span class="w"> </span>
 </span><span id="__span-53-11"><a id="__codelineno-53-11" name="__codelineno-53-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-</span><span id="__span-53-12"><a id="__codelineno-53-12" name="__codelineno-53-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-53-12"><a id="__codelineno-53-12" name="__codelineno-53-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">"Out of space!!!"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-53-13"><a id="__codelineno-53-13" name="__codelineno-53-13"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Capacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MaxElements</span><span class="p">;</span><span class="w"> </span>
 </span><span id="__span-53-14"><a id="__codelineno-53-14" name="__codelineno-53-14"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
 </span><span id="__span-53-15"><a id="__codelineno-53-15" name="__codelineno-53-15"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MinData</span><span class="p">;</span><span class="w">  </span><span class="cm">/* set the sentinel */</span>
@@ -6394,7 +6394,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-54-4"><a id="__codelineno-54-4" name="__codelineno-54-4"></a><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span>
 </span><span id="__span-54-5"><a id="__codelineno-54-5" name="__codelineno-54-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">IsFull</span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">))</span><span class="w"> </span>
 </span><span id="__span-54-6"><a id="__codelineno-54-6" name="__codelineno-54-6"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-54-7"><a id="__codelineno-54-7" name="__codelineno-54-7"></a><span class="w">     </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Priority queue is full&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-54-7"><a id="__codelineno-54-7" name="__codelineno-54-7"></a><span class="w">     </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">"Priority queue is full"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-54-8"><a id="__codelineno-54-8" name="__codelineno-54-8"></a><span class="w">     </span><span class="k">return</span><span class="p">;</span><span class="w"> </span>
 </span><span id="__span-54-9"><a id="__codelineno-54-9" name="__codelineno-54-9"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
 </span><span id="__span-54-10"><a id="__codelineno-54-10" name="__codelineno-54-10"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="p">;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
@@ -6437,7 +6437,7 @@ T_{worst}(N)=O(\log N)
 </span><span id="__span-55-4"><a id="__codelineno-55-4" name="__codelineno-55-4"></a><span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">MinElement</span><span class="p">,</span><span class="w"> </span><span class="n">LastElement</span><span class="p">;</span><span class="w"> </span>
 </span><span id="__span-55-5"><a id="__codelineno-55-5" name="__codelineno-55-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">IsEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
 </span><span id="__span-55-6"><a id="__codelineno-55-6" name="__codelineno-55-6"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-55-7"><a id="__codelineno-55-7" name="__codelineno-55-7"></a><span class="w">        </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Priority queue is empty&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-55-7"><a id="__codelineno-55-7" name="__codelineno-55-7"></a><span class="w">        </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">"Priority queue is empty"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-55-8"><a id="__codelineno-55-8" name="__codelineno-55-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">];</span><span class="w">   </span>
 </span><span id="__span-55-9"><a id="__codelineno-55-9" name="__codelineno-55-9"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
 </span><span id="__span-55-10"><a id="__codelineno-55-10" name="__codelineno-55-10"></a><span class="w">    </span><span class="n">MinElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">];</span><span class="w">  </span><span class="cm">/*Save the min element*/</span>
@@ -6486,8 +6486,8 @@ T(N)=O(\log N)
    T(N)=O(N)
    $$</p>
 <p><strong>[Theorem]</strong> For the perfect binary tree of height <span class="arithmatex">\(h\)</span> containing <span class="arithmatex">\(2^{h+1}-1\)</span> nodes, the sum of the heights of the nodes is <span class="arithmatex">\(2^{h+1}-1-(h+1)\)</span>.</p>
-<p><img alt="image-20210125151728720" src="../picture/image-20210125151728720.png" /></p>
-<hr />
+<p><img alt="image-20210125151728720" src="../picture/image-20210125151728720.png"></p>
+<hr>
 <h3 id="44-applications-of-priority-queues">4.4 Applications of Priority Queues</h3>
 <h4 id="heap-sort">Heap Sort</h4>
 <h4 id="k">查找一个序列中第k小的元素</h4>
@@ -6540,7 +6540,7 @@ T(N)=O(\log N)
 </span><span id="__span-57-23"><a id="__codelineno-57-23" name="__codelineno-57-23"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
 </span><span id="__span-57-24"><a id="__codelineno-57-24" name="__codelineno-57-24"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<hr />
+<hr>
 <h3 id="45-d-heaps-all-nodes-have-d-children">4.5 <span class="arithmatex">\(d\)</span>-Heaps — All nodes have <span class="arithmatex">\(d\)</span> children</h3>
 <p><strong>Note</strong> :</p>
 <blockquote>
@@ -6550,16 +6550,16 @@ T(N)=O(\log N)
 <li>When the priority queue is too large to fit entirely in main memory, a d-heap will become interesting.</li>
 </ul>
 </blockquote>
-<p><img src="picture/6-2.png" alt="6-2"  /></p>
-<p><img alt="image-20210125070700824" src="../picture/image-20210125070700824.png" /></p>
+<p><img src="picture/6-2.png" alt="6-2"></p>
+<p><img alt="image-20210125070700824" src="../picture/image-20210125070700824.png"></p>
 <p>正确答案是4，注意“in the process”</p>
-<hr />
+<hr>
 <h2 id="5-the-disjoint-set">5 The Disjoint Set</h2>
 <h3 id="51-equivalence-relations">5.1 Equivalence Relations</h3>
 <h4 id="definition-a-relation-r-is-defined-on-a-set-s-if-for-every-pair-of-elements-a-b-a-b-in-s-a-r-b-is-either-true-or-false-if-a-r-b-is-true-then-we-say-that-a-is-related-to-b">[Definition] A <em>relation R</em> is defined on a set <em>S</em> if for every pair of elements <em>(a, b)</em>, <em>a, b <span class="arithmatex">\(\in\)</span> S</em>, <em>a R b</em> is either true or false.  If <em>a R b</em> is true, then we say that <em>a</em> is related to <em>b</em>.</h4>
 <h4 id="definition-a-relation-over-a-set-s-is-said-to-be-an-equivalence-relation-over-s-if-it-is-symmetric-reflexive-and-transitive-over-s">[Definition] A relation, ~, over a set, <em>S</em>, is said to be an <em>equivalence relation</em> over <em>S</em> if it is symmetric, reflexive, and transitive over <em>S</em>.</h4>
 <h4 id="definition-two-members-x-and-y-of-a-set-s-are-said-to-be-in-the-same-equivalence-class-if-x-y">[Definition] Two members <em>x</em> and <em>y</em> of a set <em>S</em> are said to be in the same <em>equivalence class</em> if <em>x ~ y</em>.</h4>
-<hr />
+<hr>
 <h3 id="52-the-dynamic-equivalence-problem">5.2 The Dynamic Equivalence Problem</h3>
 <ul>
 <li>Given an equivalence relation ~, decide for any <em>a</em> and <em>b</em> if <em>a ~ b</em></li>
@@ -6611,7 +6611,7 @@ T(N)=O(\log N)
 </li>
 <li>Find( <span class="arithmatex">\(i\)</span> ) = Find the set <span class="arithmatex">\(S_k\)</span> which contains the element <span class="arithmatex">\(i\)</span></li>
 </ul>
-<hr />
+<hr>
 <h3 id="53-basic-data-structure">5.3 Basic Data Structure</h3>
 <h4 id="union-i-j">Union( <span class="arithmatex">\(i, j\)</span> )</h4>
 <ul>
@@ -6622,7 +6622,7 @@ T(N)=O(\log N)
 <p><strong>Implementation 1</strong> :</p>
 </li>
 </ul>
-<p><img src="picture/7-1.png" alt="7-1" style="zoom:80%;" /></p>
+<p><img src="picture/7-1.png" alt="7-1" style="zoom:80%;"></p>
 <ul>
 <li>
 <p><strong>Implementation 2</strong> :</p>
@@ -6650,7 +6650,7 @@ T(N)=O(\log N)
 <ul>
 <li><strong>Implementation 1</strong> :</li>
 </ul>
-<p><img alt="7-2" src="../picture/7-2.png" /></p>
+<p><img alt="7-2" src="../picture/7-2.png"></p>
 <ul>
 <li><strong>Implementation 2</strong> :</li>
 </ul>
@@ -6668,7 +6668,7 @@ T(N)=O(\log N)
 <ul>
 <li>Union and find are always paired. Thus we consider the performance of a sequence of <strong>union-find operations</strong>.</li>
 </ul>
-<p><img src="picture/7-3.png" alt="7-3" style="zoom:80%;" /></p>
+<p><img src="picture/7-3.png" alt="7-3" style="zoom:80%;"></p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1">1</a></span>
 <span class="normal"><a href="#__codelineno-61-2">2</a></span>
 <span class="normal"><a href="#__codelineno-61-3">3</a></span>
@@ -6690,7 +6690,7 @@ T(N)=O(\log N)
 <ul>
 <li>Worst case : <span class="arithmatex">\(T(N)=\Theta(N^2)\)</span></li>
 </ul>
-<hr />
+<hr>
 <h3 id="54-smart-union-algorithms">5.4 Smart Union Algorithms</h3>
 <h4 id="union-by-size">Union-by-Size</h4>
 <ul>
@@ -6765,7 +6765,7 @@ T(N)=O(\log N)
 </span><span id="__span-63-11"><a id="__codelineno-63-11" name="__codelineno-63-11"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-63-12"><a id="__codelineno-63-12" name="__codelineno-63-12"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<hr />
+<hr>
 <h3 id="55-path-compression">5.5 Path Compression</h3>
 <ul>
 <li>从X到Root的路径上的每一个结点都使它的父结点变成Root</li>
@@ -6809,7 +6809,7 @@ T(N)=O(\log N)
 <ul>
 <li>Note : Not compatible with union-by-height since it changes the heights.  Just take “height” as an estimated <strong>rank</strong>.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="56-worst-case-for-union-by-rank-and-path-compression">5.6 Worst Case for Union-by-Rank and Path Compression</h3>
 <h4 id="lemma-let-tmn-be-the-maximum-time-required-to-process-an-intermixed-sequence-of-mgeq-n-finds-and-n-1-unions-then-k_1malphamnleq-tmnleq-k_2malphamn-for-some-positive-constants-k_1-and-k_2">[Lemma] Let <span class="arithmatex">\(T(M,N)\)</span> be the maximum time required to process an intermixed sequence of <span class="arithmatex">\(M\geq N\)</span> finds and <span class="arithmatex">\(N-1\)</span> unions, then <span class="arithmatex">\(k_1M\alpha(M,N)\leq T(M,N)\leq k_2M\alpha(M,N)\)</span> for some positive constants <span class="arithmatex">\(k_1\)</span> and <span class="arithmatex">\(k_2\)</span>.</h4>
 <ul>
@@ -6830,7 +6830,7 @@ T(N)=O(\log N)
 <li><span class="arithmatex">\(\alpha(M,N)=min\{i\geq1|A(i,\lfloor M/N\rfloor)&gt;\log N\}\leq O(\log^*N)\leq4\)</span></li>
 </ul>
 <p><span class="arithmatex">\(\log^*N\)</span> (inverse Ackermann function) = number of times the logarithm is applied to <span class="arithmatex">\(N\)</span> until the result <span class="arithmatex">\(\leq1\)</span>.</p>
-<hr />
+<hr>
 <h3 id="57-conclusion">5.7 Conclusion</h3>
 <p>一共有五种算法，注意看清题设</p>
 <ul>
@@ -6850,7 +6850,7 @@ T(N)=O(\log N)
 <p>Union-by-height + Path Compression</p>
 </li>
 </ul>
-<hr />
+<hr>
 <h2 id="6-graph-algorithms">6 Graph Algorithms</h2>
 <h3 id="61-definitions">6.1 Definitions</h3>
 <ul>
@@ -6861,7 +6861,7 @@ T(N)=O(\log N)
 <li><span class="arithmatex">\(( v_i , v_j ) = ( v_j , v_i )\)</span> = the same edge.</li>
 </ul>
 <h4 id="directed-graphdiagraph">Directed graph(diagraph)</h4>
-<p><img src="picture/8-1.png" alt="8-1" style="zoom:120%;" /></p>
+<p><img src="picture/8-1.png" alt="8-1" style="zoom:120%;"></p>
 <h4 id="restrictions">Restrictions</h4>
 <ul>
 <li><strong>Self loop</strong> is illegal.</li>
@@ -6871,10 +6871,10 @@ T(N)=O(\log N)
 <ul>
 <li>A graph that has the maximum number of edges.</li>
 </ul>
-<p><img alt="image-20210124163038265" src="../picture/image-20210124163038265.png" /></p>
+<p><img alt="image-20210124163038265" src="../picture/image-20210124163038265.png"></p>
 <h4 id="adjacent">Adjacent</h4>
-<p><img src="picture/image-20210124163324744.png" alt="image-20210124163324744" style="zoom:120%;" /></p>
-<p><img src="picture/image-20210124163301833.png" alt="image-20210124163301833" style="zoom:120%;" /></p>
+<p><img src="picture/image-20210124163324744.png" alt="image-20210124163324744" style="zoom:120%;"></p>
+<p><img src="picture/image-20210124163301833.png" alt="image-20210124163301833" style="zoom:120%;"></p>
 <h4 id="subgraph">Subgraph</h4>
 <div class="arithmatex">\[
 G'\subset G=V(G')\subseteq V(G) \&amp;\&amp; E(G')\subseteq E(G)
@@ -6936,14 +6936,14 @@ G'\subset G=V(G')\subseteq V(G) \&amp;\&amp; E(G')\subseteq E(G)
   $$</p>
 </li>
 </ul>
-<hr />
+<hr>
 <h3 id="62-representation-of-graphs">6.2 Representation of Graphs</h3>
 <h4 id="adjacency-matrix">Adjacency Matrix</h4>
-<p><img alt="image-20210124163641976" src="../picture/image-20210124163641976.png" /></p>
+<p><img alt="image-20210124163641976" src="../picture/image-20210124163641976.png"></p>
 <blockquote>
 <p>Note : If G is undirected, then adj_mat[][] is symmetric. Thus we can save space by storing only half of the matrix.</p>
 </blockquote>
-<p><img src="picture/image-20210123194735917.png" alt="image-20210123194735917"  /></p>
+<p><img src="picture/image-20210123194735917.png" alt="image-20210123194735917"></p>
 <ul>
 <li>
 <p>This representation wastes space if the graph has a lot of vertices but very few edges.</p>
@@ -6956,7 +6956,7 @@ G'\subset G=V(G')\subseteq V(G) \&amp;\&amp; E(G')\subseteq E(G)
 <ul>
 <li>Replace each row by a linked list</li>
 </ul>
-<p><img alt="image-20210124164723362" src="../picture/image-20210124164723362.png" /></p>
+<p><img alt="image-20210124164723362" src="../picture/image-20210124164723362.png"></p>
 <blockquote>
 <p>Note : The order of nodes in each list does not matter.</p>
 </blockquote>
@@ -6965,9 +6965,9 @@ G'\subset G=V(G')\subseteq V(G) \&amp;\&amp; E(G')\subseteq E(G)
 <li>Degree(i) = number of nodes in graph[i](if <span class="arithmatex">\(G\)</span> is undirected)</li>
 <li><span class="arithmatex">\(T\)</span> of examine <span class="arithmatex">\(E(G)\)</span> = <span class="arithmatex">\(O(n+e)\)</span></li>
 </ul>
-<p><img alt="image-20210124165346405" src="../picture/image-20210124165346405.png" /></p>
+<p><img alt="image-20210124165346405" src="../picture/image-20210124165346405.png"></p>
 <h4 id="adjacency-multilists">Adjacency Multilists</h4>
-<p><img alt="image-20210124164607434" src="../picture/image-20210124164607434.png" /></p>
+<p><img alt="image-20210124164607434" src="../picture/image-20210124164607434.png"></p>
 <ul>
 <li>Sometimes we need to mark the edge after examine it, and then find the next edge.</li>
 </ul>
@@ -6976,7 +6976,7 @@ G'\subset G=V(G')\subseteq V(G) \&amp;\&amp; E(G')\subseteq E(G)
 <li>adj_mat [ i ] [ j ] = weight</li>
 <li>adjacency lists / multilists :  add a weight field to the node</li>
 </ul>
-<hr />
+<hr>
 <h3 id="63-topological-sort">6.3 Topological Sort</h3>
 <h4 id="aov-network">AOV Network</h4>
 <ul>
@@ -7080,7 +7080,7 @@ T=O(|V|^2)
 <div class="arithmatex">\[
 T=O(|V|+|E|)
 \]</div>
-<hr />
+<hr>
 <h3 id="64-shortest-path-algorithms">6.4 Shortest Path Algorithms</h3>
 <p>Given a digraph <span class="arithmatex">\(G = ( V, E )\)</span>, and a cost function <span class="arithmatex">\(c( e )\)</span> for <span class="arithmatex">\(e \in E( G )\)</span>. </p>
 <p>The <strong>length</strong> of a path <span class="arithmatex">\(P\)</span> from <strong>source</strong> to <strong>destination</strong> is <span class="arithmatex">\(\sum_{e_i\subset P} c(e_i)\)</span>(also called <strong>weighted path length</strong>).</p>
@@ -7138,7 +7138,7 @@ T=O(|V|+|E|)
 </span><span id="__span-68-19"><a id="__codelineno-68-19" name="__codelineno-68-19"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <p>The worst case : </p>
-<p><img src="picture/9-1.png" alt="9-1" style="zoom: 50%;" />
+<p><img src="picture/9-1.png" alt="9-1" style="zoom: 50%;">
 $$
 T(N)=O(|V|^2)
 $$
@@ -7261,9 +7261,9 @@ T=O(|V|+|E|)
 </span><span id="__span-72-5"><a id="__codelineno-72-5" name="__codelineno-72-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Path</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">NotAVertex</span><span class="p">)</span>
 </span><span id="__span-72-6"><a id="__codelineno-72-6" name="__codelineno-72-6"></a><span class="w">    </span><span class="p">{</span>
 </span><span id="__span-72-7"><a id="__codelineno-72-7" name="__codelineno-72-7"></a><span class="w">        </span><span class="n">PrintPath</span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Path</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">);</span>
-</span><span id="__span-72-8"><a id="__codelineno-72-8" name="__codelineno-72-8"></a><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot; to&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-72-8"><a id="__codelineno-72-8" name="__codelineno-72-8"></a><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">" to"</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </span><span id="__span-72-9"><a id="__codelineno-72-9" name="__codelineno-72-9"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-72-10"><a id="__codelineno-72-10" name="__codelineno-72-10"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%v&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">V</span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="cm">/* %v is pseudocode * /</span>
+</span><span id="__span-72-10"><a id="__codelineno-72-10" name="__codelineno-72-10"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"%v"</span><span class="p">,</span><span class="w"> </span><span class="n">V</span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="cm">/* %v is pseudocode * /</span>
 </span></code></pre></div></td></tr></table></div>
 <div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-73-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-73-2"> 2</a></span>
@@ -7391,9 +7391,9 @@ T=O(|V|\times|E|)
 <li><span class="arithmatex">\(T=O(|E|+|V|)\)</span> and no priority queue is needed.</li>
 </ul>
 <h6 id="aoeactivity-on-edge-networks">AOE(Activity on Edge) Networks</h6>
-<p><img alt="image-20210124185420522" src="../picture/image-20210124185420522.png" /></p>
-<p><img alt="image-20210124185541801" src="../picture/image-20210124185541801.png" /></p>
-<p><img alt="image-20210124185508683" src="../picture/image-20210124185508683.png" /></p>
+<p><img alt="image-20210124185420522" src="../picture/image-20210124185420522.png"></p>
+<p><img alt="image-20210124185541801" src="../picture/image-20210124185541801.png"></p>
+<p><img alt="image-20210124185508683" src="../picture/image-20210124185508683.png"></p>
 <h4 id="all-pairs-shortest-path-problem">All-Pairs Shortest Path Problem</h4>
 <ul>
 <li>For all pairs of <span class="arithmatex">\(v_i\)</span> and <span class="arithmatex">\(v_j\)</span> ( <span class="arithmatex">\(i\neq j\)</span> ), find the shortest path between.</li>
@@ -7408,9 +7408,9 @@ T=O(|V|\times|E|)
 <li>动态规划</li>
 <li><span class="arithmatex">\(O(|V|^3)\)</span> algorithm given in Chapter 10, works faster on dense graphs.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="65-network-flow-problems">6.5 Network Flow Problems</h3>
-<p><img alt="image-20201206175230349" src="../picture/image-20201206175230349.png" /></p>
+<p><img alt="image-20201206175230349" src="../picture/image-20201206175230349.png"></p>
 <ul>
 <li>Determine the maximum amount of flow that can pass from <span class="arithmatex">\(s\)</span> to <span class="arithmatex">\(t\)</span>.</li>
 </ul>
@@ -7482,7 +7482,7 @@ T=O(|V|\times|E|)
 <li>The <strong>min-cost flow</strong> problem is to find, among all maximum flows, the one flow of minimum cost provided that each edge has a cost per unit of flow.</li>
 </ul>
 </blockquote>
-<hr />
+<hr>
 <h3 id="66-minimum-spanning-tree">6.6 Minimum Spanning Tree</h3>
 <h5 id="definition-a-spanning-tree-of-a-graph-g-is-a-tree-which-consists-of-vg-and-a-subset-of-eg">[Definition] A <em>spanning tree</em> of a graph <span class="arithmatex">\(G\)</span> is a tree which consists of <span class="arithmatex">\(V(G)\)</span> and a subset of <span class="arithmatex">\(E(G)\)</span></h5>
 <blockquote>
@@ -7606,8 +7606,8 @@ T=O(|V|\times|E|)
 <p>$$
  T=O(|E|\log|E|)
  $$</p>
-<p><img alt="image-20210124214008496" src="../picture/image-20210124214008496.png" /></p>
-<hr />
+<p><img alt="image-20210124214008496" src="../picture/image-20210124214008496.png"></p>
+<hr>
 </li>
 </ol>
 <h3 id="67-applications-of-depth-first-search">6.7 Applications of Depth-First Search</h3>
@@ -7640,7 +7640,7 @@ T=O(|V|\times|E|)
 </span><span id="__span-78-4"><a id="__codelineno-78-4" name="__codelineno-78-4"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
 </span><span id="__span-78-5"><a id="__codelineno-78-5" name="__codelineno-78-5"></a><span class="w">        </span><span class="p">{</span>
 </span><span id="__span-78-6"><a id="__codelineno-78-6" name="__codelineno-78-6"></a><span class="w">            </span><span class="n">DFS</span><span class="p">(</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">);</span>
-</span><span id="__span-78-7"><a id="__codelineno-78-7" name="__codelineno-78-7"></a><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-78-7"><a id="__codelineno-78-7" name="__codelineno-78-7"></a><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
 </span><span id="__span-78-8"><a id="__codelineno-78-8" name="__codelineno-78-8"></a><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-78-9"><a id="__codelineno-78-9" name="__codelineno-78-9"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
@@ -7650,8 +7650,8 @@ T=O(|V|\times|E|)
 <li><span class="arithmatex">\(G\)</span> is a <strong>biconnected graph</strong> if <span class="arithmatex">\(G\)</span> is connected and has no articulation points.</li>
 <li>A <strong>biconnected component</strong> is a maximal biconnected subgraph.</li>
 </ul>
-<p><img alt="image-20201207194401819" src="../picture/image-20201207194401819.png" /></p>
-<p><img alt="image-20201207194413257" src="../picture/image-20201207194413257.png" /></p>
+<p><img alt="image-20201207194401819" src="../picture/image-20201207194401819.png"></p>
+<p><img alt="image-20201207194413257" src="../picture/image-20201207194413257.png"></p>
 <blockquote>
 <p>Note : No edges can be shared by two or more biconnected components.  Hence <span class="arithmatex">\(E(G)\)</span> is partitioned by the biconnected components of <span class="arithmatex">\(G\)</span>.</p>
 </blockquote>
@@ -7660,8 +7660,8 @@ T=O(|V|\times|E|)
 <ul>
 <li>Use <strong>depth first search</strong> to obtain a spanning tree of <span class="arithmatex">\(G\)</span></li>
 </ul>
-<p><img alt="image-20201208110403641" src="../picture/image-20201208110403641.png" /></p>
-<p><img alt="image-20201208110506092" src="../picture/image-20201208110506092.png" /></p>
+<p><img alt="image-20201208110403641" src="../picture/image-20201208110403641.png"></p>
+<p><img alt="image-20201208110506092" src="../picture/image-20201208110506092.png"></p>
 <ul>
 <li>Depth first number(<span class="arithmatex">\(Num\)</span>) 先序编号</li>
 <li>Back edges(背向边) = <span class="arithmatex">\((u,v)\notin\)</span> tree and <span class="arithmatex">\(u\)</span> is an ancestor of <span class="arithmatex">\(v\)</span>.</li>
@@ -7740,7 +7740,7 @@ T=O(|V|\times|E|)
 </span><span id="__span-80-9"><a id="__codelineno-80-9" name="__codelineno-80-9"></a>        {
 </span><span id="__span-80-10"><a id="__codelineno-80-10" name="__codelineno-80-10"></a>            Assignlow(W);
 </span><span id="__span-80-11"><a id="__codelineno-80-11" name="__codelineno-80-11"></a>            if(Low[W] &gt;= Num[V])
-</span><span id="__span-80-12"><a id="__codelineno-80-12" name="__codelineno-80-12"></a>                printf(&quot;%v is an articulation point\n&quot;, v);
+</span><span id="__span-80-12"><a id="__codelineno-80-12" name="__codelineno-80-12"></a>                printf("%v is an articulation point\n", v);
 </span><span id="__span-80-13"><a id="__codelineno-80-13" name="__codelineno-80-13"></a>            Low[V] = Min(Low[V], Low[W]); /*Rule 3*/
 </span><span id="__span-80-14"><a id="__codelineno-80-14" name="__codelineno-80-14"></a>        }
 </span><span id="__span-80-15"><a id="__codelineno-80-15" name="__codelineno-80-15"></a>        else
@@ -7780,7 +7780,7 @@ T=O(|V|\times|E|)
 </span><span id="__span-81-10"><a id="__codelineno-81-10" name="__codelineno-81-10"></a>            Parent[W] = V;
 </span><span id="__span-81-11"><a id="__codelineno-81-11" name="__codelineno-81-11"></a>            FindArt(W);
 </span><span id="__span-81-12"><a id="__codelineno-81-12" name="__codelineno-81-12"></a>            if(Low[W] &gt;= Num[V])
-</span><span id="__span-81-13"><a id="__codelineno-81-13" name="__codelineno-81-13"></a>                printf(&quot;%v is an articulation point\n&quot;, v);
+</span><span id="__span-81-13"><a id="__codelineno-81-13" name="__codelineno-81-13"></a>                printf("%v is an articulation point\n", v);
 </span><span id="__span-81-14"><a id="__codelineno-81-14" name="__codelineno-81-14"></a>            Low[V] = Min(Low[V], Low[W]); /*Rule 3*/
 </span><span id="__span-81-15"><a id="__codelineno-81-15" name="__codelineno-81-15"></a>        }
 </span><span id="__span-81-16"><a id="__codelineno-81-16" name="__codelineno-81-16"></a>        else
@@ -7800,7 +7800,7 @@ T=O(|V|\times|E|)
 <li><span class="arithmatex">\(T=O(|E|+|V|)\)</span></li>
 </ul>
 </blockquote>
-<hr />
+<hr>
 <h2 id="7-sorting">7 Sorting</h2>
 <h3 id="71-preliminaries">7.1 Preliminaries</h3>
 <div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-82-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-82-1"><a id="__codelineno-82-1" name="__codelineno-82-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">X_Sort</span><span class="w"> </span><span class="p">(</span><span class="n">ElementType</span><span class="w"> </span><span class="n">A</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span>
@@ -7811,7 +7811,7 @@ T=O(|V|\times|E|)
 <li>‘&gt;’ and ‘&lt;’ operators exist and are the only operations allowed on the input data.</li>
 <li>Consider internal sorting only. The entire sort can be done in main memory.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="72-insertion-sort">7.2 Insertion Sort</h3>
 <div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-83-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-83-2"> 2</a></span>
@@ -7855,7 +7855,7 @@ T=O(|V|\times|E|)
   $$</p>
 </li>
 </ul>
-<hr />
+<hr>
 <h3 id="73-a-lower-bound-for-simple-sorting-algorithms">7.3 A Lower Bound for Simple Sorting Algorithms</h3>
 <h4 id="definition-an-inversion-in-an-array-of-numbers-is-any-ordered-pairij-having-the-property-that-ij-but-aiaj">[Definition] An <em>inversion</em> in an array of numbers is any ordered pair<span class="arithmatex">\((i,j)\)</span> having the property that <span class="arithmatex">\(i&lt;j\)</span> but <span class="arithmatex">\(A[i]&gt;A[j]\)</span></h4>
 <ul>
@@ -7868,9 +7868,9 @@ T=O(|V|\times|E|)
 </ul>
 <h4 id="theorem-the-average-number-of-inversions-in-an-array-of-n-distinct-numbers-is-nn-14">[Theorem] The average number of inversions in an array of <span class="arithmatex">\(N\)</span> distinct numbers is <span class="arithmatex">\(N(N-1)/4\)</span></h4>
 <h4 id="theorem-any-algorithm-that-sorts-by-exchanging-adjacent-elements-requires-omegan2-time-on-average">[Theorem] Any algorithm that sorts by exchanging adjacent elements requires <span class="arithmatex">\(\Omega(N^2)\)</span> time on average</h4>
-<hr />
+<hr>
 <h3 id="74-shellsort">7.4 Shellsort</h3>
-<p><img alt="image-20201214133747061" src="../picture/image-20201214133747061.png" /></p>
+<p><img alt="image-20201214133747061" src="../picture/image-20201214133747061.png"></p>
 <ul>
 <li>Define an <strong>increment sequence</strong> <span class="arithmatex">\(h_1 &lt; h_2 &lt; \cdots &lt; h_t  ( h_1 = 1 )\)</span></li>
 <li>
@@ -7940,7 +7940,7 @@ h_k=2^k-1
 <li>Shellsort is a very simple algorithm, yet with an extremely complex analysis.  </li>
 <li>It is good for sorting up to moderately large input (tens of thousands).</li>
 </ul>
-<hr />
+<hr>
 <h3 id="75-heapsort">7.5 Heapsort</h3>
 <h4 id="algorithm1">Algorithm1</h4>
 <div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-85-1">1</a></span>
@@ -7994,7 +7994,7 @@ T(N)=O(N\log N)
 <blockquote>
 <p>Note : Although Heapsort gives <strong>the best average time</strong>, in practice it is slower than a version of Shellsort that uses Sedgewick’s increment sequence.</p>
 </blockquote>
-<hr />
+<hr>
 <h3 id="76-mergesort">7.6 Mergesort</h3>
 <div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-87-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-87-2"> 2</a></span>
@@ -8039,7 +8039,7 @@ T(N)=O(N\log N)
 </span><span id="__span-87-19"><a id="__codelineno-87-19" name="__codelineno-87-19"></a><span class="w">        </span><span class="n">MSort</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">TmpArray</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="mi">-1</span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-87-20"><a id="__codelineno-87-20" name="__codelineno-87-20"></a><span class="w">        </span><span class="n">free</span><span class="p">(</span><span class="n">TmpArray</span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-87-21"><a id="__codelineno-87-21" name="__codelineno-87-21"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
-</span><span id="__span-87-22"><a id="__codelineno-87-22" name="__codelineno-87-22"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="s">&quot;No space for tmp array!!!&quot;</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-87-22"><a id="__codelineno-87-22" name="__codelineno-87-22"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="s">"No space for tmp array!!!"</span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-87-23"><a id="__codelineno-87-23" name="__codelineno-87-23"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <ul>
@@ -8097,7 +8097,7 @@ T(N)=O(N+N\log N)
 <blockquote>
 <p>Note : Mergesort requires linear extra memory, and copying an array is slow. It is hardly ever used for internal sorting, but is quite useful for external sorting.</p>
 </blockquote>
-<hr />
+<hr>
 <h3 id="77-quicksort">7.7 Quicksort</h3>
 <ul>
 <li>the <strong>fastest</strong> known sorting algorithm in practice</li>
@@ -8409,16 +8409,16 @@ T(N)=T(i)+T(N-i-1)+cN
 </span><span id="__span-93-30"><a id="__codelineno-93-30" name="__codelineno-93-30"></a><span class="w">        </span><span class="n">InsertionSort</span><span class="p">(</span><span class="n">A</span><span class="o">+</span><span class="n">Left</span><span class="p">,</span><span class="w"> </span><span class="n">Right</span><span class="o">-</span><span class="n">Left</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
 </span><span id="__span-93-31"><a id="__codelineno-93-31" name="__codelineno-93-31"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<p><img alt="image-20210125115951471" src="../picture/image-20210125115951471.png" /></p>
+<p><img alt="image-20210125115951471" src="../picture/image-20210125115951471.png"></p>
 <p>正确答案是D</p>
-<hr />
+<hr>
 <h3 id="78-sorting-large-structures">7.8 Sorting Large Structures</h3>
 <ul>
 <li>Swapping large structures can be very much expensive.</li>
 <li>Add a pointer field to the structure and swap pointers instead – <strong>indirect sorting</strong>. Physically rearrange the structures at last if it is really necessary.</li>
 <li>Table Sort</li>
 </ul>
-<hr />
+<hr>
 <h3 id="79-a-general-lower-bound-for-sorting">7.9 A General Lower Bound for Sorting</h3>
 <h4 id="theorem-any-algorithm-that-sorts-by-comparisons-only-must-have-a-worst-case-computing-time-of-omeganlog-n">[Theorem] Any algorithm that <em>sorts by comparisons only</em> must have a worst case computing time of <span class="arithmatex">\(\Omega(N\log N)\)</span>.</h4>
 <ul>
@@ -8428,9 +8428,9 @@ T(N)=T(i)+T(N-i-1)+cN
 <li>Since <span class="arithmatex">\(N!\geq (N/2)^{N/2}\)</span> and <span class="arithmatex">\(\log_2N!\geq(N/2)\log_2(N/2) = \Theta(N\log_2N )\)</span></li>
 <li>Therefore <span class="arithmatex">\(T(N)=k\geq c\cdot N\log_2 N\)</span></li>
 </ul>
-<hr />
+<hr>
 <h3 id="710-bucket-sort">7.10 Bucket Sort</h3>
-<p><img alt="image-20201221203533117" src="../picture/image-20201221203533117.png" /></p>
+<p><img alt="image-20201221203533117" src="../picture/image-20201221203533117.png"></p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-94-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-94-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-94-3"> 3</a></span>
@@ -8454,26 +8454,26 @@ T(N)=T(i)+T(N-i-1)+cN
 <div class="arithmatex">\[
 T(N,M)=O(M+N)
 \]</div>
-<hr />
+<hr>
 <h3 id="711-radix-sort">7.11 Radix Sort</h3>
-<p><img alt="image-20201221203826847" src="../picture/image-20201221203826847.png" /></p>
-<p><img alt="image-20201221203950519" src="../picture/image-20201221203950519.png" /></p>
+<p><img alt="image-20201221203826847" src="../picture/image-20201221203826847.png"></p>
+<p><img alt="image-20201221203950519" src="../picture/image-20201221203950519.png"></p>
 <ul>
 <li><span class="arithmatex">\(T=O(P(N+B))\)</span> where <span class="arithmatex">\(P\)</span> is the number of passes, <span class="arithmatex">\(N\)</span> is the number of elements to sort, and <span class="arithmatex">\(B\)</span> is the number of buckets.</li>
 </ul>
 <h4 id="msdmost-significant-digit-sort-and-lsdleast-significant-digit-sort">MSD(Most Significant Digit) Sort and LSD(Least Significant Digit) Sort</h4>
-<p><img src="picture/image-20210102211456822.png" alt="image-20210102211456822" style="zoom: 75%;" /></p>
-<p><img src="picture/image-20210102211604977.png" alt="image-20210102211604977" style="zoom: 75%;" /></p>
-<p><img src="picture/image-20210102211647809.png" alt="image-20210102211647809" style="zoom:75%;" /></p>
-<hr />
+<p><img src="picture/image-20210102211456822.png" alt="image-20210102211456822" style="zoom: 75%;"></p>
+<p><img src="picture/image-20210102211604977.png" alt="image-20210102211604977" style="zoom: 75%;"></p>
+<p><img src="picture/image-20210102211647809.png" alt="image-20210102211647809" style="zoom:75%;"></p>
+<hr>
 <ul>
 <li>稳定的排序算法：冒泡排序、插入排序、归并排序、基数排序</li>
 <li>不稳定的排序算法：选择排序、快速排序、希尔排序、堆排序</li>
 </ul>
-<hr />
+<hr>
 <h2 id="8-hashing">8 Hashing</h2>
 <h3 id="81-general-idea">8.1 General Idea</h3>
-<p><img src="picture/image-20210102212103035.png" alt="image-20210102212103035" style="zoom: 75%;" /></p>
+<p><img src="picture/image-20210102212103035.png" alt="image-20210102212103035" style="zoom: 75%;"></p>
 <h4 id="symbol-table-adt">Symbol Table ADT</h4>
 <ul>
 <li><strong>Objects</strong> : A set of name-attribute pairs, where the names are unique</li>
@@ -8485,18 +8485,18 @@ T(N,M)=O(M+N)
 <li>SymTab  Delete(symtab, name) </li>
 </ul>
 <h4 id="hash-tables">Hash Tables</h4>
-<p><img src="picture/image-20210102212608844.png" alt="image-20210102212608844" style="zoom:75%;" /></p>
+<p><img src="picture/image-20210102212608844.png" alt="image-20210102212608844" style="zoom:75%;"></p>
 <ul>
 <li>A <strong>collision</strong> occurs when we hash two nonidentical identifiers into the same bucket.</li>
 <li>An <strong>overflow</strong> occurs when we hash a new identifier into a full bucket.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="82-hash-function">8.2 Hash Function</h3>
 <ul>
 <li><span class="arithmatex">\(f(x)\)</span> must be <strong>easy</strong> to compute and <strong>minimize</strong> the number of <strong>collisions</strong>.</li>
 <li><span class="arithmatex">\(f(x)\)</span> should be unbiased. For any <span class="arithmatex">\(x\)</span> and any <span class="arithmatex">\(i\)</span>, we have that <span class="arithmatex">\(Probability(f(x)=i)=\frac{1}{b}\)</span>. Such kind of a hash function is called a <strong>uniform hash function</strong>.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="83-separate-chaining">8.3 Separate Chaining</h3>
 <ul>
 <li>keep a list of all keys that hash to the same value</li>
@@ -8562,19 +8562,19 @@ T(N,M)=O(M+N)
 </span><span id="__span-96-4"><a id="__codelineno-96-4" name="__codelineno-96-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span>
 </span><span id="__span-96-5"><a id="__codelineno-96-5" name="__codelineno-96-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">TableSize</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MinTableSize</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
 </span><span id="__span-96-6"><a id="__codelineno-96-6" name="__codelineno-96-6"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-96-7"><a id="__codelineno-96-7" name="__codelineno-96-7"></a><span class="w">        </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Table size too small&quot;</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-96-7"><a id="__codelineno-96-7" name="__codelineno-96-7"></a><span class="w">        </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">"Table size too small"</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-96-8"><a id="__codelineno-96-8" name="__codelineno-96-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-96-9"><a id="__codelineno-96-9" name="__codelineno-96-9"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
 </span><span id="__span-96-10"><a id="__codelineno-96-10" name="__codelineno-96-10"></a><span class="w">    </span><span class="n">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">HashTbl</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/*Allocate table*/</span>
-</span><span id="__span-96-11"><a id="__codelineno-96-11" name="__codelineno-96-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-96-11"><a id="__codelineno-96-11" name="__codelineno-96-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">"Out of space!!!"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-96-12"><a id="__codelineno-96-12" name="__codelineno-96-12"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NextPrime</span><span class="p">(</span><span class="w"> </span><span class="n">TableSize</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/*Better be prime*/</span>
 </span><span id="__span-96-13"><a id="__codelineno-96-13" name="__codelineno-96-13"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheLists</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="n">List</span><span class="w"> </span><span class="p">)</span><span class="o">*</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/*Array of lists*/</span>
-</span><span id="__span-96-14"><a id="__codelineno-96-14" name="__codelineno-96-14"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheLists</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span>
+</span><span id="__span-96-14"><a id="__codelineno-96-14" name="__codelineno-96-14"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheLists</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">"Out of space!!!"</span><span class="w"> </span><span class="p">);</span>
 </span><span id="__span-96-15"><a id="__codelineno-96-15" name="__codelineno-96-15"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">ListNode</span><span class="p">));</span>
 </span><span id="__span-96-16"><a id="__codelineno-96-16" name="__codelineno-96-16"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
 </span><span id="__span-96-17"><a id="__codelineno-96-17" name="__codelineno-96-17"></a><span class="w">    </span><span class="p">{</span><span class="w">   </span><span class="cm">/*Allocate list headers*/</span>
 </span><span id="__span-96-18"><a id="__codelineno-96-18" name="__codelineno-96-18"></a><span class="w">        </span><span class="c1">//H-&gt;TheLists[ i ] = malloc( sizeof( struct ListNode ) ); /* Slow! */</span>
-</span><span id="__span-96-19"><a id="__codelineno-96-19" name="__codelineno-96-19"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheLists</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-96-19"><a id="__codelineno-96-19" name="__codelineno-96-19"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheLists</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">"Out of space!!!"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-96-20"><a id="__codelineno-96-20" name="__codelineno-96-20"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheLists</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="o">-&gt;</span><span class="n">Next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 </span><span id="__span-96-21"><a id="__codelineno-96-21" name="__codelineno-96-21"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
 </span><span id="__span-96-22"><a id="__codelineno-96-22" name="__codelineno-96-22"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">H</span><span class="p">;</span><span class="w"> </span>
@@ -8627,7 +8627,7 @@ T(N,M)=O(M+N)
 </span><span id="__span-98-6"><a id="__codelineno-98-6" name="__codelineno-98-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Pos</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
 </span><span id="__span-98-7"><a id="__codelineno-98-7" name="__codelineno-98-7"></a><span class="w">    </span><span class="p">{</span><span class="w">   </span><span class="cm">/*Key is not found, then insert*/</span>
 </span><span id="__span-98-8"><a id="__codelineno-98-8" name="__codelineno-98-8"></a><span class="w">        </span><span class="n">NewCell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ListNode</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-98-9"><a id="__codelineno-98-9" name="__codelineno-98-9"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">NewCell</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-98-9"><a id="__codelineno-98-9" name="__codelineno-98-9"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">NewCell</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">"Out of space!!!"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-98-10"><a id="__codelineno-98-10" name="__codelineno-98-10"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span>
 </span><span id="__span-98-11"><a id="__codelineno-98-11" name="__codelineno-98-11"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span>
 </span><span id="__span-98-12"><a id="__codelineno-98-12" name="__codelineno-98-12"></a><span class="w">            </span><span class="n">L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheLists</span><span class="p">[</span><span class="w"> </span><span class="n">Hash</span><span class="p">(</span><span class="w"> </span><span class="n">Key</span><span class="p">,</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">];</span><span class="w"> </span><span class="cm">/*Compute again is bad*/</span>
@@ -8641,7 +8641,7 @@ T(N,M)=O(M+N)
 <blockquote>
 <p>Note : Make the TableSize about as large as the number of keys expected (i.e. to make the loading density factor <span class="arithmatex">\(\lambda\approx\)</span>1).</p>
 </blockquote>
-<hr />
+<hr>
 <h3 id="84-open-addressing">8.4 Open Addressing</h3>
 <ul>
 <li>find another empty cell to solve collision(avoiding pointers)</li>
@@ -8687,7 +8687,7 @@ T(N,M)=O(M+N)
 <li><span class="arithmatex">\(F(i)\)</span> is a quadratic function of <span class="arithmatex">\(i\)</span>, such as <span class="arithmatex">\(F(i)=i^2\)</span>.</li>
 </ul>
 <h5 id="theorem-if-quadratic-probing-is-used-and-the-table-size-is-prime-then-a-new-element-can-always-be-inserted-if-the-table-is-at-least-half-empty">[Theorem] If quadratic probing is used, and the table size is <em>prime</em>, then a new element can always be inserted if the table is <em>at least half empty</em>.</h5>
-<p><img src="picture/image-20210104154133711.png" alt="image-20210104154133711" style="zoom:75%;" /></p>
+<p><img src="picture/image-20210104154133711.png" alt="image-20210104154133711" style="zoom:75%;"></p>
 <blockquote>
 <p>Note : If the table size is a prime of the form <span class="arithmatex">\(4k + 3\)</span>, then the quadratic probing  <span class="arithmatex">\(f(i) = \pm i^2\)</span> can probe the entire table.</p>
 </blockquote>
@@ -8720,19 +8720,19 @@ T(N,M)=O(M+N)
 </span><span id="__span-100-4"><a id="__codelineno-100-4" name="__codelineno-100-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
 </span><span id="__span-100-5"><a id="__codelineno-100-5" name="__codelineno-100-5"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">TableSize</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MinTableSize</span><span class="p">)</span>
 </span><span id="__span-100-6"><a id="__codelineno-100-6" name="__codelineno-100-6"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-100-7"><a id="__codelineno-100-7" name="__codelineno-100-7"></a><span class="w">        </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Table size too small&quot;</span><span class="p">);</span>
+</span><span id="__span-100-7"><a id="__codelineno-100-7" name="__codelineno-100-7"></a><span class="w">        </span><span class="n">Error</span><span class="p">(</span><span class="s">"Table size too small"</span><span class="p">);</span>
 </span><span id="__span-100-8"><a id="__codelineno-100-8" name="__codelineno-100-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 </span><span id="__span-100-9"><a id="__codelineno-100-9" name="__codelineno-100-9"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-100-10"><a id="__codelineno-100-10" name="__codelineno-100-10"></a><span class="w">    </span><span class="cm">/*Allocate table*/</span>
 </span><span id="__span-100-11"><a id="__codelineno-100-11" name="__codelineno-100-11"></a><span class="w">    </span><span class="n">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">HashTbl</span><span class="p">));</span>
 </span><span id="__span-100-12"><a id="__codelineno-100-12" name="__codelineno-100-12"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">H</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-</span><span id="__span-100-13"><a id="__codelineno-100-13" name="__codelineno-100-13"></a><span class="w">        </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">&quot;Out of space!!!&quot;</span><span class="p">);</span>
+</span><span id="__span-100-13"><a id="__codelineno-100-13" name="__codelineno-100-13"></a><span class="w">        </span><span class="n">Fatal</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="s">"Out of space!!!"</span><span class="p">);</span>
 </span><span id="__span-100-14"><a id="__codelineno-100-14" name="__codelineno-100-14"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NextPrime</span><span class="p">(</span><span class="n">TableSize</span><span class="p">);</span>
 </span><span id="__span-100-15"><a id="__codelineno-100-15" name="__codelineno-100-15"></a>
 </span><span id="__span-100-16"><a id="__codelineno-100-16" name="__codelineno-100-16"></a><span class="w">    </span><span class="cm">/*Allocate array of Cells*/</span>
 </span><span id="__span-100-17"><a id="__codelineno-100-17" name="__codelineno-100-17"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheCells</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">Cell</span><span class="p">)</span><span class="o">*</span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="p">);</span>
 </span><span id="__span-100-18"><a id="__codelineno-100-18" name="__codelineno-100-18"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheCells</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-</span><span id="__span-100-19"><a id="__codelineno-100-19" name="__codelineno-100-19"></a><span class="w">        </span><span class="n">FatalError</span><span class="p">(</span><span class="s">&quot;Out of space!!!&quot;</span><span class="p">);</span>
+</span><span id="__span-100-19"><a id="__codelineno-100-19" name="__codelineno-100-19"></a><span class="w">        </span><span class="n">FatalError</span><span class="p">(</span><span class="s">"Out of space!!!"</span><span class="p">);</span>
 </span><span id="__span-100-20"><a id="__codelineno-100-20" name="__codelineno-100-20"></a>
 </span><span id="__span-100-21"><a id="__codelineno-100-21" name="__codelineno-100-21"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TableSize</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 </span><span id="__span-100-22"><a id="__codelineno-100-22" name="__codelineno-100-22"></a><span class="w">        </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">TheCells</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">].</span><span class="n">Info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Empty</span><span class="p">;</span>
@@ -8810,7 +8810,7 @@ T(N,M)=O(M+N)
 <li>Quadratic probing does not require the use of a second hash function and is thus likely to be <strong>simpler and faster</strong> in practice.</li>
 </ul>
 </blockquote>
-<hr />
+<hr>
 <h3 id="85-rehashing">8.5 Rehashing</h3>
 <ul>
 <li>Build another table that is about twice as big.</li>
@@ -8858,7 +8858,7 @@ T(N,M)=O(M+N)
 </span><span id="__span-103-16"><a id="__codelineno-103-16" name="__codelineno-103-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">H</span><span class="p">;</span>
 </span><span id="__span-103-17"><a id="__codelineno-103-17" name="__codelineno-103-17"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<hr />
+<hr></div>
 
 
 

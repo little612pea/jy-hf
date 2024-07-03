@@ -2681,7 +2681,7 @@
   
 
 
-<h1 id="week-13">WEEK 13</h1>
+<div><h1 id="week-13">WEEK 13</h1>
 <h3 id="77-quicksort">7.7 Quicksort</h3>
 <ul>
 <li>the <strong>fastest</strong> known sorting algorithm in practice</li>
@@ -2993,16 +2993,16 @@ T(N)=T(i)+T(N-i-1)+cN
 </span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">        </span><span class="n">InsertionSort</span><span class="p">(</span><span class="n">A</span><span class="o">+</span><span class="n">Left</span><span class="p">,</span><span class="w"> </span><span class="n">Right</span><span class="o">-</span><span class="n">Left</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
 </span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<p><img alt="image-20210125115951471" src="../picture/image-20210125115951471.png" /></p>
+<p><img alt="image-20210125115951471" src="../picture/image-20210125115951471.png"></p>
 <p>正确答案是D</p>
-<hr />
+<hr>
 <h3 id="78-sorting-large-structures">7.8 Sorting Large Structures</h3>
 <ul>
 <li>Swapping large structures can be very much expensive.</li>
 <li>Add a pointer field to the structure and swap pointers instead – <strong>indirect sorting</strong>. Physically rearrange the structures at last if it is really necessary.</li>
 <li>Table Sort</li>
 </ul>
-<hr />
+<hr>
 <h3 id="79-a-general-lower-bound-for-sorting">7.9 A General Lower Bound for Sorting</h3>
 <h4 id="theorem-any-algorithm-that-sorts-by-comparisons-only-must-have-a-worst-case-computing-time-of-omeganlog-n">[Theorem] Any algorithm that <em>sorts by comparisons only</em> must have a worst case computing time of <span class="arithmatex">\(\Omega(N\log N)\)</span>.</h4>
 <ul>
@@ -3012,9 +3012,9 @@ T(N)=T(i)+T(N-i-1)+cN
 <li>Since <span class="arithmatex">\(N!\geq (N/2)^{N/2}\)</span> and <span class="arithmatex">\(\log_2N!\geq(N/2)\log_2(N/2) = \Theta(N\log_2N )\)</span></li>
 <li>Therefore <span class="arithmatex">\(T(N)=k\geq c\cdot N\log_2 N\)</span></li>
 </ul>
-<hr />
+<hr>
 <h3 id="710-bucket-sort">7.10 Bucket Sort</h3>
-<p><img alt="image-20201221203533117" src="../picture/image-20201221203533117.png" /></p>
+<p><img alt="image-20201221203533117" src="../picture/image-20201221203533117.png"></p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -3038,23 +3038,23 @@ T(N)=T(i)+T(N-i-1)+cN
 <div class="arithmatex">\[
 T(N,M)=O(M+N)
 \]</div>
-<hr />
+<hr>
 <h3 id="711-radix-sort">7.11 Radix Sort</h3>
-<p><img alt="image-20201221203826847" src="../picture/image-20201221203826847.png" /></p>
-<p><img alt="image-20201221203950519" src="../picture/image-20201221203950519.png" /></p>
+<p><img alt="image-20201221203826847" src="../picture/image-20201221203826847.png"></p>
+<p><img alt="image-20201221203950519" src="../picture/image-20201221203950519.png"></p>
 <ul>
 <li><span class="arithmatex">\(T=O(P(N+B))\)</span> where <span class="arithmatex">\(P\)</span> is the number of passes, <span class="arithmatex">\(N\)</span> is the number of elements to sort, and <span class="arithmatex">\(B\)</span> is the number of buckets.</li>
 </ul>
 <h4 id="msdmost-significant-digit-sort-and-lsdleast-significant-digit-sort">MSD(Most Significant Digit) Sort and LSD(Least Significant Digit) Sort</h4>
-<p><img src="picture/image-20210102211456822.png" alt="image-20210102211456822" style="zoom: 75%;" /></p>
-<p><img src="picture/image-20210102211604977.png" alt="image-20210102211604977" style="zoom: 75%;" /></p>
-<p><img src="picture/image-20210102211647809.png" alt="image-20210102211647809" style="zoom:75%;" /></p>
-<hr />
+<p><img src="picture/image-20210102211456822.png" alt="image-20210102211456822" style="zoom: 75%;"></p>
+<p><img src="picture/image-20210102211604977.png" alt="image-20210102211604977" style="zoom: 75%;"></p>
+<p><img src="picture/image-20210102211647809.png" alt="image-20210102211647809" style="zoom:75%;"></p>
+<hr>
 <ul>
 <li>稳定的排序算法：冒泡排序、插入排序、归并排序、基数排序</li>
 <li>不稳定的排序算法：选择排序、快速排序、希尔排序、堆排序</li>
 </ul>
-<hr />
+<hr></div>
 
 
 

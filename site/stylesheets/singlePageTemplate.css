@@ -65,6 +65,7 @@
     .hero_header {
         font-size: 1.3rem;
         /* Adjust width for smaller screens */
+        letter-spacing: 2px;
     }
 
     .tagline {

@@ -2612,9 +2612,9 @@
   
 
 
-<h1 id="week-12">WEEK 12</h1>
+<div><h1 id="week-12">WEEK 12</h1>
 <h3 id="74-shellsort">7.4 Shellsort</h3>
-<p><img alt="image-20201214133747061" src="../picture/image-20201214133747061.png" /></p>
+<p><img alt="image-20201214133747061" src="../picture/image-20201214133747061.png"></p>
 <ul>
 <li>Define an <strong>increment sequence</strong> <span class="arithmatex">\(h_1 &lt; h_2 &lt; \cdots &lt; h_t  ( h_1 = 1 )\)</span></li>
 <li>
@@ -2684,7 +2684,7 @@ h_k=2^k-1
 <li>Shellsort is a very simple algorithm, yet with an extremely complex analysis.  </li>
 <li>It is good for sorting up to moderately large input (tens of thousands).</li>
 </ul>
-<hr />
+<hr>
 <h3 id="75-heapsort">7.5 Heapsort</h3>
 <h4 id="algorithm1">Algorithm1</h4>
 <div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -2738,7 +2738,7 @@ T(N)=O(N\log N)
 <blockquote>
 <p>Note : Although Heapsort gives <strong>the best average time</strong>, in practice it is slower than a version of Shellsort that uses Sedgewick’s increment sequence.</p>
 </blockquote>
-<hr />
+<hr>
 <h3 id="76-mergesort">7.6 Mergesort</h3>
 <div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
@@ -2783,7 +2783,7 @@ T(N)=O(N\log N)
 </span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">        </span><span class="n">MSort</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">TmpArray</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="mi">-1</span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">        </span><span class="n">free</span><span class="p">(</span><span class="n">TmpArray</span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="s">&quot;No space for tmp array!!!&quot;</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="s">"No space for tmp array!!!"</span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <ul>
@@ -2841,7 +2841,7 @@ T(N)=O(N+N\log N)
 <blockquote>
 <p>Note : Mergesort requires linear extra memory, and copying an array is slow. It is hardly ever used for internal sorting, but is quite useful for external sorting.</p>
 </blockquote>
-<hr />
+<hr></div>
 
 
 

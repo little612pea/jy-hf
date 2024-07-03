@@ -142,6 +142,7 @@ extra_css:
 
 markdown_extensions:
   - admonition
+  - attr_list
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.details
@@ -175,3 +176,4 @@ plugins:
       enable_creation_date: true
       type: timeago
       enabled: true
+  - mkdocs-pdf

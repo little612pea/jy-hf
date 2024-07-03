@@ -2645,7 +2645,7 @@
   
 
 
-<h1 id="week-11">WEEK 11</h1>
+<div><h1 id="week-11">WEEK 11</h1>
 <h3 id="67-applications-of-depth-first-search">6.7 Applications of Depth-First Search</h3>
 <div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -2676,7 +2676,7 @@
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="p">{</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">            </span><span class="n">DFS</span><span class="p">(</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">);</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2686,8 +2686,8 @@
 <li><span class="arithmatex">\(G\)</span> is a <strong>biconnected graph</strong> if <span class="arithmatex">\(G\)</span> is connected and has no articulation points.</li>
 <li>A <strong>biconnected component</strong> is a maximal biconnected subgraph.</li>
 </ul>
-<p><img alt="image-20201207194401819" src="../picture/image-20201207194401819.png" /></p>
-<p><img alt="image-20201207194413257" src="../picture/image-20201207194413257.png" /></p>
+<p><img alt="image-20201207194401819" src="../picture/image-20201207194401819.png"></p>
+<p><img alt="image-20201207194413257" src="../picture/image-20201207194413257.png"></p>
 <blockquote>
 <p>Note : No edges can be shared by two or more biconnected components.  Hence <span class="arithmatex">\(E(G)\)</span> is partitioned by the biconnected components of <span class="arithmatex">\(G\)</span>.</p>
 </blockquote>
@@ -2696,8 +2696,8 @@
 <ul>
 <li>Use <strong>depth first search</strong> to obtain a spanning tree of <span class="arithmatex">\(G\)</span></li>
 </ul>
-<p><img alt="image-20201208110403641" src="../picture/image-20201208110403641.png" /></p>
-<p><img alt="image-20201208110506092" src="../picture/image-20201208110506092.png" /></p>
+<p><img alt="image-20201208110403641" src="../picture/image-20201208110403641.png"></p>
+<p><img alt="image-20201208110506092" src="../picture/image-20201208110506092.png"></p>
 <ul>
 <li>Depth first number(<span class="arithmatex">\(Num\)</span>) 先序编号</li>
 <li>Back edges(背向边) = <span class="arithmatex">\((u,v)\notin\)</span> tree and <span class="arithmatex">\(u\)</span> is an ancestor of <span class="arithmatex">\(v\)</span>.</li>
@@ -2772,7 +2772,7 @@
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>        {
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>            Assignlow(W);
 </span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>            if(Low[W] &gt;= Num[V])
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>                printf(&quot;%v is an articulation point\n&quot;, v);
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>                printf("%v is an articulation point\n", v);
 </span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a>            Low[V] = Min(Low[V], Low[W]); /*Rule 3*/
 </span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a>        }
 </span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a>        else
@@ -2812,7 +2812,7 @@
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a>            Parent[W] = V;
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a>            FindArt(W);
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a>            if(Low[W] &gt;= Num[V])
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a>                printf(&quot;%v is an articulation point\n&quot;, v);
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a>                printf("%v is an articulation point\n", v);
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a>            Low[V] = Min(Low[V], Low[W]); /*Rule 3*/
 </span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a>        }
 </span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a>        else
@@ -2832,7 +2832,7 @@
 <li><span class="arithmatex">\(T=O(|E|+|V|)\)</span></li>
 </ul>
 </blockquote>
-<hr />
+<hr>
 <h2 id="7-sorting">7 Sorting</h2>
 <h3 id="71-preliminaries">7.1 Preliminaries</h3>
 <div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">X_Sort</span><span class="w"> </span><span class="p">(</span><span class="n">ElementType</span><span class="w"> </span><span class="n">A</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span>
@@ -2843,7 +2843,7 @@
 <li>‘&gt;’ and ‘&lt;’ operators exist and are the only operations allowed on the input data.</li>
 <li>Consider internal sorting only. The entire sort can be done in main memory.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="72-insertion-sort">7.2 Insertion Sort</h3>
 <div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
@@ -2887,7 +2887,7 @@
   $$</p>
 </li>
 </ul>
-<hr />
+<hr>
 <h3 id="73-a-lower-bound-for-simple-sorting-algorithms">7.3 A Lower Bound for Simple Sorting Algorithms</h3>
 <h4 id="definition-an-inversion-in-an-array-of-numbers-is-any-ordered-pairij-having-the-property-that-ij-but-aiaj">[Definition] An <em>inversion</em> in an array of numbers is any ordered pair<span class="arithmatex">\((i,j)\)</span> having the property that <span class="arithmatex">\(i&lt;j\)</span> but <span class="arithmatex">\(A[i]&gt;A[j]\)</span></h4>
 <ul>
@@ -2900,7 +2900,7 @@
 </ul>
 <h4 id="theorem-the-average-number-of-inversions-in-an-array-of-n-distinct-numbers-is-nn-14">[Theorem] The average number of inversions in an array of <span class="arithmatex">\(N\)</span> distinct numbers is <span class="arithmatex">\(N(N-1)/4\)</span></h4>
 <h4 id="theorem-any-algorithm-that-sorts-by-exchanging-adjacent-elements-requires-omegan2-time-on-average">[Theorem] Any algorithm that sorts by exchanging adjacent elements requires <span class="arithmatex">\(\Omega(N^2)\)</span> time on average</h4>
-<hr />
+<hr></div>
 
 
 

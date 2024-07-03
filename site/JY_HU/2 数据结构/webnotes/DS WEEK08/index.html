@@ -2780,7 +2780,7 @@
   
 
 
-<h1 id="week-8">WEEK 8</h1>
+<div><h1 id="week-8">WEEK 8</h1>
 <h2 id="6-graph-algorithms">6 Graph Algorithms</h2>
 <h3 id="61-definitions">6.1 Definitions</h3>
 <ul>
@@ -2791,7 +2791,7 @@
 <li><span class="arithmatex">\(( v_i , v_j ) = ( v_j , v_i )\)</span> = the same edge.</li>
 </ul>
 <h4 id="directed-graphdiagraph">Directed graph(diagraph)</h4>
-<p><img src="picture/8-1.png" alt="8-1" style="zoom:120%;" /></p>
+<p><img src="picture/8-1.png" alt="8-1" style="zoom:120%;"></p>
 <h4 id="restrictions">Restrictions</h4>
 <ul>
 <li><strong>Self loop</strong> is illegal.</li>
@@ -2801,10 +2801,10 @@
 <ul>
 <li>A graph that has the maximum number of edges.</li>
 </ul>
-<p><img alt="image-20210124163038265" src="../picture/image-20210124163038265.png" /></p>
+<p><img alt="image-20210124163038265" src="../picture/image-20210124163038265.png"></p>
 <h4 id="adjacent">Adjacent</h4>
-<p><img src="picture/image-20210124163324744.png" alt="image-20210124163324744" style="zoom:120%;" /></p>
-<p><img src="picture/image-20210124163301833.png" alt="image-20210124163301833" style="zoom:120%;" /></p>
+<p><img src="picture/image-20210124163324744.png" alt="image-20210124163324744" style="zoom:120%;"></p>
+<p><img src="picture/image-20210124163301833.png" alt="image-20210124163301833" style="zoom:120%;"></p>
 <h4 id="subgraph">Subgraph</h4>
 <div class="arithmatex">\[
 G'\subset G=V(G')\subseteq V(G) \&amp;\&amp; E(G')\subseteq E(G)
@@ -2866,14 +2866,14 @@ G'\subset G=V(G')\subseteq V(G) \&amp;\&amp; E(G')\subseteq E(G)
   $$</p>
 </li>
 </ul>
-<hr />
+<hr>
 <h3 id="62-representation-of-graphs">6.2 Representation of Graphs</h3>
 <h4 id="adjacency-matrix">Adjacency Matrix</h4>
-<p><img alt="image-20210124163641976" src="../picture/image-20210124163641976.png" /></p>
+<p><img alt="image-20210124163641976" src="../picture/image-20210124163641976.png"></p>
 <blockquote>
 <p>Note : If G is undirected, then adj_mat[][] is symmetric. Thus we can save space by storing only half of the matrix.</p>
 </blockquote>
-<p><img src="picture/image-20210123194735917.png" alt="image-20210123194735917"  /></p>
+<p><img src="picture/image-20210123194735917.png" alt="image-20210123194735917"></p>
 <ul>
 <li>
 <p>This representation wastes space if the graph has a lot of vertices but very few edges.</p>
@@ -2886,7 +2886,7 @@ G'\subset G=V(G')\subseteq V(G) \&amp;\&amp; E(G')\subseteq E(G)
 <ul>
 <li>Replace each row by a linked list</li>
 </ul>
-<p><img alt="image-20210124164723362" src="../picture/image-20210124164723362.png" /></p>
+<p><img alt="image-20210124164723362" src="../picture/image-20210124164723362.png"></p>
 <blockquote>
 <p>Note : The order of nodes in each list does not matter.</p>
 </blockquote>
@@ -2895,9 +2895,9 @@ G'\subset G=V(G')\subseteq V(G) \&amp;\&amp; E(G')\subseteq E(G)
 <li>Degree(i) = number of nodes in graph[i](if <span class="arithmatex">\(G\)</span> is undirected)</li>
 <li><span class="arithmatex">\(T\)</span> of examine <span class="arithmatex">\(E(G)\)</span> = <span class="arithmatex">\(O(n+e)\)</span></li>
 </ul>
-<p><img alt="image-20210124165346405" src="../picture/image-20210124165346405.png" /></p>
+<p><img alt="image-20210124165346405" src="../picture/image-20210124165346405.png"></p>
 <h4 id="adjacency-multilists">Adjacency Multilists</h4>
-<p><img alt="image-20210124164607434" src="../picture/image-20210124164607434.png" /></p>
+<p><img alt="image-20210124164607434" src="../picture/image-20210124164607434.png"></p>
 <ul>
 <li>Sometimes we need to mark the edge after examine it, and then find the next edge.</li>
 </ul>
@@ -2906,7 +2906,7 @@ G'\subset G=V(G')\subseteq V(G) \&amp;\&amp; E(G')\subseteq E(G)
 <li>adj_mat [ i ] [ j ] = weight</li>
 <li>adjacency lists / multilists :  add a weight field to the node</li>
 </ul>
-<hr />
+<hr>
 <h3 id="63-topological-sort">6.3 Topological Sort 拓扑排序 不是一种严格意义的排序算法</h3>
 <h4 id="aov-activity-on-vertices-network">AOV  activity on vertices  Network 有向无环图</h4>
 <ul>
@@ -3010,8 +3010,8 @@ T=O(|V|^2+|E|) = O(|V|^2)
 <div class="arithmatex">\[
 T=O(|V|+|E|)
 \]</div>
-<hr />
-<p><span class="arithmatex">\(注意E的范围 最小 V 最大 |V|^2\)</span></p>
+<hr>
+<p><span class="arithmatex">\(注意E的范围 最小 V 最大 |V|^2\)</span></p></div>
 
 
 

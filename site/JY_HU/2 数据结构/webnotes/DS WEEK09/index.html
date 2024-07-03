@@ -2660,7 +2660,7 @@
   
 
 
-<h1 id="week-9">WEEK 9</h1>
+<div><h1 id="week-9">WEEK 9</h1>
 <h3 id="64-shortest-path-algorithms">6.4 Shortest Path Algorithms</h3>
 <p>Given a digraph <span class="arithmatex">\(G = ( V, E )\)</span>, and a cost function <span class="arithmatex">\(c( e )\)</span> for <span class="arithmatex">\(e \in E( G )\)</span>. </p>
 <p>The <strong>length</strong> of a path <span class="arithmatex">\(P\)</span> from <strong>source</strong> to <strong>destination</strong> is <span class="arithmatex">\(\sum_{e_i\subset P} c(e_i)\)</span>(also called <strong>weighted path length</strong>).</p>
@@ -2718,7 +2718,7 @@
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <p>The worst case : </p>
-<p><img src="picture/9-1.png" alt="9-1" style="zoom: 50%;" />
+<p><img src="picture/9-1.png" alt="9-1" style="zoom: 50%;">
 $$
 T(N)=O(|V|^2)
 $$
@@ -2841,9 +2841,9 @@ T=O(|V|+|E|)
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Path</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">NotAVertex</span><span class="p">)</span>
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="p">{</span>
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">        </span><span class="n">PrintPath</span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">].</span><span class="n">Path</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">);</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot; to&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">" to"</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%v&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">V</span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="cm">/* %v is pseudocode * /</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"%v"</span><span class="p">,</span><span class="w"> </span><span class="n">V</span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="cm">/* %v is pseudocode * /</span>
 </span></code></pre></div></td></tr></table></div>
 <div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
@@ -2971,9 +2971,9 @@ T=O(|V|\times|E|)
 <li><span class="arithmatex">\(T=O(|E|+|V|)\)</span> and no priority queue is needed.</li>
 </ul>
 <h6 id="aoeactivity-on-edge-networks">AOE(Activity on Edge) Networks</h6>
-<p><img alt="image-20210124185420522" src="../picture/image-20210124185420522.png" /></p>
-<p><img alt="image-20210124185541801" src="../picture/image-20210124185541801.png" /></p>
-<p><img alt="image-20210124185508683" src="../picture/image-20210124185508683.png" /></p>
+<p><img alt="image-20210124185420522" src="../picture/image-20210124185420522.png"></p>
+<p><img alt="image-20210124185541801" src="../picture/image-20210124185541801.png"></p>
+<p><img alt="image-20210124185508683" src="../picture/image-20210124185508683.png"></p>
 <h4 id="all-pairs-shortest-path-problem">All-Pairs Shortest Path Problem</h4>
 <ul>
 <li>For all pairs of <span class="arithmatex">\(v_i\)</span> and <span class="arithmatex">\(v_j\)</span> ( <span class="arithmatex">\(i\neq j\)</span> ), find the shortest path between.</li>
@@ -2988,7 +2988,7 @@ T=O(|V|\times|E|)
 <li>动态规划</li>
 <li><span class="arithmatex">\(O(|V|^3)\)</span> algorithm given in Chapter 10, works faster on dense graphs.</li>
 </ul>
-<hr />
+<hr></div>
 
 
 

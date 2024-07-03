@@ -1,1 +1,1 @@
-<iframe src="../WLab1.pdf" width="100%" height="600px"></iframe>
+![WLab1.pdf](./WLab1.pdf){ type=application/pdf style="height:600px;width:100%" }

@@ -2681,7 +2681,7 @@
   
 
 
-<h1 id="week-6">WEEK 6</h1>
+<div><h1 id="week-6">WEEK 6</h1>
 <h2 id="4-priority-queues-heaps">4 堆  Priority Queues (Heaps)</h2>
 <h3 id="41-adt-model">4.1 ADT Model</h3>
 <ul>
@@ -2692,7 +2692,7 @@
 <li>ElementType  DeleteMin( PriorityQueue H ); </li>
 <li>ElementType  FindMin( PriorityQueue H ); </li>
 </ul>
-<hr />
+<hr>
 <h3 id="42-implementations">4.2 Implementations</h3>
 <h4 id="array">Array</h4>
 <ul>
@@ -2740,7 +2740,7 @@
 <li>Keep a balanced tree </li>
 <li>But there are many operations related to AVL tree that we don't really need for a priority queue.</li>
 </ul>
-<hr />
+<hr>
 <h3 id="43-binary-heap">4.3 Binary Heap</h3>
 <h4 id="structure-property">Structure Property</h4>
 <p><strong>[Definition]</strong> A binary tree with <span class="arithmatex">\(n\)</span> nodes and height <span class="arithmatex">\(h\)</span> is <strong>complete</strong>  if  its nodes correspond to the nodes numbered from <span class="arithmatex">\(1\)</span> to <span class="arithmatex">\(n\)</span> in the perfect binary tree of height <span class="arithmatex">\(h\)</span>.</p>
@@ -2755,7 +2755,7 @@
 <p>Array Representation : BT[n + 1]  ( BT[0] is not used)</p>
 </li>
 </ul>
-<p><img alt="6-1" src="../picture/6-1.png" /></p>
+<p><img alt="6-1" src="../picture/6-1.png"></p>
 <p><strong>[Lemma]</strong> </p>
 <ol>
 <li><span class="arithmatex">\(index\,of\,parent(i)=\left\{
@@ -2794,14 +2794,14 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">{</span><span class="w"> </span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="n">PriorityQueue</span><span class="w"> </span><span class="n">H</span><span class="p">;</span><span class="w"> </span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">MaxElements</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MinPQSize</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Priority queue size is too small&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">"Priority queue size is too small"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="n">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">HeapStruct</span><span class="w"> </span><span class="p">));</span><span class="w"> </span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">"Out of space!!!"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="cm">/* Allocate the array plus one extra for sentinel */</span><span class="w"> </span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">((</span><span class="w"> </span><span class="n">MaxElements</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="p">));</span><span class="w"> </span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">"Out of space!!!"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Capacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MaxElements</span><span class="p">;</span><span class="w"> </span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MinData</span><span class="p">;</span><span class="w">  </span><span class="cm">/* set the sentinel */</span>
@@ -2835,7 +2835,7 @@
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">IsFull</span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">))</span><span class="w"> </span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">     </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Priority queue is full&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">     </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">"Priority queue is full"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">     </span><span class="k">return</span><span class="p">;</span><span class="w"> </span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="p">;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
@@ -2849,7 +2849,7 @@
 <ol>
 <li>DeleteMin</li>
 </ol>
-<p><div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<p></p><div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
@@ -2878,7 +2878,7 @@
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">MinElement</span><span class="p">,</span><span class="w"> </span><span class="n">LastElement</span><span class="p">;</span><span class="w"> </span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">IsEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Priority queue is empty&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">"Priority queue is empty"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">];</span><span class="w">   </span>
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="n">MinElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">];</span><span class="w">  </span><span class="cm">/*Save the min element*/</span>
@@ -2899,7 +2899,7 @@
 </span></code></pre></div></td></tr></table></div>
 $$
 T(N)=O(\log N)
-$$</p>
+$$
 <h4 id="other-heap-operations">Other Heap Operations</h4>
 <ul>
 <li>
@@ -2927,8 +2927,8 @@ $$</p>
    T(N)=O(N)
    $$</p>
 <p><strong>[Theorem]</strong> For the perfect binary tree of height <span class="arithmatex">\(h\)</span> containing <span class="arithmatex">\(2^{h+1}-1\)</span> nodes, the sum of the heights of the nodes is <span class="arithmatex">\(2^{h+1}-1-(h+1)\)</span>.</p>
-<p><img alt="image-20210125151728720" src="../picture/image-20210125151728720.png" /></p>
-<hr />
+<p><img alt="image-20210125151728720" src="../picture/image-20210125151728720.png"></p>
+<hr>
 <h3 id="44-applications-of-priority-queues">4.4 Applications of Priority Queues</h3>
 <h4 id="heap-sort">Heap Sort</h4>
 <h4 id="k">查找一个序列中第k小的元素</h4>
@@ -2981,7 +2981,7 @@ $$</p>
 </span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">H</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
 </span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<hr />
+<hr>
 <h3 id="45-d-heaps-all-nodes-have-d-children">4.5 <span class="arithmatex">\(d\)</span>-Heaps — All nodes have <span class="arithmatex">\(d\)</span> children</h3>
 <p><strong>Note</strong> :</p>
 <blockquote>
@@ -2991,10 +2991,10 @@ $$</p>
 <li>When the priority queue is too large to fit entirely in main memory, a d-heap will become interesting.</li>
 </ul>
 </blockquote>
-<p><img src="picture/6-2.png" alt="6-2"  /></p>
-<p><img alt="image-20210125070700824" src="../picture/image-20210125070700824.png" /></p>
+<p><img src="picture/6-2.png" alt="6-2"></p>
+<p><img alt="image-20210125070700824" src="../picture/image-20210125070700824.png"></p>
 <p>正确答案是4，注意“in the process”</p>
-<hr />
+<hr></div>
 
 
 

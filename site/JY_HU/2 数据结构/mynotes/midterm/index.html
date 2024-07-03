@@ -2622,7 +2622,7 @@
   
 
 
-<h1 id="midterm">midterm</h1>
+<div><h1 id="midterm">midterm</h1>
 <p>易错复杂度分析</p>
 <p>建堆（不是一个个插入）的算法：<span class="arithmatex">\(O(N)\)</span>,对i=n/2到1的所有节点都pecolate down</p>
 <p>指针比较多，注意调试不要打印或者访问NULL的某个属性，避免越界等段错误</p>
@@ -2820,7 +2820,7 @@
 </span></code></pre></div></td></tr></table></div>
 <h3 id="4">4.树：二叉树，搜索树</h3>
 <h3 id="zigzagging-on-a-tree">zigzagging on a tree</h3>
-<p><img alt="zigzag.jpg" src="../assets/337cbfb0-a7b2-4500-9664-318e9ffc870e.jpg" /></p>
+<p><img alt="zigzag.jpg" src="../assets/337cbfb0-a7b2-4500-9664-318e9ffc870e.jpg"></p>
 <div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
 <span class="normal"><a href="#__codelineno-6-3">3</a></span>
@@ -3049,7 +3049,7 @@
 </span><span id="__span-8-68"><a id="__codelineno-8-68" name="__codelineno-8-68"></a><span class="cm">void print_tree(tree_ptr tree){</span>
 </span><span id="__span-8-69"><a id="__codelineno-8-69" name="__codelineno-8-69"></a><span class="cm">    //打印顺序为根左右</span>
 </span><span id="__span-8-70"><a id="__codelineno-8-70" name="__codelineno-8-70"></a><span class="cm">    if(tree == NULL)return;</span>
-</span><span id="__span-8-71"><a id="__codelineno-8-71" name="__codelineno-8-71"></a><span class="cm">    printf(&quot;%d &quot;, tree-&gt;data);</span>
+</span><span id="__span-8-71"><a id="__codelineno-8-71" name="__codelineno-8-71"></a><span class="cm">    printf("%d ", tree-&gt;data);</span>
 </span><span id="__span-8-72"><a id="__codelineno-8-72" name="__codelineno-8-72"></a><span class="cm">    if(tree-&gt;left != NULL)print_tree(tree-&gt;left);</span>
 </span><span id="__span-8-73"><a id="__codelineno-8-73" name="__codelineno-8-73"></a><span class="cm">    if(tree-&gt;right != NULL)print_tree(tree-&gt;right);  </span>
 </span><span id="__span-8-74"><a id="__codelineno-8-74" name="__codelineno-8-74"></a><span class="cm">}</span>
@@ -3073,7 +3073,7 @@
 </span><span id="__span-8-92"><a id="__codelineno-8-92" name="__codelineno-8-92"></a><span class="w">        </span><span class="p">{</span>
 </span><span id="__span-8-93"><a id="__codelineno-8-93" name="__codelineno-8-93"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">len</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 </span><span id="__span-8-94"><a id="__codelineno-8-94" name="__codelineno-8-94"></a><span class="w">            </span><span class="p">{</span>
-</span><span id="__span-8-95"><a id="__codelineno-8-95" name="__codelineno-8-95"></a><span class="w">                </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot; %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span><span id="__span-8-95"><a id="__codelineno-8-95" name="__codelineno-8-95"></a><span class="w">                </span><span class="n">printf</span><span class="p">(</span><span class="s">" %d"</span><span class="p">,</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
 </span><span id="__span-8-96"><a id="__codelineno-8-96" name="__codelineno-8-96"></a><span class="w">            </span><span class="p">}</span>
 </span><span id="__span-8-97"><a id="__codelineno-8-97" name="__codelineno-8-97"></a><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-8-98"><a id="__codelineno-8-98" name="__codelineno-8-98"></a><span class="w">        </span><span class="k">else</span>
@@ -3081,9 +3081,9 @@
 </span><span id="__span-8-100"><a id="__codelineno-8-100" name="__codelineno-8-100"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
 </span><span id="__span-8-101"><a id="__codelineno-8-101" name="__codelineno-8-101"></a><span class="w">            </span><span class="p">{</span>
 </span><span id="__span-8-102"><a id="__codelineno-8-102" name="__codelineno-8-102"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">level</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-</span><span id="__span-8-103"><a id="__codelineno-8-103" name="__codelineno-8-103"></a><span class="w">                    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span><span id="__span-8-103"><a id="__codelineno-8-103" name="__codelineno-8-103"></a><span class="w">                    </span><span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
 </span><span id="__span-8-104"><a id="__codelineno-8-104" name="__codelineno-8-104"></a><span class="w">                </span><span class="k">else</span>
-</span><span id="__span-8-105"><a id="__codelineno-8-105" name="__codelineno-8-105"></a><span class="w">                    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot; %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span><span id="__span-8-105"><a id="__codelineno-8-105" name="__codelineno-8-105"></a><span class="w">                    </span><span class="n">printf</span><span class="p">(</span><span class="s">" %d"</span><span class="p">,</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
 </span><span id="__span-8-106"><a id="__codelineno-8-106" name="__codelineno-8-106"></a><span class="w">            </span><span class="p">}</span>
 </span><span id="__span-8-107"><a id="__codelineno-8-107" name="__codelineno-8-107"></a><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-8-108"><a id="__codelineno-8-108" name="__codelineno-8-108"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">queue</span><span class="o">-&gt;</span><span class="n">front</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">len</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
@@ -3102,7 +3102,7 @@
 </span><span id="__span-8-121"><a id="__codelineno-8-121" name="__codelineno-8-121"></a><span class="p">{</span>
 </span><span id="__span-8-122"><a id="__codelineno-8-122" name="__codelineno-8-122"></a><span class="w">    </span><span class="c1">// zigzag 层序遍历，在每一行输出时打印出逆序的</span>
 </span><span id="__span-8-123"><a id="__codelineno-8-123" name="__codelineno-8-123"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-</span><span id="__span-8-124"><a id="__codelineno-8-124" name="__codelineno-8-124"></a><span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+</span><span id="__span-8-124"><a id="__codelineno-8-124" name="__codelineno-8-124"></a><span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
 </span><span id="__span-8-125"><a id="__codelineno-8-125" name="__codelineno-8-125"></a><span class="w">    </span><span class="c1">// The second line gives the inorder sequence</span>
 </span><span id="__span-8-126"><a id="__codelineno-8-126" name="__codelineno-8-126"></a><span class="w">    </span><span class="c1">// and the third line gives the postorder sequence</span>
 </span><span id="__span-8-127"><a id="__codelineno-8-127" name="__codelineno-8-127"></a><span class="w">    </span><span class="cm">/*  1. 根据后序序列的最后一个元素建立根结点；</span>
@@ -3113,9 +3113,9 @@
 </span><span id="__span-8-132"><a id="__codelineno-8-132" name="__codelineno-8-132"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">in_order</span><span class="p">[</span><span class="n">MAX_NODE_NUM</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 </span><span id="__span-8-133"><a id="__codelineno-8-133" name="__codelineno-8-133"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">post_order</span><span class="p">[</span><span class="n">MAX_NODE_NUM</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 </span><span id="__span-8-134"><a id="__codelineno-8-134" name="__codelineno-8-134"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-</span><span id="__span-8-135"><a id="__codelineno-8-135" name="__codelineno-8-135"></a><span class="w">        </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">in_order</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span><span id="__span-8-135"><a id="__codelineno-8-135" name="__codelineno-8-135"></a><span class="w">        </span><span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">in_order</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 </span><span id="__span-8-136"><a id="__codelineno-8-136" name="__codelineno-8-136"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-</span><span id="__span-8-137"><a id="__codelineno-8-137" name="__codelineno-8-137"></a><span class="w">        </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">post_order</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span><span id="__span-8-137"><a id="__codelineno-8-137" name="__codelineno-8-137"></a><span class="w">        </span><span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">post_order</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 </span><span id="__span-8-138"><a id="__codelineno-8-138" name="__codelineno-8-138"></a>
 </span><span id="__span-8-139"><a id="__codelineno-8-139" name="__codelineno-8-139"></a><span class="w">    </span><span class="n">tree_ptr</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">build_tree</span><span class="p">(</span><span class="n">in_order</span><span class="p">,</span><span class="w"> </span><span class="n">post_order</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
 </span><span id="__span-8-140"><a id="__codelineno-8-140" name="__codelineno-8-140"></a><span class="w">    </span><span class="c1">// 把树打印出来看看</span>
@@ -3156,7 +3156,7 @@
 </span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <p>insertion sequence序列不同，构建出的二叉树形状可能有多种</p>
-<p><img alt="2023-11-23 (9)" src="../assets/2023-11-23%20%289%29.png" /></p>
+<p><img alt="2023-11-23 (9)" src="../assets/2023-11-23%20%289%29.png"></p>
 <p>建立二叉搜索树的顺序</p>
 <p>先判断当前节点是否为NULL，若是，则建立新节点（data = x，left=right=NULL）</p>
 <p>若不是，则递归向下，若大于当前，则Insert(x,tree-&gt;left),小于前，则Insert(x,tree-&gt;right)</p>
@@ -3187,7 +3187,7 @@
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span>
 </span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">        </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">TreeNode</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">            </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">            </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">"Out of space!!!"</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span>
 </span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span>
 </span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">            </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span>
@@ -3200,13 +3200,13 @@
 </span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span>
 </span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
 </span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">                </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="w">        </span><span class="cm">/* Else X is in the tree already; we&#39;ll do nothing */</span><span class="w"> </span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="w">        </span><span class="cm">/* Else X is in the tree already; we'll do nothing */</span><span class="w"> </span>
 </span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="w">    </span><span class="k">return</span><span class="w">  </span><span class="n">T</span><span class="p">;</span><span class="w">   </span><span class="cm">/* Do not forget this line!! */</span><span class="w"> </span>
 </span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <p>作业错题</p>
-<p><img alt="2023-11-23 (3)" src="../assets/2023-11-23%20%283%29.png" /></p>
-<p><img alt="2023-11-23 (4)" src="../assets/2023-11-23%20%284%29-1700729444540-3.png" /></p>
+<p><img alt="2023-11-23 (3)" src="../assets/2023-11-23%20%283%29.png"></p>
+<p><img alt="2023-11-23 (4)" src="../assets/2023-11-23%20%284%29-1700729444540-3.png"></p>
 <p>环形队列 数组实现</p>
 <p>Suppose that an array of size <code>m</code> is used to store a circular queue. If the front position is <code>front</code> and the current size is <code>size</code>, then the rear element must be at:</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>A.front+size
@@ -3217,10 +3217,10 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>D.front+size-1
 </span></code></pre></div></td></tr></table></div>
-<p><img alt="2023-11-23 (5)" src="../assets/2023-11-23%20%285%29.png" /></p>
-<p><img alt="image-20231123171418423" src="../assets/image-20231123171418423.png" /></p>
+<p><img alt="2023-11-23 (5)" src="../assets/2023-11-23%20%285%29.png"></p>
+<p><img alt="image-20231123171418423" src="../assets/image-20231123171418423.png"></p>
 <p>disjoint sets</p>
-<p><img alt="2023-11-23 (7)" src="../assets/2023-11-23%20%287%29.png" /></p>
+<p><img alt="2023-11-23 (7)" src="../assets/2023-11-23%20%287%29.png"></p>
 <h5 id="hw3-m1n">HW3: 栈最多容纳M个数，数字1~N依次入栈，而出栈顺序任意，验证给定的序列是否为出栈序列</h5>
 <p>对于某个序列，如3，2，1，7，5，6，4，栈的大小为5</p>
 <p>预设flag=1，假设是合法出栈序列 </p>
@@ -3288,7 +3288,7 @@
 </span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
 </span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="p">{</span>
 </span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="p">;</span>
-</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d %d %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">K</span><span class="p">);</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d %d"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">K</span><span class="p">);</span>
 </span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">    </span><span class="c1">// M为栈的最大容量，N为入栈的数字个数，K为需要判断的出栈序列的个数</span>
 </span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">;</span>
 </span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">[</span><span class="n">MAXSIZE</span><span class="p">];</span>
@@ -3298,13 +3298,13 @@
 </span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">    </span><span class="p">{</span>
 </span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
 </span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">            </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">num</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">            </span><span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">num</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
 </span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="w">        </span><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">);</span><span class="w"> </span><span class="c1">// 传入出栈序列，栈的最大容量，入栈数字的个数</span>
 </span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">flag</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;NO</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">"NO</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
 </span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="w">        </span><span class="k">else</span>
-</span><span id="__span-15-25"><a id="__codelineno-15-25" name="__codelineno-15-25"></a><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;YES</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-15-25"><a id="__codelineno-15-25" name="__codelineno-15-25"></a><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">"YES</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
 </span><span id="__span-15-26"><a id="__codelineno-15-26" name="__codelineno-15-26"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-15-27"><a id="__codelineno-15-27" name="__codelineno-15-27"></a><span class="p">}</span>
 </span><span id="__span-15-28"><a id="__codelineno-15-28" name="__codelineno-15-28"></a>
@@ -3336,7 +3336,7 @@
 </span></code></pre></div></td></tr></table></div>
 <p>polish</p>
 <p>infix操作</p>
-<p><img alt="2023-11-26" src="../assets/2023-11-26.png" /></p>
+<p><img alt="2023-11-26" src="../assets/2023-11-26.png"></p>
 <p>C</p>
 <p>计算机只能在将中缀表达式转换为前缀或后缀表达式后才能进行运算</p>
 <p>计算机在计算后缀表达式时只需从左到右线性扫描，遇到操作数压入栈，遇到运算符则<strong>依次</strong>取出栈顶的两个操作数计算后将结果重新压回栈中。</p>
@@ -3345,12 +3345,12 @@
 <p>最后输出时一般是倒序输出</p>
 <p><strong>注意，只有S1栈顶运算符优先级小于当前运算符时，才将当前运算符压入S1，否则直接压入中间结果栈S2</strong></p>
 <p>S2不叫操作数栈，因为最后结果从S2中逆序输出得到</p>
-<p><img alt="img" src="../assets/v2-7845939f2c3d8ca4de7d859b085210b7_r.jpg" /></p>
-<p><img alt="img" src="../assets/v2-abeac41c041deb327ed4dd41a0747ad2_r.jpg" /></p>
+<p><img alt="img" src="../assets/v2-7845939f2c3d8ca4de7d859b085210b7_r.jpg"></p>
+<p><img alt="img" src="../assets/v2-abeac41c041deb327ed4dd41a0747ad2_r.jpg"></p>
 <p>倒序输出为ABC+*DEF+/-</p>
 <p>操作数顺序不会变化，一定是叶子节点</p>
 <h2 id="1-1">二分查找+1-1问题处理</h2>
-<p><img alt="img" src="../assets/v2-3554e8997059b1b41ae95a3e47ffd8b5_r.jpg" /></p>
+<p><img alt="img" src="../assets/v2-3554e8997059b1b41ae95a3e47ffd8b5_r.jpg"></p>
 <ul>
 <li>左、中、右索引的分配。</li>
 <li>循环或递归终止条件。</li>
@@ -3445,9 +3445,9 @@
 </span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">X</span><span class="p">;</span>
 </span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20"></a>
 </span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BuildTree</span><span class="p">();</span>
-</span><span id="__span-16-22"><a id="__codelineno-16-22" name="__codelineno-16-22"></a><span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">X</span><span class="p">);</span>
+</span><span id="__span-16-22"><a id="__codelineno-16-22" name="__codelineno-16-22"></a><span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">X</span><span class="p">);</span>
 </span><span id="__span-16-23"><a id="__codelineno-16-23" name="__codelineno-16-23"></a><span class="w">    </span><span class="n">Print_NGT</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">);</span>
-</span><span id="__span-16-24"><a id="__codelineno-16-24" name="__codelineno-16-24"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;End</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-16-24"><a id="__codelineno-16-24" name="__codelineno-16-24"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"End</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
 </span><span id="__span-16-25"><a id="__codelineno-16-25" name="__codelineno-16-25"></a>
 </span><span id="__span-16-26"><a id="__codelineno-16-26" name="__codelineno-16-26"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </span><span id="__span-16-27"><a id="__codelineno-16-27" name="__codelineno-16-27"></a><span class="p">}</span>
@@ -3456,7 +3456,7 @@
 </span><span id="__span-16-30"><a id="__codelineno-16-30" name="__codelineno-16-30"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Print_NGT</span><span class="p">(</span><span class="w"> </span><span class="n">Tree</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">){</span>
 </span><span id="__span-16-31"><a id="__codelineno-16-31" name="__codelineno-16-31"></a>
 </span><span id="__span-16-32"><a id="__codelineno-16-32" name="__codelineno-16-32"></a><span class="p">}</span>
-</span></code></pre></div></td></tr></table></div>
+</span></code></pre></div></td></tr></table></div></div>
 
 
 
