@@ -4,6 +4,7 @@
     padding-top: 150px;
     padding-bottom: 150px;
 	text-align: center;
+    font-weight: bold;
 }
 
 .pink {
@@ -11,7 +12,6 @@
 }
 
 .light {
-    font-weight: bold;
     color: #0B3ADC;
 }
 

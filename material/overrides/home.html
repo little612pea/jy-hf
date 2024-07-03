@@ -50,11 +50,11 @@
             let i = 0;
             function type() {
               if (i < text.length) {
-                element.innerHTML += text.charAt(i).replace('\n', '<br>'); // Replace newline with <br> for line breaks
+                element.innerHTML += text.charAt(i); // Replace newline with <br> for line breaks
                 i++;
                 setTimeout(type, speed);
               } else {
-                console.log('Typing complete, pausing cursor animation for', element); // Debug output
+    
                 if (callback) callback();
               }
             }
@@ -74,8 +74,8 @@
 
           typeWriter(headerElement, headerText, 150, () => {
             headerElement.innerHTML = headerHTML;
-            headerElement.style.animationPlayState = 'paused'; // Pause the cursor animation
-            headerElement.style.borderRightColor = 'transparent'; // Make the cursor transparent
+            headerElement.setAttribute("class","hero_header");
+            console.log('Typing complete, pausing cursor animation for', headerElement); // Debug output
             typeWriter(taglineElement, taglineText, 150, () => {
               taglineElement.innerHTML = taglineHTML;
 
