@@ -72,11 +72,11 @@
           headerElement.textContent = '';
           taglineElement.textContent = '';
 
-          typeWriter(headerElement, headerText, 300, () => {
+          typeWriter(headerElement, headerText, 150, () => {
             headerElement.innerHTML = headerHTML;
             headerElement.style.animationPlayState = 'paused'; // Pause the cursor animation
             headerElement.style.borderRightColor = 'transparent'; // Make the cursor transparent
-            typeWriter(taglineElement, taglineText, 300, () => {
+            typeWriter(taglineElement, taglineText, 150, () => {
               taglineElement.innerHTML = taglineHTML;
 
             });
