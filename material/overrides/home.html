@@ -70,22 +70,28 @@
       type();
     }
 
-    const headerElement = document.querySelector('.hero_header');
-    const taglineElement = document.querySelector('.tagline');
+    function startTyping() {
+      const headerElement = document.querySelector('.hero_header');
+      const taglineElement = document.querySelector('.tagline');
 
-    const headerHTML = 'JY-HF <span class="light">Learning Site___</span>';
-    const taglineHTML = 'Share the knowledge to you and <span class="blue">Us</span>';
+      const headerHTML = 'JY-HF <span class="light">Learning Site___</span>';
+      const taglineHTML = 'Share the knowledge to you and <span class="blue">Us</span>';
 
-    headerElement.textContent = '';
-    taglineElement.textContent = '';
+      headerElement.textContent = '';
+      taglineElement.textContent = '';
 
-    typeWriter(headerElement, headerHTML, 150, () => {
-      headerElement.classList.remove('typewriter');
-      console.log('Typing complete, pausing cursor animation for', headerElement);
-      typeWriter(taglineElement, taglineHTML, 150);
-    });
+      typeWriter(headerElement, headerHTML, 150, () => {
+        headerElement.classList.remove('typewriter');
+        console.log('Typing complete, pausing cursor animation for', headerElement);
+        typeWriter(taglineElement, taglineHTML, 150);
+      });
+    }
+
+    startTyping();
+    setInterval(startTyping, 20000); // Repeat every 20 seconds
   });
 </script>
+
 <section class="mdx-container">
   <div class="md-grid md-typeset">
     <div class="mdx-hero">

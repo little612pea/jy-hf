@@ -164,6 +164,10 @@ nav:
           - Lab 12 一位全加器和四位加法器: JY_FENG/2 电路电子技术II实验/Lab12/Lab12.md
           - Lab 13 数字钟（Quartus）: JY_FENG/2 电路电子技术II实验/Lab13/Lab13.md
           - Lab 14 步进电机脉冲分配器: JY_FENG/2 电路电子技术II实验/Lab14/Lab14.md
+      - Semiconductor Physics and Devices:
+          - 1 The Crystal Structure of Solids: JY_FENG\Semiconductor Physics and Devices\1 The Crystal Structure of Solids.md
+          - 2 Introduction to Quantum Mechanics: JY_FENG\Semiconductor Physics and Devices\2 Introduction to Quantum Mechanics.md
+          - 3 Introduction to the Quantum Theory of Solids: JY_FENG\Semiconductor Physics and Devices\3 Introduction to the Quantum Theory of Solids.md
 
   - Other:
       - Linux服务器运维(x)把玩(√): Others/linux 启动.md
