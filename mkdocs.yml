@@ -189,6 +189,9 @@ theme:
     - navigation.footer
     - content.code.copy
     - content.code.select
+    - search.suggest
+    - search.highlight
+    - search.share
 
   icon:
     repo: material/robot-love
@@ -257,3 +260,4 @@ plugins:
       type: timeago
       enabled: true
   - mkdocs-pdf
+  - search
