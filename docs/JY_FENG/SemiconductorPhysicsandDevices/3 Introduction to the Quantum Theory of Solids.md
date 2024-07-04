@@ -1,14 +1,14 @@
 ## 3.1 Allowed and Forbidden Energy Bands
 
-<img src="./assets/image-20240704140255482.png" alt="image-20240704140255482" style="zoom:53%;" /><img src="./assets/image-20240704140432020.png" alt="image-20240704140432020" style="zoom:33%;" />
+<img src="../assets/image-20240704140255482.png" alt="image-20240704140255482" style="zoom:53%;" /><img src="../assets/image-20240704140432020.png" alt="image-20240704140432020" style="zoom:33%;" />
 
 
 
-<img src="./assets/image-20240704140502040.png" alt="image-20240704140502040" style="zoom:50%;" />
+<img src="../assets/image-20240704140502040.png" alt="image-20240704140502040" style="zoom:50%;" />
 
 
 
-<img src="./assets/image-20240704144925972.png" alt="image-20240704144925972" style="zoom:53%;" />
+<img src="../assets/image-20240704144925972.png" alt="image-20240704144925972" style="zoom:53%;" />
 
 ### 3.1.3 The $k$-Space Diagram
 
@@ -30,7 +30,7 @@ $\alpha$ is given by$\sqrt{\frac{2mE}{\hbar^2}}=\frac{p}{\hbar}=k$, so we obtain
 $$
 E=\frac{k^2\hbar^2}{2m}
 $$
-<img src="./assets/image-20240704144228103.png" alt="image-20240704144228103" style="zoom:25%;" />
+<img src="../assets/image-20240704144228103.png" alt="image-20240704144228103" style="zoom:25%;" />
 
 Now, we consider the relation between $E$ and $k$ form Equation for the particle in the single-crystal lattice.
 
@@ -44,21 +44,21 @@ f(\alpha a)=\cos ka
 $$
 ![image-20240704145326035](./assets/image-20240704145326035.png)
 
-<img src="./assets/image-20240704145501812.png" alt="image-20240704145501812" style="zoom:25%;" />
+<img src="../assets/image-20240704145501812.png" alt="image-20240704145501812" style="zoom:25%;" />
 
 the right side can also be written as $\cos ka=\cos(ka+2n\pi)=\cos(ka-2n\pi)$ 
 
 then we gain
 
-<img src="./assets/image-20240704150237183.png" alt="image-20240704150237183" style="zoom:25%;" />
+<img src="../assets/image-20240704150237183.png" alt="image-20240704150237183" style="zoom:25%;" />
 
 ## 3.2 Electrical Conduction In Solids
 
 ### 3.2.1 The Energy Band and the Bond Model
 
-<img src="./assets/image-20240704140810574.png" alt="image-20240704140810574" style="zoom:50%;" />
+<img src="../assets/image-20240704140810574.png" alt="image-20240704140810574" style="zoom:50%;" />
 
-<img src="./assets/image-20240704141325933.png" alt="image-20240704141325933" style="zoom:50%;" />
+<img src="../assets/image-20240704141325933.png" alt="image-20240704141325933" style="zoom:50%;" />
 
 
 
@@ -73,7 +73,7 @@ if a force is applied to a particle and the particle moves.
 $$
 dE=Fdx=Fv\cdot dt
 $$
-<img src="./assets/image-20240704141339201.png" alt="image-20240704141339201" style="zoom:33%;" />
+<img src="../assets/image-20240704141339201.png" alt="image-20240704141339201" style="zoom:33%;" />
 
 ### 3.2.3 Electron Effective Mass
 

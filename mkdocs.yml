@@ -10,128 +10,128 @@ nav:
   - HowTo:
       - Embedding a PDF file: artifacts/test.md
   - Jy Hu CS:
-    - 大二下:
-      - 1 高级数据结构与算法分析: 
-        - mynotes: JY_HU/大二下/1 高级数据结构与算法分析/ADS-notes.md
-      - 2 数据库系统: 
-        - mynotes: JY_HU/大二下/2 数据库系统/Database-notes.md
-      - 3 计算机组成: 
-        - mynotes: JY_HU/大二下/3 计算机组成/组成-notes.md
-      - 4 面向对象程序设计: 
-        - mynotes: JY_HU/大二下/4 面向对象程序设计/OOP-notes.md
-    - 大二上: 
-      - 1 数字逻辑设计:
-        - 实验过程: JY_HU/大二上/1 数字逻辑设计/数逻实验.md
-        - 理论部分: 
-          - 数逻笔记: JY_HU/大二上/1 数字逻辑设计/数字逻辑设计 notes.md
-          - verilog 常见语法问题: JY_HU/大二上/1 数字逻辑设计/verilog.md
-          - 期末复习: JY_HU/大二上/1 数字逻辑设计/期末复习.md
-      - 2 数据结构: 
-        - webnotes: 
-          - 写在前面: JY_HU/大二上/2 数据结构/webnotes/README.md
-          - 课程定位: JY_HU/大二上/2 数据结构/webnotes/DS WEEK01.md
-          - 复杂度分析: JY_HU/大二上/2 数据结构/webnotes/DS WEEK02.md
-          - 链表/栈/队列: JY_HU/大二上/2 数据结构/webnotes/DS WEEK03.md
-          - 树的定义与遍历: JY_HU/大二上/2 数据结构/webnotes/DS WEEK04.md
-          - 二叉搜索树: JY_HU/大二上/2 数据结构/webnotes/DS WEEK05.md
-          - 优先队列(heap): JY_HU/大二上/2 数据结构/webnotes/DS WEEK06.md
-          - 并查集: JY_HU/大二上/2 数据结构/webnotes/DS WEEK07.md
-          - 图表示与拓扑排序: JY_HU/大二上/2 数据结构/webnotes/DS WEEK08.md
-          - 最短路算法/AOE: JY_HU/大二上/2 数据结构/webnotes/DS WEEK09.md
-          - 网络流问题/MST: JY_HU/大二上/2 数据结构/webnotes/DS WEEK10.md
-          - DFS/联通分量/插排/交换排序下界: JY_HU/大二上/2 数据结构/webnotes/DS WEEK11.md
-          - shell/heap/merge sort: JY_HU/大二上/2 数据结构/webnotes/DS WEEK12.md
-          - queue bucket radix sort: JY_HU/大二上/2 数据结构/webnotes/DS WEEK13.md
-          - hasing linear probing separate chaining: JY_HU/大二上/2 数据结构/webnotes/DS WEEK14.md
-          - rehashing quadratic probing: JY_HU/大二上/2 数据结构/webnotes/DS WEEK15.md
-        - mynotes:  
-          - FDS-notes: JY_HU/大二上/2 数据结构/mynotes/FDS-notes.md
-          - coding-thoughts: JY_HU/大二上/2 数据结构/labs&hw/coding-thoughts.md
-          - toplogical sorting: JY_HU/大二上/2 数据结构/mynotes/8.2拓扑排序.md
-          - BFS/DFS: JY_HU/大二上/2 数据结构/mynotes/BFS和DFS的理解.md
-          - FDS期末复习: JY_HU/大二上/2 数据结构/mynotes/FDS期末复习.md
-          - labuladong: JY_HU/大二上/2 数据结构/mynotes/labuladong.md
-          - 记忆部分: JY_HU/大二上/2 数据结构/mynotes/recite.md
-          - 二叉树: JY_HU/大二上/2 数据结构/mynotes/二叉树算法复习.md
-          - MST-uniqueness: JY_HU/大二上/2 数据结构/mynotes/判定最小生成树是否唯一.md
-          - euler circuit: JY_HU/大二上/2 数据结构/mynotes/判断是否有Euler Circuit.md
-          - 负权环检测: JY_HU/大二上/2 数据结构/mynotes/检测负权环-求最小路径.md
-          - tarjan: JY_HU/大二上/2 数据结构/mynotes/求强连通分量的Tarjan算法.md
-          - 邻接表遍历: JY_HU/大二上/2 数据结构/mynotes/邻接图的遍历.md
-          - Labs&hw review: JY_HU/大二上/2 数据结构/labs&hw/FDS Lab&hw review.md
-          - midterm: JY_HU/大二上/2 数据结构/mynotes/midterm.md
-        - exams:
-          - 15-16: JY_HU/大二上/2 数据结构/exams/15-16-middle.md
-          - 16-17: JY_HU/大二上/2 数据结构/exams/16-17-middle.md
-          - 17-18: JY_HU/大二上/2 数据结构/exams/17-18-middle.md
-          - 18-19: JY_HU/大二上/2 数据结构/exams/18-19-middle.md
-          - 19-20: JY_HU/大二上/2 数据结构/exams/19-20-middle.md
-    - 3 图像信息处理 DIP:  
-      - DIP notes: 
-        - DIP: JY_HU/大二上/3 图像信息处理 DIP/DIP.md
-        - 尺度不变性检测器: JY_HU/大二上/3 图像信息处理 DIP/Scale Invariant Detector.md
-        - 高斯/中值滤波: JY_HU/大二上/3 图像信息处理 DIP/gauss filtering medium filtering.md
-        - 双边滤波: JY_HU/大二上/3 图像信息处理 DIP/双边滤波 bilateral filtering.md
-        - 导向滤波: JY_HU/大二上/3 图像信息处理 DIP/导向滤波解释 guided filtering.md
-        - 空间滤波: JY_HU/大二上/3 图像信息处理 DIP/空间滤波 spatial filtering.md
-      - 回忆卷:
-        - 回忆卷1: JY_HU/大二上/3 图像信息处理 DIP/回忆卷1.md
-        - 回忆卷2: JY_HU/大二上/3 图像信息处理 DIP/回忆卷2.md
-        - 回忆卷3: JY_HU/大二上/3 图像信息处理 DIP/回忆卷3.md
-    - AI:
-      - 赶快补课抄笔记: JY_HU/AI/notes for ZJU-AI-ML.md
-      - 一些截图: JY_HU/AI/ML-zju.md
-      - Approaching-almost: JY_HU/AI/Approach almost.md
-      - 课程Lab&hw: JY_HU/AI/labs & hw review.md
-      - d2l笔记: JY_HU/AI/d2l-zh-pytorch.md
-      - AI算法岗面试问题汇总: JY_HU/AI/interview-questions.md
-      - srtp:  JY_HU/AI/srtp-2024-plan.md
-      - 跟李沐学AI:
-        - JY_HU/AI/跟李沐学AI/1-如何读论文.md
-        - JY_HU/AI/跟李沐学AI/2-AlexNet.md
-        - JY_HU/AI/跟李沐学AI/3-ResNet.md
-        - JY_HU/AI/跟李沐学AI/4-Transformer.md
-        - JY_HU/AI/跟李沐学AI/5-GNN.md
-        - JY_HU/AI/跟李沐学AI/6-GAN.md
-        - JY_HU/AI/跟李沐学AI/7-BERT.md
-        - JY_HU/AI/跟李沐学AI/8-ViT.md
-        - JY_HU/AI/跟李沐学AI/9-MAE.md
-        - JY_HU/AI/跟李沐学AI/10-如何找研究想法.md
-        - JY_HU/AI/跟李沐学AI/11-MoCo.md
-        - JY_HU/AI/跟李沐学AI/12-ContrastLearning.md
-        - JY_HU/AI/跟李沐学AI/13-AI-guided-Intuition.md
-        - JY_HU/AI/跟李沐学AI/14-SwinTransformer.md
-        - JY_HU/AI/跟李沐学AI/15-什么是好的研究工作.md
-        - JY_HU/AI/跟李沐学AI/16-AlphaFold2.md
-        - JY_HU/AI/跟李沐学AI/17-CLIP.md
-        - JY_HU/AI/跟李沐学AI/18-TwoStream.md
-        - JY_HU/AI/跟李沐学AI/19-GPT.md
-        - JY_HU/AI/跟李沐学AI/20-Codex.md
-        - JY_HU/AI/跟李沐学AI/21-AlphaCode.md
-        - JY_HU/AI/跟李沐学AI/22-StanfordAIReport.md
-        - JY_HU/AI/跟李沐学AI/23-I3D.md
-        - JY_HU/AI/跟李沐学AI/24-VideoRecognition.md
-        - JY_HU/AI/跟李沐学AI/25-ParameterServer.md
-        - JY_HU/AI/跟李沐学AI/26-Pathways.md
-        - JY_HU/AI/跟李沐学AI/27-GPip.md
-        - JY_HU/AI/跟李沐学AI/28-MegatronLM.md
-        - JY_HU/AI/跟李沐学AI/29-DETR.md
-        - JY_HU/AI/跟李沐学AI/30-Zero.md
-        - JY_HU/AI/跟李沐学AI/31-研究的艺术.md
-        - JY_HU/AI/跟李沐学AI/32-DALLE2.md
-        - JY_HU/AI/跟李沐学AI/33-ViLT.md
-        - JY_HU/AI/跟李沐学AI/34-CLIP串讲.md
-        - JY_HU/AI/跟李沐学AI/35-ChainOfThought.md
-        - JY_HU/AI/跟李沐学AI/36-Whisper.md
-        - JY_HU/AI/跟李沐学AI/37-多模态串讲.md
-        - JY_HU/AI/跟李沐学AI/38-NeuralCorpusIndexer.md
-        - JY_HU/AI/跟李沐学AI/39-InstructGPT.md
-        - JY_HU/AI/跟李沐学AI/40-HELM.md
-        - JY_HU/AI/跟李沐学AI/41-AnthropicLLM.md
-        - JY_HU/AI/跟李沐学AI/42-大模型时代的科研.md
-  - Jy Feng EE: 
-      - Preview: 
-        - Preview: JY_FENG/JY-Feng.md
+      - 大二下:
+          - 1 高级数据结构与算法分析:
+              - mynotes: JY_HU/大二下/1 高级数据结构与算法分析/ADS-notes.md
+          - 2 数据库系统:
+              - mynotes: JY_HU/大二下/2 数据库系统/Database-notes.md
+          - 3 计算机组成:
+              - mynotes: JY_HU/大二下/3 计算机组成/组成-notes.md
+          - 4 面向对象程序设计:
+              - mynotes: JY_HU/大二下/4 面向对象程序设计/OOP-notes.md
+      - 大二上:
+          - 1 数字逻辑设计:
+              - 实验过程: JY_HU/大二上/1 数字逻辑设计/数逻实验.md
+              - 理论部分:
+                  - 数逻笔记: JY_HU/大二上/1 数字逻辑设计/数字逻辑设计 notes.md
+                  - verilog 常见语法问题: JY_HU/大二上/1 数字逻辑设计/verilog.md
+                  - 期末复习: JY_HU/大二上/1 数字逻辑设计/期末复习.md
+          - 2 数据结构:
+              - webnotes:
+                  - 写在前面: JY_HU/大二上/2 数据结构/webnotes/README.md
+                  - 课程定位: JY_HU/大二上/2 数据结构/webnotes/DS WEEK01.md
+                  - 复杂度分析: JY_HU/大二上/2 数据结构/webnotes/DS WEEK02.md
+                  - 链表/栈/队列: JY_HU/大二上/2 数据结构/webnotes/DS WEEK03.md
+                  - 树的定义与遍历: JY_HU/大二上/2 数据结构/webnotes/DS WEEK04.md
+                  - 二叉搜索树: JY_HU/大二上/2 数据结构/webnotes/DS WEEK05.md
+                  - 优先队列(heap): JY_HU/大二上/2 数据结构/webnotes/DS WEEK06.md
+                  - 并查集: JY_HU/大二上/2 数据结构/webnotes/DS WEEK07.md
+                  - 图表示与拓扑排序: JY_HU/大二上/2 数据结构/webnotes/DS WEEK08.md
+                  - 最短路算法/AOE: JY_HU/大二上/2 数据结构/webnotes/DS WEEK09.md
+                  - 网络流问题/MST: JY_HU/大二上/2 数据结构/webnotes/DS WEEK10.md
+                  - DFS/联通分量/插排/交换排序下界: JY_HU/大二上/2 数据结构/webnotes/DS WEEK11.md
+                  - shell/heap/merge sort: JY_HU/大二上/2 数据结构/webnotes/DS WEEK12.md
+                  - queue bucket radix sort: JY_HU/大二上/2 数据结构/webnotes/DS WEEK13.md
+                  - hasing linear probing separate chaining: JY_HU/大二上/2 数据结构/webnotes/DS WEEK14.md
+                  - rehashing quadratic probing: JY_HU/大二上/2 数据结构/webnotes/DS WEEK15.md
+              - mynotes:
+                  - FDS-notes: JY_HU/大二上/2 数据结构/mynotes/FDS-notes.md
+                  - coding-thoughts: JY_HU/大二上/2 数据结构/labs&hw/coding-thoughts.md
+                  - toplogical sorting: JY_HU/大二上/2 数据结构/mynotes/8.2拓扑排序.md
+                  - BFS/DFS: JY_HU/大二上/2 数据结构/mynotes/BFS和DFS的理解.md
+                  - FDS期末复习: JY_HU/大二上/2 数据结构/mynotes/FDS期末复习.md
+                  - labuladong: JY_HU/大二上/2 数据结构/mynotes/labuladong.md
+                  - 记忆部分: JY_HU/大二上/2 数据结构/mynotes/recite.md
+                  - 二叉树: JY_HU/大二上/2 数据结构/mynotes/二叉树算法复习.md
+                  - MST-uniqueness: JY_HU/大二上/2 数据结构/mynotes/判定最小生成树是否唯一.md
+                  - euler circuit: JY_HU/大二上/2 数据结构/mynotes/判断是否有Euler Circuit.md
+                  - 负权环检测: JY_HU/大二上/2 数据结构/mynotes/检测负权环-求最小路径.md
+                  - tarjan: JY_HU/大二上/2 数据结构/mynotes/求强连通分量的Tarjan算法.md
+                  - 邻接表遍历: JY_HU/大二上/2 数据结构/mynotes/邻接图的遍历.md
+                  - Labs&hw review: JY_HU/大二上/2 数据结构/labs&hw/FDS Lab&hw review.md
+                  - midterm: JY_HU/大二上/2 数据结构/mynotes/midterm.md
+              - exams:
+                  - 15-16: JY_HU/大二上/2 数据结构/exams/15-16-middle.md
+                  - 16-17: JY_HU/大二上/2 数据结构/exams/16-17-middle.md
+                  - 17-18: JY_HU/大二上/2 数据结构/exams/17-18-middle.md
+                  - 18-19: JY_HU/大二上/2 数据结构/exams/18-19-middle.md
+                  - 19-20: JY_HU/大二上/2 数据结构/exams/19-20-middle.md
+      - 3 图像信息处理 DIP:
+          - DIP notes:
+              - DIP: JY_HU/大二上/3 图像信息处理 DIP/DIP.md
+              - 尺度不变性检测器: JY_HU/大二上/3 图像信息处理 DIP/Scale Invariant Detector.md
+              - 高斯/中值滤波: JY_HU/大二上/3 图像信息处理 DIP/gauss filtering medium filtering.md
+              - 双边滤波: JY_HU/大二上/3 图像信息处理 DIP/双边滤波 bilateral filtering.md
+              - 导向滤波: JY_HU/大二上/3 图像信息处理 DIP/导向滤波解释 guided filtering.md
+              - 空间滤波: JY_HU/大二上/3 图像信息处理 DIP/空间滤波 spatial filtering.md
+          - 回忆卷:
+              - 回忆卷1: JY_HU/大二上/3 图像信息处理 DIP/回忆卷1.md
+              - 回忆卷2: JY_HU/大二上/3 图像信息处理 DIP/回忆卷2.md
+              - 回忆卷3: JY_HU/大二上/3 图像信息处理 DIP/回忆卷3.md
+      - AI:
+          - 赶快补课抄笔记: JY_HU/AI/notes for ZJU-AI-ML.md
+          - 一些截图: JY_HU/AI/ML-zju.md
+          - Approaching-almost: JY_HU/AI/Approach almost.md
+          - 课程Lab&hw: JY_HU/AI/labs & hw review.md
+          - d2l笔记: JY_HU/AI/d2l-zh-pytorch.md
+          - AI算法岗面试问题汇总: JY_HU/AI/interview-questions.md
+          - srtp: JY_HU/AI/srtp-2024-plan.md
+          - 跟李沐学AI:
+              - JY_HU/AI/跟李沐学AI/1-如何读论文.md
+              - JY_HU/AI/跟李沐学AI/2-AlexNet.md
+              - JY_HU/AI/跟李沐学AI/3-ResNet.md
+              - JY_HU/AI/跟李沐学AI/4-Transformer.md
+              - JY_HU/AI/跟李沐学AI/5-GNN.md
+              - JY_HU/AI/跟李沐学AI/6-GAN.md
+              - JY_HU/AI/跟李沐学AI/7-BERT.md
+              - JY_HU/AI/跟李沐学AI/8-ViT.md
+              - JY_HU/AI/跟李沐学AI/9-MAE.md
+              - JY_HU/AI/跟李沐学AI/10-如何找研究想法.md
+              - JY_HU/AI/跟李沐学AI/11-MoCo.md
+              - JY_HU/AI/跟李沐学AI/12-ContrastLearning.md
+              - JY_HU/AI/跟李沐学AI/13-AI-guided-Intuition.md
+              - JY_HU/AI/跟李沐学AI/14-SwinTransformer.md
+              - JY_HU/AI/跟李沐学AI/15-什么是好的研究工作.md
+              - JY_HU/AI/跟李沐学AI/16-AlphaFold2.md
+              - JY_HU/AI/跟李沐学AI/17-CLIP.md
+              - JY_HU/AI/跟李沐学AI/18-TwoStream.md
+              - JY_HU/AI/跟李沐学AI/19-GPT.md
+              - JY_HU/AI/跟李沐学AI/20-Codex.md
+              - JY_HU/AI/跟李沐学AI/21-AlphaCode.md
+              - JY_HU/AI/跟李沐学AI/22-StanfordAIReport.md
+              - JY_HU/AI/跟李沐学AI/23-I3D.md
+              - JY_HU/AI/跟李沐学AI/24-VideoRecognition.md
+              - JY_HU/AI/跟李沐学AI/25-ParameterServer.md
+              - JY_HU/AI/跟李沐学AI/26-Pathways.md
+              - JY_HU/AI/跟李沐学AI/27-GPip.md
+              - JY_HU/AI/跟李沐学AI/28-MegatronLM.md
+              - JY_HU/AI/跟李沐学AI/29-DETR.md
+              - JY_HU/AI/跟李沐学AI/30-Zero.md
+              - JY_HU/AI/跟李沐学AI/31-研究的艺术.md
+              - JY_HU/AI/跟李沐学AI/32-DALLE2.md
+              - JY_HU/AI/跟李沐学AI/33-ViLT.md
+              - JY_HU/AI/跟李沐学AI/34-CLIP串讲.md
+              - JY_HU/AI/跟李沐学AI/35-ChainOfThought.md
+              - JY_HU/AI/跟李沐学AI/36-Whisper.md
+              - JY_HU/AI/跟李沐学AI/37-多模态串讲.md
+              - JY_HU/AI/跟李沐学AI/38-NeuralCorpusIndexer.md
+              - JY_HU/AI/跟李沐学AI/39-InstructGPT.md
+              - JY_HU/AI/跟李沐学AI/40-HELM.md
+              - JY_HU/AI/跟李沐学AI/41-AnthropicLLM.md
+              - JY_HU/AI/跟李沐学AI/42-大模型时代的科研.md
+  - Jy Feng EE:
+      - Preview:
+          - Preview: JY_FENG/JY-Feng.md
       - 1 电路电子技术I实验（爱迪生班）:
           - Preview: JY_FENG/1 电路电子技术I实验/preview.md
           - Lab 1: JY_FENG/1 电路电子技术I实验/Lab1/Lab1 常用仪器使用练习实验.md
@@ -164,10 +164,12 @@ nav:
           - Lab 12 一位全加器和四位加法器: JY_FENG/2 电路电子技术II实验/Lab12/Lab12.md
           - Lab 13 数字钟（Quartus）: JY_FENG/2 电路电子技术II实验/Lab13/Lab13.md
           - Lab 14 步进电机脉冲分配器: JY_FENG/2 电路电子技术II实验/Lab14/Lab14.md
+      - 3 电网络分析:
+          - Preview: JY_FENG/3 电网络分析/Preview.md
       - Semiconductor Physics and Devices:
-          - 1 The Crystal Structure of Solids: JY_FENG\Semiconductor Physics and Devices\1 The Crystal Structure of Solids.md
-          - 2 Introduction to Quantum Mechanics: JY_FENG\Semiconductor Physics and Devices\2 Introduction to Quantum Mechanics.md
-          - 3 Introduction to the Quantum Theory of Solids: JY_FENG\Semiconductor Physics and Devices\3 Introduction to the Quantum Theory of Solids.md
+          - 1 The Crystal Structure of Solids: JY_FENG/SemiconductorPhysicsandDevices/1 The Crystal Structure of Solids.md
+          - 2 Introduction to Quantum Mechanics: JY_FENG/SemiconductorPhysicsandDevices/2 Introduction to Quantum Mechanics.md
+          - 3 Introduction to the Quantum Theory of Solids: JY_FENG/SemiconductorPhysicsandDevices/3 Introduction to the Quantum Theory of Solids.md
 
   - Other:
       - Linux服务器运维(x)把玩(√): Others/linux 启动.md
@@ -248,7 +250,6 @@ markdown_extensions:
 
   - pymdownx.inlinehilite
   - pymdownx.snippets
-
 
 extra:
   social:

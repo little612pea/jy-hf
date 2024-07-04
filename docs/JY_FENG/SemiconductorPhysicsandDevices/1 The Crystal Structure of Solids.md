@@ -3,11 +3,11 @@
 ## 1.0 Preview
 
 In this chapter, we will:
-■ Describe three classifications of solids—amorphous 非晶体, polycrystalline 多晶体, and single crystal.
-■ Discuss the concept of a unit cell.
-■ Describe three simple crystal structures and determine the volume and surfacedensity of atoms in each structure.
-■ Describe the diamond crystal structure.
-■ Briefly discuss several methods of forming single-crystal semiconductor materials.
+* Describe three classifications of solids—amorphous 非晶体, polycrystalline 多晶体, and single crystal.
+* Discuss the concept of a unit cell.
+* Describe three simple crystal structures and determine the volume and surfacedensity of atoms in each structure.
+* Describe the diamond crystal structure.
+* Briefly discuss several methods of forming single-crystal semiconductor materials.
 
 ## 1.3 Space Lattices
 
@@ -22,6 +22,7 @@ In this chapter, we will:
 #### Volume Density of Atoms
 
 1.5 (b)
+
 $$
 \frac1{8}\times8+1=2\\
 Volume\space Density=\frac{\#atoms\space per\space unit\space cell}{volume\space of \space unit\space cell}={2\over a^3}
@@ -91,8 +92,6 @@ NaCl
 
 #### covalent bonding 共价键
 
-H~2~
-
 the outer silicon atoms always have valence electrons available for additional covalent bonding - infinite structure
 
 #### metallic bonding 金属键
@@ -119,7 +118,7 @@ thermal energy(function of temperature) - atom randomly fluctuate
 
 lack of an atom - **vacancy**
 
-<img src="./assets/image-20240410102423914.png" alt="image-20240410102423914" style="zoom:33%;" />
+<img src="../assets/image-20240410102423914.png" alt="image-20240410102423914" style="zoom:33%;" />
 
 多了一个 **interstitial**
 
