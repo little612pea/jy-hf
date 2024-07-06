@@ -177,6 +177,9 @@ nav:
       - Git 基础: Others/git使用教程.md
       - memories: Others/memories.md
       - content: Others/content block example.md
+  - Travelogue:
+      - timeline: travel/timeThread.md
+  
 
 theme:
   name: material
