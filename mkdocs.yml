@@ -179,6 +179,11 @@ nav:
       - content: Others/content block example.md
   - Travelogue:
       - timeline: travel/timeThread.md
+      - WestLake: travel/WestLake/WestLake.md
+      - Shanghai: travel/Shanghai/Shanghai.md
+      - Beijing: travel/Beijing/Beijing.md
+      - Japan: travel/Japan/Japan.md
+      
   
 
 theme:
@@ -190,7 +195,6 @@ theme:
     - navigation.instant
     - navigation.tracking
     - content.code.annotate
-    - toc.integrate
     - toc.follow
     - navigation.path
     - navigation.top

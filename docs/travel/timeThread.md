@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+  - toc
+---
 <link rel="stylesheet" href="../../stylesheets/reset.min.css">
 <link rel='stylesheet' href='https://cdn.lineicons.com/1.0.1/LineIcons.min.css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600&amp;display=swap'>
@@ -12,21 +17,21 @@
 
 <div class="timeline" id="timeline">
 	<!--first-->
-	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+	<div class="timeline__event  animated fadeInUp delay-1s timeline__event--type1">
 		<div class="timeline__event__icon ">
 			<!-- <i class="lni-sport"></i>-->
 		</div>
 		<div class="timeline__event__date">
-			September 1985
+			2023.2.22
 		</div>
-		<div class="timeline__event__content ">
+		<a href="../WestLake/WestLake" class="timeline__event__content">
 			<div class="timeline__event__title">
-				Super Mario Brothers
+				西湖夜游
 			</div>
 			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
+				<p>西湖夜游系列，美景推荐</p>
 			</div>
-		</div>
+		</a>
 	</div>
 	<!--second-->
 	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
@@ -34,50 +39,50 @@
 			<!-- <i class="lni-sport"></i>-->
 		</div>
 		<div class="timeline__event__date">
-			June 1986
+			2023.9
 		</div>
-		<div class="timeline__event__content">
+		<a href="../Shanghai/Shanghai" class="timeline__event__content">
 			<div class="timeline__event__title">
-				Super Mario Bros: The Lost Levels
+				上海纪事·迪士尼
 			</div>
 			<div class="timeline__event__description">
 				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
 			</div>
-		</div>
+		</a>
 	</div>
 	<!--third-->
-	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+	<div class="timeline__event animated fadeInUp delay-3s timeline__event--type3">
 		<div class="timeline__event__icon">
 			<!-- <i class="lni-sport"></i>-->
 		</div>
 		<div class="timeline__event__date">
-			October 1988
+			2024.2
 		</div>
-		<div class="timeline__event__content">
+		<a href="../Beijing/Beijing" class="timeline__event__content">
 			<div class="timeline__event__title">
-				Super Mario Bros. 2
+				北京纪事·紫禁城·环球影城
 			</div>
 			<div class="timeline__event__description">
 				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
 			</div>
-		</div>
+		</a>
 	</div>
 	<!--forth-->
 	<div class="timeline__event animated fadeInUp timeline__event--type1">
 		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
+				<!-- <i class="lni-sport"></i>-->
 		</div>
 		<div class="timeline__event__date">
-			October 1988
+			2024.9
 		</div>
-		<div class="timeline__event__content">
+		<a href="../Japan/Japan" class="timeline__event__content">
 			<div class="timeline__event__title">
-				Super Mario Bros. 3
+				Japan Planning
 			</div>
 			<div class="timeline__event__description">
 				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
 			</div>
-		</div>
+		</a>
 	</div>
 </div>
 <!-- partial -->
