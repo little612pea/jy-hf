@@ -1,1 +1,5 @@
+---
+hide:
+  - toc
+---
 ![WLab1.pdf](./WLab1.pdf){ type=application/pdf style="height:600px;width:100%" }
