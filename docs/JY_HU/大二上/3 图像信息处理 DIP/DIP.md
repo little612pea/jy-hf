@@ -50,7 +50,7 @@ Interactive image retrieval: Mindfinder-> 根据sketch和附加的prompt（颜�
 
 ▪Image format
 
-<img src="./assets/image-20240106114157123-1704512519246-4.png" alt="image-20240106114157123" style="zoom: 80%;" />
+<img src="../assets/image-20240106114157123-1704512519246-4.png" alt="image-20240106114157123" style="zoom: 80%;" />
 
 ![image-20240106115620257](./assets/image-20240106115620257.png)
 

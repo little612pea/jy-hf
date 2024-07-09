@@ -1,6 +1,6 @@
 # d2l-zh-pytorch
 
-<img src="./assets/image-20240123211120304.png" alt="image-20240123211120304" style="zoom: 50%;" />
+<img src="../assets/image-20240123211120304.png" alt="image-20240123211120304" style="zoom: 50%;" />
 
 ## 1.20
 
@@ -149,7 +149,7 @@ class Model(Module):
 
 
 
-<img src="./assets/OIP-1705891331401-67-1705908072743-71.jpeg" alt="Transformer各层网络结构详解！面试必备！(附代码实现) - 掘金" style="zoom: 67%;" />
+<img src="../assets/OIP-1705891331401-67-1705908072743-71.jpeg" alt="Transformer各层网络结构详解！面试必备！(附代码实现) - 掘金" style="zoom: 67%;" />
 
 上图是论文中 Transformer 的内部结构图，左侧为 Encoder block，右侧为 Decoder block。红色圈中的部分为 **Multi-Head Attention**，是由多个 **Self-Attention**组成的，可以看到 Encoder block 包含一个 Multi-Head Attention，而 Decoder block 包含两个 Multi-Head Attention (其中有一个用到 Masked)。Multi-Head Attention 上方还包括一个 Add & Norm 层，Add 表示残差连接 (Residual Connection) 用于防止网络退化，Norm 表示 Layer Normalization，用于对每一层的激活值进行归一化。
 
@@ -251,7 +251,7 @@ multi-head 多头注意力机制，拆开来再合并
 
 如下图，在第一次multi-head-attention之后，实际上整个序列的信息已经通过attention层，把不同的query和position encoding被拆解成独立的部分，和RNN不同
 
-<img src="./assets/image-20240122152121671.png" alt="image-20240122152121671" style="zoom: 67%;" />
+<img src="../assets/image-20240122152121671.png" alt="image-20240122152121671" style="zoom: 67%;" />
 
 
 
@@ -309,7 +309,7 @@ Output=F(Input)+Input
 
 ## 1.23
 
-<img src="./assets/43a69d21d6ca9b411ebbdaaeafb292b.png" alt="43a69d21d6ca9b411ebbdaaeafb292b" style="zoom:50%;" />
+<img src="../assets/43a69d21d6ca9b411ebbdaaeafb292b.png" alt="43a69d21d6ca9b411ebbdaaeafb292b" style="zoom:50%;" />
 
 
 "LR" 在深度学习领域中通常指的是逻辑回归（Logistic Regression），是一种用于二分类问题的模型。对于逻辑回归模型，通常使用二元交叉熵损失函数（Binary Cross Entropy Loss）作为损失函数，而不是传统的均方误差损失。
@@ -518,7 +518,7 @@ class Model(nn.Module)
    调。但是，目标模型的输出层需要从头开始训练。
 3. 通常，微调参数使用较小的学习率，而从头开始训练输出层可以使用更大的学习率。
 
-<img src="./assets/v2-f0cd36d214b248c905f32680d3243279_1440w.webp" alt="img" style="zoom: 67%;" />
+<img src="../assets/v2-f0cd36d214b248c905f32680d3243279_1440w.webp" alt="img" style="zoom: 67%;" />
 
 ​					                                     VGG 网络结构示意
 

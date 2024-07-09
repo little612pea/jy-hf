@@ -16,7 +16,7 @@
 
 暴力双边滤波迭代次数非常大
 
-<img src="./assets/539bc8392654f31ba8aa83d9024d0fec.png" alt="img" style="zoom:50%;" />
+<img src="../assets/539bc8392654f31ba8aa83d9024d0fec.png" alt="img" style="zoom:50%;" />
 
 解决双边滤波中的梯度反转、计算缓慢问题，能够保边、非迭代
 I是guide，p是输入图，q是输出图。输出是I的线性表达

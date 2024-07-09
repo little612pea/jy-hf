@@ -41,7 +41,7 @@ h1 {
   margin: 20px 0;
   border-radius: 6px;
   align-self: center;
-  min-height: 100px;
+  min-height: 160px;
 }
 .timeline__event:nth-child(2n+1) {
   flex-direction: row-reverse;
@@ -155,7 +155,7 @@ h1 {
 .timeline__event__description {
   flex-basis: 100%;
   color: #000000;
-  line-height: 1.2;
+  line-height: 1.6;
 }
 .timeline__event--type2:after {
   background: #555ac0;

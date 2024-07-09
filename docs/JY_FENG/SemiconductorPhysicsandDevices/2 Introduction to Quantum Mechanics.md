@@ -238,7 +238,7 @@ $$
 
 ### 2.3.3 The Step Potential Function
 
-<img src="./assets/image-20240410150845804.png" alt="image-20240410150845804" style="zoom:33%;" />
+<img src="../assets/image-20240410150845804.png" alt="image-20240410150845804" style="zoom:33%;" />
 
 We will assume that the particles are traveling in the +x direction and that they originated at $x=-\infin$​.
 
@@ -317,9 +317,9 @@ which means, if $E<V_0$ then the particle is reflected.
 
 ### 2.3.4 The Potential Barrier and Tunneling
 
-<img src="./assets/image-20240630193928719.png" alt="image-20240630193928719" style="zoom:50%;" />
+<img src="../assets/image-20240630193928719.png" alt="image-20240630193928719" style="zoom:50%;" />
 
-<img src="./assets/image-20240630194138160.png" alt="image-20240630194138160" style="zoom:50%;" />
+<img src="../assets/image-20240630194138160.png" alt="image-20240630194138160" style="zoom:50%;" />
 
 transmission coefficient T 
 $$

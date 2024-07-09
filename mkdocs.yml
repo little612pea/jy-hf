@@ -166,6 +166,24 @@ nav:
           - Lab 14 步进电机脉冲分配器: JY_FENG/2 电路电子技术II实验/Lab14/Lab14.md
       - 3 电网络分析:
           - Preview: JY_FENG/3 电网络分析/Preview.md
+          - Lab1: JY_FENG/3 电网络分析/Lab1/Lab1.md
+          - Lab2: JY_FENG/3 电网络分析/Lab2/Lab2.md
+          - Lab3: JY_FENG/3 电网络分析/Lab3/Lab3.md
+          - Lab4: JY_FENG/3 电网络分析/Lab4/Lab4.md
+      - 4 微机原理及应用:
+          - Preview: JY_FENG/4 微机原理及应用/Preview.md
+          - 80C51:
+              - 中断与定时器: JY_FENG/4 微机原理及应用/Note/中断.md
+              - 串行通信: JY_FENG/4 微机原理及应用/Note/串行口原理及应用.md
+              - 并行扩展: JY_FENG/4 微机原理及应用/Note/并行扩展.md
+              - 串行扩展: JY_FENG/4 微机原理及应用/Note/串行扩展.md
+          - Arm-Cortex: JY_FENG/4 微机原理及应用/Note/Arm-Cortex.md
+      - 5 微机原理及应用实验:
+          - Preview: JY_FENG/5 微机原理及应用实验/Preview.md
+      - 6 工程电磁场与波:
+          - Preview: JY_FENG/6 工程电磁场与波/Preview.md
+          - 实验: JY_FENG/6 工程电磁场与波/实验/工程电磁场与波实验.md
+          - 复习: JY_FENG/6 工程电磁场与波/复习/工程电磁场与波复习.md
       - Semiconductor Physics and Devices:
           - 1 The Crystal Structure of Solids: JY_FENG/SemiconductorPhysicsandDevices/1 The Crystal Structure of Solids.md
           - 2 Introduction to Quantum Mechanics: JY_FENG/SemiconductorPhysicsandDevices/2 Introduction to Quantum Mechanics.md
@@ -182,7 +200,10 @@ nav:
       - WestLake: travel/WestLake/WestLake.md
       - Shanghai: travel/Shanghai/Shanghai.md
       - Beijing: travel/Beijing/Beijing.md
-      - Japan: travel/Japan/Japan.md
+      - Japan: 
+        - 行前攻略: travel/Japan/Japan行前攻略.md
+        - 游记: travel/Japan/Japan.md
+
       
   
 
@@ -271,5 +292,6 @@ plugins:
       enable_creation_date: true
       type: timeago
       enabled: true
+      strict: false
   - mkdocs-pdf
   - search

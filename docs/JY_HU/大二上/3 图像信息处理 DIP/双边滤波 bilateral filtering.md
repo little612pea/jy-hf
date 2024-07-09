@@ -8,9 +8,9 @@
 
 
 
-<img src="./assets/image-20240110145317828.png" alt="image-20240110145317828" style="zoom:50%;" />
+<img src="../assets/image-20240110145317828.png" alt="image-20240110145317828" style="zoom:50%;" />
 
-<img src="./assets/image-20240110145422395.png" alt="image-20240110145422395" style="zoom:50%;" />
+<img src="../assets/image-20240110145422395.png" alt="image-20240110145422395" style="zoom:50%;" />
 
 sigma s 一般设为图像对角线的2%这么大
 sigma r 一般设为gradient的均值或中位值？

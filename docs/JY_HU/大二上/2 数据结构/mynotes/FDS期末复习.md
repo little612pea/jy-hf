@@ -173,7 +173,7 @@ heapsort从1开始的
 
 ### 4.模拟建堆
 
-<img src="./assets/image-20240108153910563-1704699552409-1-1705661659067-7-1705665977647-32.png" alt="image-20240108153910563" style="zoom: 50%;" />
+<img src="../assets/image-20240108153910563-1704699552409-1-1705661659067-7-1705665977647-32.png" alt="image-20240108153910563" style="zoom: 50%;" />
 
 # 7.并查集
 
@@ -465,7 +465,7 @@ shell 增量：**for** **( Increment = N / 2; Increment > 0; Increment /= 2 )**
 
 堆排：O(NlogN)
 
-<img src="./assets/image-20240115222023514-1705665977648-35.png" alt="image-20240115222023514" style="zoom:50%;" />
+<img src="../assets/image-20240115222023514-1705665977648-35.png" alt="image-20240115222023514" style="zoom:50%;" />
 
 插入：O(N^2)
 

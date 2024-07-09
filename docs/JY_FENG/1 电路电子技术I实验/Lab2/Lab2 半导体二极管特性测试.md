@@ -62,7 +62,7 @@
 
 5. 利用相同方法测量稳压二极管，得到相似结果
 
-   <img src="../assets/IMG_9033.jpeg" style="zoom:8%;" /><img src="./assets/IMG_9034.jpeg" alt="IMG_9034" style="zoom:8%;" />
+   <img src="../assets/IMG_9033.jpeg" style="zoom:8%;" /><img src="../assets/IMG_9034.jpeg" alt="IMG_9034" style="zoom:8%;" />
 
    
 

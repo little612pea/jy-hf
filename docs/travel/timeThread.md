@@ -80,7 +80,11 @@ hide:
 				Japan Planning
 			</div>
 			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
+				<p>
+					行前攻略
+					<br>
+					旅行日志
+				</p>
 			</div>
 		</a>
 	</div>
