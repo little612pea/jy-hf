@@ -10,6 +10,7 @@ hide:
 <link rel="stylesheet" href="../../stylesheets/timeThread.css">
 <body>
 <!-- partial:index.partial.html -->
+
 <script src="https://kit.fontawesome.com/fc596df623.js" crossorigin="anonymous"></script>
 
 <h2>Super Mario Timeline</h2>
@@ -90,5 +91,5 @@ hide:
 	</div>
 </div>
 <!-- partial -->
-  
+
 </body>

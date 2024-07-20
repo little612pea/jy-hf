@@ -188,7 +188,11 @@ nav:
           - 1 The Crystal Structure of Solids: JY_FENG/SemiconductorPhysicsandDevices/1 The Crystal Structure of Solids.md
           - 2 Introduction to Quantum Mechanics: JY_FENG/SemiconductorPhysicsandDevices/2 Introduction to Quantum Mechanics.md
           - 3 Introduction to the Quantum Theory of Solids: JY_FENG/SemiconductorPhysicsandDevices/3 Introduction to the Quantum Theory of Solids.md
-
+          - 4 Semiconductor in Equilibrium: JY_FENG/SemiconductorPhysicsandDevices/4 Semiconductor in Equilibrium.md
+          - 5 Carrier Transport Phenomena: JY_FENG/SemiconductorPhysicsandDevices/5 Carrier Transport Phenomena.md
+          - 6 Nonequilibrium Excess Carriers in Semiconductors: JY_FENG/SemiconductorPhysicsandDevices/6 Nonequilibrium Excess Carriers in Semiconductors.md
+          - 7 The pn Junction: JY_FENG/SemiconductorPhysicsandDevices/7 The pn Junction.md
+          - 8 The pn Junction Diode: JY_FENG/SemiconductorPhysicsandDevices/8 The pn Junction Diode.md
   - Other:
       - Linux服务器运维(x)把玩(√): Others/linux 启动.md
       - CS61A: Others/CS61A-python.md

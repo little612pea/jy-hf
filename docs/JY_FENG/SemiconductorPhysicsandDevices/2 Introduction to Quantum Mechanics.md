@@ -14,14 +14,17 @@ In this chapter, we will:
 ### 2.1.1 Energy Quanta
 
 photoelectric effect
+
 $$
 E=hv\space (h=6.625\times 10^{-34}J\cdot s)
 $$
+
 **photon** the particle- like packet of energy
 
 **work function** The minimum energy required to remove an electron
 
 The **maximum kinetic energy** of the **photoelectron**
+
 $$
 T= \frac1{2}mv^2=hv-\Phi
 $$
@@ -52,8 +55,10 @@ $\lambda$​ *de Broglie wavelength*
 #### Heisenberg uncertainty principle
 
 $$
+\begin{gather*}
 \Delta p\Delta x\ge \hbar\\
 \Delta E\Delta t\ge \hbar
+\end{gather*}
 $$
 
 to *probability density function*
@@ -65,46 +70,56 @@ to *probability density function*
 ### 2.2.1 The Wave Equation
 
 one-dimensional, nonrelativistic Schrodinger's wave equation
+
 $$
 \frac{-\hbar}{2m}\cdot\frac{\partial^2\Psi(x,t)}{\partial x^2}+V(x)\Psi(x,t)=j\hbar\frac{\partial\Psi(x,t)}{\partial t}
 $$
+
 $\Psi(x,t)$ wave function
 
 $V(x)$ potential function
+
 $$
+\begin{gather*}
 \Psi(x,t)=\psi(x)\phi(t)\\
 (use\ the\ technique\ of\ seperation\ of\ variables)\\
 \frac{-\hbar}{2m}\frac1{\psi(x)}\frac{\partial^2\psi(x)}{\partial x^2}+V(x)=j\hbar\frac1{\phi(t)}\frac{\partial\phi(t)}{\partial t}
+\end{gather*}
 $$
+
 Since the left side of Equation (2.9) is a function of position x only and the right side of the equation is a function of time t only, **each side of this equation must be equal to a constant**.
+
 $$
+\begin{gather*}
 \eta=j\hbar\cdot\frac1{\phi(t)}\cdot \frac{\partial\phi(t)}{t}\\
 \Rightarrow \phi(t)=e^{-j(\eta/\hbar)t}\\
 E=hv=\frac{h\omega}{2\pi}\Rightarrow\omega=\frac{\eta}{\hbar}=\frac{E}{\hbar}\Rightarrow\phi(t)=e^{-j\omega t}\\
-\therefore \frac{-\hbar^2}{2m}\cdot\frac1{\psi(x)}\cdot\frac{\partial^2\psi(x)}{\partial x^2}+V(x)=E\\
+\therefore E=\frac{-\hbar^2}{2m}\cdot\frac1{\psi(x)} \cdot\frac{\partial^2\psi(x)}{\partial x^2}+V(x)\\
+\end{gather*}
 $$
 
 $$
 \Rightarrow \frac{\partial^2\phi(x)}{\partial x^2}+\frac{2m}{\hbar^2}(E-V(x))\psi(x)=0
 $$
 
-
-
 ### 2.2.2 Physical Meaning of the Wave Function
 
 the relation between the function and the electron
+
 $$
 \Psi(x,t)=\psi(x)\phi(t)=\psi(x)e^{-j(E/\hbar)t}=\psi(t)e^{-j\omega t}
 $$
+
 $\Psi$不代表任何实际的物理含义
 
 $\bold{\left|\Psi(x,t)\right|^2dx}$ the probability of finding the particle between x and $x + dx$ at a given time
+
 $$
-\begin{align}
+\begin{aligned}
 \left|\Psi(x,t)\right|^2&=\Psi(x,t)\cdot\Psi^*(x,t)\\
 &=[\psi(x)e^{-j(E/\hbar)t}][\psi^*(x)e^{+j(E/\hbar)t}]\\
 &=\psi(x)\psi^*(x)=\left|\psi(x)\right|^2\\
-\end{align}
+\end{aligned}
 $$
 
 ### 2.2.3 Boundary Conditions
@@ -141,14 +156,17 @@ $$
 If there is no force acting on the particle, then the potential function V(x) will be constant and we must have E>V(x). Assume $V(x)=0$, ​
 
 $(14)\Rightarrow\\$
+
 $$
 \frac{\partial^2\phi(x)}{\partial x^2}+\frac{2mE}{\hbar^2}\psi(x)=0\\
 $$
 
 $$
+\begin{gather*}
 \psi(x)=A\ \exp[\frac{jx\sqrt{2mE}}{\hbar}]+B\ \exp[\frac{-jx\sqrt{2mE}}{\hbar}]\\
 \Rightarrow \psi(x)=A\ \exp[jkx]+B\ \exp[-jkx]\\
 \small{k=\frac{\sqrt{2mE}}{\hbar}}
+\end{gather*}
 $$
 
 $$
@@ -164,26 +182,37 @@ $B\exp[-j(kx+\omega t)]$ 负行波
 
 
 假设B=0, 此时物质仅仅由正行波A决定
+
+
 $$
+\begin{gather*}
 k=\sqrt{\frac{2mE}{\hbar^2}}=\frac{p}{\hbar}\\
-E=\frac{p}{2m}此时把并未考虑相对论效应，只能说E\approx \frac{p}{2m}\\
-\small{（当动量p很小，即远小于静止质量能量m_0c^2时）}
+E=\frac{p}{2m}
+\end{gather*}
 $$
+
+此时把并未考虑相对论效应，只能说$E\approx \frac{p}{2m}$（当动量p很小，即远小于静止质量能量$m_0c^2$时）
+
 利用德布罗意方程
 $$
-p=\frac{h}{\lambda}\\
-k=\frac{2\pi}{\lambda}
+\begin{align}
+p&=\frac{h}{\lambda}\\
+k&=\frac{2\pi}{\lambda}
+\end{align}
 $$
+
 A free particle with a well-defined energy will also have a well-defined wavelength and momentum. But it can be found anywhere since $|\Psi(x,y)|^2=AA^*$.
 
 **wave packet** 
 
 ### 2.3.2 The Infinite Potential Well
 
-![image-20240410144417644](./assets/image-20240410144417644.png)
+<img src="../assets/image-20240410144417644.png" alt="image-20240410144417644" style="zoom:50%;" />
+
 $$
 \frac{\partial^2\phi(x)}{\partial x^2}+\frac{2m}{\hbar^2}(E-V(x))\psi(x)=0\\
 $$
+
 **E** total energy of the particle. If E is finite, the wave function must be zero $\psi(x)=0$​ in region I and III.
 
 >A particle cannot penetrate these infinite potential barriers, so the probability of finding the particle in regions I and III is zero.
@@ -193,10 +222,14 @@ $$
 $$
 
 in region II: V=0
+
 $$
-\psi(x)=A_1 \cos kx+A_2\sin kx\\
-k=\sqrt{\frac{2mE}{\hbar^2}}
+\begin{align}
+\psi(x)&=A_1 \cos kx+A_2\sin kx\\
+k&=\sqrt{\frac{2mE}{\hbar^2}}
+\end{align}
 $$
+
 boundary condition: 
 
 * $\psi(x=0)=\psi(x=a)=0$
@@ -211,9 +244,12 @@ $$
 而$A_2$的解可以由$\int^{\infin}_{-\infin}\left|\psi(x)\right|^2 dx =1$给出。
 
 如果波函数为实数，则
+
 $$
-\because \int_0^a A_2^2\sin^2 kx\ dx=1\\
+\begin{gather*}
+\because \int_0^a A_2^2  \sin^2 kx\ dx=1\\
 \therefore A_2=\sqrt{\frac2{a}}
+\end{gather*}
 $$
 
 $$
@@ -238,7 +274,7 @@ $$
 
 ### 2.3.3 The Step Potential Function
 
-<img src="../assets/image-20240410150845804.png" alt="image-20240410150845804" style="zoom:33%;" />
+<img src="../assets/image-20240410150845804.png" alt="image-20240410150845804" style="zoom:60%;" />
 
 We will assume that the particles are traveling in the +x direction and that they originated at $x=-\infin$​.
 
@@ -247,9 +283,11 @@ We will assume that the particles are traveling in the +x direction and that the
 ##### in region I
 
 $$
+\begin{gather*}
 \frac{\partial^2\psi(x)}{\partial x^2}+\frac{2mE}{\hbar^2}\psi(x)=0\\
 \Rightarrow \psi_1(x)=A_1e^{jk_1x}+B_1e^{-jk_1x}(x\le 0)\\
 \small{(k_1=\sqrt{\frac{2mE}{\hbar^2}})}
+\end{gather*}
 $$
 
 incident  入射
@@ -261,9 +299,11 @@ reflect  反射
 ##### in region II
 
 $$
+\begin{gather*}
 \frac{\partial^2\psi_2(x)}{\partial x^2}-\frac{2m}{\hbar^2}(V_0-E)\psi_2(x)=0\\
 \Rightarrow \psi_2(x)=A_2e^{-k_2x}+B_2e^{k_2x}(x\ge 0)\\
 \small{(k_2=\sqrt{\frac{2m(V_0-E)}{\hbar^2}})}
+\end{gather*}
 $$
 
 ##### boundary condition
@@ -284,9 +324,12 @@ $$
   $$
 
 therefore，
+
 $$
+\begin{gather*}
 B_1=-\frac{k_2^2+2jk_1k_2-k_1^2}{k_1^2+k_2^2}\cdot A_1\\
 A_2=\frac{2k_1(k_1-jk_2)}{k_1^2+k_2^2}\cdot A_1
+\end{gather*}
 $$
 
 $$
@@ -294,14 +337,17 @@ B_1B_1^*=\frac{(k_2^2-k_1^2+2jk_1k_2)(k_2^2-k_1^2-2jk_1k_2)}{(k_1^2+k_2^2)^2}A_1
 $$
 
 reflection coefficient **R**
+
 $$
 R=\frac{v_rB_1B_1^*}{v_1A_1A_1^*}
 $$
 
 $$
+\begin{gather*}
 [in\ region\ I]V=0\Rightarrow T(kinetic\ energy)=E\\
 \therefore k_1=\sqrt{\frac{2m}{\hbar^2}(\frac1{2}mv^2)}=\sqrt{m^2\frac{v^2}{\hbar^2}}=\frac{mv}{\hbar}\\
 v_i=\frac{\hbar}{m}\cdot k_1\\
+\end{gather*}
 $$
 
 Since the reflected particle also exists in region I, the reflected velocity (magnitude) is given by
@@ -309,10 +355,13 @@ Since the reflected particle also exists in region I, the reflected velocity (ma
 $$
 v_r=\frac{\hbar}{m}\cdot k_1
 $$
+
 then,
+
 $$
 R=\frac{B_1\cdot B_!^*}{A_1\cdot A_1^*}=1.0
 $$
+
 which means, if $E<V_0$ then the particle is reflected.
 
 ### 2.3.4 The Potential Barrier and Tunneling
@@ -322,6 +371,7 @@ which means, if $E<V_0$ then the particle is reflected.
 <img src="../assets/image-20240630194138160.png" alt="image-20240630194138160" style="zoom:50%;" />
 
 transmission coefficient T 
+
 $$
 T=\frac{v_t\cdot A_3\cdot A_3^*}{v_i\cdot A_1\cdot A_1^*}=\frac{A_3\cdot A_3^*}{A_1\cdot A_1^*}\approx 16(\frac{E}{V_0})(1-\frac{E}{V_0})exp(-2k_2a)
 $$
@@ -331,6 +381,7 @@ $$
 ### 2.4.1 The One-Electron Atom
 
 the potential function of H
+
 $$
 V(r)=\frac{-e^2}{4\pi \epsilon_0 r}
 $$
@@ -340,10 +391,13 @@ $$
 $$
 
 $\phi$ can be written in the form of
+
 $$
 \phi(r,\theta,\phi)=R(r)\cdot\Theta(\theta)\cdot \Phi(\phi)
 $$
- then, we obtain
+
+then, we obtain
+
 $$
 {\sin^2\theta\over R}\cdot\frac{\partial}{\partial r}(r^2\frac{\partial R}{\partial r})+\frac1{\Phi}\cdot\frac{\partial^2\phi}{\partial \phi^2}+\frac{\sin\theta}{\Theta}\cdot \frac{\partial}{\partial\theta}(\sin\theta\cdot \frac{\partial\Theta}{\partial\theta})+r^2\sin^2\theta\sdot\frac{2m_0}{\hbar^2}(E-V)=0
 $$
@@ -353,18 +407,25 @@ $$
 $$
 
 the solution is
+
 $$
 \phi=e^{jmp}
 $$
+
 m is integer, $m=0,\pm1,\pm2,\dots$
 
 we can further seperate the variables $\theta$ and $r$ and generate two additional seperation-of-variables constants l and n
+
 $$
-\text{the principle quantum number } n=1,2,3,\dots\\
-\text{the angular quantum number }l=n-1,n-2,n-3,\dots,0\\
-\text{the magnetic quantum number} \abs{m}=l,l-1,\dots,0
+\begin{split}
+\text{the principle quantum number } n&=1,2,3,\dots\\
+\text{the angular quantum number }l&=n-1,n-2,n-3,\dots,0\\
+\text{the magnetic quantum number} \abs{m}&=l,l-1,\dots,0
+\end{split}
 $$
+
 the electron energy is,
+
 $$
 E_n=\frac{-m_0e^4}{(4\pi\epsilon_0)^2\cdot 2\hbar^2n^2}
 $$

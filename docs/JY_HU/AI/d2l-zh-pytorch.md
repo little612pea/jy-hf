@@ -1,6 +1,43 @@
 # d2l-zh-pytorch
 
-<img src="../assets/image-20240123211120304.png" alt="image-20240123211120304" style="zoom: 50%;" />
+![image-20240711171936556](./assets/image-20240711171936556.png)
+
+## 1.2 关键组件
+
+#### 基本内容
+
+* data 
+  * training dataset/set
+  * test dataset/set
+* model（转换数据）
+* obejective function（目标函数，量化魔性有效性）
+  * 也被称为loss function
+    * squared error 平方误差
+    * overfitting 过拟合
+* algorithm（调整模型参数以优化目标函数）
+  * gradient descent（梯度下降）
+
+## 1.3 各种机器学习问题
+
+#### 监督学习 Supervised Learning
+
+提供的样本带有标签
+
+![image-20240711172754385](./assets/image-20240711172754385.png)
+
+##### 回归 Regression
+
+“有多少"
+
+##### 分类 Classification
+
+“是什么”
+
+* multiclass classfication
+* cross-entropy
+* hierarchial classification
+
+##### 
 
 ## 1.20
 

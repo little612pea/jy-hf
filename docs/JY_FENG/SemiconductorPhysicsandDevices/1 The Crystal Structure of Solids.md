@@ -1,14 +1,5 @@
 # 1 The Crystal Structure of Solids
 
-## 1.0 Preview
-
-In this chapter, we will:
-* Describe three classifications of solids—amorphous 非晶体, polycrystalline 多晶体, and single crystal.
-* Discuss the concept of a unit cell.
-* Describe three simple crystal structures and determine the volume and surfacedensity of atoms in each structure.
-* Describe the diamond crystal structure.
-* Briefly discuss several methods of forming single-crystal semiconductor materials.
-
 ## 1.3 Space Lattices
 
 *lattice point* 晶格点
@@ -24,8 +15,10 @@ In this chapter, we will:
 1.5 (b)
 
 $$
+\begin{gather*}
 \frac1{8}\times8+1=2\\
 Volume\space Density=\frac{\#atoms\space per\space unit\space cell}{volume\space of \space unit\space cell}={2\over a^3}
+\end{gather*}
 $$
 
 #### Three lattice types: 
@@ -91,6 +84,8 @@ coulomb attraction 库伦吸引
 NaCl
 
 #### covalent bonding 共价键
+
+H~2~
 
 the outer silicon atoms always have valence electrons available for additional covalent bonding - infinite structure
 

@@ -2,4 +2,5 @@
 hide:
   - toc
 ---
-![WLab1.pdf](./WLab1.pdf){ type=application/pdf style="height:600px;width:100%" }
+[实验报告](./WLab1.pdf)
+<iframe src="../WLab1.pdf" width="100%" height="600px"></iframe>
